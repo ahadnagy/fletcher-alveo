@@ -1,4 +1,6 @@
 # fletcher-alveo
+[![Build Status](https://dev.azure.com/abs-tudelft/fletcher/_apis/build/status/abs-tudelft.fletcher-alveo?branchName=master)](https://dev.azure.com/abs-tudelft/fletcher/_build/latest?definitionId=8&branchName=master)
+
 Work-in-progress Fletcher Alveo platform support.
 
 Platform support for the Alveo platform consists of:
@@ -30,8 +32,8 @@ Requirements
 - Docker
 
 ```
-cmake runtime/
-make
+cd runtime
+docker built -t fletcher-alveo/runtime .
 ```
 
 ### Using the runtime
