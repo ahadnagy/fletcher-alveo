@@ -14,6 +14,8 @@ typedef struct {
 } platform_init; 
 
 
+fstatus_t platformHostMalloc(uint8_t *device_address, int64_t size);
+
 #ifdef __cplusplus
 }
 #endif
