@@ -36,6 +36,7 @@ typedef struct {
     xrtDeviceHandle device;
     xrtXclbinHandle xclbin;
     xrtKernelHandle kernel;
+    uint64_t memory_bank;
 } platform_state;
 
 typedef struct {
