@@ -11,10 +11,10 @@ typedef struct {
     uint8_t device_id;
     data_trans_mech transfer_mech;
     const char* xclbin;
+    const char* kernel_name;
+    uint64_t memory_bank;
 } platform_init; 
 
-
-fstatus_t platformHostMalloc(uint8_t *device_address, int64_t size);
 
 #ifdef __cplusplus
 }
