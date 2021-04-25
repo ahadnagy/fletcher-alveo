@@ -31,6 +31,10 @@ include(CompileUnits)
 
 include_directories($ENV{XILINX_XRT}/include)
 
+# HACK: '/opt/xilinx/xrt/include/experimental/xrt_graph.h' has a C++ include (<chrono>),
+# so a C++ compiler has to be used...
+set_source_files_properties(src/fletcher_alveo.c PROPERTIES LANGUAGE CXX )
+
 add_compile_unit(
   NAME fletcher::alveo
   TYPE SHARED
