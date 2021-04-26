@@ -186,17 +186,17 @@ uint64_t platformDeviceMalloc(da_t *device_address, int64_t size) {
     return FLETCHER_STATUS_OK;
 }
 
-uint64_t platformHostMalloc(uint8_t *host_address, int64_t size) {
+uint64_t platformHostMalloc(da_t *device_address, int64_t size) {
     device_buffer buf;
 
-    buf.handle = xrtBOAlloc(platform.device, size, XRT_BO_FLAGS_HOST_ONLY, 0);
+    buf.handle = xrtBOAlloc(platform.device, size, XRT_BO_FLAGS_HOST_ONLY, platform.memory_bank);
     if (buf.handle == 0) {
         fprintf(stderr, "[FLETCHER_ALVEO] Error: allocating host memory.\n");
         return FLETCHER_STATUS_ERROR;
     }
 
-    *host_address = xrtBOAddress(buf.handle);
-    buf.device_address = *host_address;
+    *device_address = xrtBOAddress(buf.handle);
+    buf.device_address = *device_address;
     buf.active = true;
     buf.size = size;
     buffer_map[buffer_map_size] = buf;
@@ -230,8 +230,8 @@ fstatus_t platformPrepareHostBuffer(const uint8_t *host_source,
     da_t *device_destination,
     int64_t size,
     int *alloced) {
-
     fstatus_t rc;
+    uint8_t *host_mapped_addr;
 
     switch (platform.transfer_mech) {
         case FL_TR_DEVICE_DMA:
@@ -248,12 +248,14 @@ fstatus_t platformPrepareHostBuffer(const uint8_t *host_source,
             break;
 
         case FL_TR_HOST_SHADOW_BUFF:
-            rc = platformHostMalloc((uint8_t*)device_destination, size);
+            rc = platformHostMalloc(device_destination, size*sizeof(uint8_t));
             if (rc != FLETCHER_STATUS_OK) {
                 return FLETCHER_STATUS_ERROR;
             }
-            // Copy data to shadow buffer
-            memcpy(device_destination, host_source, size);
+             device_buffer *buffer;
+             rc = getBuffer(*device_destination, &buffer);
+             host_mapped_addr = (uint8_t*)xrtBOMap(buffer->handle);
+             memcpy(host_mapped_addr, host_source, size);
             break;
 
         case FL_TR_HOST_ONLY_BUFF:
