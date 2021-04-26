@@ -8,10 +8,22 @@ platform_state platform;
 device_buffer buffer_map[FLETCHER_PLATFORM_BUFFER_MAP_CAPACITY];
 size_t buffer_map_size = 0;
 
-fstatus_t getBuffer(da_t device_address, device_buffer **device_buffer) {
+fstatus_t getBufferByDA(da_t device_address, device_buffer **device_buffer) {
     for (int i = 0; i < buffer_map_size; i++) {
         if (buffer_map[i].device_address <= device_address &&
             buffer_map[i].device_address + buffer_map[i].size > device_address) {
+            *device_buffer = & buffer_map[i];
+            return FLETCHER_STATUS_OK;
+        }
+    }
+    fprintf(stderr, "[FLETCHER_ALVEO] Buffer address not found in platform buffer map\n");
+    return FLETCHER_STATUS_ERROR;
+}
+
+fstatus_t getBufferByHA(uint8_t host_address, device_buffer **device_buffer) {
+    for (int i = 0; i < buffer_map_size; i++) {
+        if (buffer_map[i].host_address <= host_address &&
+            buffer_map[i].host_address + buffer_map[i].size > host_address) {
             *device_buffer = & buffer_map[i];
             return FLETCHER_STATUS_OK;
         }
@@ -120,7 +132,7 @@ fstatus_t platformCopyHostToDevice(const uint8_t *host_source,
         size);
     fstatus_t rc;
     device_buffer *buffer;
-    rc = getBuffer(device_destination, & buffer);
+    rc = getBufferByDA(device_destination, & buffer);
     if (rc != FLETCHER_STATUS_OK) {
         return FLETCHER_STATUS_ERROR;
     }
@@ -149,7 +161,7 @@ fstatus_t platformCopyDeviceToHost(const da_t device_source,
 
     fstatus_t rc;
     device_buffer *buffer;
-    rc = getBuffer(device_source, & buffer);
+    rc = getBufferByDA(device_source, & buffer);
     if (rc != FLETCHER_STATUS_OK) {
         return FLETCHER_STATUS_ERROR;
     }
@@ -194,9 +206,11 @@ uint64_t platformHostMalloc(da_t *device_address, int64_t size) {
         fprintf(stderr, "[FLETCHER_ALVEO] Error: allocating host memory.\n");
         return FLETCHER_STATUS_ERROR;
     }
-
+        
+    uint8_t *host_mapped_addr = (uint8_t*)xrtBOMap(buf.handle);
     *device_address = xrtBOAddress(buf.handle);
     buf.device_address = *device_address;
+    buf.host_address = *host_mapped_addr;
     buf.active = true;
     buf.size = size;
     buffer_map[buffer_map_size] = buf;
@@ -208,7 +222,7 @@ uint64_t platformHostMalloc(da_t *device_address, int64_t size) {
 fstatus_t platformDeviceFree(da_t device_address) {
     int rc;
     device_buffer *buffer;
-    rc = getBuffer(device_address, & buffer);
+    rc = getBufferByDA(device_address, & buffer);
     if (rc != 0) {
         return FLETCHER_STATUS_ERROR;
     }
@@ -231,7 +245,6 @@ fstatus_t platformPrepareHostBuffer(const uint8_t *host_source,
     int64_t size,
     int *alloced) {
     fstatus_t rc;
-    uint8_t *host_mapped_addr;
 
     switch (platform.transfer_mech) {
         case FL_TR_DEVICE_DMA:
@@ -248,19 +261,27 @@ fstatus_t platformPrepareHostBuffer(const uint8_t *host_source,
             break;
 
         case FL_TR_HOST_SHADOW_BUFF:
-            rc = platformHostMalloc(device_destination, size*sizeof(uint8_t));
+            uint8_t *host_address;
+            rc = platformHostMalloc(host_address, size*sizeof(uint8_t));
             if (rc != FLETCHER_STATUS_OK) {
                 return FLETCHER_STATUS_ERROR;
             }
-             device_buffer *buffer;
-             rc = getBuffer(*device_destination, &buffer);
-             host_mapped_addr = (uint8_t*)xrtBOMap(buffer->handle);
-             memcpy(host_mapped_addr, host_source, size);
+              device_buffer *buffer;
+             rc = getBufferByHA(*host_address, &buffer);
+             if (rc != FLETCHER_STATUS_OK) {
+                return FLETCHER_STATUS_ERROR;
+             }
+             *device_destination = buffer->device_address;
+             memcpy(host_address, host_source, size);
+             
             break;
 
         case FL_TR_HOST_ONLY_BUFF:
-            // The buffer has been allocated externally, so do nothing.
-            *device_destination = (da_t) host_source;
+            rc = getBufferByHA(*host_source, &buffer);
+             if (rc != FLETCHER_STATUS_OK) {
+                return FLETCHER_STATUS_ERROR;
+             }
+             *device_destination = buffer->device_address;             
             break;
         case FL_TR_NONE:
             break;

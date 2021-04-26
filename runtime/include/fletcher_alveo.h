@@ -15,7 +15,7 @@ typedef struct {
     uint64_t memory_bank;
 } platform_init; 
 
-uint64_t platformHostMalloc(da_t *device_address, int64_t size);
+uint64_t platformHostMalloc(uint8_t *host_address, int64_t size);
 
 #ifdef __cplusplus
 }
