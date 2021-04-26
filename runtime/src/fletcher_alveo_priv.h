@@ -42,6 +42,7 @@ typedef struct {
 typedef struct {
     xrtBufferHandle handle;
     da_t device_address;
+    uint64_t host_address;
     size_t size;
     bool active;
 } device_buffer;
