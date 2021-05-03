@@ -20,7 +20,7 @@
 
 #define FLETCHER_PLATFORM_BUFFER_MAP_CAPACITY 4096
 
-#define ALVEO_CHECK_RESULT(result, label)                              \
+#define ALVEO_CHECK_RESULT(result, label)                             \
     if (result != FPGA_OK)                                            \
     {                                                                 \
         fprintf(stderr, "Error %s: %s\n", label, fpgaErrStr(result)); \

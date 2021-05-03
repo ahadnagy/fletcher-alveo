@@ -198,8 +198,9 @@ uint64_t platformDeviceMalloc(da_t *device_address, int64_t size) {
     return FLETCHER_STATUS_OK;
 }
 
-uint64_t platformHostMalloc(da_t *device_address, int64_t size) {
+uint64_t platformHostMalloc(uint8_t **host_ptr, int64_t size) {
     device_buffer buf;
+    da_t device_address;
 
     buf.handle = xrtBOAlloc(platform.device, size, XRT_BO_FLAGS_HOST_ONLY, platform.memory_bank);
     if (buf.handle == 0) {
@@ -207,10 +208,10 @@ uint64_t platformHostMalloc(da_t *device_address, int64_t size) {
         return FLETCHER_STATUS_ERROR;
     }
         
-    uint8_t *host_mapped_addr = (uint8_t*)xrtBOMap(buf.handle);
-    *device_address = xrtBOAddress(buf.handle);
-    buf.device_address = *device_address;
-    buf.host_address = *host_mapped_addr;
+    *host_ptr = (uint8_t*)xrtBOMap(buf.handle);
+    device_address = xrtBOAddress(buf.handle);
+    buf.device_address = device_address;
+    buf.host_address = **host_ptr;
     buf.active = true;
     buf.size = size;
     buffer_map[buffer_map_size] = buf;
@@ -262,7 +263,7 @@ fstatus_t platformPrepareHostBuffer(const uint8_t *host_source,
 
         case FL_TR_HOST_SHADOW_BUFF:
             uint8_t *host_address;
-            rc = platformHostMalloc(host_address, size*sizeof(uint8_t));
+            rc = platformHostMalloc(&host_address, size*sizeof(uint8_t));
             if (rc != FLETCHER_STATUS_OK) {
                 return FLETCHER_STATUS_ERROR;
             }
