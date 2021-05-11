@@ -53,35 +53,48 @@ architecture Behavorial of SimTop_tc is
       BUS_BURST_MAX_LEN  : integer := 16
     );
     port (
-      bcd_clk           : in  std_logic;
-      bcd_reset         : in  std_logic;
-      kcd_clk           : in  std_logic;
-      kcd_reset         : in  std_logic;
-      mmio_awvalid      : in  std_logic;
-      mmio_awready      : out std_logic;
-      mmio_awaddr       : in  std_logic_vector(31 downto 0);
-      mmio_wvalid       : in  std_logic;
-      mmio_wready       : out std_logic;
-      mmio_wdata        : in  std_logic_vector(31 downto 0);
-      mmio_wstrb        : in  std_logic_vector(3 downto 0);
-      mmio_bvalid       : out std_logic;
-      mmio_bready       : in  std_logic;
-      mmio_bresp        : out std_logic_vector(1 downto 0);
-      mmio_arvalid      : in  std_logic;
-      mmio_arready      : out std_logic;
-      mmio_araddr       : in  std_logic_vector(31 downto 0);
-      mmio_rvalid       : out std_logic;
-      mmio_rready       : in  std_logic;
-      mmio_rdata        : out std_logic_vector(31 downto 0);
-      mmio_rresp        : out std_logic_vector(1 downto 0);
-      rd_mst_rreq_valid : out std_logic;
-      rd_mst_rreq_ready : in  std_logic;
-      rd_mst_rreq_addr  : out std_logic_vector(BUS_ADDR_WIDTH-1 downto 0);
-      rd_mst_rreq_len   : out std_logic_vector(BUS_LEN_WIDTH-1 downto 0);
-      rd_mst_rdat_valid : in  std_logic;
-      rd_mst_rdat_ready : out std_logic;
-      rd_mst_rdat_data  : in  std_logic_vector(BUS_DATA_WIDTH-1 downto 0);
-      rd_mst_rdat_last  : in  std_logic
+      bcd_clk            : in  std_logic;
+      bcd_reset          : in  std_logic;
+      kcd_clk            : in  std_logic;
+      kcd_reset          : in  std_logic;
+      mmio_awvalid       : in  std_logic;
+      mmio_awready       : out std_logic;
+      mmio_awaddr        : in  std_logic_vector(31 downto 0);
+      mmio_wvalid        : in  std_logic;
+      mmio_wready        : out std_logic;
+      mmio_wdata         : in  std_logic_vector(31 downto 0);
+      mmio_wstrb         : in  std_logic_vector(3 downto 0);
+      mmio_bvalid        : out std_logic;
+      mmio_bready        : in  std_logic;
+      mmio_bresp         : out std_logic_vector(1 downto 0);
+      mmio_arvalid       : in  std_logic;
+      mmio_arready       : out std_logic;
+      mmio_araddr        : in  std_logic_vector(31 downto 0);
+      mmio_rvalid        : out std_logic;
+      mmio_rready        : in  std_logic;
+      mmio_rdata         : out std_logic_vector(31 downto 0);
+      mmio_rresp         : out std_logic_vector(1 downto 0);
+      rd_mst_rreq_valid  : out std_logic;
+      rd_mst_rreq_ready  : in  std_logic;
+      rd_mst_rreq_addr   : out std_logic_vector(BUS_ADDR_WIDTH-1 downto 0);
+      rd_mst_rreq_len    : out std_logic_vector(BUS_LEN_WIDTH-1 downto 0);
+      rd_mst_rdat_valid  : in  std_logic;
+      rd_mst_rdat_ready  : out std_logic;
+      rd_mst_rdat_data   : in  std_logic_vector(BUS_DATA_WIDTH-1 downto 0);
+      rd_mst_rdat_last   : in  std_logic;
+      wr_mst_wreq_valid  : out std_logic;
+      wr_mst_wreq_ready  : in  std_logic;
+      wr_mst_wreq_addr   : out std_logic_vector(BUS_ADDR_WIDTH-1 downto 0);
+      wr_mst_wreq_len    : out std_logic_vector(BUS_LEN_WIDTH-1 downto 0);
+      wr_mst_wreq_last   : out std_logic;
+      wr_mst_wdat_valid  : out std_logic;
+      wr_mst_wdat_ready  : in  std_logic;
+      wr_mst_wdat_data   : out std_logic_vector(BUS_DATA_WIDTH-1 downto 0);
+      wr_mst_wdat_strobe : out std_logic_vector(BUS_DATA_WIDTH/8-1 downto 0);
+      wr_mst_wdat_last   : out std_logic;
+      wr_mst_wrep_valid  : in  std_logic;
+      wr_mst_wrep_ready  : out std_logic;
+      wr_mst_wrep_ok     : in  std_logic
     );
   end component;
   -----------------------------------------------------------------------------
@@ -307,109 +320,173 @@ begin
     mmio_write32(REG_CONTROL, CONTROL_RESET, mmio_source, mmio_sink, bcd_clk, bcd_reset);
 
     -- 2. Write addresses of the arrow buffers in the SREC file.
-    mmio_write32(36, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch000 in_offsets buffer address.
-    mmio_write32(37, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(38, X"00000100", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch000 in_values buffer address.
-    mmio_write32(39, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(40, X"00001540", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch001 in_offsets buffer address.
-    mmio_write32(41, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(42, X"00001640", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch001 in_values buffer address.
-    mmio_write32(43, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(44, X"00002a00", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch002 in_offsets buffer address.
-    mmio_write32(45, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(46, X"00002b00", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch002 in_values buffer address.
-    mmio_write32(47, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(48, X"00003f00", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch003 in_offsets buffer address.
-    mmio_write32(49, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(50, X"00004000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch003 in_values buffer address.
-    mmio_write32(51, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(52, X"00005400", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch004 in_offsets buffer address.
-    mmio_write32(53, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(54, X"00005500", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch004 in_values buffer address.
-    mmio_write32(55, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(56, X"00006900", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch005 in_offsets buffer address.
-    mmio_write32(57, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(58, X"000069c0", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch005 in_values buffer address.
-    mmio_write32(59, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(60, X"00007d80", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch006 in_offsets buffer address.
-    mmio_write32(61, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(62, X"00007e80", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch006 in_values buffer address.
-    mmio_write32(63, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(64, X"00009240", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch007 in_offsets buffer address.
-    mmio_write32(65, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(66, X"00009340", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch007 in_values buffer address.
-    mmio_write32(67, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(68, X"0000a780", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch008 in_offsets buffer address.
+    mmio_write32(68, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch000 in_offsets buffer address.
     mmio_write32(69, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(70, X"0000a880", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch008 in_values buffer address.
+    mmio_write32(70, X"00000100", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch000 in_values buffer address.
     mmio_write32(71, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(72, X"0000bc40", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch009 in_offsets buffer address.
+    mmio_write32(72, X"00001500", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch001 in_offsets buffer address.
     mmio_write32(73, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(74, X"0000bd00", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch009 in_values buffer address.
+    mmio_write32(74, X"00001600", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch001 in_values buffer address.
     mmio_write32(75, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(76, X"0000d0c0", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch010 in_offsets buffer address.
+    mmio_write32(76, X"00002a00", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch002 in_offsets buffer address.
     mmio_write32(77, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(78, X"0000d1c0", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch010 in_values buffer address.
+    mmio_write32(78, X"00002b00", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch002 in_values buffer address.
     mmio_write32(79, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(80, X"0000e600", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch011 in_offsets buffer address.
+    mmio_write32(80, X"00003ec0", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch003 in_offsets buffer address.
     mmio_write32(81, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(82, X"0000e700", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch011 in_values buffer address.
+    mmio_write32(82, X"00003fc0", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch003 in_values buffer address.
     mmio_write32(83, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(84, X"0000fb00", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch012 in_offsets buffer address.
+    mmio_write32(84, X"00005380", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch004 in_offsets buffer address.
     mmio_write32(85, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(86, X"0000fc00", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch012 in_values buffer address.
+    mmio_write32(86, X"00005480", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch004 in_values buffer address.
     mmio_write32(87, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(88, X"00011000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch013 in_offsets buffer address.
+    mmio_write32(88, X"00006880", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch005 in_offsets buffer address.
     mmio_write32(89, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(90, X"00011100", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch013 in_values buffer address.
+    mmio_write32(90, X"00006940", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch005 in_values buffer address.
     mmio_write32(91, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(92, X"000124c0", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch014 in_offsets buffer address.
+    mmio_write32(92, X"00007d00", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch006 in_offsets buffer address.
     mmio_write32(93, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(94, X"000125c0", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch014 in_values buffer address.
+    mmio_write32(94, X"00007e00", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch006 in_values buffer address.
     mmio_write32(95, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(96, X"00013a00", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch015 in_offsets buffer address.
+    mmio_write32(96, X"00009200", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch007 in_offsets buffer address.
     mmio_write32(97, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    mmio_write32(98, X"00013b00", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch015 in_values buffer address.
+    mmio_write32(98, X"00009300", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch007 in_values buffer address.
     mmio_write32(99, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(100, X"0000a6c0", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch008 in_offsets buffer address.
+    mmio_write32(101, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(102, X"0000a7c0", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch008 in_values buffer address.
+    mmio_write32(103, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(104, X"0000bb80", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch009 in_offsets buffer address.
+    mmio_write32(105, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(106, X"0000bc40", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch009 in_values buffer address.
+    mmio_write32(107, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(108, X"0000d040", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch010 in_offsets buffer address.
+    mmio_write32(109, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(110, X"0000d140", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch010 in_values buffer address.
+    mmio_write32(111, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(112, X"0000e540", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch011 in_offsets buffer address.
+    mmio_write32(113, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(114, X"0000e640", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch011 in_values buffer address.
+    mmio_write32(115, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(116, X"0000fa00", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch012 in_offsets buffer address.
+    mmio_write32(117, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(118, X"0000fb00", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch012 in_values buffer address.
+    mmio_write32(119, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(120, X"00010ec0", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch013 in_offsets buffer address.
+    mmio_write32(121, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(122, X"00010f80", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch013 in_values buffer address.
+    mmio_write32(123, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(124, X"00012380", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch014 in_offsets buffer address.
+    mmio_write32(125, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(126, X"00012480", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch014 in_values buffer address.
+    mmio_write32(127, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(128, X"00013840", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch015 in_offsets buffer address.
+    mmio_write32(129, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(130, X"00013940", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch015 in_values buffer address.
+    mmio_write32(131, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(132, X"00014d80", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch000_taxi out_values buffer address.
+    mmio_write32(133, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(134, X"00014e00", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch001_taxi out_values buffer address.
+    mmio_write32(135, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(136, X"00014e80", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch002_taxi out_values buffer address.
+    mmio_write32(137, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(138, X"00014f00", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch003_taxi out_values buffer address.
+    mmio_write32(139, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(140, X"00014f80", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch004_taxi out_values buffer address.
+    mmio_write32(141, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(142, X"00015000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch005_taxi out_values buffer address.
+    mmio_write32(143, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(144, X"00015080", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch006_taxi out_values buffer address.
+    mmio_write32(145, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(146, X"00015140", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch007_taxi out_values buffer address.
+    mmio_write32(147, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(148, X"000151c0", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch008_taxi out_values buffer address.
+    mmio_write32(149, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(150, X"00015240", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch009_taxi out_values buffer address.
+    mmio_write32(151, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(152, X"000152c0", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch010_taxi out_values buffer address.
+    mmio_write32(153, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(154, X"00015340", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch011_taxi out_values buffer address.
+    mmio_write32(155, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(156, X"000153c0", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch012_taxi out_values buffer address.
+    mmio_write32(157, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(158, X"00015440", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch013_taxi out_values buffer address.
+    mmio_write32(159, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(160, X"000154c0", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch014_taxi out_values buffer address.
+    mmio_write32(161, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    mmio_write32(162, X"00015540", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch015_taxi out_values buffer address.
+    mmio_write32(163, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset);
 
     -- 3. Write recordbatch bounds.
     mmio_write32(4, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch000 first index.
     mmio_write32(5, X"00000034", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch000 last index.
     mmio_write32(6, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch001 first index.
-    mmio_write32(7, X"00000034", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch001 last index.
+    mmio_write32(7, X"00000032", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch001 last index.
     mmio_write32(8, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch002 first index.
-    mmio_write32(9, X"00000030", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch002 last index.
+    mmio_write32(9, X"00000031", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch002 last index.
     mmio_write32(10, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch003 first index.
-    mmio_write32(11, X"00000034", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch003 last index.
+    mmio_write32(11, X"00000036", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch003 last index.
     mmio_write32(12, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch004 first index.
-    mmio_write32(13, X"00000030", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch004 last index.
+    mmio_write32(13, X"00000034", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch004 last index.
     mmio_write32(14, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch005 first index.
-    mmio_write32(15, X"0000002d", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch005 last index.
+    mmio_write32(15, X"0000002e", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch005 last index.
     mmio_write32(16, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch006 first index.
-    mmio_write32(17, X"00000033", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch006 last index.
+    mmio_write32(17, X"00000032", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch006 last index.
     mmio_write32(18, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch007 first index.
-    mmio_write32(19, X"00000030", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch007 last index.
+    mmio_write32(19, X"00000038", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch007 last index.
     mmio_write32(20, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch008 first index.
-    mmio_write32(21, X"00000033", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch008 last index.
+    mmio_write32(21, X"00000031", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch008 last index.
     mmio_write32(22, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch009 first index.
-    mmio_write32(23, X"0000002f", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch009 last index.
+    mmio_write32(23, X"0000002d", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch009 last index.
     mmio_write32(24, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch010 first index.
-    mmio_write32(25, X"00000031", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch010 last index.
+    mmio_write32(25, X"00000036", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch010 last index.
     mmio_write32(26, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch011 first index.
-    mmio_write32(27, X"00000033", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch011 last index.
+    mmio_write32(27, X"00000034", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch011 last index.
     mmio_write32(28, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch012 first index.
-    mmio_write32(29, X"00000033", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch012 last index.
+    mmio_write32(29, X"00000037", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch012 last index.
     mmio_write32(30, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch013 first index.
-    mmio_write32(31, X"00000033", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch013 last index.
+    mmio_write32(31, X"0000002d", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch013 last index.
     mmio_write32(32, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch014 first index.
-    mmio_write32(33, X"00000032", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch014 last index.
+    mmio_write32(33, X"00000033", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch014 last index.
     mmio_write32(34, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch015 first index.
-    mmio_write32(35, X"00000035", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch015 last index.
+    mmio_write32(35, X"00000038", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch015 last index.
+    mmio_write32(36, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch000_taxi first index.
+    mmio_write32(37, X"0000001b", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch000_taxi last index.
+    mmio_write32(38, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch001_taxi first index.
+    mmio_write32(39, X"00000017", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch001_taxi last index.
+    mmio_write32(40, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch002_taxi first index.
+    mmio_write32(41, X"00000018", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch002_taxi last index.
+    mmio_write32(42, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch003_taxi first index.
+    mmio_write32(43, X"00000019", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch003_taxi last index.
+    mmio_write32(44, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch004_taxi first index.
+    mmio_write32(45, X"00000016", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch004_taxi last index.
+    mmio_write32(46, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch005_taxi first index.
+    mmio_write32(47, X"00000015", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch005_taxi last index.
+    mmio_write32(48, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch006_taxi first index.
+    mmio_write32(49, X"00000023", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch006_taxi last index.
+    mmio_write32(50, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch007_taxi first index.
+    mmio_write32(51, X"0000001e", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch007_taxi last index.
+    mmio_write32(52, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch008_taxi first index.
+    mmio_write32(53, X"00000016", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch008_taxi last index.
+    mmio_write32(54, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch009_taxi first index.
+    mmio_write32(55, X"00000014", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch009_taxi last index.
+    mmio_write32(56, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch010_taxi first index.
+    mmio_write32(57, X"0000001a", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch010_taxi last index.
+    mmio_write32(58, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch011_taxi first index.
+    mmio_write32(59, X"00000018", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch011_taxi last index.
+    mmio_write32(60, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch012_taxi first index.
+    mmio_write32(61, X"00000018", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch012_taxi last index.
+    mmio_write32(62, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch013_taxi first index.
+    mmio_write32(63, X"00000018", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch013_taxi last index.
+    mmio_write32(64, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch014_taxi first index.
+    mmio_write32(65, X"0000001a", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch014_taxi last index.
+    mmio_write32(66, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch015_taxi first index.
+    mmio_write32(67, X"00000018", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- rematch015_taxi last index.
 
     -- 4. Write any kernel-specific registers.
 
     -- 5. Start the kernel.
-    mmio_write32(121, X"00000001", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- Start profiling.
+    mmio_write32(200, X"00000001", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- Start profiling.
     mmio_write32(REG_CONTROL, CONTROL_START, mmio_source, mmio_sink, bcd_clk, bcd_reset);
 
     -- 6. Poll for completion
@@ -427,104 +504,104 @@ begin
       exit when read_data_masked = STATUS_DONE;
     end loop;
 
-    mmio_write32(121, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- Stop profiling.
+    mmio_write32(200, X"00000000", mmio_source, mmio_sink, bcd_clk, bcd_reset); -- Stop profiling.
 
     -- 7. Read return register.
 
-    mmio_read32(104, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    println("Number of matches for bird: " & integer'image(to_integer(unsigned(read_data))));
-    assert to_integer(unsigned(read_data)) = 22
-        report "unexpected number of matches for bird; expected 22"
-        severity failure;
-
-    mmio_read32(105, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    println("Number of matches for bunny: " & integer'image(to_integer(unsigned(read_data))));
+    mmio_read32(168, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    println("Number of matches for taxi: " & integer'image(to_integer(unsigned(read_data))));
     assert to_integer(unsigned(read_data)) = 27
-        report "unexpected number of matches for bunny; expected 27"
+        report "unexpected number of matches for taxi; expected 27"
         severity failure;
 
-    mmio_read32(106, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    println("Number of matches for cat: " & integer'image(to_integer(unsigned(read_data))));
-    assert to_integer(unsigned(read_data)) = 19
-        report "unexpected number of matches for cat; expected 19"
-        severity failure;
-
-    mmio_read32(107, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    println("Number of matches for dog: " & integer'image(to_integer(unsigned(read_data))));
-    assert to_integer(unsigned(read_data)) = 24
-        report "unexpected number of matches for dog; expected 24"
-        severity failure;
-
-    mmio_read32(108, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    println("Number of matches for ferret: " & integer'image(to_integer(unsigned(read_data))));
-    assert to_integer(unsigned(read_data)) = 27
-        report "unexpected number of matches for ferret; expected 27"
-        severity failure;
-
-    mmio_read32(109, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    println("Number of matches for fish: " & integer'image(to_integer(unsigned(read_data))));
-    assert to_integer(unsigned(read_data)) = 29
-        report "unexpected number of matches for fish; expected 29"
-        severity failure;
-
-    mmio_read32(110, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    println("Number of matches for gerbil: " & integer'image(to_integer(unsigned(read_data))));
-    assert to_integer(unsigned(read_data)) = 28
-        report "unexpected number of matches for gerbil; expected 28"
-        severity failure;
-
-    mmio_read32(111, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    println("Number of matches for hamster: " & integer'image(to_integer(unsigned(read_data))));
-    assert to_integer(unsigned(read_data)) = 20
-        report "unexpected number of matches for hamster; expected 20"
-        severity failure;
-
-    mmio_read32(112, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    println("Number of matches for horse: " & integer'image(to_integer(unsigned(read_data))));
-    assert to_integer(unsigned(read_data)) = 26
-        report "unexpected number of matches for horse; expected 26"
-        severity failure;
-
-    mmio_read32(113, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    println("Number of matches for kitten: " & integer'image(to_integer(unsigned(read_data))));
-    assert to_integer(unsigned(read_data)) = 31
-        report "unexpected number of matches for kitten; expected 31"
-        severity failure;
-
-    mmio_read32(114, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    println("Number of matches for lizard: " & integer'image(to_integer(unsigned(read_data))));
-    assert to_integer(unsigned(read_data)) = 30
-        report "unexpected number of matches for lizard; expected 30"
-        severity failure;
-
-    mmio_read32(115, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    println("Number of matches for mouse: " & integer'image(to_integer(unsigned(read_data))));
-    assert to_integer(unsigned(read_data)) = 26
-        report "unexpected number of matches for mouse; expected 26"
-        severity failure;
-
-    mmio_read32(116, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    println("Number of matches for puppy: " & integer'image(to_integer(unsigned(read_data))));
-    assert to_integer(unsigned(read_data)) = 28
-        report "unexpected number of matches for puppy; expected 28"
-        severity failure;
-
-    mmio_read32(117, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    println("Number of matches for rabbit: " & integer'image(to_integer(unsigned(read_data))));
+    mmio_read32(170, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    println("Number of matches for taxi: " & integer'image(to_integer(unsigned(read_data))));
     assert to_integer(unsigned(read_data)) = 23
-        report "unexpected number of matches for rabbit; expected 23"
+        report "unexpected number of matches for taxi; expected 23"
         severity failure;
 
-    mmio_read32(118, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    println("Number of matches for rat: " & integer'image(to_integer(unsigned(read_data))));
-    assert to_integer(unsigned(read_data)) = 22
-        report "unexpected number of matches for rat; expected 22"
-        severity failure;
-
-    mmio_read32(119, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
-    println("Number of matches for turtle: " & integer'image(to_integer(unsigned(read_data))));
+    mmio_read32(172, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    println("Number of matches for taxi: " & integer'image(to_integer(unsigned(read_data))));
     assert to_integer(unsigned(read_data)) = 24
-        report "unexpected number of matches for turtle; expected 24"
+        report "unexpected number of matches for taxi; expected 24"
+        severity failure;
+
+    mmio_read32(174, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    println("Number of matches for taxi: " & integer'image(to_integer(unsigned(read_data))));
+    assert to_integer(unsigned(read_data)) = 25
+        report "unexpected number of matches for taxi; expected 25"
+        severity failure;
+
+    mmio_read32(176, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    println("Number of matches for taxi: " & integer'image(to_integer(unsigned(read_data))));
+    assert to_integer(unsigned(read_data)) = 22
+        report "unexpected number of matches for taxi; expected 22"
+        severity failure;
+
+    mmio_read32(178, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    println("Number of matches for taxi: " & integer'image(to_integer(unsigned(read_data))));
+    assert to_integer(unsigned(read_data)) = 21
+        report "unexpected number of matches for taxi; expected 21"
+        severity failure;
+
+    mmio_read32(180, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    println("Number of matches for taxi: " & integer'image(to_integer(unsigned(read_data))));
+    assert to_integer(unsigned(read_data)) = 35
+        report "unexpected number of matches for taxi; expected 35"
+        severity failure;
+
+    mmio_read32(182, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    println("Number of matches for taxi: " & integer'image(to_integer(unsigned(read_data))));
+    assert to_integer(unsigned(read_data)) = 30
+        report "unexpected number of matches for taxi; expected 30"
+        severity failure;
+
+    mmio_read32(184, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    println("Number of matches for taxi: " & integer'image(to_integer(unsigned(read_data))));
+    assert to_integer(unsigned(read_data)) = 22
+        report "unexpected number of matches for taxi; expected 22"
+        severity failure;
+
+    mmio_read32(186, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    println("Number of matches for taxi: " & integer'image(to_integer(unsigned(read_data))));
+    assert to_integer(unsigned(read_data)) = 20
+        report "unexpected number of matches for taxi; expected 20"
+        severity failure;
+
+    mmio_read32(188, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    println("Number of matches for taxi: " & integer'image(to_integer(unsigned(read_data))));
+    assert to_integer(unsigned(read_data)) = 26
+        report "unexpected number of matches for taxi; expected 26"
+        severity failure;
+
+    mmio_read32(190, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    println("Number of matches for taxi: " & integer'image(to_integer(unsigned(read_data))));
+    assert to_integer(unsigned(read_data)) = 24
+        report "unexpected number of matches for taxi; expected 24"
+        severity failure;
+
+    mmio_read32(192, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    println("Number of matches for taxi: " & integer'image(to_integer(unsigned(read_data))));
+    assert to_integer(unsigned(read_data)) = 24
+        report "unexpected number of matches for taxi; expected 24"
+        severity failure;
+
+    mmio_read32(194, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    println("Number of matches for taxi: " & integer'image(to_integer(unsigned(read_data))));
+    assert to_integer(unsigned(read_data)) = 24
+        report "unexpected number of matches for taxi; expected 24"
+        severity failure;
+
+    mmio_read32(196, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    println("Number of matches for taxi: " & integer'image(to_integer(unsigned(read_data))));
+    assert to_integer(unsigned(read_data)) = 26
+        report "unexpected number of matches for taxi; expected 26"
+        severity failure;
+
+    mmio_read32(198, read_data, mmio_source, mmio_sink, bcd_clk, bcd_reset);
+    println("Number of matches for taxi: " & integer'image(to_integer(unsigned(read_data))));
+    assert to_integer(unsigned(read_data)) = 24
+        report "unexpected number of matches for taxi; expected 24"
         severity failure;
 
     -- 8. Read profile registers.
@@ -585,7 +662,33 @@ begin
   );
 
 
-
+  wmem_inst: BusWriteSlaveMock
+  generic map (
+    BUS_ADDR_WIDTH              => BUS_ADDR_WIDTH,
+    BUS_LEN_WIDTH               => BUS_LEN_WIDTH,
+    BUS_DATA_WIDTH              => BUS_DATA_WIDTH,
+    SEED                        => 1337,
+    RANDOM_REQUEST_TIMING       => false,
+    RANDOM_RESPONSE_TIMING      => false,
+    SREC_FILE                   => ""
+  )
+  port map (
+    clk                         => bcd_clk,
+    reset                       => bcd_reset,
+    wreq_valid                  => bus_wreq_valid,
+    wreq_ready                  => bus_wreq_ready,
+    wreq_addr                   => bus_wreq_addr,
+    wreq_len                    => bus_wreq_len,
+    wreq_last                   => bus_wreq_last,
+    wdat_valid                  => bus_wdat_valid,
+    wdat_ready                  => bus_wdat_ready,
+    wdat_data                   => bus_wdat_data,
+    wdat_strobe                 => bus_wdat_strobe,
+    wdat_last                   => bus_wdat_last,
+    wrep_valid                  => bus_wrep_valid,
+    wrep_ready                  => bus_wrep_ready,
+    wrep_ok                     => bus_wrep_ok
+  );
 
 
   -----------------------------------------------------------------------------
@@ -616,7 +719,19 @@ begin
       rd_mst_rdat_data          => bus_rdat_data,
       rd_mst_rdat_last          => bus_rdat_last,
 
-
+      wr_mst_wreq_valid         => bus_wreq_valid,
+      wr_mst_wreq_ready         => bus_wreq_ready,
+      wr_mst_wreq_addr          => bus_wreq_addr,
+      wr_mst_wreq_len           => bus_wreq_len,
+      wr_mst_wreq_last          => bus_wreq_last,
+      wr_mst_wdat_valid         => bus_wdat_valid,
+      wr_mst_wdat_ready         => bus_wdat_ready,
+      wr_mst_wdat_data          => bus_wdat_data,
+      wr_mst_wdat_strobe        => bus_wdat_strobe,
+      wr_mst_wdat_last          => bus_wdat_last,
+      wr_mst_wrep_valid         => bus_wrep_valid,
+      wr_mst_wrep_ready         => bus_wrep_ready,
+      wr_mst_wrep_ok            => bus_wrep_ok,
       mmio_awvalid              => mmio_awvalid,
       mmio_awready              => mmio_awready,
       mmio_awaddr               => mmio_awaddr,

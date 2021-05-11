@@ -1,5 +1,0 @@
-build/**
-xilinx_*
-*.xclbin
-*log*
-*.srec

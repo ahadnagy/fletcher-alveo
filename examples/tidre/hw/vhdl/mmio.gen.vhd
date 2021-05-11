@@ -165,6 +165,134 @@ entity mmio is
     f_rematch015_lastidx_data : out std_logic_vector(31 downto 0)
         := (others => '0');
 
+    -- Interface for field rematch000_taxi_firstidx: rematch000_taxi_firstidx.
+    f_rematch000_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch000_taxi_lastidx: rematch000_taxi_lastidx.
+    f_rematch000_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch001_taxi_firstidx: rematch001_taxi_firstidx.
+    f_rematch001_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch001_taxi_lastidx: rematch001_taxi_lastidx.
+    f_rematch001_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch002_taxi_firstidx: rematch002_taxi_firstidx.
+    f_rematch002_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch002_taxi_lastidx: rematch002_taxi_lastidx.
+    f_rematch002_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch003_taxi_firstidx: rematch003_taxi_firstidx.
+    f_rematch003_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch003_taxi_lastidx: rematch003_taxi_lastidx.
+    f_rematch003_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch004_taxi_firstidx: rematch004_taxi_firstidx.
+    f_rematch004_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch004_taxi_lastidx: rematch004_taxi_lastidx.
+    f_rematch004_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch005_taxi_firstidx: rematch005_taxi_firstidx.
+    f_rematch005_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch005_taxi_lastidx: rematch005_taxi_lastidx.
+    f_rematch005_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch006_taxi_firstidx: rematch006_taxi_firstidx.
+    f_rematch006_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch006_taxi_lastidx: rematch006_taxi_lastidx.
+    f_rematch006_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch007_taxi_firstidx: rematch007_taxi_firstidx.
+    f_rematch007_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch007_taxi_lastidx: rematch007_taxi_lastidx.
+    f_rematch007_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch008_taxi_firstidx: rematch008_taxi_firstidx.
+    f_rematch008_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch008_taxi_lastidx: rematch008_taxi_lastidx.
+    f_rematch008_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch009_taxi_firstidx: rematch009_taxi_firstidx.
+    f_rematch009_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch009_taxi_lastidx: rematch009_taxi_lastidx.
+    f_rematch009_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch010_taxi_firstidx: rematch010_taxi_firstidx.
+    f_rematch010_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch010_taxi_lastidx: rematch010_taxi_lastidx.
+    f_rematch010_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch011_taxi_firstidx: rematch011_taxi_firstidx.
+    f_rematch011_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch011_taxi_lastidx: rematch011_taxi_lastidx.
+    f_rematch011_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch012_taxi_firstidx: rematch012_taxi_firstidx.
+    f_rematch012_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch012_taxi_lastidx: rematch012_taxi_lastidx.
+    f_rematch012_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch013_taxi_firstidx: rematch013_taxi_firstidx.
+    f_rematch013_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch013_taxi_lastidx: rematch013_taxi_lastidx.
+    f_rematch013_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch014_taxi_firstidx: rematch014_taxi_firstidx.
+    f_rematch014_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch014_taxi_lastidx: rematch014_taxi_lastidx.
+    f_rematch014_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch015_taxi_firstidx: rematch015_taxi_firstidx.
+    f_rematch015_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch015_taxi_lastidx: rematch015_taxi_lastidx.
+    f_rematch015_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+        := (others => '0');
+
     -- Interface for field rematch000_in_offsets: rematch000_in_offsets.
     f_rematch000_in_offsets_data : out std_logic_vector(63 downto 0)
         := (others => '0');
@@ -293,72 +421,212 @@ entity mmio is
     f_rematch015_in_values_data : out std_logic_vector(63 downto 0)
         := (others => '0');
 
-    -- Interface for field count_re_bird: count_re_bird.
-    f_count_re_bird_write_data : in std_logic_vector(31 downto 0)
+    -- Interface for field rematch000_taxi_out_values:
+    -- rematch000_taxi_out_values.
+    f_rematch000_taxi_out_values_data : out std_logic_vector(63 downto 0)
         := (others => '0');
 
-    -- Interface for field count_re_bunny: count_re_bunny.
-    f_count_re_bunny_write_data : in std_logic_vector(31 downto 0)
+    -- Interface for field rematch001_taxi_out_values:
+    -- rematch001_taxi_out_values.
+    f_rematch001_taxi_out_values_data : out std_logic_vector(63 downto 0)
         := (others => '0');
 
-    -- Interface for field count_re_cat: count_re_cat.
-    f_count_re_cat_write_data : in std_logic_vector(31 downto 0)
+    -- Interface for field rematch002_taxi_out_values:
+    -- rematch002_taxi_out_values.
+    f_rematch002_taxi_out_values_data : out std_logic_vector(63 downto 0)
         := (others => '0');
 
-    -- Interface for field count_re_dog: count_re_dog.
-    f_count_re_dog_write_data : in std_logic_vector(31 downto 0)
+    -- Interface for field rematch003_taxi_out_values:
+    -- rematch003_taxi_out_values.
+    f_rematch003_taxi_out_values_data : out std_logic_vector(63 downto 0)
         := (others => '0');
 
-    -- Interface for field count_re_ferret: count_re_ferret.
-    f_count_re_ferret_write_data : in std_logic_vector(31 downto 0)
+    -- Interface for field rematch004_taxi_out_values:
+    -- rematch004_taxi_out_values.
+    f_rematch004_taxi_out_values_data : out std_logic_vector(63 downto 0)
         := (others => '0');
 
-    -- Interface for field count_re_fish: count_re_fish.
-    f_count_re_fish_write_data : in std_logic_vector(31 downto 0)
+    -- Interface for field rematch005_taxi_out_values:
+    -- rematch005_taxi_out_values.
+    f_rematch005_taxi_out_values_data : out std_logic_vector(63 downto 0)
         := (others => '0');
 
-    -- Interface for field count_re_gerbil: count_re_gerbil.
-    f_count_re_gerbil_write_data : in std_logic_vector(31 downto 0)
+    -- Interface for field rematch006_taxi_out_values:
+    -- rematch006_taxi_out_values.
+    f_rematch006_taxi_out_values_data : out std_logic_vector(63 downto 0)
         := (others => '0');
 
-    -- Interface for field count_re_hamster: count_re_hamster.
-    f_count_re_hamster_write_data : in std_logic_vector(31 downto 0)
+    -- Interface for field rematch007_taxi_out_values:
+    -- rematch007_taxi_out_values.
+    f_rematch007_taxi_out_values_data : out std_logic_vector(63 downto 0)
         := (others => '0');
 
-    -- Interface for field count_re_horse: count_re_horse.
-    f_count_re_horse_write_data : in std_logic_vector(31 downto 0)
+    -- Interface for field rematch008_taxi_out_values:
+    -- rematch008_taxi_out_values.
+    f_rematch008_taxi_out_values_data : out std_logic_vector(63 downto 0)
         := (others => '0');
 
-    -- Interface for field count_re_kitten: count_re_kitten.
-    f_count_re_kitten_write_data : in std_logic_vector(31 downto 0)
+    -- Interface for field rematch009_taxi_out_values:
+    -- rematch009_taxi_out_values.
+    f_rematch009_taxi_out_values_data : out std_logic_vector(63 downto 0)
         := (others => '0');
 
-    -- Interface for field count_re_lizard: count_re_lizard.
-    f_count_re_lizard_write_data : in std_logic_vector(31 downto 0)
+    -- Interface for field rematch010_taxi_out_values:
+    -- rematch010_taxi_out_values.
+    f_rematch010_taxi_out_values_data : out std_logic_vector(63 downto 0)
         := (others => '0');
 
-    -- Interface for field count_re_mouse: count_re_mouse.
-    f_count_re_mouse_write_data : in std_logic_vector(31 downto 0)
+    -- Interface for field rematch011_taxi_out_values:
+    -- rematch011_taxi_out_values.
+    f_rematch011_taxi_out_values_data : out std_logic_vector(63 downto 0)
         := (others => '0');
 
-    -- Interface for field count_re_puppy: count_re_puppy.
-    f_count_re_puppy_write_data : in std_logic_vector(31 downto 0)
+    -- Interface for field rematch012_taxi_out_values:
+    -- rematch012_taxi_out_values.
+    f_rematch012_taxi_out_values_data : out std_logic_vector(63 downto 0)
         := (others => '0');
 
-    -- Interface for field count_re_rabbit: count_re_rabbit.
-    f_count_re_rabbit_write_data : in std_logic_vector(31 downto 0)
+    -- Interface for field rematch013_taxi_out_values:
+    -- rematch013_taxi_out_values.
+    f_rematch013_taxi_out_values_data : out std_logic_vector(63 downto 0)
         := (others => '0');
 
-    -- Interface for field count_re_rat: count_re_rat.
-    f_count_re_rat_write_data : in std_logic_vector(31 downto 0)
+    -- Interface for field rematch014_taxi_out_values:
+    -- rematch014_taxi_out_values.
+    f_rematch014_taxi_out_values_data : out std_logic_vector(63 downto 0)
         := (others => '0');
 
-    -- Interface for field count_re_turtle: count_re_turtle.
-    f_count_re_turtle_write_data : in std_logic_vector(31 downto 0)
+    -- Interface for field rematch015_taxi_out_values:
+    -- rematch015_taxi_out_values.
+    f_rematch015_taxi_out_values_data : out std_logic_vector(63 downto 0)
         := (others => '0');
 
-    -- Interface for field count_errors: count_errors.
-    f_count_errors_write_data : in std_logic_vector(31 downto 0)
+    -- Interface for field rematch000_taxi_count: rematch000_taxi_count.
+    f_rematch000_taxi_count_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch000_errors: rematch000_errors.
+    f_rematch000_errors_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch001_taxi_count: rematch001_taxi_count.
+    f_rematch001_taxi_count_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch001_errors: rematch001_errors.
+    f_rematch001_errors_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch002_taxi_count: rematch002_taxi_count.
+    f_rematch002_taxi_count_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch002_errors: rematch002_errors.
+    f_rematch002_errors_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch003_taxi_count: rematch003_taxi_count.
+    f_rematch003_taxi_count_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch003_errors: rematch003_errors.
+    f_rematch003_errors_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch004_taxi_count: rematch004_taxi_count.
+    f_rematch004_taxi_count_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch004_errors: rematch004_errors.
+    f_rematch004_errors_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch005_taxi_count: rematch005_taxi_count.
+    f_rematch005_taxi_count_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch005_errors: rematch005_errors.
+    f_rematch005_errors_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch006_taxi_count: rematch006_taxi_count.
+    f_rematch006_taxi_count_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch006_errors: rematch006_errors.
+    f_rematch006_errors_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch007_taxi_count: rematch007_taxi_count.
+    f_rematch007_taxi_count_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch007_errors: rematch007_errors.
+    f_rematch007_errors_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch008_taxi_count: rematch008_taxi_count.
+    f_rematch008_taxi_count_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch008_errors: rematch008_errors.
+    f_rematch008_errors_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch009_taxi_count: rematch009_taxi_count.
+    f_rematch009_taxi_count_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch009_errors: rematch009_errors.
+    f_rematch009_errors_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch010_taxi_count: rematch010_taxi_count.
+    f_rematch010_taxi_count_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch010_errors: rematch010_errors.
+    f_rematch010_errors_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch011_taxi_count: rematch011_taxi_count.
+    f_rematch011_taxi_count_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch011_errors: rematch011_errors.
+    f_rematch011_errors_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch012_taxi_count: rematch012_taxi_count.
+    f_rematch012_taxi_count_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch012_errors: rematch012_errors.
+    f_rematch012_errors_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch013_taxi_count: rematch013_taxi_count.
+    f_rematch013_taxi_count_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch013_errors: rematch013_errors.
+    f_rematch013_errors_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch014_taxi_count: rematch014_taxi_count.
+    f_rematch014_taxi_count_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch014_errors: rematch014_errors.
+    f_rematch014_errors_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch015_taxi_count: rematch015_taxi_count.
+    f_rematch015_taxi_count_write_data : in std_logic_vector(31 downto 0)
+        := (others => '0');
+
+    -- Interface for field rematch015_errors: rematch015_errors.
+    f_rematch015_errors_write_data : in std_logic_vector(31 downto 0)
         := (others => '0');
 
     -- Interface for field Profile_enable: Profile_enable.
@@ -1068,6 +1336,454 @@ begin
     variable f_rematch015_lastidx_r : f_rematch015_lastidx_r_array(0 to 0)
         := (others => F_REMATCH015_LASTIDX_R_RESET);
 
+    -- Private declarations for field rematch000_taxi_firstidx:
+    -- rematch000_taxi_firstidx.
+    type f_rematch000_taxi_firstidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH000_TAXI_FIRSTIDX_R_RESET : f_rematch000_taxi_firstidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch000_taxi_firstidx_r_array is array (natural range <>) of f_rematch000_taxi_firstidx_r_type;
+    variable f_rematch000_taxi_firstidx_r : f_rematch000_taxi_firstidx_r_array(0 to 0)
+        := (others => F_REMATCH000_TAXI_FIRSTIDX_R_RESET);
+
+    -- Private declarations for field rematch000_taxi_lastidx:
+    -- rematch000_taxi_lastidx.
+    type f_rematch000_taxi_lastidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH000_TAXI_LASTIDX_R_RESET : f_rematch000_taxi_lastidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch000_taxi_lastidx_r_array is array (natural range <>) of f_rematch000_taxi_lastidx_r_type;
+    variable f_rematch000_taxi_lastidx_r : f_rematch000_taxi_lastidx_r_array(0 to 0)
+        := (others => F_REMATCH000_TAXI_LASTIDX_R_RESET);
+
+    -- Private declarations for field rematch001_taxi_firstidx:
+    -- rematch001_taxi_firstidx.
+    type f_rematch001_taxi_firstidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH001_TAXI_FIRSTIDX_R_RESET : f_rematch001_taxi_firstidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch001_taxi_firstidx_r_array is array (natural range <>) of f_rematch001_taxi_firstidx_r_type;
+    variable f_rematch001_taxi_firstidx_r : f_rematch001_taxi_firstidx_r_array(0 to 0)
+        := (others => F_REMATCH001_TAXI_FIRSTIDX_R_RESET);
+
+    -- Private declarations for field rematch001_taxi_lastidx:
+    -- rematch001_taxi_lastidx.
+    type f_rematch001_taxi_lastidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH001_TAXI_LASTIDX_R_RESET : f_rematch001_taxi_lastidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch001_taxi_lastidx_r_array is array (natural range <>) of f_rematch001_taxi_lastidx_r_type;
+    variable f_rematch001_taxi_lastidx_r : f_rematch001_taxi_lastidx_r_array(0 to 0)
+        := (others => F_REMATCH001_TAXI_LASTIDX_R_RESET);
+
+    -- Private declarations for field rematch002_taxi_firstidx:
+    -- rematch002_taxi_firstidx.
+    type f_rematch002_taxi_firstidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH002_TAXI_FIRSTIDX_R_RESET : f_rematch002_taxi_firstidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch002_taxi_firstidx_r_array is array (natural range <>) of f_rematch002_taxi_firstidx_r_type;
+    variable f_rematch002_taxi_firstidx_r : f_rematch002_taxi_firstidx_r_array(0 to 0)
+        := (others => F_REMATCH002_TAXI_FIRSTIDX_R_RESET);
+
+    -- Private declarations for field rematch002_taxi_lastidx:
+    -- rematch002_taxi_lastidx.
+    type f_rematch002_taxi_lastidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH002_TAXI_LASTIDX_R_RESET : f_rematch002_taxi_lastidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch002_taxi_lastidx_r_array is array (natural range <>) of f_rematch002_taxi_lastidx_r_type;
+    variable f_rematch002_taxi_lastidx_r : f_rematch002_taxi_lastidx_r_array(0 to 0)
+        := (others => F_REMATCH002_TAXI_LASTIDX_R_RESET);
+
+    -- Private declarations for field rematch003_taxi_firstidx:
+    -- rematch003_taxi_firstidx.
+    type f_rematch003_taxi_firstidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH003_TAXI_FIRSTIDX_R_RESET : f_rematch003_taxi_firstidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch003_taxi_firstidx_r_array is array (natural range <>) of f_rematch003_taxi_firstidx_r_type;
+    variable f_rematch003_taxi_firstidx_r : f_rematch003_taxi_firstidx_r_array(0 to 0)
+        := (others => F_REMATCH003_TAXI_FIRSTIDX_R_RESET);
+
+    -- Private declarations for field rematch003_taxi_lastidx:
+    -- rematch003_taxi_lastidx.
+    type f_rematch003_taxi_lastidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH003_TAXI_LASTIDX_R_RESET : f_rematch003_taxi_lastidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch003_taxi_lastidx_r_array is array (natural range <>) of f_rematch003_taxi_lastidx_r_type;
+    variable f_rematch003_taxi_lastidx_r : f_rematch003_taxi_lastidx_r_array(0 to 0)
+        := (others => F_REMATCH003_TAXI_LASTIDX_R_RESET);
+
+    -- Private declarations for field rematch004_taxi_firstidx:
+    -- rematch004_taxi_firstidx.
+    type f_rematch004_taxi_firstidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH004_TAXI_FIRSTIDX_R_RESET : f_rematch004_taxi_firstidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch004_taxi_firstidx_r_array is array (natural range <>) of f_rematch004_taxi_firstidx_r_type;
+    variable f_rematch004_taxi_firstidx_r : f_rematch004_taxi_firstidx_r_array(0 to 0)
+        := (others => F_REMATCH004_TAXI_FIRSTIDX_R_RESET);
+
+    -- Private declarations for field rematch004_taxi_lastidx:
+    -- rematch004_taxi_lastidx.
+    type f_rematch004_taxi_lastidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH004_TAXI_LASTIDX_R_RESET : f_rematch004_taxi_lastidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch004_taxi_lastidx_r_array is array (natural range <>) of f_rematch004_taxi_lastidx_r_type;
+    variable f_rematch004_taxi_lastidx_r : f_rematch004_taxi_lastidx_r_array(0 to 0)
+        := (others => F_REMATCH004_TAXI_LASTIDX_R_RESET);
+
+    -- Private declarations for field rematch005_taxi_firstidx:
+    -- rematch005_taxi_firstidx.
+    type f_rematch005_taxi_firstidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH005_TAXI_FIRSTIDX_R_RESET : f_rematch005_taxi_firstidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch005_taxi_firstidx_r_array is array (natural range <>) of f_rematch005_taxi_firstidx_r_type;
+    variable f_rematch005_taxi_firstidx_r : f_rematch005_taxi_firstidx_r_array(0 to 0)
+        := (others => F_REMATCH005_TAXI_FIRSTIDX_R_RESET);
+
+    -- Private declarations for field rematch005_taxi_lastidx:
+    -- rematch005_taxi_lastidx.
+    type f_rematch005_taxi_lastidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH005_TAXI_LASTIDX_R_RESET : f_rematch005_taxi_lastidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch005_taxi_lastidx_r_array is array (natural range <>) of f_rematch005_taxi_lastidx_r_type;
+    variable f_rematch005_taxi_lastidx_r : f_rematch005_taxi_lastidx_r_array(0 to 0)
+        := (others => F_REMATCH005_TAXI_LASTIDX_R_RESET);
+
+    -- Private declarations for field rematch006_taxi_firstidx:
+    -- rematch006_taxi_firstidx.
+    type f_rematch006_taxi_firstidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH006_TAXI_FIRSTIDX_R_RESET : f_rematch006_taxi_firstidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch006_taxi_firstidx_r_array is array (natural range <>) of f_rematch006_taxi_firstidx_r_type;
+    variable f_rematch006_taxi_firstidx_r : f_rematch006_taxi_firstidx_r_array(0 to 0)
+        := (others => F_REMATCH006_TAXI_FIRSTIDX_R_RESET);
+
+    -- Private declarations for field rematch006_taxi_lastidx:
+    -- rematch006_taxi_lastidx.
+    type f_rematch006_taxi_lastidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH006_TAXI_LASTIDX_R_RESET : f_rematch006_taxi_lastidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch006_taxi_lastidx_r_array is array (natural range <>) of f_rematch006_taxi_lastidx_r_type;
+    variable f_rematch006_taxi_lastidx_r : f_rematch006_taxi_lastidx_r_array(0 to 0)
+        := (others => F_REMATCH006_TAXI_LASTIDX_R_RESET);
+
+    -- Private declarations for field rematch007_taxi_firstidx:
+    -- rematch007_taxi_firstidx.
+    type f_rematch007_taxi_firstidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH007_TAXI_FIRSTIDX_R_RESET : f_rematch007_taxi_firstidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch007_taxi_firstidx_r_array is array (natural range <>) of f_rematch007_taxi_firstidx_r_type;
+    variable f_rematch007_taxi_firstidx_r : f_rematch007_taxi_firstidx_r_array(0 to 0)
+        := (others => F_REMATCH007_TAXI_FIRSTIDX_R_RESET);
+
+    -- Private declarations for field rematch007_taxi_lastidx:
+    -- rematch007_taxi_lastidx.
+    type f_rematch007_taxi_lastidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH007_TAXI_LASTIDX_R_RESET : f_rematch007_taxi_lastidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch007_taxi_lastidx_r_array is array (natural range <>) of f_rematch007_taxi_lastidx_r_type;
+    variable f_rematch007_taxi_lastidx_r : f_rematch007_taxi_lastidx_r_array(0 to 0)
+        := (others => F_REMATCH007_TAXI_LASTIDX_R_RESET);
+
+    -- Private declarations for field rematch008_taxi_firstidx:
+    -- rematch008_taxi_firstidx.
+    type f_rematch008_taxi_firstidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH008_TAXI_FIRSTIDX_R_RESET : f_rematch008_taxi_firstidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch008_taxi_firstidx_r_array is array (natural range <>) of f_rematch008_taxi_firstidx_r_type;
+    variable f_rematch008_taxi_firstidx_r : f_rematch008_taxi_firstidx_r_array(0 to 0)
+        := (others => F_REMATCH008_TAXI_FIRSTIDX_R_RESET);
+
+    -- Private declarations for field rematch008_taxi_lastidx:
+    -- rematch008_taxi_lastidx.
+    type f_rematch008_taxi_lastidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH008_TAXI_LASTIDX_R_RESET : f_rematch008_taxi_lastidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch008_taxi_lastidx_r_array is array (natural range <>) of f_rematch008_taxi_lastidx_r_type;
+    variable f_rematch008_taxi_lastidx_r : f_rematch008_taxi_lastidx_r_array(0 to 0)
+        := (others => F_REMATCH008_TAXI_LASTIDX_R_RESET);
+
+    -- Private declarations for field rematch009_taxi_firstidx:
+    -- rematch009_taxi_firstidx.
+    type f_rematch009_taxi_firstidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH009_TAXI_FIRSTIDX_R_RESET : f_rematch009_taxi_firstidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch009_taxi_firstidx_r_array is array (natural range <>) of f_rematch009_taxi_firstidx_r_type;
+    variable f_rematch009_taxi_firstidx_r : f_rematch009_taxi_firstidx_r_array(0 to 0)
+        := (others => F_REMATCH009_TAXI_FIRSTIDX_R_RESET);
+
+    -- Private declarations for field rematch009_taxi_lastidx:
+    -- rematch009_taxi_lastidx.
+    type f_rematch009_taxi_lastidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH009_TAXI_LASTIDX_R_RESET : f_rematch009_taxi_lastidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch009_taxi_lastidx_r_array is array (natural range <>) of f_rematch009_taxi_lastidx_r_type;
+    variable f_rematch009_taxi_lastidx_r : f_rematch009_taxi_lastidx_r_array(0 to 0)
+        := (others => F_REMATCH009_TAXI_LASTIDX_R_RESET);
+
+    -- Private declarations for field rematch010_taxi_firstidx:
+    -- rematch010_taxi_firstidx.
+    type f_rematch010_taxi_firstidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH010_TAXI_FIRSTIDX_R_RESET : f_rematch010_taxi_firstidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch010_taxi_firstidx_r_array is array (natural range <>) of f_rematch010_taxi_firstidx_r_type;
+    variable f_rematch010_taxi_firstidx_r : f_rematch010_taxi_firstidx_r_array(0 to 0)
+        := (others => F_REMATCH010_TAXI_FIRSTIDX_R_RESET);
+
+    -- Private declarations for field rematch010_taxi_lastidx:
+    -- rematch010_taxi_lastidx.
+    type f_rematch010_taxi_lastidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH010_TAXI_LASTIDX_R_RESET : f_rematch010_taxi_lastidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch010_taxi_lastidx_r_array is array (natural range <>) of f_rematch010_taxi_lastidx_r_type;
+    variable f_rematch010_taxi_lastidx_r : f_rematch010_taxi_lastidx_r_array(0 to 0)
+        := (others => F_REMATCH010_TAXI_LASTIDX_R_RESET);
+
+    -- Private declarations for field rematch011_taxi_firstidx:
+    -- rematch011_taxi_firstidx.
+    type f_rematch011_taxi_firstidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH011_TAXI_FIRSTIDX_R_RESET : f_rematch011_taxi_firstidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch011_taxi_firstidx_r_array is array (natural range <>) of f_rematch011_taxi_firstidx_r_type;
+    variable f_rematch011_taxi_firstidx_r : f_rematch011_taxi_firstidx_r_array(0 to 0)
+        := (others => F_REMATCH011_TAXI_FIRSTIDX_R_RESET);
+
+    -- Private declarations for field rematch011_taxi_lastidx:
+    -- rematch011_taxi_lastidx.
+    type f_rematch011_taxi_lastidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH011_TAXI_LASTIDX_R_RESET : f_rematch011_taxi_lastidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch011_taxi_lastidx_r_array is array (natural range <>) of f_rematch011_taxi_lastidx_r_type;
+    variable f_rematch011_taxi_lastidx_r : f_rematch011_taxi_lastidx_r_array(0 to 0)
+        := (others => F_REMATCH011_TAXI_LASTIDX_R_RESET);
+
+    -- Private declarations for field rematch012_taxi_firstidx:
+    -- rematch012_taxi_firstidx.
+    type f_rematch012_taxi_firstidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH012_TAXI_FIRSTIDX_R_RESET : f_rematch012_taxi_firstidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch012_taxi_firstidx_r_array is array (natural range <>) of f_rematch012_taxi_firstidx_r_type;
+    variable f_rematch012_taxi_firstidx_r : f_rematch012_taxi_firstidx_r_array(0 to 0)
+        := (others => F_REMATCH012_TAXI_FIRSTIDX_R_RESET);
+
+    -- Private declarations for field rematch012_taxi_lastidx:
+    -- rematch012_taxi_lastidx.
+    type f_rematch012_taxi_lastidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH012_TAXI_LASTIDX_R_RESET : f_rematch012_taxi_lastidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch012_taxi_lastidx_r_array is array (natural range <>) of f_rematch012_taxi_lastidx_r_type;
+    variable f_rematch012_taxi_lastidx_r : f_rematch012_taxi_lastidx_r_array(0 to 0)
+        := (others => F_REMATCH012_TAXI_LASTIDX_R_RESET);
+
+    -- Private declarations for field rematch013_taxi_firstidx:
+    -- rematch013_taxi_firstidx.
+    type f_rematch013_taxi_firstidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH013_TAXI_FIRSTIDX_R_RESET : f_rematch013_taxi_firstidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch013_taxi_firstidx_r_array is array (natural range <>) of f_rematch013_taxi_firstidx_r_type;
+    variable f_rematch013_taxi_firstidx_r : f_rematch013_taxi_firstidx_r_array(0 to 0)
+        := (others => F_REMATCH013_TAXI_FIRSTIDX_R_RESET);
+
+    -- Private declarations for field rematch013_taxi_lastidx:
+    -- rematch013_taxi_lastidx.
+    type f_rematch013_taxi_lastidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH013_TAXI_LASTIDX_R_RESET : f_rematch013_taxi_lastidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch013_taxi_lastidx_r_array is array (natural range <>) of f_rematch013_taxi_lastidx_r_type;
+    variable f_rematch013_taxi_lastidx_r : f_rematch013_taxi_lastidx_r_array(0 to 0)
+        := (others => F_REMATCH013_TAXI_LASTIDX_R_RESET);
+
+    -- Private declarations for field rematch014_taxi_firstidx:
+    -- rematch014_taxi_firstidx.
+    type f_rematch014_taxi_firstidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH014_TAXI_FIRSTIDX_R_RESET : f_rematch014_taxi_firstidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch014_taxi_firstidx_r_array is array (natural range <>) of f_rematch014_taxi_firstidx_r_type;
+    variable f_rematch014_taxi_firstidx_r : f_rematch014_taxi_firstidx_r_array(0 to 0)
+        := (others => F_REMATCH014_TAXI_FIRSTIDX_R_RESET);
+
+    -- Private declarations for field rematch014_taxi_lastidx:
+    -- rematch014_taxi_lastidx.
+    type f_rematch014_taxi_lastidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH014_TAXI_LASTIDX_R_RESET : f_rematch014_taxi_lastidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch014_taxi_lastidx_r_array is array (natural range <>) of f_rematch014_taxi_lastidx_r_type;
+    variable f_rematch014_taxi_lastidx_r : f_rematch014_taxi_lastidx_r_array(0 to 0)
+        := (others => F_REMATCH014_TAXI_LASTIDX_R_RESET);
+
+    -- Private declarations for field rematch015_taxi_firstidx:
+    -- rematch015_taxi_firstidx.
+    type f_rematch015_taxi_firstidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH015_TAXI_FIRSTIDX_R_RESET : f_rematch015_taxi_firstidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch015_taxi_firstidx_r_array is array (natural range <>) of f_rematch015_taxi_firstidx_r_type;
+    variable f_rematch015_taxi_firstidx_r : f_rematch015_taxi_firstidx_r_array(0 to 0)
+        := (others => F_REMATCH015_TAXI_FIRSTIDX_R_RESET);
+
+    -- Private declarations for field rematch015_taxi_lastidx:
+    -- rematch015_taxi_lastidx.
+    type f_rematch015_taxi_lastidx_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH015_TAXI_LASTIDX_R_RESET : f_rematch015_taxi_lastidx_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch015_taxi_lastidx_r_array is array (natural range <>) of f_rematch015_taxi_lastidx_r_type;
+    variable f_rematch015_taxi_lastidx_r : f_rematch015_taxi_lastidx_r_array(0 to 0)
+        := (others => F_REMATCH015_TAXI_LASTIDX_R_RESET);
+
     -- Private declarations for field rematch000_in_offsets:
     -- rematch000_in_offsets.
     type f_rematch000_in_offsets_r_type is record
@@ -1516,226 +2232,661 @@ begin
     variable f_rematch015_in_values_r : f_rematch015_in_values_r_array(0 to 0)
         := (others => F_REMATCH015_IN_VALUES_R_RESET);
 
-    -- Private declarations for field count_re_bird: count_re_bird.
-    type f_count_re_bird_r_type is record
-      d : std_logic_vector(31 downto 0);
+    -- Private declarations for field rematch000_taxi_out_values:
+    -- rematch000_taxi_out_values.
+    type f_rematch000_taxi_out_values_r_type is record
+      d : std_logic_vector(63 downto 0);
       v : std_logic;
     end record;
-    constant F_COUNT_RE_BIRD_R_RESET : f_count_re_bird_r_type := (
+    constant F_REMATCH000_TAXI_OUT_VALUES_R_RESET : f_rematch000_taxi_out_values_r_type := (
       d => (others => '0'),
       v => '0'
     );
-    type f_count_re_bird_r_array is array (natural range <>) of f_count_re_bird_r_type;
-    variable f_count_re_bird_r : f_count_re_bird_r_array(0 to 0)
-        := (others => F_COUNT_RE_BIRD_R_RESET);
+    type f_rematch000_taxi_out_values_r_array is array (natural range <>) of f_rematch000_taxi_out_values_r_type;
+    variable f_rematch000_taxi_out_values_r : f_rematch000_taxi_out_values_r_array(0 to 0)
+        := (others => F_REMATCH000_TAXI_OUT_VALUES_R_RESET);
 
-    -- Private declarations for field count_re_bunny: count_re_bunny.
-    type f_count_re_bunny_r_type is record
-      d : std_logic_vector(31 downto 0);
+    -- Private declarations for field rematch001_taxi_out_values:
+    -- rematch001_taxi_out_values.
+    type f_rematch001_taxi_out_values_r_type is record
+      d : std_logic_vector(63 downto 0);
       v : std_logic;
     end record;
-    constant F_COUNT_RE_BUNNY_R_RESET : f_count_re_bunny_r_type := (
+    constant F_REMATCH001_TAXI_OUT_VALUES_R_RESET : f_rematch001_taxi_out_values_r_type := (
       d => (others => '0'),
       v => '0'
     );
-    type f_count_re_bunny_r_array is array (natural range <>) of f_count_re_bunny_r_type;
-    variable f_count_re_bunny_r : f_count_re_bunny_r_array(0 to 0)
-        := (others => F_COUNT_RE_BUNNY_R_RESET);
+    type f_rematch001_taxi_out_values_r_array is array (natural range <>) of f_rematch001_taxi_out_values_r_type;
+    variable f_rematch001_taxi_out_values_r : f_rematch001_taxi_out_values_r_array(0 to 0)
+        := (others => F_REMATCH001_TAXI_OUT_VALUES_R_RESET);
 
-    -- Private declarations for field count_re_cat: count_re_cat.
-    type f_count_re_cat_r_type is record
-      d : std_logic_vector(31 downto 0);
+    -- Private declarations for field rematch002_taxi_out_values:
+    -- rematch002_taxi_out_values.
+    type f_rematch002_taxi_out_values_r_type is record
+      d : std_logic_vector(63 downto 0);
       v : std_logic;
     end record;
-    constant F_COUNT_RE_CAT_R_RESET : f_count_re_cat_r_type := (
+    constant F_REMATCH002_TAXI_OUT_VALUES_R_RESET : f_rematch002_taxi_out_values_r_type := (
       d => (others => '0'),
       v => '0'
     );
-    type f_count_re_cat_r_array is array (natural range <>) of f_count_re_cat_r_type;
-    variable f_count_re_cat_r : f_count_re_cat_r_array(0 to 0)
-        := (others => F_COUNT_RE_CAT_R_RESET);
+    type f_rematch002_taxi_out_values_r_array is array (natural range <>) of f_rematch002_taxi_out_values_r_type;
+    variable f_rematch002_taxi_out_values_r : f_rematch002_taxi_out_values_r_array(0 to 0)
+        := (others => F_REMATCH002_TAXI_OUT_VALUES_R_RESET);
 
-    -- Private declarations for field count_re_dog: count_re_dog.
-    type f_count_re_dog_r_type is record
-      d : std_logic_vector(31 downto 0);
+    -- Private declarations for field rematch003_taxi_out_values:
+    -- rematch003_taxi_out_values.
+    type f_rematch003_taxi_out_values_r_type is record
+      d : std_logic_vector(63 downto 0);
       v : std_logic;
     end record;
-    constant F_COUNT_RE_DOG_R_RESET : f_count_re_dog_r_type := (
+    constant F_REMATCH003_TAXI_OUT_VALUES_R_RESET : f_rematch003_taxi_out_values_r_type := (
       d => (others => '0'),
       v => '0'
     );
-    type f_count_re_dog_r_array is array (natural range <>) of f_count_re_dog_r_type;
-    variable f_count_re_dog_r : f_count_re_dog_r_array(0 to 0)
-        := (others => F_COUNT_RE_DOG_R_RESET);
+    type f_rematch003_taxi_out_values_r_array is array (natural range <>) of f_rematch003_taxi_out_values_r_type;
+    variable f_rematch003_taxi_out_values_r : f_rematch003_taxi_out_values_r_array(0 to 0)
+        := (others => F_REMATCH003_TAXI_OUT_VALUES_R_RESET);
 
-    -- Private declarations for field count_re_ferret: count_re_ferret.
-    type f_count_re_ferret_r_type is record
-      d : std_logic_vector(31 downto 0);
+    -- Private declarations for field rematch004_taxi_out_values:
+    -- rematch004_taxi_out_values.
+    type f_rematch004_taxi_out_values_r_type is record
+      d : std_logic_vector(63 downto 0);
       v : std_logic;
     end record;
-    constant F_COUNT_RE_FERRET_R_RESET : f_count_re_ferret_r_type := (
+    constant F_REMATCH004_TAXI_OUT_VALUES_R_RESET : f_rematch004_taxi_out_values_r_type := (
       d => (others => '0'),
       v => '0'
     );
-    type f_count_re_ferret_r_array is array (natural range <>) of f_count_re_ferret_r_type;
-    variable f_count_re_ferret_r : f_count_re_ferret_r_array(0 to 0)
-        := (others => F_COUNT_RE_FERRET_R_RESET);
+    type f_rematch004_taxi_out_values_r_array is array (natural range <>) of f_rematch004_taxi_out_values_r_type;
+    variable f_rematch004_taxi_out_values_r : f_rematch004_taxi_out_values_r_array(0 to 0)
+        := (others => F_REMATCH004_TAXI_OUT_VALUES_R_RESET);
 
-    -- Private declarations for field count_re_fish: count_re_fish.
-    type f_count_re_fish_r_type is record
-      d : std_logic_vector(31 downto 0);
+    -- Private declarations for field rematch005_taxi_out_values:
+    -- rematch005_taxi_out_values.
+    type f_rematch005_taxi_out_values_r_type is record
+      d : std_logic_vector(63 downto 0);
       v : std_logic;
     end record;
-    constant F_COUNT_RE_FISH_R_RESET : f_count_re_fish_r_type := (
+    constant F_REMATCH005_TAXI_OUT_VALUES_R_RESET : f_rematch005_taxi_out_values_r_type := (
       d => (others => '0'),
       v => '0'
     );
-    type f_count_re_fish_r_array is array (natural range <>) of f_count_re_fish_r_type;
-    variable f_count_re_fish_r : f_count_re_fish_r_array(0 to 0)
-        := (others => F_COUNT_RE_FISH_R_RESET);
+    type f_rematch005_taxi_out_values_r_array is array (natural range <>) of f_rematch005_taxi_out_values_r_type;
+    variable f_rematch005_taxi_out_values_r : f_rematch005_taxi_out_values_r_array(0 to 0)
+        := (others => F_REMATCH005_TAXI_OUT_VALUES_R_RESET);
 
-    -- Private declarations for field count_re_gerbil: count_re_gerbil.
-    type f_count_re_gerbil_r_type is record
-      d : std_logic_vector(31 downto 0);
+    -- Private declarations for field rematch006_taxi_out_values:
+    -- rematch006_taxi_out_values.
+    type f_rematch006_taxi_out_values_r_type is record
+      d : std_logic_vector(63 downto 0);
       v : std_logic;
     end record;
-    constant F_COUNT_RE_GERBIL_R_RESET : f_count_re_gerbil_r_type := (
+    constant F_REMATCH006_TAXI_OUT_VALUES_R_RESET : f_rematch006_taxi_out_values_r_type := (
       d => (others => '0'),
       v => '0'
     );
-    type f_count_re_gerbil_r_array is array (natural range <>) of f_count_re_gerbil_r_type;
-    variable f_count_re_gerbil_r : f_count_re_gerbil_r_array(0 to 0)
-        := (others => F_COUNT_RE_GERBIL_R_RESET);
+    type f_rematch006_taxi_out_values_r_array is array (natural range <>) of f_rematch006_taxi_out_values_r_type;
+    variable f_rematch006_taxi_out_values_r : f_rematch006_taxi_out_values_r_array(0 to 0)
+        := (others => F_REMATCH006_TAXI_OUT_VALUES_R_RESET);
 
-    -- Private declarations for field count_re_hamster: count_re_hamster.
-    type f_count_re_hamster_r_type is record
-      d : std_logic_vector(31 downto 0);
+    -- Private declarations for field rematch007_taxi_out_values:
+    -- rematch007_taxi_out_values.
+    type f_rematch007_taxi_out_values_r_type is record
+      d : std_logic_vector(63 downto 0);
       v : std_logic;
     end record;
-    constant F_COUNT_RE_HAMSTER_R_RESET : f_count_re_hamster_r_type := (
+    constant F_REMATCH007_TAXI_OUT_VALUES_R_RESET : f_rematch007_taxi_out_values_r_type := (
       d => (others => '0'),
       v => '0'
     );
-    type f_count_re_hamster_r_array is array (natural range <>) of f_count_re_hamster_r_type;
-    variable f_count_re_hamster_r : f_count_re_hamster_r_array(0 to 0)
-        := (others => F_COUNT_RE_HAMSTER_R_RESET);
+    type f_rematch007_taxi_out_values_r_array is array (natural range <>) of f_rematch007_taxi_out_values_r_type;
+    variable f_rematch007_taxi_out_values_r : f_rematch007_taxi_out_values_r_array(0 to 0)
+        := (others => F_REMATCH007_TAXI_OUT_VALUES_R_RESET);
 
-    -- Private declarations for field count_re_horse: count_re_horse.
-    type f_count_re_horse_r_type is record
-      d : std_logic_vector(31 downto 0);
+    -- Private declarations for field rematch008_taxi_out_values:
+    -- rematch008_taxi_out_values.
+    type f_rematch008_taxi_out_values_r_type is record
+      d : std_logic_vector(63 downto 0);
       v : std_logic;
     end record;
-    constant F_COUNT_RE_HORSE_R_RESET : f_count_re_horse_r_type := (
+    constant F_REMATCH008_TAXI_OUT_VALUES_R_RESET : f_rematch008_taxi_out_values_r_type := (
       d => (others => '0'),
       v => '0'
     );
-    type f_count_re_horse_r_array is array (natural range <>) of f_count_re_horse_r_type;
-    variable f_count_re_horse_r : f_count_re_horse_r_array(0 to 0)
-        := (others => F_COUNT_RE_HORSE_R_RESET);
+    type f_rematch008_taxi_out_values_r_array is array (natural range <>) of f_rematch008_taxi_out_values_r_type;
+    variable f_rematch008_taxi_out_values_r : f_rematch008_taxi_out_values_r_array(0 to 0)
+        := (others => F_REMATCH008_TAXI_OUT_VALUES_R_RESET);
 
-    -- Private declarations for field count_re_kitten: count_re_kitten.
-    type f_count_re_kitten_r_type is record
-      d : std_logic_vector(31 downto 0);
+    -- Private declarations for field rematch009_taxi_out_values:
+    -- rematch009_taxi_out_values.
+    type f_rematch009_taxi_out_values_r_type is record
+      d : std_logic_vector(63 downto 0);
       v : std_logic;
     end record;
-    constant F_COUNT_RE_KITTEN_R_RESET : f_count_re_kitten_r_type := (
+    constant F_REMATCH009_TAXI_OUT_VALUES_R_RESET : f_rematch009_taxi_out_values_r_type := (
       d => (others => '0'),
       v => '0'
     );
-    type f_count_re_kitten_r_array is array (natural range <>) of f_count_re_kitten_r_type;
-    variable f_count_re_kitten_r : f_count_re_kitten_r_array(0 to 0)
-        := (others => F_COUNT_RE_KITTEN_R_RESET);
+    type f_rematch009_taxi_out_values_r_array is array (natural range <>) of f_rematch009_taxi_out_values_r_type;
+    variable f_rematch009_taxi_out_values_r : f_rematch009_taxi_out_values_r_array(0 to 0)
+        := (others => F_REMATCH009_TAXI_OUT_VALUES_R_RESET);
 
-    -- Private declarations for field count_re_lizard: count_re_lizard.
-    type f_count_re_lizard_r_type is record
-      d : std_logic_vector(31 downto 0);
+    -- Private declarations for field rematch010_taxi_out_values:
+    -- rematch010_taxi_out_values.
+    type f_rematch010_taxi_out_values_r_type is record
+      d : std_logic_vector(63 downto 0);
       v : std_logic;
     end record;
-    constant F_COUNT_RE_LIZARD_R_RESET : f_count_re_lizard_r_type := (
+    constant F_REMATCH010_TAXI_OUT_VALUES_R_RESET : f_rematch010_taxi_out_values_r_type := (
       d => (others => '0'),
       v => '0'
     );
-    type f_count_re_lizard_r_array is array (natural range <>) of f_count_re_lizard_r_type;
-    variable f_count_re_lizard_r : f_count_re_lizard_r_array(0 to 0)
-        := (others => F_COUNT_RE_LIZARD_R_RESET);
+    type f_rematch010_taxi_out_values_r_array is array (natural range <>) of f_rematch010_taxi_out_values_r_type;
+    variable f_rematch010_taxi_out_values_r : f_rematch010_taxi_out_values_r_array(0 to 0)
+        := (others => F_REMATCH010_TAXI_OUT_VALUES_R_RESET);
 
-    -- Private declarations for field count_re_mouse: count_re_mouse.
-    type f_count_re_mouse_r_type is record
-      d : std_logic_vector(31 downto 0);
+    -- Private declarations for field rematch011_taxi_out_values:
+    -- rematch011_taxi_out_values.
+    type f_rematch011_taxi_out_values_r_type is record
+      d : std_logic_vector(63 downto 0);
       v : std_logic;
     end record;
-    constant F_COUNT_RE_MOUSE_R_RESET : f_count_re_mouse_r_type := (
+    constant F_REMATCH011_TAXI_OUT_VALUES_R_RESET : f_rematch011_taxi_out_values_r_type := (
       d => (others => '0'),
       v => '0'
     );
-    type f_count_re_mouse_r_array is array (natural range <>) of f_count_re_mouse_r_type;
-    variable f_count_re_mouse_r : f_count_re_mouse_r_array(0 to 0)
-        := (others => F_COUNT_RE_MOUSE_R_RESET);
+    type f_rematch011_taxi_out_values_r_array is array (natural range <>) of f_rematch011_taxi_out_values_r_type;
+    variable f_rematch011_taxi_out_values_r : f_rematch011_taxi_out_values_r_array(0 to 0)
+        := (others => F_REMATCH011_TAXI_OUT_VALUES_R_RESET);
 
-    -- Private declarations for field count_re_puppy: count_re_puppy.
-    type f_count_re_puppy_r_type is record
-      d : std_logic_vector(31 downto 0);
+    -- Private declarations for field rematch012_taxi_out_values:
+    -- rematch012_taxi_out_values.
+    type f_rematch012_taxi_out_values_r_type is record
+      d : std_logic_vector(63 downto 0);
       v : std_logic;
     end record;
-    constant F_COUNT_RE_PUPPY_R_RESET : f_count_re_puppy_r_type := (
+    constant F_REMATCH012_TAXI_OUT_VALUES_R_RESET : f_rematch012_taxi_out_values_r_type := (
       d => (others => '0'),
       v => '0'
     );
-    type f_count_re_puppy_r_array is array (natural range <>) of f_count_re_puppy_r_type;
-    variable f_count_re_puppy_r : f_count_re_puppy_r_array(0 to 0)
-        := (others => F_COUNT_RE_PUPPY_R_RESET);
+    type f_rematch012_taxi_out_values_r_array is array (natural range <>) of f_rematch012_taxi_out_values_r_type;
+    variable f_rematch012_taxi_out_values_r : f_rematch012_taxi_out_values_r_array(0 to 0)
+        := (others => F_REMATCH012_TAXI_OUT_VALUES_R_RESET);
 
-    -- Private declarations for field count_re_rabbit: count_re_rabbit.
-    type f_count_re_rabbit_r_type is record
-      d : std_logic_vector(31 downto 0);
+    -- Private declarations for field rematch013_taxi_out_values:
+    -- rematch013_taxi_out_values.
+    type f_rematch013_taxi_out_values_r_type is record
+      d : std_logic_vector(63 downto 0);
       v : std_logic;
     end record;
-    constant F_COUNT_RE_RABBIT_R_RESET : f_count_re_rabbit_r_type := (
+    constant F_REMATCH013_TAXI_OUT_VALUES_R_RESET : f_rematch013_taxi_out_values_r_type := (
       d => (others => '0'),
       v => '0'
     );
-    type f_count_re_rabbit_r_array is array (natural range <>) of f_count_re_rabbit_r_type;
-    variable f_count_re_rabbit_r : f_count_re_rabbit_r_array(0 to 0)
-        := (others => F_COUNT_RE_RABBIT_R_RESET);
+    type f_rematch013_taxi_out_values_r_array is array (natural range <>) of f_rematch013_taxi_out_values_r_type;
+    variable f_rematch013_taxi_out_values_r : f_rematch013_taxi_out_values_r_array(0 to 0)
+        := (others => F_REMATCH013_TAXI_OUT_VALUES_R_RESET);
 
-    -- Private declarations for field count_re_rat: count_re_rat.
-    type f_count_re_rat_r_type is record
-      d : std_logic_vector(31 downto 0);
+    -- Private declarations for field rematch014_taxi_out_values:
+    -- rematch014_taxi_out_values.
+    type f_rematch014_taxi_out_values_r_type is record
+      d : std_logic_vector(63 downto 0);
       v : std_logic;
     end record;
-    constant F_COUNT_RE_RAT_R_RESET : f_count_re_rat_r_type := (
+    constant F_REMATCH014_TAXI_OUT_VALUES_R_RESET : f_rematch014_taxi_out_values_r_type := (
       d => (others => '0'),
       v => '0'
     );
-    type f_count_re_rat_r_array is array (natural range <>) of f_count_re_rat_r_type;
-    variable f_count_re_rat_r : f_count_re_rat_r_array(0 to 0)
-        := (others => F_COUNT_RE_RAT_R_RESET);
+    type f_rematch014_taxi_out_values_r_array is array (natural range <>) of f_rematch014_taxi_out_values_r_type;
+    variable f_rematch014_taxi_out_values_r : f_rematch014_taxi_out_values_r_array(0 to 0)
+        := (others => F_REMATCH014_TAXI_OUT_VALUES_R_RESET);
 
-    -- Private declarations for field count_re_turtle: count_re_turtle.
-    type f_count_re_turtle_r_type is record
-      d : std_logic_vector(31 downto 0);
+    -- Private declarations for field rematch015_taxi_out_values:
+    -- rematch015_taxi_out_values.
+    type f_rematch015_taxi_out_values_r_type is record
+      d : std_logic_vector(63 downto 0);
       v : std_logic;
     end record;
-    constant F_COUNT_RE_TURTLE_R_RESET : f_count_re_turtle_r_type := (
+    constant F_REMATCH015_TAXI_OUT_VALUES_R_RESET : f_rematch015_taxi_out_values_r_type := (
       d => (others => '0'),
       v => '0'
     );
-    type f_count_re_turtle_r_array is array (natural range <>) of f_count_re_turtle_r_type;
-    variable f_count_re_turtle_r : f_count_re_turtle_r_array(0 to 0)
-        := (others => F_COUNT_RE_TURTLE_R_RESET);
+    type f_rematch015_taxi_out_values_r_array is array (natural range <>) of f_rematch015_taxi_out_values_r_type;
+    variable f_rematch015_taxi_out_values_r : f_rematch015_taxi_out_values_r_array(0 to 0)
+        := (others => F_REMATCH015_TAXI_OUT_VALUES_R_RESET);
 
-    -- Private declarations for field count_errors: count_errors.
-    type f_count_errors_r_type is record
+    -- Private declarations for field rematch000_taxi_count:
+    -- rematch000_taxi_count.
+    type f_rematch000_taxi_count_r_type is record
       d : std_logic_vector(31 downto 0);
       v : std_logic;
     end record;
-    constant F_COUNT_ERRORS_R_RESET : f_count_errors_r_type := (
+    constant F_REMATCH000_TAXI_COUNT_R_RESET : f_rematch000_taxi_count_r_type := (
       d => (others => '0'),
       v => '0'
     );
-    type f_count_errors_r_array is array (natural range <>) of f_count_errors_r_type;
-    variable f_count_errors_r : f_count_errors_r_array(0 to 0)
-        := (others => F_COUNT_ERRORS_R_RESET);
+    type f_rematch000_taxi_count_r_array is array (natural range <>) of f_rematch000_taxi_count_r_type;
+    variable f_rematch000_taxi_count_r : f_rematch000_taxi_count_r_array(0 to 0)
+        := (others => F_REMATCH000_TAXI_COUNT_R_RESET);
+
+    -- Private declarations for field rematch000_errors: rematch000_errors.
+    type f_rematch000_errors_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH000_ERRORS_R_RESET : f_rematch000_errors_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch000_errors_r_array is array (natural range <>) of f_rematch000_errors_r_type;
+    variable f_rematch000_errors_r : f_rematch000_errors_r_array(0 to 0)
+        := (others => F_REMATCH000_ERRORS_R_RESET);
+
+    -- Private declarations for field rematch001_taxi_count:
+    -- rematch001_taxi_count.
+    type f_rematch001_taxi_count_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH001_TAXI_COUNT_R_RESET : f_rematch001_taxi_count_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch001_taxi_count_r_array is array (natural range <>) of f_rematch001_taxi_count_r_type;
+    variable f_rematch001_taxi_count_r : f_rematch001_taxi_count_r_array(0 to 0)
+        := (others => F_REMATCH001_TAXI_COUNT_R_RESET);
+
+    -- Private declarations for field rematch001_errors: rematch001_errors.
+    type f_rematch001_errors_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH001_ERRORS_R_RESET : f_rematch001_errors_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch001_errors_r_array is array (natural range <>) of f_rematch001_errors_r_type;
+    variable f_rematch001_errors_r : f_rematch001_errors_r_array(0 to 0)
+        := (others => F_REMATCH001_ERRORS_R_RESET);
+
+    -- Private declarations for field rematch002_taxi_count:
+    -- rematch002_taxi_count.
+    type f_rematch002_taxi_count_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH002_TAXI_COUNT_R_RESET : f_rematch002_taxi_count_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch002_taxi_count_r_array is array (natural range <>) of f_rematch002_taxi_count_r_type;
+    variable f_rematch002_taxi_count_r : f_rematch002_taxi_count_r_array(0 to 0)
+        := (others => F_REMATCH002_TAXI_COUNT_R_RESET);
+
+    -- Private declarations for field rematch002_errors: rematch002_errors.
+    type f_rematch002_errors_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH002_ERRORS_R_RESET : f_rematch002_errors_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch002_errors_r_array is array (natural range <>) of f_rematch002_errors_r_type;
+    variable f_rematch002_errors_r : f_rematch002_errors_r_array(0 to 0)
+        := (others => F_REMATCH002_ERRORS_R_RESET);
+
+    -- Private declarations for field rematch003_taxi_count:
+    -- rematch003_taxi_count.
+    type f_rematch003_taxi_count_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH003_TAXI_COUNT_R_RESET : f_rematch003_taxi_count_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch003_taxi_count_r_array is array (natural range <>) of f_rematch003_taxi_count_r_type;
+    variable f_rematch003_taxi_count_r : f_rematch003_taxi_count_r_array(0 to 0)
+        := (others => F_REMATCH003_TAXI_COUNT_R_RESET);
+
+    -- Private declarations for field rematch003_errors: rematch003_errors.
+    type f_rematch003_errors_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH003_ERRORS_R_RESET : f_rematch003_errors_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch003_errors_r_array is array (natural range <>) of f_rematch003_errors_r_type;
+    variable f_rematch003_errors_r : f_rematch003_errors_r_array(0 to 0)
+        := (others => F_REMATCH003_ERRORS_R_RESET);
+
+    -- Private declarations for field rematch004_taxi_count:
+    -- rematch004_taxi_count.
+    type f_rematch004_taxi_count_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH004_TAXI_COUNT_R_RESET : f_rematch004_taxi_count_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch004_taxi_count_r_array is array (natural range <>) of f_rematch004_taxi_count_r_type;
+    variable f_rematch004_taxi_count_r : f_rematch004_taxi_count_r_array(0 to 0)
+        := (others => F_REMATCH004_TAXI_COUNT_R_RESET);
+
+    -- Private declarations for field rematch004_errors: rematch004_errors.
+    type f_rematch004_errors_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH004_ERRORS_R_RESET : f_rematch004_errors_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch004_errors_r_array is array (natural range <>) of f_rematch004_errors_r_type;
+    variable f_rematch004_errors_r : f_rematch004_errors_r_array(0 to 0)
+        := (others => F_REMATCH004_ERRORS_R_RESET);
+
+    -- Private declarations for field rematch005_taxi_count:
+    -- rematch005_taxi_count.
+    type f_rematch005_taxi_count_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH005_TAXI_COUNT_R_RESET : f_rematch005_taxi_count_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch005_taxi_count_r_array is array (natural range <>) of f_rematch005_taxi_count_r_type;
+    variable f_rematch005_taxi_count_r : f_rematch005_taxi_count_r_array(0 to 0)
+        := (others => F_REMATCH005_TAXI_COUNT_R_RESET);
+
+    -- Private declarations for field rematch005_errors: rematch005_errors.
+    type f_rematch005_errors_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH005_ERRORS_R_RESET : f_rematch005_errors_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch005_errors_r_array is array (natural range <>) of f_rematch005_errors_r_type;
+    variable f_rematch005_errors_r : f_rematch005_errors_r_array(0 to 0)
+        := (others => F_REMATCH005_ERRORS_R_RESET);
+
+    -- Private declarations for field rematch006_taxi_count:
+    -- rematch006_taxi_count.
+    type f_rematch006_taxi_count_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH006_TAXI_COUNT_R_RESET : f_rematch006_taxi_count_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch006_taxi_count_r_array is array (natural range <>) of f_rematch006_taxi_count_r_type;
+    variable f_rematch006_taxi_count_r : f_rematch006_taxi_count_r_array(0 to 0)
+        := (others => F_REMATCH006_TAXI_COUNT_R_RESET);
+
+    -- Private declarations for field rematch006_errors: rematch006_errors.
+    type f_rematch006_errors_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH006_ERRORS_R_RESET : f_rematch006_errors_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch006_errors_r_array is array (natural range <>) of f_rematch006_errors_r_type;
+    variable f_rematch006_errors_r : f_rematch006_errors_r_array(0 to 0)
+        := (others => F_REMATCH006_ERRORS_R_RESET);
+
+    -- Private declarations for field rematch007_taxi_count:
+    -- rematch007_taxi_count.
+    type f_rematch007_taxi_count_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH007_TAXI_COUNT_R_RESET : f_rematch007_taxi_count_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch007_taxi_count_r_array is array (natural range <>) of f_rematch007_taxi_count_r_type;
+    variable f_rematch007_taxi_count_r : f_rematch007_taxi_count_r_array(0 to 0)
+        := (others => F_REMATCH007_TAXI_COUNT_R_RESET);
+
+    -- Private declarations for field rematch007_errors: rematch007_errors.
+    type f_rematch007_errors_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH007_ERRORS_R_RESET : f_rematch007_errors_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch007_errors_r_array is array (natural range <>) of f_rematch007_errors_r_type;
+    variable f_rematch007_errors_r : f_rematch007_errors_r_array(0 to 0)
+        := (others => F_REMATCH007_ERRORS_R_RESET);
+
+    -- Private declarations for field rematch008_taxi_count:
+    -- rematch008_taxi_count.
+    type f_rematch008_taxi_count_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH008_TAXI_COUNT_R_RESET : f_rematch008_taxi_count_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch008_taxi_count_r_array is array (natural range <>) of f_rematch008_taxi_count_r_type;
+    variable f_rematch008_taxi_count_r : f_rematch008_taxi_count_r_array(0 to 0)
+        := (others => F_REMATCH008_TAXI_COUNT_R_RESET);
+
+    -- Private declarations for field rematch008_errors: rematch008_errors.
+    type f_rematch008_errors_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH008_ERRORS_R_RESET : f_rematch008_errors_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch008_errors_r_array is array (natural range <>) of f_rematch008_errors_r_type;
+    variable f_rematch008_errors_r : f_rematch008_errors_r_array(0 to 0)
+        := (others => F_REMATCH008_ERRORS_R_RESET);
+
+    -- Private declarations for field rematch009_taxi_count:
+    -- rematch009_taxi_count.
+    type f_rematch009_taxi_count_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH009_TAXI_COUNT_R_RESET : f_rematch009_taxi_count_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch009_taxi_count_r_array is array (natural range <>) of f_rematch009_taxi_count_r_type;
+    variable f_rematch009_taxi_count_r : f_rematch009_taxi_count_r_array(0 to 0)
+        := (others => F_REMATCH009_TAXI_COUNT_R_RESET);
+
+    -- Private declarations for field rematch009_errors: rematch009_errors.
+    type f_rematch009_errors_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH009_ERRORS_R_RESET : f_rematch009_errors_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch009_errors_r_array is array (natural range <>) of f_rematch009_errors_r_type;
+    variable f_rematch009_errors_r : f_rematch009_errors_r_array(0 to 0)
+        := (others => F_REMATCH009_ERRORS_R_RESET);
+
+    -- Private declarations for field rematch010_taxi_count:
+    -- rematch010_taxi_count.
+    type f_rematch010_taxi_count_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH010_TAXI_COUNT_R_RESET : f_rematch010_taxi_count_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch010_taxi_count_r_array is array (natural range <>) of f_rematch010_taxi_count_r_type;
+    variable f_rematch010_taxi_count_r : f_rematch010_taxi_count_r_array(0 to 0)
+        := (others => F_REMATCH010_TAXI_COUNT_R_RESET);
+
+    -- Private declarations for field rematch010_errors: rematch010_errors.
+    type f_rematch010_errors_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH010_ERRORS_R_RESET : f_rematch010_errors_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch010_errors_r_array is array (natural range <>) of f_rematch010_errors_r_type;
+    variable f_rematch010_errors_r : f_rematch010_errors_r_array(0 to 0)
+        := (others => F_REMATCH010_ERRORS_R_RESET);
+
+    -- Private declarations for field rematch011_taxi_count:
+    -- rematch011_taxi_count.
+    type f_rematch011_taxi_count_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH011_TAXI_COUNT_R_RESET : f_rematch011_taxi_count_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch011_taxi_count_r_array is array (natural range <>) of f_rematch011_taxi_count_r_type;
+    variable f_rematch011_taxi_count_r : f_rematch011_taxi_count_r_array(0 to 0)
+        := (others => F_REMATCH011_TAXI_COUNT_R_RESET);
+
+    -- Private declarations for field rematch011_errors: rematch011_errors.
+    type f_rematch011_errors_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH011_ERRORS_R_RESET : f_rematch011_errors_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch011_errors_r_array is array (natural range <>) of f_rematch011_errors_r_type;
+    variable f_rematch011_errors_r : f_rematch011_errors_r_array(0 to 0)
+        := (others => F_REMATCH011_ERRORS_R_RESET);
+
+    -- Private declarations for field rematch012_taxi_count:
+    -- rematch012_taxi_count.
+    type f_rematch012_taxi_count_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH012_TAXI_COUNT_R_RESET : f_rematch012_taxi_count_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch012_taxi_count_r_array is array (natural range <>) of f_rematch012_taxi_count_r_type;
+    variable f_rematch012_taxi_count_r : f_rematch012_taxi_count_r_array(0 to 0)
+        := (others => F_REMATCH012_TAXI_COUNT_R_RESET);
+
+    -- Private declarations for field rematch012_errors: rematch012_errors.
+    type f_rematch012_errors_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH012_ERRORS_R_RESET : f_rematch012_errors_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch012_errors_r_array is array (natural range <>) of f_rematch012_errors_r_type;
+    variable f_rematch012_errors_r : f_rematch012_errors_r_array(0 to 0)
+        := (others => F_REMATCH012_ERRORS_R_RESET);
+
+    -- Private declarations for field rematch013_taxi_count:
+    -- rematch013_taxi_count.
+    type f_rematch013_taxi_count_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH013_TAXI_COUNT_R_RESET : f_rematch013_taxi_count_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch013_taxi_count_r_array is array (natural range <>) of f_rematch013_taxi_count_r_type;
+    variable f_rematch013_taxi_count_r : f_rematch013_taxi_count_r_array(0 to 0)
+        := (others => F_REMATCH013_TAXI_COUNT_R_RESET);
+
+    -- Private declarations for field rematch013_errors: rematch013_errors.
+    type f_rematch013_errors_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH013_ERRORS_R_RESET : f_rematch013_errors_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch013_errors_r_array is array (natural range <>) of f_rematch013_errors_r_type;
+    variable f_rematch013_errors_r : f_rematch013_errors_r_array(0 to 0)
+        := (others => F_REMATCH013_ERRORS_R_RESET);
+
+    -- Private declarations for field rematch014_taxi_count:
+    -- rematch014_taxi_count.
+    type f_rematch014_taxi_count_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH014_TAXI_COUNT_R_RESET : f_rematch014_taxi_count_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch014_taxi_count_r_array is array (natural range <>) of f_rematch014_taxi_count_r_type;
+    variable f_rematch014_taxi_count_r : f_rematch014_taxi_count_r_array(0 to 0)
+        := (others => F_REMATCH014_TAXI_COUNT_R_RESET);
+
+    -- Private declarations for field rematch014_errors: rematch014_errors.
+    type f_rematch014_errors_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH014_ERRORS_R_RESET : f_rematch014_errors_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch014_errors_r_array is array (natural range <>) of f_rematch014_errors_r_type;
+    variable f_rematch014_errors_r : f_rematch014_errors_r_array(0 to 0)
+        := (others => F_REMATCH014_ERRORS_R_RESET);
+
+    -- Private declarations for field rematch015_taxi_count:
+    -- rematch015_taxi_count.
+    type f_rematch015_taxi_count_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH015_TAXI_COUNT_R_RESET : f_rematch015_taxi_count_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch015_taxi_count_r_array is array (natural range <>) of f_rematch015_taxi_count_r_type;
+    variable f_rematch015_taxi_count_r : f_rematch015_taxi_count_r_array(0 to 0)
+        := (others => F_REMATCH015_TAXI_COUNT_R_RESET);
+
+    -- Private declarations for field rematch015_errors: rematch015_errors.
+    type f_rematch015_errors_r_type is record
+      d : std_logic_vector(31 downto 0);
+      v : std_logic;
+    end record;
+    constant F_REMATCH015_ERRORS_R_RESET : f_rematch015_errors_r_type := (
+      d => (others => '0'),
+      v => '0'
+    );
+    type f_rematch015_errors_r_array is array (natural range <>) of f_rematch015_errors_r_type;
+    variable f_rematch015_errors_r : f_rematch015_errors_r_array(0 to 0)
+        := (others => F_REMATCH015_ERRORS_R_RESET);
 
     -- Private declarations for field Profile_enable: Profile_enable.
     type f_Profile_enable_r_type is record
@@ -1917,107 +3068,197 @@ begin
       f_result_r((0)).d := f_result_write_data;
       f_result_r((0)).v := '1';
 
-      -- Pre-bus logic for field count_re_bird: count_re_bird.
+      -- Pre-bus logic for field rematch000_taxi_count: rematch000_taxi_count.
 
-      -- Handle hardware write for field count_re_bird: status.
-      f_count_re_bird_r((0)).d := f_count_re_bird_write_data;
-      f_count_re_bird_r((0)).v := '1';
+      -- Handle hardware write for field rematch000_taxi_count: status.
+      f_rematch000_taxi_count_r((0)).d := f_rematch000_taxi_count_write_data;
+      f_rematch000_taxi_count_r((0)).v := '1';
 
-      -- Pre-bus logic for field count_re_bunny: count_re_bunny.
+      -- Pre-bus logic for field rematch000_errors: rematch000_errors.
 
-      -- Handle hardware write for field count_re_bunny: status.
-      f_count_re_bunny_r((0)).d := f_count_re_bunny_write_data;
-      f_count_re_bunny_r((0)).v := '1';
+      -- Handle hardware write for field rematch000_errors: status.
+      f_rematch000_errors_r((0)).d := f_rematch000_errors_write_data;
+      f_rematch000_errors_r((0)).v := '1';
 
-      -- Pre-bus logic for field count_re_cat: count_re_cat.
+      -- Pre-bus logic for field rematch001_taxi_count: rematch001_taxi_count.
 
-      -- Handle hardware write for field count_re_cat: status.
-      f_count_re_cat_r((0)).d := f_count_re_cat_write_data;
-      f_count_re_cat_r((0)).v := '1';
+      -- Handle hardware write for field rematch001_taxi_count: status.
+      f_rematch001_taxi_count_r((0)).d := f_rematch001_taxi_count_write_data;
+      f_rematch001_taxi_count_r((0)).v := '1';
 
-      -- Pre-bus logic for field count_re_dog: count_re_dog.
+      -- Pre-bus logic for field rematch001_errors: rematch001_errors.
 
-      -- Handle hardware write for field count_re_dog: status.
-      f_count_re_dog_r((0)).d := f_count_re_dog_write_data;
-      f_count_re_dog_r((0)).v := '1';
+      -- Handle hardware write for field rematch001_errors: status.
+      f_rematch001_errors_r((0)).d := f_rematch001_errors_write_data;
+      f_rematch001_errors_r((0)).v := '1';
 
-      -- Pre-bus logic for field count_re_ferret: count_re_ferret.
+      -- Pre-bus logic for field rematch002_taxi_count: rematch002_taxi_count.
 
-      -- Handle hardware write for field count_re_ferret: status.
-      f_count_re_ferret_r((0)).d := f_count_re_ferret_write_data;
-      f_count_re_ferret_r((0)).v := '1';
+      -- Handle hardware write for field rematch002_taxi_count: status.
+      f_rematch002_taxi_count_r((0)).d := f_rematch002_taxi_count_write_data;
+      f_rematch002_taxi_count_r((0)).v := '1';
 
-      -- Pre-bus logic for field count_re_fish: count_re_fish.
+      -- Pre-bus logic for field rematch002_errors: rematch002_errors.
 
-      -- Handle hardware write for field count_re_fish: status.
-      f_count_re_fish_r((0)).d := f_count_re_fish_write_data;
-      f_count_re_fish_r((0)).v := '1';
+      -- Handle hardware write for field rematch002_errors: status.
+      f_rematch002_errors_r((0)).d := f_rematch002_errors_write_data;
+      f_rematch002_errors_r((0)).v := '1';
 
-      -- Pre-bus logic for field count_re_gerbil: count_re_gerbil.
+      -- Pre-bus logic for field rematch003_taxi_count: rematch003_taxi_count.
 
-      -- Handle hardware write for field count_re_gerbil: status.
-      f_count_re_gerbil_r((0)).d := f_count_re_gerbil_write_data;
-      f_count_re_gerbil_r((0)).v := '1';
+      -- Handle hardware write for field rematch003_taxi_count: status.
+      f_rematch003_taxi_count_r((0)).d := f_rematch003_taxi_count_write_data;
+      f_rematch003_taxi_count_r((0)).v := '1';
 
-      -- Pre-bus logic for field count_re_hamster: count_re_hamster.
+      -- Pre-bus logic for field rematch003_errors: rematch003_errors.
 
-      -- Handle hardware write for field count_re_hamster: status.
-      f_count_re_hamster_r((0)).d := f_count_re_hamster_write_data;
-      f_count_re_hamster_r((0)).v := '1';
+      -- Handle hardware write for field rematch003_errors: status.
+      f_rematch003_errors_r((0)).d := f_rematch003_errors_write_data;
+      f_rematch003_errors_r((0)).v := '1';
 
-      -- Pre-bus logic for field count_re_horse: count_re_horse.
+      -- Pre-bus logic for field rematch004_taxi_count: rematch004_taxi_count.
 
-      -- Handle hardware write for field count_re_horse: status.
-      f_count_re_horse_r((0)).d := f_count_re_horse_write_data;
-      f_count_re_horse_r((0)).v := '1';
+      -- Handle hardware write for field rematch004_taxi_count: status.
+      f_rematch004_taxi_count_r((0)).d := f_rematch004_taxi_count_write_data;
+      f_rematch004_taxi_count_r((0)).v := '1';
 
-      -- Pre-bus logic for field count_re_kitten: count_re_kitten.
+      -- Pre-bus logic for field rematch004_errors: rematch004_errors.
 
-      -- Handle hardware write for field count_re_kitten: status.
-      f_count_re_kitten_r((0)).d := f_count_re_kitten_write_data;
-      f_count_re_kitten_r((0)).v := '1';
+      -- Handle hardware write for field rematch004_errors: status.
+      f_rematch004_errors_r((0)).d := f_rematch004_errors_write_data;
+      f_rematch004_errors_r((0)).v := '1';
 
-      -- Pre-bus logic for field count_re_lizard: count_re_lizard.
+      -- Pre-bus logic for field rematch005_taxi_count: rematch005_taxi_count.
 
-      -- Handle hardware write for field count_re_lizard: status.
-      f_count_re_lizard_r((0)).d := f_count_re_lizard_write_data;
-      f_count_re_lizard_r((0)).v := '1';
+      -- Handle hardware write for field rematch005_taxi_count: status.
+      f_rematch005_taxi_count_r((0)).d := f_rematch005_taxi_count_write_data;
+      f_rematch005_taxi_count_r((0)).v := '1';
 
-      -- Pre-bus logic for field count_re_mouse: count_re_mouse.
+      -- Pre-bus logic for field rematch005_errors: rematch005_errors.
 
-      -- Handle hardware write for field count_re_mouse: status.
-      f_count_re_mouse_r((0)).d := f_count_re_mouse_write_data;
-      f_count_re_mouse_r((0)).v := '1';
+      -- Handle hardware write for field rematch005_errors: status.
+      f_rematch005_errors_r((0)).d := f_rematch005_errors_write_data;
+      f_rematch005_errors_r((0)).v := '1';
 
-      -- Pre-bus logic for field count_re_puppy: count_re_puppy.
+      -- Pre-bus logic for field rematch006_taxi_count: rematch006_taxi_count.
 
-      -- Handle hardware write for field count_re_puppy: status.
-      f_count_re_puppy_r((0)).d := f_count_re_puppy_write_data;
-      f_count_re_puppy_r((0)).v := '1';
+      -- Handle hardware write for field rematch006_taxi_count: status.
+      f_rematch006_taxi_count_r((0)).d := f_rematch006_taxi_count_write_data;
+      f_rematch006_taxi_count_r((0)).v := '1';
 
-      -- Pre-bus logic for field count_re_rabbit: count_re_rabbit.
+      -- Pre-bus logic for field rematch006_errors: rematch006_errors.
 
-      -- Handle hardware write for field count_re_rabbit: status.
-      f_count_re_rabbit_r((0)).d := f_count_re_rabbit_write_data;
-      f_count_re_rabbit_r((0)).v := '1';
+      -- Handle hardware write for field rematch006_errors: status.
+      f_rematch006_errors_r((0)).d := f_rematch006_errors_write_data;
+      f_rematch006_errors_r((0)).v := '1';
 
-      -- Pre-bus logic for field count_re_rat: count_re_rat.
+      -- Pre-bus logic for field rematch007_taxi_count: rematch007_taxi_count.
 
-      -- Handle hardware write for field count_re_rat: status.
-      f_count_re_rat_r((0)).d := f_count_re_rat_write_data;
-      f_count_re_rat_r((0)).v := '1';
+      -- Handle hardware write for field rematch007_taxi_count: status.
+      f_rematch007_taxi_count_r((0)).d := f_rematch007_taxi_count_write_data;
+      f_rematch007_taxi_count_r((0)).v := '1';
 
-      -- Pre-bus logic for field count_re_turtle: count_re_turtle.
+      -- Pre-bus logic for field rematch007_errors: rematch007_errors.
 
-      -- Handle hardware write for field count_re_turtle: status.
-      f_count_re_turtle_r((0)).d := f_count_re_turtle_write_data;
-      f_count_re_turtle_r((0)).v := '1';
+      -- Handle hardware write for field rematch007_errors: status.
+      f_rematch007_errors_r((0)).d := f_rematch007_errors_write_data;
+      f_rematch007_errors_r((0)).v := '1';
 
-      -- Pre-bus logic for field count_errors: count_errors.
+      -- Pre-bus logic for field rematch008_taxi_count: rematch008_taxi_count.
 
-      -- Handle hardware write for field count_errors: status.
-      f_count_errors_r((0)).d := f_count_errors_write_data;
-      f_count_errors_r((0)).v := '1';
+      -- Handle hardware write for field rematch008_taxi_count: status.
+      f_rematch008_taxi_count_r((0)).d := f_rematch008_taxi_count_write_data;
+      f_rematch008_taxi_count_r((0)).v := '1';
+
+      -- Pre-bus logic for field rematch008_errors: rematch008_errors.
+
+      -- Handle hardware write for field rematch008_errors: status.
+      f_rematch008_errors_r((0)).d := f_rematch008_errors_write_data;
+      f_rematch008_errors_r((0)).v := '1';
+
+      -- Pre-bus logic for field rematch009_taxi_count: rematch009_taxi_count.
+
+      -- Handle hardware write for field rematch009_taxi_count: status.
+      f_rematch009_taxi_count_r((0)).d := f_rematch009_taxi_count_write_data;
+      f_rematch009_taxi_count_r((0)).v := '1';
+
+      -- Pre-bus logic for field rematch009_errors: rematch009_errors.
+
+      -- Handle hardware write for field rematch009_errors: status.
+      f_rematch009_errors_r((0)).d := f_rematch009_errors_write_data;
+      f_rematch009_errors_r((0)).v := '1';
+
+      -- Pre-bus logic for field rematch010_taxi_count: rematch010_taxi_count.
+
+      -- Handle hardware write for field rematch010_taxi_count: status.
+      f_rematch010_taxi_count_r((0)).d := f_rematch010_taxi_count_write_data;
+      f_rematch010_taxi_count_r((0)).v := '1';
+
+      -- Pre-bus logic for field rematch010_errors: rematch010_errors.
+
+      -- Handle hardware write for field rematch010_errors: status.
+      f_rematch010_errors_r((0)).d := f_rematch010_errors_write_data;
+      f_rematch010_errors_r((0)).v := '1';
+
+      -- Pre-bus logic for field rematch011_taxi_count: rematch011_taxi_count.
+
+      -- Handle hardware write for field rematch011_taxi_count: status.
+      f_rematch011_taxi_count_r((0)).d := f_rematch011_taxi_count_write_data;
+      f_rematch011_taxi_count_r((0)).v := '1';
+
+      -- Pre-bus logic for field rematch011_errors: rematch011_errors.
+
+      -- Handle hardware write for field rematch011_errors: status.
+      f_rematch011_errors_r((0)).d := f_rematch011_errors_write_data;
+      f_rematch011_errors_r((0)).v := '1';
+
+      -- Pre-bus logic for field rematch012_taxi_count: rematch012_taxi_count.
+
+      -- Handle hardware write for field rematch012_taxi_count: status.
+      f_rematch012_taxi_count_r((0)).d := f_rematch012_taxi_count_write_data;
+      f_rematch012_taxi_count_r((0)).v := '1';
+
+      -- Pre-bus logic for field rematch012_errors: rematch012_errors.
+
+      -- Handle hardware write for field rematch012_errors: status.
+      f_rematch012_errors_r((0)).d := f_rematch012_errors_write_data;
+      f_rematch012_errors_r((0)).v := '1';
+
+      -- Pre-bus logic for field rematch013_taxi_count: rematch013_taxi_count.
+
+      -- Handle hardware write for field rematch013_taxi_count: status.
+      f_rematch013_taxi_count_r((0)).d := f_rematch013_taxi_count_write_data;
+      f_rematch013_taxi_count_r((0)).v := '1';
+
+      -- Pre-bus logic for field rematch013_errors: rematch013_errors.
+
+      -- Handle hardware write for field rematch013_errors: status.
+      f_rematch013_errors_r((0)).d := f_rematch013_errors_write_data;
+      f_rematch013_errors_r((0)).v := '1';
+
+      -- Pre-bus logic for field rematch014_taxi_count: rematch014_taxi_count.
+
+      -- Handle hardware write for field rematch014_taxi_count: status.
+      f_rematch014_taxi_count_r((0)).d := f_rematch014_taxi_count_write_data;
+      f_rematch014_taxi_count_r((0)).v := '1';
+
+      -- Pre-bus logic for field rematch014_errors: rematch014_errors.
+
+      -- Handle hardware write for field rematch014_errors: status.
+      f_rematch014_errors_r((0)).d := f_rematch014_errors_write_data;
+      f_rematch014_errors_r((0)).v := '1';
+
+      -- Pre-bus logic for field rematch015_taxi_count: rematch015_taxi_count.
+
+      -- Handle hardware write for field rematch015_taxi_count: status.
+      f_rematch015_taxi_count_r((0)).d := f_rematch015_taxi_count_write_data;
+      f_rematch015_taxi_count_r((0)).v := '1';
+
+      -- Pre-bus logic for field rematch015_errors: rematch015_errors.
+
+      -- Handle hardware write for field rematch015_errors: status.
+      f_rematch015_errors_r((0)).d := f_rematch015_errors_write_data;
+      f_rematch015_errors_r((0)).v := '1';
 
       -- Pre-bus logic for field Profile_clear: Profile_clear.
 
@@ -2037,8 +3278,8 @@ begin
       subaddr_none(0) := '0';
 
       -- Read address decoder.
-      case r_addr(8 downto 2) is
-        when "0000101" =>
+      case r_addr(9 downto 2) is
+        when "00000101" =>
           -- r_addr = 000000000000000000000000000101--
 
           if r_req then
@@ -2105,7 +3346,7 @@ begin
 
           end if;
 
-        when "0000110" =>
+        when "00000110" =>
           -- r_addr = 000000000000000000000000000110--
 
           if r_req then
@@ -2140,7 +3381,7 @@ begin
 
           end if;
 
-        when "0000111" =>
+        when "00000111" =>
           -- r_addr = 000000000000000000000000000111--
 
           -- Read logic for block result_reg_high: block containing bits 63..32
@@ -2157,7 +3398,7 @@ begin
 
           end if;
 
-        when "0001000" =>
+        when "00001000" =>
           -- r_addr = 000000000000000000000000001000--
 
           if r_req then
@@ -2193,7 +3434,7 @@ begin
 
           end if;
 
-        when "0001001" =>
+        when "00001001" =>
           -- r_addr = 000000000000000000000000001001--
 
           if r_req then
@@ -2228,7 +3469,7 @@ begin
 
           end if;
 
-        when "0001010" =>
+        when "00001010" =>
           -- r_addr = 000000000000000000000000001010--
 
           if r_req then
@@ -2264,7 +3505,7 @@ begin
 
           end if;
 
-        when "0001011" =>
+        when "00001011" =>
           -- r_addr = 000000000000000000000000001011--
 
           if r_req then
@@ -2299,7 +3540,7 @@ begin
 
           end if;
 
-        when "0001100" =>
+        when "00001100" =>
           -- r_addr = 000000000000000000000000001100--
 
           if r_req then
@@ -2335,7 +3576,7 @@ begin
 
           end if;
 
-        when "0001101" =>
+        when "00001101" =>
           -- r_addr = 000000000000000000000000001101--
 
           if r_req then
@@ -2370,7 +3611,7 @@ begin
 
           end if;
 
-        when "0001110" =>
+        when "00001110" =>
           -- r_addr = 000000000000000000000000001110--
 
           if r_req then
@@ -2406,7 +3647,7 @@ begin
 
           end if;
 
-        when "0001111" =>
+        when "00001111" =>
           -- r_addr = 000000000000000000000000001111--
 
           if r_req then
@@ -2441,7 +3682,7 @@ begin
 
           end if;
 
-        when "0010000" =>
+        when "00010000" =>
           -- r_addr = 000000000000000000000000010000--
 
           if r_req then
@@ -2477,7 +3718,7 @@ begin
 
           end if;
 
-        when "0010001" =>
+        when "00010001" =>
           -- r_addr = 000000000000000000000000010001--
 
           if r_req then
@@ -2512,7 +3753,7 @@ begin
 
           end if;
 
-        when "0010010" =>
+        when "00010010" =>
           -- r_addr = 000000000000000000000000010010--
 
           if r_req then
@@ -2548,7 +3789,7 @@ begin
 
           end if;
 
-        when "0010011" =>
+        when "00010011" =>
           -- r_addr = 000000000000000000000000010011--
 
           if r_req then
@@ -2583,7 +3824,7 @@ begin
 
           end if;
 
-        when "0010100" =>
+        when "00010100" =>
           -- r_addr = 000000000000000000000000010100--
 
           if r_req then
@@ -2619,7 +3860,7 @@ begin
 
           end if;
 
-        when "0010101" =>
+        when "00010101" =>
           -- r_addr = 000000000000000000000000010101--
 
           if r_req then
@@ -2654,7 +3895,7 @@ begin
 
           end if;
 
-        when "0010110" =>
+        when "00010110" =>
           -- r_addr = 000000000000000000000000010110--
 
           if r_req then
@@ -2690,7 +3931,7 @@ begin
 
           end if;
 
-        when "0010111" =>
+        when "00010111" =>
           -- r_addr = 000000000000000000000000010111--
 
           if r_req then
@@ -2725,7 +3966,7 @@ begin
 
           end if;
 
-        when "0011000" =>
+        when "00011000" =>
           -- r_addr = 000000000000000000000000011000--
 
           if r_req then
@@ -2761,7 +4002,7 @@ begin
 
           end if;
 
-        when "0011001" =>
+        when "00011001" =>
           -- r_addr = 000000000000000000000000011001--
 
           if r_req then
@@ -2796,7 +4037,7 @@ begin
 
           end if;
 
-        when "0011010" =>
+        when "00011010" =>
           -- r_addr = 000000000000000000000000011010--
 
           if r_req then
@@ -2832,7 +4073,7 @@ begin
 
           end if;
 
-        when "0011011" =>
+        when "00011011" =>
           -- r_addr = 000000000000000000000000011011--
 
           if r_req then
@@ -2867,7 +4108,7 @@ begin
 
           end if;
 
-        when "0011100" =>
+        when "00011100" =>
           -- r_addr = 000000000000000000000000011100--
 
           if r_req then
@@ -2903,7 +4144,7 @@ begin
 
           end if;
 
-        when "0011101" =>
+        when "00011101" =>
           -- r_addr = 000000000000000000000000011101--
 
           if r_req then
@@ -2938,7 +4179,7 @@ begin
 
           end if;
 
-        when "0011110" =>
+        when "00011110" =>
           -- r_addr = 000000000000000000000000011110--
 
           if r_req then
@@ -2974,7 +4215,7 @@ begin
 
           end if;
 
-        when "0011111" =>
+        when "00011111" =>
           -- r_addr = 000000000000000000000000011111--
 
           if r_req then
@@ -3009,7 +4250,7 @@ begin
 
           end if;
 
-        when "0100000" =>
+        when "00100000" =>
           -- r_addr = 000000000000000000000000100000--
 
           if r_req then
@@ -3045,7 +4286,7 @@ begin
 
           end if;
 
-        when "0100001" =>
+        when "00100001" =>
           -- r_addr = 000000000000000000000000100001--
 
           if r_req then
@@ -3080,7 +4321,7 @@ begin
 
           end if;
 
-        when "0100010" =>
+        when "00100010" =>
           -- r_addr = 000000000000000000000000100010--
 
           if r_req then
@@ -3116,7 +4357,7 @@ begin
 
           end if;
 
-        when "0100011" =>
+        when "00100011" =>
           -- r_addr = 000000000000000000000000100011--
 
           if r_req then
@@ -3151,7 +4392,7 @@ begin
 
           end if;
 
-        when "0100100" =>
+        when "00100100" =>
           -- r_addr = 000000000000000000000000100100--
 
           if r_req then
@@ -3187,7 +4428,7 @@ begin
 
           end if;
 
-        when "0100101" =>
+        when "00100101" =>
           -- r_addr = 000000000000000000000000100101--
 
           if r_req then
@@ -3222,7 +4463,7 @@ begin
 
           end if;
 
-        when "0100110" =>
+        when "00100110" =>
           -- r_addr = 000000000000000000000000100110--
 
           if r_req then
@@ -3258,7 +4499,7 @@ begin
 
           end if;
 
-        when "0100111" =>
+        when "00100111" =>
           -- r_addr = 000000000000000000000000100111--
 
           if r_req then
@@ -3293,8 +4534,1192 @@ begin
 
           end if;
 
-        when "0101000" =>
+        when "00101000" =>
           -- r_addr = 000000000000000000000000101000--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch000_taxi_firstidx:
+          -- rematch000_taxi_firstidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch000_taxi_firstidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch000_taxi_firstidx_reg: block containing
+          -- bits 31..0 of register `rematch000_taxi_firstidx_reg`
+          -- (`REMATCH000_TAXI_FIRSTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "00101001" =>
+          -- r_addr = 000000000000000000000000101001--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch000_taxi_lastidx:
+          -- rematch000_taxi_lastidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch000_taxi_lastidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch000_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch000_taxi_lastidx_reg`
+          -- (`REMATCH000_TAXI_LASTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "00101010" =>
+          -- r_addr = 000000000000000000000000101010--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch001_taxi_firstidx:
+          -- rematch001_taxi_firstidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch001_taxi_firstidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch001_taxi_firstidx_reg: block containing
+          -- bits 31..0 of register `rematch001_taxi_firstidx_reg`
+          -- (`REMATCH001_TAXI_FIRSTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "00101011" =>
+          -- r_addr = 000000000000000000000000101011--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch001_taxi_lastidx:
+          -- rematch001_taxi_lastidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch001_taxi_lastidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch001_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch001_taxi_lastidx_reg`
+          -- (`REMATCH001_TAXI_LASTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "00101100" =>
+          -- r_addr = 000000000000000000000000101100--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch002_taxi_firstidx:
+          -- rematch002_taxi_firstidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch002_taxi_firstidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch002_taxi_firstidx_reg: block containing
+          -- bits 31..0 of register `rematch002_taxi_firstidx_reg`
+          -- (`REMATCH002_TAXI_FIRSTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "00101101" =>
+          -- r_addr = 000000000000000000000000101101--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch002_taxi_lastidx:
+          -- rematch002_taxi_lastidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch002_taxi_lastidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch002_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch002_taxi_lastidx_reg`
+          -- (`REMATCH002_TAXI_LASTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "00101110" =>
+          -- r_addr = 000000000000000000000000101110--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch003_taxi_firstidx:
+          -- rematch003_taxi_firstidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch003_taxi_firstidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch003_taxi_firstidx_reg: block containing
+          -- bits 31..0 of register `rematch003_taxi_firstidx_reg`
+          -- (`REMATCH003_TAXI_FIRSTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "00101111" =>
+          -- r_addr = 000000000000000000000000101111--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch003_taxi_lastidx:
+          -- rematch003_taxi_lastidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch003_taxi_lastidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch003_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch003_taxi_lastidx_reg`
+          -- (`REMATCH003_TAXI_LASTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "00110000" =>
+          -- r_addr = 000000000000000000000000110000--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch004_taxi_firstidx:
+          -- rematch004_taxi_firstidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch004_taxi_firstidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch004_taxi_firstidx_reg: block containing
+          -- bits 31..0 of register `rematch004_taxi_firstidx_reg`
+          -- (`REMATCH004_TAXI_FIRSTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "00110001" =>
+          -- r_addr = 000000000000000000000000110001--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch004_taxi_lastidx:
+          -- rematch004_taxi_lastidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch004_taxi_lastidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch004_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch004_taxi_lastidx_reg`
+          -- (`REMATCH004_TAXI_LASTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "00110010" =>
+          -- r_addr = 000000000000000000000000110010--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch005_taxi_firstidx:
+          -- rematch005_taxi_firstidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch005_taxi_firstidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch005_taxi_firstidx_reg: block containing
+          -- bits 31..0 of register `rematch005_taxi_firstidx_reg`
+          -- (`REMATCH005_TAXI_FIRSTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "00110011" =>
+          -- r_addr = 000000000000000000000000110011--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch005_taxi_lastidx:
+          -- rematch005_taxi_lastidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch005_taxi_lastidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch005_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch005_taxi_lastidx_reg`
+          -- (`REMATCH005_TAXI_LASTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "00110100" =>
+          -- r_addr = 000000000000000000000000110100--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch006_taxi_firstidx:
+          -- rematch006_taxi_firstidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch006_taxi_firstidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch006_taxi_firstidx_reg: block containing
+          -- bits 31..0 of register `rematch006_taxi_firstidx_reg`
+          -- (`REMATCH006_TAXI_FIRSTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "00110101" =>
+          -- r_addr = 000000000000000000000000110101--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch006_taxi_lastidx:
+          -- rematch006_taxi_lastidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch006_taxi_lastidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch006_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch006_taxi_lastidx_reg`
+          -- (`REMATCH006_TAXI_LASTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "00110110" =>
+          -- r_addr = 000000000000000000000000110110--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch007_taxi_firstidx:
+          -- rematch007_taxi_firstidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch007_taxi_firstidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch007_taxi_firstidx_reg: block containing
+          -- bits 31..0 of register `rematch007_taxi_firstidx_reg`
+          -- (`REMATCH007_TAXI_FIRSTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "00110111" =>
+          -- r_addr = 000000000000000000000000110111--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch007_taxi_lastidx:
+          -- rematch007_taxi_lastidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch007_taxi_lastidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch007_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch007_taxi_lastidx_reg`
+          -- (`REMATCH007_TAXI_LASTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "00111000" =>
+          -- r_addr = 000000000000000000000000111000--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch008_taxi_firstidx:
+          -- rematch008_taxi_firstidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch008_taxi_firstidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch008_taxi_firstidx_reg: block containing
+          -- bits 31..0 of register `rematch008_taxi_firstidx_reg`
+          -- (`REMATCH008_TAXI_FIRSTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "00111001" =>
+          -- r_addr = 000000000000000000000000111001--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch008_taxi_lastidx:
+          -- rematch008_taxi_lastidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch008_taxi_lastidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch008_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch008_taxi_lastidx_reg`
+          -- (`REMATCH008_TAXI_LASTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "00111010" =>
+          -- r_addr = 000000000000000000000000111010--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch009_taxi_firstidx:
+          -- rematch009_taxi_firstidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch009_taxi_firstidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch009_taxi_firstidx_reg: block containing
+          -- bits 31..0 of register `rematch009_taxi_firstidx_reg`
+          -- (`REMATCH009_TAXI_FIRSTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "00111011" =>
+          -- r_addr = 000000000000000000000000111011--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch009_taxi_lastidx:
+          -- rematch009_taxi_lastidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch009_taxi_lastidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch009_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch009_taxi_lastidx_reg`
+          -- (`REMATCH009_TAXI_LASTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "00111100" =>
+          -- r_addr = 000000000000000000000000111100--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch010_taxi_firstidx:
+          -- rematch010_taxi_firstidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch010_taxi_firstidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch010_taxi_firstidx_reg: block containing
+          -- bits 31..0 of register `rematch010_taxi_firstidx_reg`
+          -- (`REMATCH010_TAXI_FIRSTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "00111101" =>
+          -- r_addr = 000000000000000000000000111101--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch010_taxi_lastidx:
+          -- rematch010_taxi_lastidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch010_taxi_lastidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch010_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch010_taxi_lastidx_reg`
+          -- (`REMATCH010_TAXI_LASTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "00111110" =>
+          -- r_addr = 000000000000000000000000111110--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch011_taxi_firstidx:
+          -- rematch011_taxi_firstidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch011_taxi_firstidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch011_taxi_firstidx_reg: block containing
+          -- bits 31..0 of register `rematch011_taxi_firstidx_reg`
+          -- (`REMATCH011_TAXI_FIRSTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "00111111" =>
+          -- r_addr = 000000000000000000000000111111--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch011_taxi_lastidx:
+          -- rematch011_taxi_lastidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch011_taxi_lastidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch011_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch011_taxi_lastidx_reg`
+          -- (`REMATCH011_TAXI_LASTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "01000000" =>
+          -- r_addr = 000000000000000000000001000000--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch012_taxi_firstidx:
+          -- rematch012_taxi_firstidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch012_taxi_firstidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch012_taxi_firstidx_reg: block containing
+          -- bits 31..0 of register `rematch012_taxi_firstidx_reg`
+          -- (`REMATCH012_TAXI_FIRSTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "01000001" =>
+          -- r_addr = 000000000000000000000001000001--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch012_taxi_lastidx:
+          -- rematch012_taxi_lastidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch012_taxi_lastidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch012_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch012_taxi_lastidx_reg`
+          -- (`REMATCH012_TAXI_LASTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "01000010" =>
+          -- r_addr = 000000000000000000000001000010--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch013_taxi_firstidx:
+          -- rematch013_taxi_firstidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch013_taxi_firstidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch013_taxi_firstidx_reg: block containing
+          -- bits 31..0 of register `rematch013_taxi_firstidx_reg`
+          -- (`REMATCH013_TAXI_FIRSTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "01000011" =>
+          -- r_addr = 000000000000000000000001000011--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch013_taxi_lastidx:
+          -- rematch013_taxi_lastidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch013_taxi_lastidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch013_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch013_taxi_lastidx_reg`
+          -- (`REMATCH013_TAXI_LASTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "01000100" =>
+          -- r_addr = 000000000000000000000001000100--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch014_taxi_firstidx:
+          -- rematch014_taxi_firstidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch014_taxi_firstidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch014_taxi_firstidx_reg: block containing
+          -- bits 31..0 of register `rematch014_taxi_firstidx_reg`
+          -- (`REMATCH014_TAXI_FIRSTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "01000101" =>
+          -- r_addr = 000000000000000000000001000101--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch014_taxi_lastidx:
+          -- rematch014_taxi_lastidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch014_taxi_lastidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch014_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch014_taxi_lastidx_reg`
+          -- (`REMATCH014_TAXI_LASTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "01000110" =>
+          -- r_addr = 000000000000000000000001000110--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch015_taxi_firstidx:
+          -- rematch015_taxi_firstidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch015_taxi_firstidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch015_taxi_firstidx_reg: block containing
+          -- bits 31..0 of register `rematch015_taxi_firstidx_reg`
+          -- (`REMATCH015_TAXI_FIRSTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "01000111" =>
+          -- r_addr = 000000000000000000000001000111--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch015_taxi_lastidx:
+          -- rematch015_taxi_lastidx.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch015_taxi_lastidx_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch015_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch015_taxi_lastidx_reg`
+          -- (`REMATCH015_TAXI_LASTIDX`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "01001000" =>
+          -- r_addr = 000000000000000000000001001000--
 
           if r_req then
 
@@ -3329,8 +5754,8 @@ begin
 
           end if;
 
-        when "0101001" =>
-          -- r_addr = 000000000000000000000000101001--
+        when "01001001" =>
+          -- r_addr = 000000000000000000000001001001--
 
           -- Read logic for block rematch000_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch000_in_offsets_reg`
@@ -3347,8 +5772,8 @@ begin
 
           end if;
 
-        when "0101010" =>
-          -- r_addr = 000000000000000000000000101010--
+        when "01001010" =>
+          -- r_addr = 000000000000000000000001001010--
 
           if r_req then
 
@@ -3383,8 +5808,8 @@ begin
 
           end if;
 
-        when "0101011" =>
-          -- r_addr = 000000000000000000000000101011--
+        when "01001011" =>
+          -- r_addr = 000000000000000000000001001011--
 
           -- Read logic for block rematch000_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch000_in_values_reg`
@@ -3401,8 +5826,8 @@ begin
 
           end if;
 
-        when "0101100" =>
-          -- r_addr = 000000000000000000000000101100--
+        when "01001100" =>
+          -- r_addr = 000000000000000000000001001100--
 
           if r_req then
 
@@ -3437,8 +5862,8 @@ begin
 
           end if;
 
-        when "0101101" =>
-          -- r_addr = 000000000000000000000000101101--
+        when "01001101" =>
+          -- r_addr = 000000000000000000000001001101--
 
           -- Read logic for block rematch001_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch001_in_offsets_reg`
@@ -3455,8 +5880,8 @@ begin
 
           end if;
 
-        when "0101110" =>
-          -- r_addr = 000000000000000000000000101110--
+        when "01001110" =>
+          -- r_addr = 000000000000000000000001001110--
 
           if r_req then
 
@@ -3491,8 +5916,8 @@ begin
 
           end if;
 
-        when "0101111" =>
-          -- r_addr = 000000000000000000000000101111--
+        when "01001111" =>
+          -- r_addr = 000000000000000000000001001111--
 
           -- Read logic for block rematch001_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch001_in_values_reg`
@@ -3509,8 +5934,8 @@ begin
 
           end if;
 
-        when "0110000" =>
-          -- r_addr = 000000000000000000000000110000--
+        when "01010000" =>
+          -- r_addr = 000000000000000000000001010000--
 
           if r_req then
 
@@ -3545,8 +5970,8 @@ begin
 
           end if;
 
-        when "0110001" =>
-          -- r_addr = 000000000000000000000000110001--
+        when "01010001" =>
+          -- r_addr = 000000000000000000000001010001--
 
           -- Read logic for block rematch002_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch002_in_offsets_reg`
@@ -3563,8 +5988,8 @@ begin
 
           end if;
 
-        when "0110010" =>
-          -- r_addr = 000000000000000000000000110010--
+        when "01010010" =>
+          -- r_addr = 000000000000000000000001010010--
 
           if r_req then
 
@@ -3599,8 +6024,8 @@ begin
 
           end if;
 
-        when "0110011" =>
-          -- r_addr = 000000000000000000000000110011--
+        when "01010011" =>
+          -- r_addr = 000000000000000000000001010011--
 
           -- Read logic for block rematch002_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch002_in_values_reg`
@@ -3617,8 +6042,8 @@ begin
 
           end if;
 
-        when "0110100" =>
-          -- r_addr = 000000000000000000000000110100--
+        when "01010100" =>
+          -- r_addr = 000000000000000000000001010100--
 
           if r_req then
 
@@ -3653,8 +6078,8 @@ begin
 
           end if;
 
-        when "0110101" =>
-          -- r_addr = 000000000000000000000000110101--
+        when "01010101" =>
+          -- r_addr = 000000000000000000000001010101--
 
           -- Read logic for block rematch003_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch003_in_offsets_reg`
@@ -3671,8 +6096,8 @@ begin
 
           end if;
 
-        when "0110110" =>
-          -- r_addr = 000000000000000000000000110110--
+        when "01010110" =>
+          -- r_addr = 000000000000000000000001010110--
 
           if r_req then
 
@@ -3707,8 +6132,8 @@ begin
 
           end if;
 
-        when "0110111" =>
-          -- r_addr = 000000000000000000000000110111--
+        when "01010111" =>
+          -- r_addr = 000000000000000000000001010111--
 
           -- Read logic for block rematch003_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch003_in_values_reg`
@@ -3725,8 +6150,8 @@ begin
 
           end if;
 
-        when "0111000" =>
-          -- r_addr = 000000000000000000000000111000--
+        when "01011000" =>
+          -- r_addr = 000000000000000000000001011000--
 
           if r_req then
 
@@ -3761,8 +6186,8 @@ begin
 
           end if;
 
-        when "0111001" =>
-          -- r_addr = 000000000000000000000000111001--
+        when "01011001" =>
+          -- r_addr = 000000000000000000000001011001--
 
           -- Read logic for block rematch004_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch004_in_offsets_reg`
@@ -3779,8 +6204,8 @@ begin
 
           end if;
 
-        when "0111010" =>
-          -- r_addr = 000000000000000000000000111010--
+        when "01011010" =>
+          -- r_addr = 000000000000000000000001011010--
 
           if r_req then
 
@@ -3815,8 +6240,8 @@ begin
 
           end if;
 
-        when "0111011" =>
-          -- r_addr = 000000000000000000000000111011--
+        when "01011011" =>
+          -- r_addr = 000000000000000000000001011011--
 
           -- Read logic for block rematch004_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch004_in_values_reg`
@@ -3833,8 +6258,8 @@ begin
 
           end if;
 
-        when "0111100" =>
-          -- r_addr = 000000000000000000000000111100--
+        when "01011100" =>
+          -- r_addr = 000000000000000000000001011100--
 
           if r_req then
 
@@ -3869,8 +6294,8 @@ begin
 
           end if;
 
-        when "0111101" =>
-          -- r_addr = 000000000000000000000000111101--
+        when "01011101" =>
+          -- r_addr = 000000000000000000000001011101--
 
           -- Read logic for block rematch005_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch005_in_offsets_reg`
@@ -3887,8 +6312,8 @@ begin
 
           end if;
 
-        when "0111110" =>
-          -- r_addr = 000000000000000000000000111110--
+        when "01011110" =>
+          -- r_addr = 000000000000000000000001011110--
 
           if r_req then
 
@@ -3923,8 +6348,8 @@ begin
 
           end if;
 
-        when "0111111" =>
-          -- r_addr = 000000000000000000000000111111--
+        when "01011111" =>
+          -- r_addr = 000000000000000000000001011111--
 
           -- Read logic for block rematch005_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch005_in_values_reg`
@@ -3941,8 +6366,8 @@ begin
 
           end if;
 
-        when "1000000" =>
-          -- r_addr = 000000000000000000000001000000--
+        when "01100000" =>
+          -- r_addr = 000000000000000000000001100000--
 
           if r_req then
 
@@ -3977,8 +6402,8 @@ begin
 
           end if;
 
-        when "1000001" =>
-          -- r_addr = 000000000000000000000001000001--
+        when "01100001" =>
+          -- r_addr = 000000000000000000000001100001--
 
           -- Read logic for block rematch006_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch006_in_offsets_reg`
@@ -3995,8 +6420,8 @@ begin
 
           end if;
 
-        when "1000010" =>
-          -- r_addr = 000000000000000000000001000010--
+        when "01100010" =>
+          -- r_addr = 000000000000000000000001100010--
 
           if r_req then
 
@@ -4031,8 +6456,8 @@ begin
 
           end if;
 
-        when "1000011" =>
-          -- r_addr = 000000000000000000000001000011--
+        when "01100011" =>
+          -- r_addr = 000000000000000000000001100011--
 
           -- Read logic for block rematch006_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch006_in_values_reg`
@@ -4049,8 +6474,8 @@ begin
 
           end if;
 
-        when "1000100" =>
-          -- r_addr = 000000000000000000000001000100--
+        when "01100100" =>
+          -- r_addr = 000000000000000000000001100100--
 
           if r_req then
 
@@ -4085,8 +6510,8 @@ begin
 
           end if;
 
-        when "1000101" =>
-          -- r_addr = 000000000000000000000001000101--
+        when "01100101" =>
+          -- r_addr = 000000000000000000000001100101--
 
           -- Read logic for block rematch007_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch007_in_offsets_reg`
@@ -4103,8 +6528,8 @@ begin
 
           end if;
 
-        when "1000110" =>
-          -- r_addr = 000000000000000000000001000110--
+        when "01100110" =>
+          -- r_addr = 000000000000000000000001100110--
 
           if r_req then
 
@@ -4139,8 +6564,8 @@ begin
 
           end if;
 
-        when "1000111" =>
-          -- r_addr = 000000000000000000000001000111--
+        when "01100111" =>
+          -- r_addr = 000000000000000000000001100111--
 
           -- Read logic for block rematch007_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch007_in_values_reg`
@@ -4157,8 +6582,8 @@ begin
 
           end if;
 
-        when "1001000" =>
-          -- r_addr = 000000000000000000000001001000--
+        when "01101000" =>
+          -- r_addr = 000000000000000000000001101000--
 
           if r_req then
 
@@ -4193,8 +6618,8 @@ begin
 
           end if;
 
-        when "1001001" =>
-          -- r_addr = 000000000000000000000001001001--
+        when "01101001" =>
+          -- r_addr = 000000000000000000000001101001--
 
           -- Read logic for block rematch008_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch008_in_offsets_reg`
@@ -4211,8 +6636,8 @@ begin
 
           end if;
 
-        when "1001010" =>
-          -- r_addr = 000000000000000000000001001010--
+        when "01101010" =>
+          -- r_addr = 000000000000000000000001101010--
 
           if r_req then
 
@@ -4247,8 +6672,8 @@ begin
 
           end if;
 
-        when "1001011" =>
-          -- r_addr = 000000000000000000000001001011--
+        when "01101011" =>
+          -- r_addr = 000000000000000000000001101011--
 
           -- Read logic for block rematch008_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch008_in_values_reg`
@@ -4265,8 +6690,8 @@ begin
 
           end if;
 
-        when "1001100" =>
-          -- r_addr = 000000000000000000000001001100--
+        when "01101100" =>
+          -- r_addr = 000000000000000000000001101100--
 
           if r_req then
 
@@ -4301,8 +6726,8 @@ begin
 
           end if;
 
-        when "1001101" =>
-          -- r_addr = 000000000000000000000001001101--
+        when "01101101" =>
+          -- r_addr = 000000000000000000000001101101--
 
           -- Read logic for block rematch009_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch009_in_offsets_reg`
@@ -4319,8 +6744,8 @@ begin
 
           end if;
 
-        when "1001110" =>
-          -- r_addr = 000000000000000000000001001110--
+        when "01101110" =>
+          -- r_addr = 000000000000000000000001101110--
 
           if r_req then
 
@@ -4355,8 +6780,8 @@ begin
 
           end if;
 
-        when "1001111" =>
-          -- r_addr = 000000000000000000000001001111--
+        when "01101111" =>
+          -- r_addr = 000000000000000000000001101111--
 
           -- Read logic for block rematch009_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch009_in_values_reg`
@@ -4373,8 +6798,8 @@ begin
 
           end if;
 
-        when "1010000" =>
-          -- r_addr = 000000000000000000000001010000--
+        when "01110000" =>
+          -- r_addr = 000000000000000000000001110000--
 
           if r_req then
 
@@ -4409,8 +6834,8 @@ begin
 
           end if;
 
-        when "1010001" =>
-          -- r_addr = 000000000000000000000001010001--
+        when "01110001" =>
+          -- r_addr = 000000000000000000000001110001--
 
           -- Read logic for block rematch010_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch010_in_offsets_reg`
@@ -4427,8 +6852,8 @@ begin
 
           end if;
 
-        when "1010010" =>
-          -- r_addr = 000000000000000000000001010010--
+        when "01110010" =>
+          -- r_addr = 000000000000000000000001110010--
 
           if r_req then
 
@@ -4463,8 +6888,8 @@ begin
 
           end if;
 
-        when "1010011" =>
-          -- r_addr = 000000000000000000000001010011--
+        when "01110011" =>
+          -- r_addr = 000000000000000000000001110011--
 
           -- Read logic for block rematch010_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch010_in_values_reg`
@@ -4481,8 +6906,8 @@ begin
 
           end if;
 
-        when "1010100" =>
-          -- r_addr = 000000000000000000000001010100--
+        when "01110100" =>
+          -- r_addr = 000000000000000000000001110100--
 
           if r_req then
 
@@ -4517,8 +6942,8 @@ begin
 
           end if;
 
-        when "1010101" =>
-          -- r_addr = 000000000000000000000001010101--
+        when "01110101" =>
+          -- r_addr = 000000000000000000000001110101--
 
           -- Read logic for block rematch011_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch011_in_offsets_reg`
@@ -4535,8 +6960,8 @@ begin
 
           end if;
 
-        when "1010110" =>
-          -- r_addr = 000000000000000000000001010110--
+        when "01110110" =>
+          -- r_addr = 000000000000000000000001110110--
 
           if r_req then
 
@@ -4571,8 +6996,8 @@ begin
 
           end if;
 
-        when "1010111" =>
-          -- r_addr = 000000000000000000000001010111--
+        when "01110111" =>
+          -- r_addr = 000000000000000000000001110111--
 
           -- Read logic for block rematch011_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch011_in_values_reg`
@@ -4589,8 +7014,8 @@ begin
 
           end if;
 
-        when "1011000" =>
-          -- r_addr = 000000000000000000000001011000--
+        when "01111000" =>
+          -- r_addr = 000000000000000000000001111000--
 
           if r_req then
 
@@ -4625,8 +7050,8 @@ begin
 
           end if;
 
-        when "1011001" =>
-          -- r_addr = 000000000000000000000001011001--
+        when "01111001" =>
+          -- r_addr = 000000000000000000000001111001--
 
           -- Read logic for block rematch012_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch012_in_offsets_reg`
@@ -4643,8 +7068,8 @@ begin
 
           end if;
 
-        when "1011010" =>
-          -- r_addr = 000000000000000000000001011010--
+        when "01111010" =>
+          -- r_addr = 000000000000000000000001111010--
 
           if r_req then
 
@@ -4679,8 +7104,8 @@ begin
 
           end if;
 
-        when "1011011" =>
-          -- r_addr = 000000000000000000000001011011--
+        when "01111011" =>
+          -- r_addr = 000000000000000000000001111011--
 
           -- Read logic for block rematch012_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch012_in_values_reg`
@@ -4697,8 +7122,8 @@ begin
 
           end if;
 
-        when "1011100" =>
-          -- r_addr = 000000000000000000000001011100--
+        when "01111100" =>
+          -- r_addr = 000000000000000000000001111100--
 
           if r_req then
 
@@ -4733,8 +7158,8 @@ begin
 
           end if;
 
-        when "1011101" =>
-          -- r_addr = 000000000000000000000001011101--
+        when "01111101" =>
+          -- r_addr = 000000000000000000000001111101--
 
           -- Read logic for block rematch013_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch013_in_offsets_reg`
@@ -4751,8 +7176,8 @@ begin
 
           end if;
 
-        when "1011110" =>
-          -- r_addr = 000000000000000000000001011110--
+        when "01111110" =>
+          -- r_addr = 000000000000000000000001111110--
 
           if r_req then
 
@@ -4787,8 +7212,8 @@ begin
 
           end if;
 
-        when "1011111" =>
-          -- r_addr = 000000000000000000000001011111--
+        when "01111111" =>
+          -- r_addr = 000000000000000000000001111111--
 
           -- Read logic for block rematch013_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch013_in_values_reg`
@@ -4805,8 +7230,8 @@ begin
 
           end if;
 
-        when "1100000" =>
-          -- r_addr = 000000000000000000000001100000--
+        when "10000000" =>
+          -- r_addr = 000000000000000000000010000000--
 
           if r_req then
 
@@ -4841,8 +7266,8 @@ begin
 
           end if;
 
-        when "1100001" =>
-          -- r_addr = 000000000000000000000001100001--
+        when "10000001" =>
+          -- r_addr = 000000000000000000000010000001--
 
           -- Read logic for block rematch014_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch014_in_offsets_reg`
@@ -4859,8 +7284,8 @@ begin
 
           end if;
 
-        when "1100010" =>
-          -- r_addr = 000000000000000000000001100010--
+        when "10000010" =>
+          -- r_addr = 000000000000000000000010000010--
 
           if r_req then
 
@@ -4895,8 +7320,8 @@ begin
 
           end if;
 
-        when "1100011" =>
-          -- r_addr = 000000000000000000000001100011--
+        when "10000011" =>
+          -- r_addr = 000000000000000000000010000011--
 
           -- Read logic for block rematch014_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch014_in_values_reg`
@@ -4913,8 +7338,8 @@ begin
 
           end if;
 
-        when "1100100" =>
-          -- r_addr = 000000000000000000000001100100--
+        when "10000100" =>
+          -- r_addr = 000000000000000000000010000100--
 
           if r_req then
 
@@ -4949,8 +7374,8 @@ begin
 
           end if;
 
-        when "1100101" =>
-          -- r_addr = 000000000000000000000001100101--
+        when "10000101" =>
+          -- r_addr = 000000000000000000000010000101--
 
           -- Read logic for block rematch015_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch015_in_offsets_reg`
@@ -4967,8 +7392,8 @@ begin
 
           end if;
 
-        when "1100110" =>
-          -- r_addr = 000000000000000000000001100110--
+        when "10000110" =>
+          -- r_addr = 000000000000000000000010000110--
 
           if r_req then
 
@@ -5003,8 +7428,8 @@ begin
 
           end if;
 
-        when "1100111" =>
-          -- r_addr = 000000000000000000000001100111--
+        when "10000111" =>
+          -- r_addr = 000000000000000000000010000111--
 
           -- Read logic for block rematch015_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch015_in_values_reg`
@@ -5021,8 +7446,8 @@ begin
 
           end if;
 
-        when "1101000" =>
-          -- r_addr = 000000000000000000000001101000--
+        when "10001000" =>
+          -- r_addr = 000000000000000000000010001000--
 
           if r_req then
 
@@ -5031,33 +7456,53 @@ begin
 
           end if;
 
-          -- Read logic for field count_re_bird: count_re_bird.
+          -- Read logic for field rematch000_taxi_out_values:
+          -- rematch000_taxi_out_values.
 
           if r_req then
-            tmp_data32 := r_hold(31 downto 0);
+            tmp_data64 := r_hold(63 downto 0);
           end if;
           if r_req then
 
             -- Regular access logic. Read mode: enabled.
-            tmp_data32 := f_count_re_bird_r((0)).d;
+            tmp_data64 := f_rematch000_taxi_out_values_r((0)).d;
             r_ack := true;
 
           end if;
           if r_req then
-            r_hold(31 downto 0) := tmp_data32;
+            r_hold(63 downto 0) := tmp_data64;
           end if;
 
-          -- Read logic for block count_re_bird_reg: block containing bits 31..0
-          -- of register `count_re_bird_reg` (`COUNT_RE_BIRD`).
+          -- Read logic for block rematch000_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch000_taxi_out_values_reg`
+          -- (`REMATCH000_TAXI_OUT_VALUES`).
           if r_req then
 
             r_data := r_hold(31 downto 0);
+            r_multi := '1';
+
+          end if;
+
+        when "10001001" =>
+          -- r_addr = 000000000000000000000010001001--
+
+          -- Read logic for block rematch000_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch000_taxi_out_values_reg`
+          -- (`REMATCH000_TAXI_OUT_VALUES`).
+          if r_req then
+
+            r_data := r_hold(63 downto 32);
+            if r_multi = '1' then
+              r_ack := true;
+            else
+              r_nack := true;
+            end if;
             r_multi := '0';
 
           end if;
 
-        when "1101001" =>
-          -- r_addr = 000000000000000000000001101001--
+        when "10001010" =>
+          -- r_addr = 000000000000000000000010001010--
 
           if r_req then
 
@@ -5066,33 +7511,53 @@ begin
 
           end if;
 
-          -- Read logic for field count_re_bunny: count_re_bunny.
+          -- Read logic for field rematch001_taxi_out_values:
+          -- rematch001_taxi_out_values.
 
           if r_req then
-            tmp_data32 := r_hold(31 downto 0);
+            tmp_data64 := r_hold(63 downto 0);
           end if;
           if r_req then
 
             -- Regular access logic. Read mode: enabled.
-            tmp_data32 := f_count_re_bunny_r((0)).d;
+            tmp_data64 := f_rematch001_taxi_out_values_r((0)).d;
             r_ack := true;
 
           end if;
           if r_req then
-            r_hold(31 downto 0) := tmp_data32;
+            r_hold(63 downto 0) := tmp_data64;
           end if;
 
-          -- Read logic for block count_re_bunny_reg: block containing bits
-          -- 31..0 of register `count_re_bunny_reg` (`COUNT_RE_BUNNY`).
+          -- Read logic for block rematch001_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch001_taxi_out_values_reg`
+          -- (`REMATCH001_TAXI_OUT_VALUES`).
           if r_req then
 
             r_data := r_hold(31 downto 0);
+            r_multi := '1';
+
+          end if;
+
+        when "10001011" =>
+          -- r_addr = 000000000000000000000010001011--
+
+          -- Read logic for block rematch001_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch001_taxi_out_values_reg`
+          -- (`REMATCH001_TAXI_OUT_VALUES`).
+          if r_req then
+
+            r_data := r_hold(63 downto 32);
+            if r_multi = '1' then
+              r_ack := true;
+            else
+              r_nack := true;
+            end if;
             r_multi := '0';
 
           end if;
 
-        when "1101010" =>
-          -- r_addr = 000000000000000000000001101010--
+        when "10001100" =>
+          -- r_addr = 000000000000000000000010001100--
 
           if r_req then
 
@@ -5101,33 +7566,53 @@ begin
 
           end if;
 
-          -- Read logic for field count_re_cat: count_re_cat.
+          -- Read logic for field rematch002_taxi_out_values:
+          -- rematch002_taxi_out_values.
 
           if r_req then
-            tmp_data32 := r_hold(31 downto 0);
+            tmp_data64 := r_hold(63 downto 0);
           end if;
           if r_req then
 
             -- Regular access logic. Read mode: enabled.
-            tmp_data32 := f_count_re_cat_r((0)).d;
+            tmp_data64 := f_rematch002_taxi_out_values_r((0)).d;
             r_ack := true;
 
           end if;
           if r_req then
-            r_hold(31 downto 0) := tmp_data32;
+            r_hold(63 downto 0) := tmp_data64;
           end if;
 
-          -- Read logic for block count_re_cat_reg: block containing bits 31..0
-          -- of register `count_re_cat_reg` (`COUNT_RE_CAT`).
+          -- Read logic for block rematch002_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch002_taxi_out_values_reg`
+          -- (`REMATCH002_TAXI_OUT_VALUES`).
           if r_req then
 
             r_data := r_hold(31 downto 0);
+            r_multi := '1';
+
+          end if;
+
+        when "10001101" =>
+          -- r_addr = 000000000000000000000010001101--
+
+          -- Read logic for block rematch002_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch002_taxi_out_values_reg`
+          -- (`REMATCH002_TAXI_OUT_VALUES`).
+          if r_req then
+
+            r_data := r_hold(63 downto 32);
+            if r_multi = '1' then
+              r_ack := true;
+            else
+              r_nack := true;
+            end if;
             r_multi := '0';
 
           end if;
 
-        when "1101011" =>
-          -- r_addr = 000000000000000000000001101011--
+        when "10001110" =>
+          -- r_addr = 000000000000000000000010001110--
 
           if r_req then
 
@@ -5136,33 +7621,53 @@ begin
 
           end if;
 
-          -- Read logic for field count_re_dog: count_re_dog.
+          -- Read logic for field rematch003_taxi_out_values:
+          -- rematch003_taxi_out_values.
 
           if r_req then
-            tmp_data32 := r_hold(31 downto 0);
+            tmp_data64 := r_hold(63 downto 0);
           end if;
           if r_req then
 
             -- Regular access logic. Read mode: enabled.
-            tmp_data32 := f_count_re_dog_r((0)).d;
+            tmp_data64 := f_rematch003_taxi_out_values_r((0)).d;
             r_ack := true;
 
           end if;
           if r_req then
-            r_hold(31 downto 0) := tmp_data32;
+            r_hold(63 downto 0) := tmp_data64;
           end if;
 
-          -- Read logic for block count_re_dog_reg: block containing bits 31..0
-          -- of register `count_re_dog_reg` (`COUNT_RE_DOG`).
+          -- Read logic for block rematch003_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch003_taxi_out_values_reg`
+          -- (`REMATCH003_TAXI_OUT_VALUES`).
           if r_req then
 
             r_data := r_hold(31 downto 0);
+            r_multi := '1';
+
+          end if;
+
+        when "10001111" =>
+          -- r_addr = 000000000000000000000010001111--
+
+          -- Read logic for block rematch003_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch003_taxi_out_values_reg`
+          -- (`REMATCH003_TAXI_OUT_VALUES`).
+          if r_req then
+
+            r_data := r_hold(63 downto 32);
+            if r_multi = '1' then
+              r_ack := true;
+            else
+              r_nack := true;
+            end if;
             r_multi := '0';
 
           end if;
 
-        when "1101100" =>
-          -- r_addr = 000000000000000000000001101100--
+        when "10010000" =>
+          -- r_addr = 000000000000000000000010010000--
 
           if r_req then
 
@@ -5171,33 +7676,53 @@ begin
 
           end if;
 
-          -- Read logic for field count_re_ferret: count_re_ferret.
+          -- Read logic for field rematch004_taxi_out_values:
+          -- rematch004_taxi_out_values.
 
           if r_req then
-            tmp_data32 := r_hold(31 downto 0);
+            tmp_data64 := r_hold(63 downto 0);
           end if;
           if r_req then
 
             -- Regular access logic. Read mode: enabled.
-            tmp_data32 := f_count_re_ferret_r((0)).d;
+            tmp_data64 := f_rematch004_taxi_out_values_r((0)).d;
             r_ack := true;
 
           end if;
           if r_req then
-            r_hold(31 downto 0) := tmp_data32;
+            r_hold(63 downto 0) := tmp_data64;
           end if;
 
-          -- Read logic for block count_re_ferret_reg: block containing bits
-          -- 31..0 of register `count_re_ferret_reg` (`COUNT_RE_FERRET`).
+          -- Read logic for block rematch004_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch004_taxi_out_values_reg`
+          -- (`REMATCH004_TAXI_OUT_VALUES`).
           if r_req then
 
             r_data := r_hold(31 downto 0);
+            r_multi := '1';
+
+          end if;
+
+        when "10010001" =>
+          -- r_addr = 000000000000000000000010010001--
+
+          -- Read logic for block rematch004_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch004_taxi_out_values_reg`
+          -- (`REMATCH004_TAXI_OUT_VALUES`).
+          if r_req then
+
+            r_data := r_hold(63 downto 32);
+            if r_multi = '1' then
+              r_ack := true;
+            else
+              r_nack := true;
+            end if;
             r_multi := '0';
 
           end if;
 
-        when "1101101" =>
-          -- r_addr = 000000000000000000000001101101--
+        when "10010010" =>
+          -- r_addr = 000000000000000000000010010010--
 
           if r_req then
 
@@ -5206,33 +7731,53 @@ begin
 
           end if;
 
-          -- Read logic for field count_re_fish: count_re_fish.
+          -- Read logic for field rematch005_taxi_out_values:
+          -- rematch005_taxi_out_values.
 
           if r_req then
-            tmp_data32 := r_hold(31 downto 0);
+            tmp_data64 := r_hold(63 downto 0);
           end if;
           if r_req then
 
             -- Regular access logic. Read mode: enabled.
-            tmp_data32 := f_count_re_fish_r((0)).d;
+            tmp_data64 := f_rematch005_taxi_out_values_r((0)).d;
             r_ack := true;
 
           end if;
           if r_req then
-            r_hold(31 downto 0) := tmp_data32;
+            r_hold(63 downto 0) := tmp_data64;
           end if;
 
-          -- Read logic for block count_re_fish_reg: block containing bits 31..0
-          -- of register `count_re_fish_reg` (`COUNT_RE_FISH`).
+          -- Read logic for block rematch005_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch005_taxi_out_values_reg`
+          -- (`REMATCH005_TAXI_OUT_VALUES`).
           if r_req then
 
             r_data := r_hold(31 downto 0);
+            r_multi := '1';
+
+          end if;
+
+        when "10010011" =>
+          -- r_addr = 000000000000000000000010010011--
+
+          -- Read logic for block rematch005_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch005_taxi_out_values_reg`
+          -- (`REMATCH005_TAXI_OUT_VALUES`).
+          if r_req then
+
+            r_data := r_hold(63 downto 32);
+            if r_multi = '1' then
+              r_ack := true;
+            else
+              r_nack := true;
+            end if;
             r_multi := '0';
 
           end if;
 
-        when "1101110" =>
-          -- r_addr = 000000000000000000000001101110--
+        when "10010100" =>
+          -- r_addr = 000000000000000000000010010100--
 
           if r_req then
 
@@ -5241,33 +7786,53 @@ begin
 
           end if;
 
-          -- Read logic for field count_re_gerbil: count_re_gerbil.
+          -- Read logic for field rematch006_taxi_out_values:
+          -- rematch006_taxi_out_values.
 
           if r_req then
-            tmp_data32 := r_hold(31 downto 0);
+            tmp_data64 := r_hold(63 downto 0);
           end if;
           if r_req then
 
             -- Regular access logic. Read mode: enabled.
-            tmp_data32 := f_count_re_gerbil_r((0)).d;
+            tmp_data64 := f_rematch006_taxi_out_values_r((0)).d;
             r_ack := true;
 
           end if;
           if r_req then
-            r_hold(31 downto 0) := tmp_data32;
+            r_hold(63 downto 0) := tmp_data64;
           end if;
 
-          -- Read logic for block count_re_gerbil_reg: block containing bits
-          -- 31..0 of register `count_re_gerbil_reg` (`COUNT_RE_GERBIL`).
+          -- Read logic for block rematch006_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch006_taxi_out_values_reg`
+          -- (`REMATCH006_TAXI_OUT_VALUES`).
           if r_req then
 
             r_data := r_hold(31 downto 0);
+            r_multi := '1';
+
+          end if;
+
+        when "10010101" =>
+          -- r_addr = 000000000000000000000010010101--
+
+          -- Read logic for block rematch006_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch006_taxi_out_values_reg`
+          -- (`REMATCH006_TAXI_OUT_VALUES`).
+          if r_req then
+
+            r_data := r_hold(63 downto 32);
+            if r_multi = '1' then
+              r_ack := true;
+            else
+              r_nack := true;
+            end if;
             r_multi := '0';
 
           end if;
 
-        when "1101111" =>
-          -- r_addr = 000000000000000000000001101111--
+        when "10010110" =>
+          -- r_addr = 000000000000000000000010010110--
 
           if r_req then
 
@@ -5276,33 +7841,53 @@ begin
 
           end if;
 
-          -- Read logic for field count_re_hamster: count_re_hamster.
+          -- Read logic for field rematch007_taxi_out_values:
+          -- rematch007_taxi_out_values.
 
           if r_req then
-            tmp_data32 := r_hold(31 downto 0);
+            tmp_data64 := r_hold(63 downto 0);
           end if;
           if r_req then
 
             -- Regular access logic. Read mode: enabled.
-            tmp_data32 := f_count_re_hamster_r((0)).d;
+            tmp_data64 := f_rematch007_taxi_out_values_r((0)).d;
             r_ack := true;
 
           end if;
           if r_req then
-            r_hold(31 downto 0) := tmp_data32;
+            r_hold(63 downto 0) := tmp_data64;
           end if;
 
-          -- Read logic for block count_re_hamster_reg: block containing bits
-          -- 31..0 of register `count_re_hamster_reg` (`COUNT_RE_HAMSTER`).
+          -- Read logic for block rematch007_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch007_taxi_out_values_reg`
+          -- (`REMATCH007_TAXI_OUT_VALUES`).
           if r_req then
 
             r_data := r_hold(31 downto 0);
+            r_multi := '1';
+
+          end if;
+
+        when "10010111" =>
+          -- r_addr = 000000000000000000000010010111--
+
+          -- Read logic for block rematch007_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch007_taxi_out_values_reg`
+          -- (`REMATCH007_TAXI_OUT_VALUES`).
+          if r_req then
+
+            r_data := r_hold(63 downto 32);
+            if r_multi = '1' then
+              r_ack := true;
+            else
+              r_nack := true;
+            end if;
             r_multi := '0';
 
           end if;
 
-        when "1110000" =>
-          -- r_addr = 000000000000000000000001110000--
+        when "10011000" =>
+          -- r_addr = 000000000000000000000010011000--
 
           if r_req then
 
@@ -5311,33 +7896,53 @@ begin
 
           end if;
 
-          -- Read logic for field count_re_horse: count_re_horse.
+          -- Read logic for field rematch008_taxi_out_values:
+          -- rematch008_taxi_out_values.
 
           if r_req then
-            tmp_data32 := r_hold(31 downto 0);
+            tmp_data64 := r_hold(63 downto 0);
           end if;
           if r_req then
 
             -- Regular access logic. Read mode: enabled.
-            tmp_data32 := f_count_re_horse_r((0)).d;
+            tmp_data64 := f_rematch008_taxi_out_values_r((0)).d;
             r_ack := true;
 
           end if;
           if r_req then
-            r_hold(31 downto 0) := tmp_data32;
+            r_hold(63 downto 0) := tmp_data64;
           end if;
 
-          -- Read logic for block count_re_horse_reg: block containing bits
-          -- 31..0 of register `count_re_horse_reg` (`COUNT_RE_HORSE`).
+          -- Read logic for block rematch008_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch008_taxi_out_values_reg`
+          -- (`REMATCH008_TAXI_OUT_VALUES`).
           if r_req then
 
             r_data := r_hold(31 downto 0);
+            r_multi := '1';
+
+          end if;
+
+        when "10011001" =>
+          -- r_addr = 000000000000000000000010011001--
+
+          -- Read logic for block rematch008_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch008_taxi_out_values_reg`
+          -- (`REMATCH008_TAXI_OUT_VALUES`).
+          if r_req then
+
+            r_data := r_hold(63 downto 32);
+            if r_multi = '1' then
+              r_ack := true;
+            else
+              r_nack := true;
+            end if;
             r_multi := '0';
 
           end if;
 
-        when "1110001" =>
-          -- r_addr = 000000000000000000000001110001--
+        when "10011010" =>
+          -- r_addr = 000000000000000000000010011010--
 
           if r_req then
 
@@ -5346,33 +7951,53 @@ begin
 
           end if;
 
-          -- Read logic for field count_re_kitten: count_re_kitten.
+          -- Read logic for field rematch009_taxi_out_values:
+          -- rematch009_taxi_out_values.
 
           if r_req then
-            tmp_data32 := r_hold(31 downto 0);
+            tmp_data64 := r_hold(63 downto 0);
           end if;
           if r_req then
 
             -- Regular access logic. Read mode: enabled.
-            tmp_data32 := f_count_re_kitten_r((0)).d;
+            tmp_data64 := f_rematch009_taxi_out_values_r((0)).d;
             r_ack := true;
 
           end if;
           if r_req then
-            r_hold(31 downto 0) := tmp_data32;
+            r_hold(63 downto 0) := tmp_data64;
           end if;
 
-          -- Read logic for block count_re_kitten_reg: block containing bits
-          -- 31..0 of register `count_re_kitten_reg` (`COUNT_RE_KITTEN`).
+          -- Read logic for block rematch009_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch009_taxi_out_values_reg`
+          -- (`REMATCH009_TAXI_OUT_VALUES`).
           if r_req then
 
             r_data := r_hold(31 downto 0);
+            r_multi := '1';
+
+          end if;
+
+        when "10011011" =>
+          -- r_addr = 000000000000000000000010011011--
+
+          -- Read logic for block rematch009_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch009_taxi_out_values_reg`
+          -- (`REMATCH009_TAXI_OUT_VALUES`).
+          if r_req then
+
+            r_data := r_hold(63 downto 32);
+            if r_multi = '1' then
+              r_ack := true;
+            else
+              r_nack := true;
+            end if;
             r_multi := '0';
 
           end if;
 
-        when "1110010" =>
-          -- r_addr = 000000000000000000000001110010--
+        when "10011100" =>
+          -- r_addr = 000000000000000000000010011100--
 
           if r_req then
 
@@ -5381,33 +8006,53 @@ begin
 
           end if;
 
-          -- Read logic for field count_re_lizard: count_re_lizard.
+          -- Read logic for field rematch010_taxi_out_values:
+          -- rematch010_taxi_out_values.
 
           if r_req then
-            tmp_data32 := r_hold(31 downto 0);
+            tmp_data64 := r_hold(63 downto 0);
           end if;
           if r_req then
 
             -- Regular access logic. Read mode: enabled.
-            tmp_data32 := f_count_re_lizard_r((0)).d;
+            tmp_data64 := f_rematch010_taxi_out_values_r((0)).d;
             r_ack := true;
 
           end if;
           if r_req then
-            r_hold(31 downto 0) := tmp_data32;
+            r_hold(63 downto 0) := tmp_data64;
           end if;
 
-          -- Read logic for block count_re_lizard_reg: block containing bits
-          -- 31..0 of register `count_re_lizard_reg` (`COUNT_RE_LIZARD`).
+          -- Read logic for block rematch010_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch010_taxi_out_values_reg`
+          -- (`REMATCH010_TAXI_OUT_VALUES`).
           if r_req then
 
             r_data := r_hold(31 downto 0);
+            r_multi := '1';
+
+          end if;
+
+        when "10011101" =>
+          -- r_addr = 000000000000000000000010011101--
+
+          -- Read logic for block rematch010_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch010_taxi_out_values_reg`
+          -- (`REMATCH010_TAXI_OUT_VALUES`).
+          if r_req then
+
+            r_data := r_hold(63 downto 32);
+            if r_multi = '1' then
+              r_ack := true;
+            else
+              r_nack := true;
+            end if;
             r_multi := '0';
 
           end if;
 
-        when "1110011" =>
-          -- r_addr = 000000000000000000000001110011--
+        when "10011110" =>
+          -- r_addr = 000000000000000000000010011110--
 
           if r_req then
 
@@ -5416,33 +8061,53 @@ begin
 
           end if;
 
-          -- Read logic for field count_re_mouse: count_re_mouse.
+          -- Read logic for field rematch011_taxi_out_values:
+          -- rematch011_taxi_out_values.
 
           if r_req then
-            tmp_data32 := r_hold(31 downto 0);
+            tmp_data64 := r_hold(63 downto 0);
           end if;
           if r_req then
 
             -- Regular access logic. Read mode: enabled.
-            tmp_data32 := f_count_re_mouse_r((0)).d;
+            tmp_data64 := f_rematch011_taxi_out_values_r((0)).d;
             r_ack := true;
 
           end if;
           if r_req then
-            r_hold(31 downto 0) := tmp_data32;
+            r_hold(63 downto 0) := tmp_data64;
           end if;
 
-          -- Read logic for block count_re_mouse_reg: block containing bits
-          -- 31..0 of register `count_re_mouse_reg` (`COUNT_RE_MOUSE`).
+          -- Read logic for block rematch011_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch011_taxi_out_values_reg`
+          -- (`REMATCH011_TAXI_OUT_VALUES`).
           if r_req then
 
             r_data := r_hold(31 downto 0);
+            r_multi := '1';
+
+          end if;
+
+        when "10011111" =>
+          -- r_addr = 000000000000000000000010011111--
+
+          -- Read logic for block rematch011_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch011_taxi_out_values_reg`
+          -- (`REMATCH011_TAXI_OUT_VALUES`).
+          if r_req then
+
+            r_data := r_hold(63 downto 32);
+            if r_multi = '1' then
+              r_ack := true;
+            else
+              r_nack := true;
+            end if;
             r_multi := '0';
 
           end if;
 
-        when "1110100" =>
-          -- r_addr = 000000000000000000000001110100--
+        when "10100000" =>
+          -- r_addr = 000000000000000000000010100000--
 
           if r_req then
 
@@ -5451,33 +8116,53 @@ begin
 
           end if;
 
-          -- Read logic for field count_re_puppy: count_re_puppy.
+          -- Read logic for field rematch012_taxi_out_values:
+          -- rematch012_taxi_out_values.
 
           if r_req then
-            tmp_data32 := r_hold(31 downto 0);
+            tmp_data64 := r_hold(63 downto 0);
           end if;
           if r_req then
 
             -- Regular access logic. Read mode: enabled.
-            tmp_data32 := f_count_re_puppy_r((0)).d;
+            tmp_data64 := f_rematch012_taxi_out_values_r((0)).d;
             r_ack := true;
 
           end if;
           if r_req then
-            r_hold(31 downto 0) := tmp_data32;
+            r_hold(63 downto 0) := tmp_data64;
           end if;
 
-          -- Read logic for block count_re_puppy_reg: block containing bits
-          -- 31..0 of register `count_re_puppy_reg` (`COUNT_RE_PUPPY`).
+          -- Read logic for block rematch012_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch012_taxi_out_values_reg`
+          -- (`REMATCH012_TAXI_OUT_VALUES`).
           if r_req then
 
             r_data := r_hold(31 downto 0);
+            r_multi := '1';
+
+          end if;
+
+        when "10100001" =>
+          -- r_addr = 000000000000000000000010100001--
+
+          -- Read logic for block rematch012_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch012_taxi_out_values_reg`
+          -- (`REMATCH012_TAXI_OUT_VALUES`).
+          if r_req then
+
+            r_data := r_hold(63 downto 32);
+            if r_multi = '1' then
+              r_ack := true;
+            else
+              r_nack := true;
+            end if;
             r_multi := '0';
 
           end if;
 
-        when "1110101" =>
-          -- r_addr = 000000000000000000000001110101--
+        when "10100010" =>
+          -- r_addr = 000000000000000000000010100010--
 
           if r_req then
 
@@ -5486,33 +8171,53 @@ begin
 
           end if;
 
-          -- Read logic for field count_re_rabbit: count_re_rabbit.
+          -- Read logic for field rematch013_taxi_out_values:
+          -- rematch013_taxi_out_values.
 
           if r_req then
-            tmp_data32 := r_hold(31 downto 0);
+            tmp_data64 := r_hold(63 downto 0);
           end if;
           if r_req then
 
             -- Regular access logic. Read mode: enabled.
-            tmp_data32 := f_count_re_rabbit_r((0)).d;
+            tmp_data64 := f_rematch013_taxi_out_values_r((0)).d;
             r_ack := true;
 
           end if;
           if r_req then
-            r_hold(31 downto 0) := tmp_data32;
+            r_hold(63 downto 0) := tmp_data64;
           end if;
 
-          -- Read logic for block count_re_rabbit_reg: block containing bits
-          -- 31..0 of register `count_re_rabbit_reg` (`COUNT_RE_RABBIT`).
+          -- Read logic for block rematch013_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch013_taxi_out_values_reg`
+          -- (`REMATCH013_TAXI_OUT_VALUES`).
           if r_req then
 
             r_data := r_hold(31 downto 0);
+            r_multi := '1';
+
+          end if;
+
+        when "10100011" =>
+          -- r_addr = 000000000000000000000010100011--
+
+          -- Read logic for block rematch013_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch013_taxi_out_values_reg`
+          -- (`REMATCH013_TAXI_OUT_VALUES`).
+          if r_req then
+
+            r_data := r_hold(63 downto 32);
+            if r_multi = '1' then
+              r_ack := true;
+            else
+              r_nack := true;
+            end if;
             r_multi := '0';
 
           end if;
 
-        when "1110110" =>
-          -- r_addr = 000000000000000000000001110110--
+        when "10100100" =>
+          -- r_addr = 000000000000000000000010100100--
 
           if r_req then
 
@@ -5521,33 +8226,53 @@ begin
 
           end if;
 
-          -- Read logic for field count_re_rat: count_re_rat.
+          -- Read logic for field rematch014_taxi_out_values:
+          -- rematch014_taxi_out_values.
 
           if r_req then
-            tmp_data32 := r_hold(31 downto 0);
+            tmp_data64 := r_hold(63 downto 0);
           end if;
           if r_req then
 
             -- Regular access logic. Read mode: enabled.
-            tmp_data32 := f_count_re_rat_r((0)).d;
+            tmp_data64 := f_rematch014_taxi_out_values_r((0)).d;
             r_ack := true;
 
           end if;
           if r_req then
-            r_hold(31 downto 0) := tmp_data32;
+            r_hold(63 downto 0) := tmp_data64;
           end if;
 
-          -- Read logic for block count_re_rat_reg: block containing bits 31..0
-          -- of register `count_re_rat_reg` (`COUNT_RE_RAT`).
+          -- Read logic for block rematch014_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch014_taxi_out_values_reg`
+          -- (`REMATCH014_TAXI_OUT_VALUES`).
           if r_req then
 
             r_data := r_hold(31 downto 0);
+            r_multi := '1';
+
+          end if;
+
+        when "10100101" =>
+          -- r_addr = 000000000000000000000010100101--
+
+          -- Read logic for block rematch014_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch014_taxi_out_values_reg`
+          -- (`REMATCH014_TAXI_OUT_VALUES`).
+          if r_req then
+
+            r_data := r_hold(63 downto 32);
+            if r_multi = '1' then
+              r_ack := true;
+            else
+              r_nack := true;
+            end if;
             r_multi := '0';
 
           end if;
 
-        when "1110111" =>
-          -- r_addr = 000000000000000000000001110111--
+        when "10100110" =>
+          -- r_addr = 000000000000000000000010100110--
 
           if r_req then
 
@@ -5556,33 +8281,53 @@ begin
 
           end if;
 
-          -- Read logic for field count_re_turtle: count_re_turtle.
+          -- Read logic for field rematch015_taxi_out_values:
+          -- rematch015_taxi_out_values.
 
           if r_req then
-            tmp_data32 := r_hold(31 downto 0);
+            tmp_data64 := r_hold(63 downto 0);
           end if;
           if r_req then
 
             -- Regular access logic. Read mode: enabled.
-            tmp_data32 := f_count_re_turtle_r((0)).d;
+            tmp_data64 := f_rematch015_taxi_out_values_r((0)).d;
             r_ack := true;
 
           end if;
           if r_req then
-            r_hold(31 downto 0) := tmp_data32;
+            r_hold(63 downto 0) := tmp_data64;
           end if;
 
-          -- Read logic for block count_re_turtle_reg: block containing bits
-          -- 31..0 of register `count_re_turtle_reg` (`COUNT_RE_TURTLE`).
+          -- Read logic for block rematch015_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch015_taxi_out_values_reg`
+          -- (`REMATCH015_TAXI_OUT_VALUES`).
           if r_req then
 
             r_data := r_hold(31 downto 0);
+            r_multi := '1';
+
+          end if;
+
+        when "10100111" =>
+          -- r_addr = 000000000000000000000010100111--
+
+          -- Read logic for block rematch015_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch015_taxi_out_values_reg`
+          -- (`REMATCH015_TAXI_OUT_VALUES`).
+          if r_req then
+
+            r_data := r_hold(63 downto 32);
+            if r_multi = '1' then
+              r_ack := true;
+            else
+              r_nack := true;
+            end if;
             r_multi := '0';
 
           end if;
 
-        when "1111000" =>
-          -- r_addr = 000000000000000000000001111000--
+        when "10101000" =>
+          -- r_addr = 000000000000000000000010101000--
 
           if r_req then
 
@@ -5591,7 +8336,7 @@ begin
 
           end if;
 
-          -- Read logic for field count_errors: count_errors.
+          -- Read logic for field rematch000_taxi_count: rematch000_taxi_count.
 
           if r_req then
             tmp_data32 := r_hold(31 downto 0);
@@ -5599,7 +8344,7 @@ begin
           if r_req then
 
             -- Regular access logic. Read mode: enabled.
-            tmp_data32 := f_count_errors_r((0)).d;
+            tmp_data32 := f_rematch000_taxi_count_r((0)).d;
             r_ack := true;
 
           end if;
@@ -5607,8 +8352,9 @@ begin
             r_hold(31 downto 0) := tmp_data32;
           end if;
 
-          -- Read logic for block count_errors_reg: block containing bits 31..0
-          -- of register `count_errors_reg` (`COUNT_ERRORS`).
+          -- Read logic for block rematch000_taxi_count_reg: block containing
+          -- bits 31..0 of register `rematch000_taxi_count_reg`
+          -- (`REMATCH000_TAXI_COUNT`).
           if r_req then
 
             r_data := r_hold(31 downto 0);
@@ -5616,8 +8362,1108 @@ begin
 
           end if;
 
-        when others => -- "1111001"
-          -- r_addr = 000000000000000000000001111001--
+        when "10101001" =>
+          -- r_addr = 000000000000000000000010101001--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch000_errors: rematch000_errors.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch000_errors_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch000_errors_reg: block containing bits
+          -- 31..0 of register `rematch000_errors_reg` (`REMATCH000_ERRORS`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "10101010" =>
+          -- r_addr = 000000000000000000000010101010--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch001_taxi_count: rematch001_taxi_count.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch001_taxi_count_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch001_taxi_count_reg: block containing
+          -- bits 31..0 of register `rematch001_taxi_count_reg`
+          -- (`REMATCH001_TAXI_COUNT`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "10101011" =>
+          -- r_addr = 000000000000000000000010101011--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch001_errors: rematch001_errors.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch001_errors_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch001_errors_reg: block containing bits
+          -- 31..0 of register `rematch001_errors_reg` (`REMATCH001_ERRORS`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "10101100" =>
+          -- r_addr = 000000000000000000000010101100--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch002_taxi_count: rematch002_taxi_count.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch002_taxi_count_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch002_taxi_count_reg: block containing
+          -- bits 31..0 of register `rematch002_taxi_count_reg`
+          -- (`REMATCH002_TAXI_COUNT`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "10101101" =>
+          -- r_addr = 000000000000000000000010101101--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch002_errors: rematch002_errors.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch002_errors_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch002_errors_reg: block containing bits
+          -- 31..0 of register `rematch002_errors_reg` (`REMATCH002_ERRORS`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "10101110" =>
+          -- r_addr = 000000000000000000000010101110--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch003_taxi_count: rematch003_taxi_count.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch003_taxi_count_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch003_taxi_count_reg: block containing
+          -- bits 31..0 of register `rematch003_taxi_count_reg`
+          -- (`REMATCH003_TAXI_COUNT`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "10101111" =>
+          -- r_addr = 000000000000000000000010101111--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch003_errors: rematch003_errors.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch003_errors_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch003_errors_reg: block containing bits
+          -- 31..0 of register `rematch003_errors_reg` (`REMATCH003_ERRORS`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "10110000" =>
+          -- r_addr = 000000000000000000000010110000--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch004_taxi_count: rematch004_taxi_count.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch004_taxi_count_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch004_taxi_count_reg: block containing
+          -- bits 31..0 of register `rematch004_taxi_count_reg`
+          -- (`REMATCH004_TAXI_COUNT`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "10110001" =>
+          -- r_addr = 000000000000000000000010110001--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch004_errors: rematch004_errors.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch004_errors_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch004_errors_reg: block containing bits
+          -- 31..0 of register `rematch004_errors_reg` (`REMATCH004_ERRORS`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "10110010" =>
+          -- r_addr = 000000000000000000000010110010--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch005_taxi_count: rematch005_taxi_count.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch005_taxi_count_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch005_taxi_count_reg: block containing
+          -- bits 31..0 of register `rematch005_taxi_count_reg`
+          -- (`REMATCH005_TAXI_COUNT`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "10110011" =>
+          -- r_addr = 000000000000000000000010110011--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch005_errors: rematch005_errors.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch005_errors_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch005_errors_reg: block containing bits
+          -- 31..0 of register `rematch005_errors_reg` (`REMATCH005_ERRORS`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "10110100" =>
+          -- r_addr = 000000000000000000000010110100--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch006_taxi_count: rematch006_taxi_count.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch006_taxi_count_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch006_taxi_count_reg: block containing
+          -- bits 31..0 of register `rematch006_taxi_count_reg`
+          -- (`REMATCH006_TAXI_COUNT`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "10110101" =>
+          -- r_addr = 000000000000000000000010110101--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch006_errors: rematch006_errors.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch006_errors_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch006_errors_reg: block containing bits
+          -- 31..0 of register `rematch006_errors_reg` (`REMATCH006_ERRORS`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "10110110" =>
+          -- r_addr = 000000000000000000000010110110--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch007_taxi_count: rematch007_taxi_count.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch007_taxi_count_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch007_taxi_count_reg: block containing
+          -- bits 31..0 of register `rematch007_taxi_count_reg`
+          -- (`REMATCH007_TAXI_COUNT`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "10110111" =>
+          -- r_addr = 000000000000000000000010110111--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch007_errors: rematch007_errors.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch007_errors_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch007_errors_reg: block containing bits
+          -- 31..0 of register `rematch007_errors_reg` (`REMATCH007_ERRORS`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "10111000" =>
+          -- r_addr = 000000000000000000000010111000--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch008_taxi_count: rematch008_taxi_count.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch008_taxi_count_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch008_taxi_count_reg: block containing
+          -- bits 31..0 of register `rematch008_taxi_count_reg`
+          -- (`REMATCH008_TAXI_COUNT`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "10111001" =>
+          -- r_addr = 000000000000000000000010111001--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch008_errors: rematch008_errors.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch008_errors_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch008_errors_reg: block containing bits
+          -- 31..0 of register `rematch008_errors_reg` (`REMATCH008_ERRORS`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "10111010" =>
+          -- r_addr = 000000000000000000000010111010--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch009_taxi_count: rematch009_taxi_count.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch009_taxi_count_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch009_taxi_count_reg: block containing
+          -- bits 31..0 of register `rematch009_taxi_count_reg`
+          -- (`REMATCH009_TAXI_COUNT`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "10111011" =>
+          -- r_addr = 000000000000000000000010111011--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch009_errors: rematch009_errors.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch009_errors_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch009_errors_reg: block containing bits
+          -- 31..0 of register `rematch009_errors_reg` (`REMATCH009_ERRORS`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "10111100" =>
+          -- r_addr = 000000000000000000000010111100--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch010_taxi_count: rematch010_taxi_count.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch010_taxi_count_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch010_taxi_count_reg: block containing
+          -- bits 31..0 of register `rematch010_taxi_count_reg`
+          -- (`REMATCH010_TAXI_COUNT`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "10111101" =>
+          -- r_addr = 000000000000000000000010111101--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch010_errors: rematch010_errors.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch010_errors_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch010_errors_reg: block containing bits
+          -- 31..0 of register `rematch010_errors_reg` (`REMATCH010_ERRORS`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "10111110" =>
+          -- r_addr = 000000000000000000000010111110--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch011_taxi_count: rematch011_taxi_count.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch011_taxi_count_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch011_taxi_count_reg: block containing
+          -- bits 31..0 of register `rematch011_taxi_count_reg`
+          -- (`REMATCH011_TAXI_COUNT`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "10111111" =>
+          -- r_addr = 000000000000000000000010111111--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch011_errors: rematch011_errors.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch011_errors_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch011_errors_reg: block containing bits
+          -- 31..0 of register `rematch011_errors_reg` (`REMATCH011_ERRORS`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "11000000" =>
+          -- r_addr = 000000000000000000000011000000--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch012_taxi_count: rematch012_taxi_count.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch012_taxi_count_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch012_taxi_count_reg: block containing
+          -- bits 31..0 of register `rematch012_taxi_count_reg`
+          -- (`REMATCH012_TAXI_COUNT`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "11000001" =>
+          -- r_addr = 000000000000000000000011000001--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch012_errors: rematch012_errors.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch012_errors_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch012_errors_reg: block containing bits
+          -- 31..0 of register `rematch012_errors_reg` (`REMATCH012_ERRORS`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "11000010" =>
+          -- r_addr = 000000000000000000000011000010--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch013_taxi_count: rematch013_taxi_count.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch013_taxi_count_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch013_taxi_count_reg: block containing
+          -- bits 31..0 of register `rematch013_taxi_count_reg`
+          -- (`REMATCH013_TAXI_COUNT`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "11000011" =>
+          -- r_addr = 000000000000000000000011000011--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch013_errors: rematch013_errors.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch013_errors_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch013_errors_reg: block containing bits
+          -- 31..0 of register `rematch013_errors_reg` (`REMATCH013_ERRORS`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "11000100" =>
+          -- r_addr = 000000000000000000000011000100--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch014_taxi_count: rematch014_taxi_count.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch014_taxi_count_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch014_taxi_count_reg: block containing
+          -- bits 31..0 of register `rematch014_taxi_count_reg`
+          -- (`REMATCH014_TAXI_COUNT`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "11000101" =>
+          -- r_addr = 000000000000000000000011000101--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch014_errors: rematch014_errors.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch014_errors_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch014_errors_reg: block containing bits
+          -- 31..0 of register `rematch014_errors_reg` (`REMATCH014_ERRORS`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "11000110" =>
+          -- r_addr = 000000000000000000000011000110--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch015_taxi_count: rematch015_taxi_count.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch015_taxi_count_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch015_taxi_count_reg: block containing
+          -- bits 31..0 of register `rematch015_taxi_count_reg`
+          -- (`REMATCH015_TAXI_COUNT`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when "11000111" =>
+          -- r_addr = 000000000000000000000011000111--
+
+          if r_req then
+
+            -- Clear holding register location prior to read.
+            r_hold := (others => '0');
+
+          end if;
+
+          -- Read logic for field rematch015_errors: rematch015_errors.
+
+          if r_req then
+            tmp_data32 := r_hold(31 downto 0);
+          end if;
+          if r_req then
+
+            -- Regular access logic. Read mode: enabled.
+            tmp_data32 := f_rematch015_errors_r((0)).d;
+            r_ack := true;
+
+          end if;
+          if r_req then
+            r_hold(31 downto 0) := tmp_data32;
+          end if;
+
+          -- Read logic for block rematch015_errors_reg: block containing bits
+          -- 31..0 of register `rematch015_errors_reg` (`REMATCH015_ERRORS`).
+          if r_req then
+
+            r_data := r_hold(31 downto 0);
+            r_multi := '0';
+
+          end if;
+
+        when others => -- "11001000"
+          -- r_addr = 000000000000000000000011001000--
 
           if r_req then
 
@@ -5661,8 +9507,8 @@ begin
       subaddr_none(0) := '0';
 
       -- Write address decoder.
-      case w_addr(8 downto 2) is
-        when "0000100" =>
+      case w_addr(9 downto 2) is
+        when "00000100" =>
           -- w_addr = 000000000000000000000000000100--
 
           -- Write logic for block start_reg: block containing bits 31..0 of
@@ -5724,7 +9570,7 @@ begin
 
           end if;
 
-        when "0001000" =>
+        when "00001000" =>
           -- w_addr = 000000000000000000000000001000--
 
           -- Write logic for block rematch000_firstidx_reg: block containing
@@ -5751,7 +9597,7 @@ begin
 
           end if;
 
-        when "0001001" =>
+        when "00001001" =>
           -- w_addr = 000000000000000000000000001001--
 
           -- Write logic for block rematch000_lastidx_reg: block containing bits
@@ -5777,7 +9623,7 @@ begin
 
           end if;
 
-        when "0001010" =>
+        when "00001010" =>
           -- w_addr = 000000000000000000000000001010--
 
           -- Write logic for block rematch001_firstidx_reg: block containing
@@ -5804,7 +9650,7 @@ begin
 
           end if;
 
-        when "0001011" =>
+        when "00001011" =>
           -- w_addr = 000000000000000000000000001011--
 
           -- Write logic for block rematch001_lastidx_reg: block containing bits
@@ -5830,7 +9676,7 @@ begin
 
           end if;
 
-        when "0001100" =>
+        when "00001100" =>
           -- w_addr = 000000000000000000000000001100--
 
           -- Write logic for block rematch002_firstidx_reg: block containing
@@ -5857,7 +9703,7 @@ begin
 
           end if;
 
-        when "0001101" =>
+        when "00001101" =>
           -- w_addr = 000000000000000000000000001101--
 
           -- Write logic for block rematch002_lastidx_reg: block containing bits
@@ -5883,7 +9729,7 @@ begin
 
           end if;
 
-        when "0001110" =>
+        when "00001110" =>
           -- w_addr = 000000000000000000000000001110--
 
           -- Write logic for block rematch003_firstidx_reg: block containing
@@ -5910,7 +9756,7 @@ begin
 
           end if;
 
-        when "0001111" =>
+        when "00001111" =>
           -- w_addr = 000000000000000000000000001111--
 
           -- Write logic for block rematch003_lastidx_reg: block containing bits
@@ -5936,7 +9782,7 @@ begin
 
           end if;
 
-        when "0010000" =>
+        when "00010000" =>
           -- w_addr = 000000000000000000000000010000--
 
           -- Write logic for block rematch004_firstidx_reg: block containing
@@ -5963,7 +9809,7 @@ begin
 
           end if;
 
-        when "0010001" =>
+        when "00010001" =>
           -- w_addr = 000000000000000000000000010001--
 
           -- Write logic for block rematch004_lastidx_reg: block containing bits
@@ -5989,7 +9835,7 @@ begin
 
           end if;
 
-        when "0010010" =>
+        when "00010010" =>
           -- w_addr = 000000000000000000000000010010--
 
           -- Write logic for block rematch005_firstidx_reg: block containing
@@ -6016,7 +9862,7 @@ begin
 
           end if;
 
-        when "0010011" =>
+        when "00010011" =>
           -- w_addr = 000000000000000000000000010011--
 
           -- Write logic for block rematch005_lastidx_reg: block containing bits
@@ -6042,7 +9888,7 @@ begin
 
           end if;
 
-        when "0010100" =>
+        when "00010100" =>
           -- w_addr = 000000000000000000000000010100--
 
           -- Write logic for block rematch006_firstidx_reg: block containing
@@ -6069,7 +9915,7 @@ begin
 
           end if;
 
-        when "0010101" =>
+        when "00010101" =>
           -- w_addr = 000000000000000000000000010101--
 
           -- Write logic for block rematch006_lastidx_reg: block containing bits
@@ -6095,7 +9941,7 @@ begin
 
           end if;
 
-        when "0010110" =>
+        when "00010110" =>
           -- w_addr = 000000000000000000000000010110--
 
           -- Write logic for block rematch007_firstidx_reg: block containing
@@ -6122,7 +9968,7 @@ begin
 
           end if;
 
-        when "0010111" =>
+        when "00010111" =>
           -- w_addr = 000000000000000000000000010111--
 
           -- Write logic for block rematch007_lastidx_reg: block containing bits
@@ -6148,7 +9994,7 @@ begin
 
           end if;
 
-        when "0011000" =>
+        when "00011000" =>
           -- w_addr = 000000000000000000000000011000--
 
           -- Write logic for block rematch008_firstidx_reg: block containing
@@ -6175,7 +10021,7 @@ begin
 
           end if;
 
-        when "0011001" =>
+        when "00011001" =>
           -- w_addr = 000000000000000000000000011001--
 
           -- Write logic for block rematch008_lastidx_reg: block containing bits
@@ -6201,7 +10047,7 @@ begin
 
           end if;
 
-        when "0011010" =>
+        when "00011010" =>
           -- w_addr = 000000000000000000000000011010--
 
           -- Write logic for block rematch009_firstidx_reg: block containing
@@ -6228,7 +10074,7 @@ begin
 
           end if;
 
-        when "0011011" =>
+        when "00011011" =>
           -- w_addr = 000000000000000000000000011011--
 
           -- Write logic for block rematch009_lastidx_reg: block containing bits
@@ -6254,7 +10100,7 @@ begin
 
           end if;
 
-        when "0011100" =>
+        when "00011100" =>
           -- w_addr = 000000000000000000000000011100--
 
           -- Write logic for block rematch010_firstidx_reg: block containing
@@ -6281,7 +10127,7 @@ begin
 
           end if;
 
-        when "0011101" =>
+        when "00011101" =>
           -- w_addr = 000000000000000000000000011101--
 
           -- Write logic for block rematch010_lastidx_reg: block containing bits
@@ -6307,7 +10153,7 @@ begin
 
           end if;
 
-        when "0011110" =>
+        when "00011110" =>
           -- w_addr = 000000000000000000000000011110--
 
           -- Write logic for block rematch011_firstidx_reg: block containing
@@ -6334,7 +10180,7 @@ begin
 
           end if;
 
-        when "0011111" =>
+        when "00011111" =>
           -- w_addr = 000000000000000000000000011111--
 
           -- Write logic for block rematch011_lastidx_reg: block containing bits
@@ -6360,7 +10206,7 @@ begin
 
           end if;
 
-        when "0100000" =>
+        when "00100000" =>
           -- w_addr = 000000000000000000000000100000--
 
           -- Write logic for block rematch012_firstidx_reg: block containing
@@ -6387,7 +10233,7 @@ begin
 
           end if;
 
-        when "0100001" =>
+        when "00100001" =>
           -- w_addr = 000000000000000000000000100001--
 
           -- Write logic for block rematch012_lastidx_reg: block containing bits
@@ -6413,7 +10259,7 @@ begin
 
           end if;
 
-        when "0100010" =>
+        when "00100010" =>
           -- w_addr = 000000000000000000000000100010--
 
           -- Write logic for block rematch013_firstidx_reg: block containing
@@ -6440,7 +10286,7 @@ begin
 
           end if;
 
-        when "0100011" =>
+        when "00100011" =>
           -- w_addr = 000000000000000000000000100011--
 
           -- Write logic for block rematch013_lastidx_reg: block containing bits
@@ -6466,7 +10312,7 @@ begin
 
           end if;
 
-        when "0100100" =>
+        when "00100100" =>
           -- w_addr = 000000000000000000000000100100--
 
           -- Write logic for block rematch014_firstidx_reg: block containing
@@ -6493,7 +10339,7 @@ begin
 
           end if;
 
-        when "0100101" =>
+        when "00100101" =>
           -- w_addr = 000000000000000000000000100101--
 
           -- Write logic for block rematch014_lastidx_reg: block containing bits
@@ -6519,7 +10365,7 @@ begin
 
           end if;
 
-        when "0100110" =>
+        when "00100110" =>
           -- w_addr = 000000000000000000000000100110--
 
           -- Write logic for block rematch015_firstidx_reg: block containing
@@ -6546,7 +10392,7 @@ begin
 
           end if;
 
-        when "0100111" =>
+        when "00100111" =>
           -- w_addr = 000000000000000000000000100111--
 
           -- Write logic for block rematch015_lastidx_reg: block containing bits
@@ -6572,8 +10418,904 @@ begin
 
           end if;
 
-        when "0101000" =>
+        when "00101000" =>
           -- w_addr = 000000000000000000000000101000--
+
+          -- Write logic for block rematch000_taxi_firstidx_reg: block
+          -- containing bits 31..0 of register `rematch000_taxi_firstidx_reg`
+          -- (`REMATCH000_TAXI_FIRSTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch000_taxi_firstidx:
+          -- rematch000_taxi_firstidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch000_taxi_firstidx_r((0)).d
+                := (f_rematch000_taxi_firstidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "00101001" =>
+          -- w_addr = 000000000000000000000000101001--
+
+          -- Write logic for block rematch000_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch000_taxi_lastidx_reg`
+          -- (`REMATCH000_TAXI_LASTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch000_taxi_lastidx:
+          -- rematch000_taxi_lastidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch000_taxi_lastidx_r((0)).d
+                := (f_rematch000_taxi_lastidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "00101010" =>
+          -- w_addr = 000000000000000000000000101010--
+
+          -- Write logic for block rematch001_taxi_firstidx_reg: block
+          -- containing bits 31..0 of register `rematch001_taxi_firstidx_reg`
+          -- (`REMATCH001_TAXI_FIRSTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch001_taxi_firstidx:
+          -- rematch001_taxi_firstidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch001_taxi_firstidx_r((0)).d
+                := (f_rematch001_taxi_firstidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "00101011" =>
+          -- w_addr = 000000000000000000000000101011--
+
+          -- Write logic for block rematch001_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch001_taxi_lastidx_reg`
+          -- (`REMATCH001_TAXI_LASTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch001_taxi_lastidx:
+          -- rematch001_taxi_lastidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch001_taxi_lastidx_r((0)).d
+                := (f_rematch001_taxi_lastidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "00101100" =>
+          -- w_addr = 000000000000000000000000101100--
+
+          -- Write logic for block rematch002_taxi_firstidx_reg: block
+          -- containing bits 31..0 of register `rematch002_taxi_firstidx_reg`
+          -- (`REMATCH002_TAXI_FIRSTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch002_taxi_firstidx:
+          -- rematch002_taxi_firstidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch002_taxi_firstidx_r((0)).d
+                := (f_rematch002_taxi_firstidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "00101101" =>
+          -- w_addr = 000000000000000000000000101101--
+
+          -- Write logic for block rematch002_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch002_taxi_lastidx_reg`
+          -- (`REMATCH002_TAXI_LASTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch002_taxi_lastidx:
+          -- rematch002_taxi_lastidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch002_taxi_lastidx_r((0)).d
+                := (f_rematch002_taxi_lastidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "00101110" =>
+          -- w_addr = 000000000000000000000000101110--
+
+          -- Write logic for block rematch003_taxi_firstidx_reg: block
+          -- containing bits 31..0 of register `rematch003_taxi_firstidx_reg`
+          -- (`REMATCH003_TAXI_FIRSTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch003_taxi_firstidx:
+          -- rematch003_taxi_firstidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch003_taxi_firstidx_r((0)).d
+                := (f_rematch003_taxi_firstidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "00101111" =>
+          -- w_addr = 000000000000000000000000101111--
+
+          -- Write logic for block rematch003_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch003_taxi_lastidx_reg`
+          -- (`REMATCH003_TAXI_LASTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch003_taxi_lastidx:
+          -- rematch003_taxi_lastidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch003_taxi_lastidx_r((0)).d
+                := (f_rematch003_taxi_lastidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "00110000" =>
+          -- w_addr = 000000000000000000000000110000--
+
+          -- Write logic for block rematch004_taxi_firstidx_reg: block
+          -- containing bits 31..0 of register `rematch004_taxi_firstidx_reg`
+          -- (`REMATCH004_TAXI_FIRSTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch004_taxi_firstidx:
+          -- rematch004_taxi_firstidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch004_taxi_firstidx_r((0)).d
+                := (f_rematch004_taxi_firstidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "00110001" =>
+          -- w_addr = 000000000000000000000000110001--
+
+          -- Write logic for block rematch004_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch004_taxi_lastidx_reg`
+          -- (`REMATCH004_TAXI_LASTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch004_taxi_lastidx:
+          -- rematch004_taxi_lastidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch004_taxi_lastidx_r((0)).d
+                := (f_rematch004_taxi_lastidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "00110010" =>
+          -- w_addr = 000000000000000000000000110010--
+
+          -- Write logic for block rematch005_taxi_firstidx_reg: block
+          -- containing bits 31..0 of register `rematch005_taxi_firstidx_reg`
+          -- (`REMATCH005_TAXI_FIRSTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch005_taxi_firstidx:
+          -- rematch005_taxi_firstidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch005_taxi_firstidx_r((0)).d
+                := (f_rematch005_taxi_firstidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "00110011" =>
+          -- w_addr = 000000000000000000000000110011--
+
+          -- Write logic for block rematch005_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch005_taxi_lastidx_reg`
+          -- (`REMATCH005_TAXI_LASTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch005_taxi_lastidx:
+          -- rematch005_taxi_lastidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch005_taxi_lastidx_r((0)).d
+                := (f_rematch005_taxi_lastidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "00110100" =>
+          -- w_addr = 000000000000000000000000110100--
+
+          -- Write logic for block rematch006_taxi_firstidx_reg: block
+          -- containing bits 31..0 of register `rematch006_taxi_firstidx_reg`
+          -- (`REMATCH006_TAXI_FIRSTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch006_taxi_firstidx:
+          -- rematch006_taxi_firstidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch006_taxi_firstidx_r((0)).d
+                := (f_rematch006_taxi_firstidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "00110101" =>
+          -- w_addr = 000000000000000000000000110101--
+
+          -- Write logic for block rematch006_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch006_taxi_lastidx_reg`
+          -- (`REMATCH006_TAXI_LASTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch006_taxi_lastidx:
+          -- rematch006_taxi_lastidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch006_taxi_lastidx_r((0)).d
+                := (f_rematch006_taxi_lastidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "00110110" =>
+          -- w_addr = 000000000000000000000000110110--
+
+          -- Write logic for block rematch007_taxi_firstidx_reg: block
+          -- containing bits 31..0 of register `rematch007_taxi_firstidx_reg`
+          -- (`REMATCH007_TAXI_FIRSTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch007_taxi_firstidx:
+          -- rematch007_taxi_firstidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch007_taxi_firstidx_r((0)).d
+                := (f_rematch007_taxi_firstidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "00110111" =>
+          -- w_addr = 000000000000000000000000110111--
+
+          -- Write logic for block rematch007_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch007_taxi_lastidx_reg`
+          -- (`REMATCH007_TAXI_LASTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch007_taxi_lastidx:
+          -- rematch007_taxi_lastidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch007_taxi_lastidx_r((0)).d
+                := (f_rematch007_taxi_lastidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "00111000" =>
+          -- w_addr = 000000000000000000000000111000--
+
+          -- Write logic for block rematch008_taxi_firstidx_reg: block
+          -- containing bits 31..0 of register `rematch008_taxi_firstidx_reg`
+          -- (`REMATCH008_TAXI_FIRSTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch008_taxi_firstidx:
+          -- rematch008_taxi_firstidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch008_taxi_firstidx_r((0)).d
+                := (f_rematch008_taxi_firstidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "00111001" =>
+          -- w_addr = 000000000000000000000000111001--
+
+          -- Write logic for block rematch008_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch008_taxi_lastidx_reg`
+          -- (`REMATCH008_TAXI_LASTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch008_taxi_lastidx:
+          -- rematch008_taxi_lastidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch008_taxi_lastidx_r((0)).d
+                := (f_rematch008_taxi_lastidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "00111010" =>
+          -- w_addr = 000000000000000000000000111010--
+
+          -- Write logic for block rematch009_taxi_firstidx_reg: block
+          -- containing bits 31..0 of register `rematch009_taxi_firstidx_reg`
+          -- (`REMATCH009_TAXI_FIRSTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch009_taxi_firstidx:
+          -- rematch009_taxi_firstidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch009_taxi_firstidx_r((0)).d
+                := (f_rematch009_taxi_firstidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "00111011" =>
+          -- w_addr = 000000000000000000000000111011--
+
+          -- Write logic for block rematch009_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch009_taxi_lastidx_reg`
+          -- (`REMATCH009_TAXI_LASTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch009_taxi_lastidx:
+          -- rematch009_taxi_lastidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch009_taxi_lastidx_r((0)).d
+                := (f_rematch009_taxi_lastidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "00111100" =>
+          -- w_addr = 000000000000000000000000111100--
+
+          -- Write logic for block rematch010_taxi_firstidx_reg: block
+          -- containing bits 31..0 of register `rematch010_taxi_firstidx_reg`
+          -- (`REMATCH010_TAXI_FIRSTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch010_taxi_firstidx:
+          -- rematch010_taxi_firstidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch010_taxi_firstidx_r((0)).d
+                := (f_rematch010_taxi_firstidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "00111101" =>
+          -- w_addr = 000000000000000000000000111101--
+
+          -- Write logic for block rematch010_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch010_taxi_lastidx_reg`
+          -- (`REMATCH010_TAXI_LASTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch010_taxi_lastidx:
+          -- rematch010_taxi_lastidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch010_taxi_lastidx_r((0)).d
+                := (f_rematch010_taxi_lastidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "00111110" =>
+          -- w_addr = 000000000000000000000000111110--
+
+          -- Write logic for block rematch011_taxi_firstidx_reg: block
+          -- containing bits 31..0 of register `rematch011_taxi_firstidx_reg`
+          -- (`REMATCH011_TAXI_FIRSTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch011_taxi_firstidx:
+          -- rematch011_taxi_firstidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch011_taxi_firstidx_r((0)).d
+                := (f_rematch011_taxi_firstidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "00111111" =>
+          -- w_addr = 000000000000000000000000111111--
+
+          -- Write logic for block rematch011_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch011_taxi_lastidx_reg`
+          -- (`REMATCH011_TAXI_LASTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch011_taxi_lastidx:
+          -- rematch011_taxi_lastidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch011_taxi_lastidx_r((0)).d
+                := (f_rematch011_taxi_lastidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "01000000" =>
+          -- w_addr = 000000000000000000000001000000--
+
+          -- Write logic for block rematch012_taxi_firstidx_reg: block
+          -- containing bits 31..0 of register `rematch012_taxi_firstidx_reg`
+          -- (`REMATCH012_TAXI_FIRSTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch012_taxi_firstidx:
+          -- rematch012_taxi_firstidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch012_taxi_firstidx_r((0)).d
+                := (f_rematch012_taxi_firstidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "01000001" =>
+          -- w_addr = 000000000000000000000001000001--
+
+          -- Write logic for block rematch012_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch012_taxi_lastidx_reg`
+          -- (`REMATCH012_TAXI_LASTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch012_taxi_lastidx:
+          -- rematch012_taxi_lastidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch012_taxi_lastidx_r((0)).d
+                := (f_rematch012_taxi_lastidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "01000010" =>
+          -- w_addr = 000000000000000000000001000010--
+
+          -- Write logic for block rematch013_taxi_firstidx_reg: block
+          -- containing bits 31..0 of register `rematch013_taxi_firstidx_reg`
+          -- (`REMATCH013_TAXI_FIRSTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch013_taxi_firstidx:
+          -- rematch013_taxi_firstidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch013_taxi_firstidx_r((0)).d
+                := (f_rematch013_taxi_firstidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "01000011" =>
+          -- w_addr = 000000000000000000000001000011--
+
+          -- Write logic for block rematch013_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch013_taxi_lastidx_reg`
+          -- (`REMATCH013_TAXI_LASTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch013_taxi_lastidx:
+          -- rematch013_taxi_lastidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch013_taxi_lastidx_r((0)).d
+                := (f_rematch013_taxi_lastidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "01000100" =>
+          -- w_addr = 000000000000000000000001000100--
+
+          -- Write logic for block rematch014_taxi_firstidx_reg: block
+          -- containing bits 31..0 of register `rematch014_taxi_firstidx_reg`
+          -- (`REMATCH014_TAXI_FIRSTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch014_taxi_firstidx:
+          -- rematch014_taxi_firstidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch014_taxi_firstidx_r((0)).d
+                := (f_rematch014_taxi_firstidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "01000101" =>
+          -- w_addr = 000000000000000000000001000101--
+
+          -- Write logic for block rematch014_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch014_taxi_lastidx_reg`
+          -- (`REMATCH014_TAXI_LASTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch014_taxi_lastidx:
+          -- rematch014_taxi_lastidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch014_taxi_lastidx_r((0)).d
+                := (f_rematch014_taxi_lastidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "01000110" =>
+          -- w_addr = 000000000000000000000001000110--
+
+          -- Write logic for block rematch015_taxi_firstidx_reg: block
+          -- containing bits 31..0 of register `rematch015_taxi_firstidx_reg`
+          -- (`REMATCH015_TAXI_FIRSTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch015_taxi_firstidx:
+          -- rematch015_taxi_firstidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch015_taxi_firstidx_r((0)).d
+                := (f_rematch015_taxi_firstidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "01000111" =>
+          -- w_addr = 000000000000000000000001000111--
+
+          -- Write logic for block rematch015_taxi_lastidx_reg: block containing
+          -- bits 31..0 of register `rematch015_taxi_lastidx_reg`
+          -- (`REMATCH015_TAXI_LASTIDX`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch015_taxi_lastidx:
+          -- rematch015_taxi_lastidx.
+
+          tmp_data32 := w_hold(31 downto 0);
+          tmp_strb32 := w_hstb(31 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch015_taxi_lastidx_r((0)).d
+                := (f_rematch015_taxi_lastidx_r((0)).d and not tmp_strb32)
+                or tmp_data32;
+            w_ack := true;
+
+          end if;
+
+        when "01001000" =>
+          -- w_addr = 000000000000000000000001001000--
 
           -- Write logic for block rematch000_in_offsets_reg_low: block
           -- containing bits 31..0 of register `rematch000_in_offsets_reg`
@@ -6587,8 +11329,8 @@ begin
             w_ack := true;
           end if;
 
-        when "0101001" =>
-          -- w_addr = 000000000000000000000000101001--
+        when "01001001" =>
+          -- w_addr = 000000000000000000000001001001--
 
           -- Write logic for block rematch000_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch000_in_offsets_reg`
@@ -6614,8 +11356,8 @@ begin
 
           end if;
 
-        when "0101010" =>
-          -- w_addr = 000000000000000000000000101010--
+        when "01001010" =>
+          -- w_addr = 000000000000000000000001001010--
 
           -- Write logic for block rematch000_in_values_reg_low: block
           -- containing bits 31..0 of register `rematch000_in_values_reg`
@@ -6629,8 +11371,8 @@ begin
             w_ack := true;
           end if;
 
-        when "0101011" =>
-          -- w_addr = 000000000000000000000000101011--
+        when "01001011" =>
+          -- w_addr = 000000000000000000000001001011--
 
           -- Write logic for block rematch000_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch000_in_values_reg`
@@ -6656,8 +11398,8 @@ begin
 
           end if;
 
-        when "0101100" =>
-          -- w_addr = 000000000000000000000000101100--
+        when "01001100" =>
+          -- w_addr = 000000000000000000000001001100--
 
           -- Write logic for block rematch001_in_offsets_reg_low: block
           -- containing bits 31..0 of register `rematch001_in_offsets_reg`
@@ -6671,8 +11413,8 @@ begin
             w_ack := true;
           end if;
 
-        when "0101101" =>
-          -- w_addr = 000000000000000000000000101101--
+        when "01001101" =>
+          -- w_addr = 000000000000000000000001001101--
 
           -- Write logic for block rematch001_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch001_in_offsets_reg`
@@ -6698,8 +11440,8 @@ begin
 
           end if;
 
-        when "0101110" =>
-          -- w_addr = 000000000000000000000000101110--
+        when "01001110" =>
+          -- w_addr = 000000000000000000000001001110--
 
           -- Write logic for block rematch001_in_values_reg_low: block
           -- containing bits 31..0 of register `rematch001_in_values_reg`
@@ -6713,8 +11455,8 @@ begin
             w_ack := true;
           end if;
 
-        when "0101111" =>
-          -- w_addr = 000000000000000000000000101111--
+        when "01001111" =>
+          -- w_addr = 000000000000000000000001001111--
 
           -- Write logic for block rematch001_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch001_in_values_reg`
@@ -6740,8 +11482,8 @@ begin
 
           end if;
 
-        when "0110000" =>
-          -- w_addr = 000000000000000000000000110000--
+        when "01010000" =>
+          -- w_addr = 000000000000000000000001010000--
 
           -- Write logic for block rematch002_in_offsets_reg_low: block
           -- containing bits 31..0 of register `rematch002_in_offsets_reg`
@@ -6755,8 +11497,8 @@ begin
             w_ack := true;
           end if;
 
-        when "0110001" =>
-          -- w_addr = 000000000000000000000000110001--
+        when "01010001" =>
+          -- w_addr = 000000000000000000000001010001--
 
           -- Write logic for block rematch002_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch002_in_offsets_reg`
@@ -6782,8 +11524,8 @@ begin
 
           end if;
 
-        when "0110010" =>
-          -- w_addr = 000000000000000000000000110010--
+        when "01010010" =>
+          -- w_addr = 000000000000000000000001010010--
 
           -- Write logic for block rematch002_in_values_reg_low: block
           -- containing bits 31..0 of register `rematch002_in_values_reg`
@@ -6797,8 +11539,8 @@ begin
             w_ack := true;
           end if;
 
-        when "0110011" =>
-          -- w_addr = 000000000000000000000000110011--
+        when "01010011" =>
+          -- w_addr = 000000000000000000000001010011--
 
           -- Write logic for block rematch002_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch002_in_values_reg`
@@ -6824,8 +11566,8 @@ begin
 
           end if;
 
-        when "0110100" =>
-          -- w_addr = 000000000000000000000000110100--
+        when "01010100" =>
+          -- w_addr = 000000000000000000000001010100--
 
           -- Write logic for block rematch003_in_offsets_reg_low: block
           -- containing bits 31..0 of register `rematch003_in_offsets_reg`
@@ -6839,8 +11581,8 @@ begin
             w_ack := true;
           end if;
 
-        when "0110101" =>
-          -- w_addr = 000000000000000000000000110101--
+        when "01010101" =>
+          -- w_addr = 000000000000000000000001010101--
 
           -- Write logic for block rematch003_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch003_in_offsets_reg`
@@ -6866,8 +11608,8 @@ begin
 
           end if;
 
-        when "0110110" =>
-          -- w_addr = 000000000000000000000000110110--
+        when "01010110" =>
+          -- w_addr = 000000000000000000000001010110--
 
           -- Write logic for block rematch003_in_values_reg_low: block
           -- containing bits 31..0 of register `rematch003_in_values_reg`
@@ -6881,8 +11623,8 @@ begin
             w_ack := true;
           end if;
 
-        when "0110111" =>
-          -- w_addr = 000000000000000000000000110111--
+        when "01010111" =>
+          -- w_addr = 000000000000000000000001010111--
 
           -- Write logic for block rematch003_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch003_in_values_reg`
@@ -6908,8 +11650,8 @@ begin
 
           end if;
 
-        when "0111000" =>
-          -- w_addr = 000000000000000000000000111000--
+        when "01011000" =>
+          -- w_addr = 000000000000000000000001011000--
 
           -- Write logic for block rematch004_in_offsets_reg_low: block
           -- containing bits 31..0 of register `rematch004_in_offsets_reg`
@@ -6923,8 +11665,8 @@ begin
             w_ack := true;
           end if;
 
-        when "0111001" =>
-          -- w_addr = 000000000000000000000000111001--
+        when "01011001" =>
+          -- w_addr = 000000000000000000000001011001--
 
           -- Write logic for block rematch004_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch004_in_offsets_reg`
@@ -6950,8 +11692,8 @@ begin
 
           end if;
 
-        when "0111010" =>
-          -- w_addr = 000000000000000000000000111010--
+        when "01011010" =>
+          -- w_addr = 000000000000000000000001011010--
 
           -- Write logic for block rematch004_in_values_reg_low: block
           -- containing bits 31..0 of register `rematch004_in_values_reg`
@@ -6965,8 +11707,8 @@ begin
             w_ack := true;
           end if;
 
-        when "0111011" =>
-          -- w_addr = 000000000000000000000000111011--
+        when "01011011" =>
+          -- w_addr = 000000000000000000000001011011--
 
           -- Write logic for block rematch004_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch004_in_values_reg`
@@ -6992,8 +11734,8 @@ begin
 
           end if;
 
-        when "0111100" =>
-          -- w_addr = 000000000000000000000000111100--
+        when "01011100" =>
+          -- w_addr = 000000000000000000000001011100--
 
           -- Write logic for block rematch005_in_offsets_reg_low: block
           -- containing bits 31..0 of register `rematch005_in_offsets_reg`
@@ -7007,8 +11749,8 @@ begin
             w_ack := true;
           end if;
 
-        when "0111101" =>
-          -- w_addr = 000000000000000000000000111101--
+        when "01011101" =>
+          -- w_addr = 000000000000000000000001011101--
 
           -- Write logic for block rematch005_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch005_in_offsets_reg`
@@ -7034,8 +11776,8 @@ begin
 
           end if;
 
-        when "0111110" =>
-          -- w_addr = 000000000000000000000000111110--
+        when "01011110" =>
+          -- w_addr = 000000000000000000000001011110--
 
           -- Write logic for block rematch005_in_values_reg_low: block
           -- containing bits 31..0 of register `rematch005_in_values_reg`
@@ -7049,8 +11791,8 @@ begin
             w_ack := true;
           end if;
 
-        when "0111111" =>
-          -- w_addr = 000000000000000000000000111111--
+        when "01011111" =>
+          -- w_addr = 000000000000000000000001011111--
 
           -- Write logic for block rematch005_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch005_in_values_reg`
@@ -7076,8 +11818,8 @@ begin
 
           end if;
 
-        when "1000000" =>
-          -- w_addr = 000000000000000000000001000000--
+        when "01100000" =>
+          -- w_addr = 000000000000000000000001100000--
 
           -- Write logic for block rematch006_in_offsets_reg_low: block
           -- containing bits 31..0 of register `rematch006_in_offsets_reg`
@@ -7091,8 +11833,8 @@ begin
             w_ack := true;
           end if;
 
-        when "1000001" =>
-          -- w_addr = 000000000000000000000001000001--
+        when "01100001" =>
+          -- w_addr = 000000000000000000000001100001--
 
           -- Write logic for block rematch006_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch006_in_offsets_reg`
@@ -7118,8 +11860,8 @@ begin
 
           end if;
 
-        when "1000010" =>
-          -- w_addr = 000000000000000000000001000010--
+        when "01100010" =>
+          -- w_addr = 000000000000000000000001100010--
 
           -- Write logic for block rematch006_in_values_reg_low: block
           -- containing bits 31..0 of register `rematch006_in_values_reg`
@@ -7133,8 +11875,8 @@ begin
             w_ack := true;
           end if;
 
-        when "1000011" =>
-          -- w_addr = 000000000000000000000001000011--
+        when "01100011" =>
+          -- w_addr = 000000000000000000000001100011--
 
           -- Write logic for block rematch006_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch006_in_values_reg`
@@ -7160,8 +11902,8 @@ begin
 
           end if;
 
-        when "1000100" =>
-          -- w_addr = 000000000000000000000001000100--
+        when "01100100" =>
+          -- w_addr = 000000000000000000000001100100--
 
           -- Write logic for block rematch007_in_offsets_reg_low: block
           -- containing bits 31..0 of register `rematch007_in_offsets_reg`
@@ -7175,8 +11917,8 @@ begin
             w_ack := true;
           end if;
 
-        when "1000101" =>
-          -- w_addr = 000000000000000000000001000101--
+        when "01100101" =>
+          -- w_addr = 000000000000000000000001100101--
 
           -- Write logic for block rematch007_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch007_in_offsets_reg`
@@ -7202,8 +11944,8 @@ begin
 
           end if;
 
-        when "1000110" =>
-          -- w_addr = 000000000000000000000001000110--
+        when "01100110" =>
+          -- w_addr = 000000000000000000000001100110--
 
           -- Write logic for block rematch007_in_values_reg_low: block
           -- containing bits 31..0 of register `rematch007_in_values_reg`
@@ -7217,8 +11959,8 @@ begin
             w_ack := true;
           end if;
 
-        when "1000111" =>
-          -- w_addr = 000000000000000000000001000111--
+        when "01100111" =>
+          -- w_addr = 000000000000000000000001100111--
 
           -- Write logic for block rematch007_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch007_in_values_reg`
@@ -7244,8 +11986,8 @@ begin
 
           end if;
 
-        when "1001000" =>
-          -- w_addr = 000000000000000000000001001000--
+        when "01101000" =>
+          -- w_addr = 000000000000000000000001101000--
 
           -- Write logic for block rematch008_in_offsets_reg_low: block
           -- containing bits 31..0 of register `rematch008_in_offsets_reg`
@@ -7259,8 +12001,8 @@ begin
             w_ack := true;
           end if;
 
-        when "1001001" =>
-          -- w_addr = 000000000000000000000001001001--
+        when "01101001" =>
+          -- w_addr = 000000000000000000000001101001--
 
           -- Write logic for block rematch008_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch008_in_offsets_reg`
@@ -7286,8 +12028,8 @@ begin
 
           end if;
 
-        when "1001010" =>
-          -- w_addr = 000000000000000000000001001010--
+        when "01101010" =>
+          -- w_addr = 000000000000000000000001101010--
 
           -- Write logic for block rematch008_in_values_reg_low: block
           -- containing bits 31..0 of register `rematch008_in_values_reg`
@@ -7301,8 +12043,8 @@ begin
             w_ack := true;
           end if;
 
-        when "1001011" =>
-          -- w_addr = 000000000000000000000001001011--
+        when "01101011" =>
+          -- w_addr = 000000000000000000000001101011--
 
           -- Write logic for block rematch008_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch008_in_values_reg`
@@ -7328,8 +12070,8 @@ begin
 
           end if;
 
-        when "1001100" =>
-          -- w_addr = 000000000000000000000001001100--
+        when "01101100" =>
+          -- w_addr = 000000000000000000000001101100--
 
           -- Write logic for block rematch009_in_offsets_reg_low: block
           -- containing bits 31..0 of register `rematch009_in_offsets_reg`
@@ -7343,8 +12085,8 @@ begin
             w_ack := true;
           end if;
 
-        when "1001101" =>
-          -- w_addr = 000000000000000000000001001101--
+        when "01101101" =>
+          -- w_addr = 000000000000000000000001101101--
 
           -- Write logic for block rematch009_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch009_in_offsets_reg`
@@ -7370,8 +12112,8 @@ begin
 
           end if;
 
-        when "1001110" =>
-          -- w_addr = 000000000000000000000001001110--
+        when "01101110" =>
+          -- w_addr = 000000000000000000000001101110--
 
           -- Write logic for block rematch009_in_values_reg_low: block
           -- containing bits 31..0 of register `rematch009_in_values_reg`
@@ -7385,8 +12127,8 @@ begin
             w_ack := true;
           end if;
 
-        when "1001111" =>
-          -- w_addr = 000000000000000000000001001111--
+        when "01101111" =>
+          -- w_addr = 000000000000000000000001101111--
 
           -- Write logic for block rematch009_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch009_in_values_reg`
@@ -7412,8 +12154,8 @@ begin
 
           end if;
 
-        when "1010000" =>
-          -- w_addr = 000000000000000000000001010000--
+        when "01110000" =>
+          -- w_addr = 000000000000000000000001110000--
 
           -- Write logic for block rematch010_in_offsets_reg_low: block
           -- containing bits 31..0 of register `rematch010_in_offsets_reg`
@@ -7427,8 +12169,8 @@ begin
             w_ack := true;
           end if;
 
-        when "1010001" =>
-          -- w_addr = 000000000000000000000001010001--
+        when "01110001" =>
+          -- w_addr = 000000000000000000000001110001--
 
           -- Write logic for block rematch010_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch010_in_offsets_reg`
@@ -7454,8 +12196,8 @@ begin
 
           end if;
 
-        when "1010010" =>
-          -- w_addr = 000000000000000000000001010010--
+        when "01110010" =>
+          -- w_addr = 000000000000000000000001110010--
 
           -- Write logic for block rematch010_in_values_reg_low: block
           -- containing bits 31..0 of register `rematch010_in_values_reg`
@@ -7469,8 +12211,8 @@ begin
             w_ack := true;
           end if;
 
-        when "1010011" =>
-          -- w_addr = 000000000000000000000001010011--
+        when "01110011" =>
+          -- w_addr = 000000000000000000000001110011--
 
           -- Write logic for block rematch010_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch010_in_values_reg`
@@ -7496,8 +12238,8 @@ begin
 
           end if;
 
-        when "1010100" =>
-          -- w_addr = 000000000000000000000001010100--
+        when "01110100" =>
+          -- w_addr = 000000000000000000000001110100--
 
           -- Write logic for block rematch011_in_offsets_reg_low: block
           -- containing bits 31..0 of register `rematch011_in_offsets_reg`
@@ -7511,8 +12253,8 @@ begin
             w_ack := true;
           end if;
 
-        when "1010101" =>
-          -- w_addr = 000000000000000000000001010101--
+        when "01110101" =>
+          -- w_addr = 000000000000000000000001110101--
 
           -- Write logic for block rematch011_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch011_in_offsets_reg`
@@ -7538,8 +12280,8 @@ begin
 
           end if;
 
-        when "1010110" =>
-          -- w_addr = 000000000000000000000001010110--
+        when "01110110" =>
+          -- w_addr = 000000000000000000000001110110--
 
           -- Write logic for block rematch011_in_values_reg_low: block
           -- containing bits 31..0 of register `rematch011_in_values_reg`
@@ -7553,8 +12295,8 @@ begin
             w_ack := true;
           end if;
 
-        when "1010111" =>
-          -- w_addr = 000000000000000000000001010111--
+        when "01110111" =>
+          -- w_addr = 000000000000000000000001110111--
 
           -- Write logic for block rematch011_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch011_in_values_reg`
@@ -7580,8 +12322,8 @@ begin
 
           end if;
 
-        when "1011000" =>
-          -- w_addr = 000000000000000000000001011000--
+        when "01111000" =>
+          -- w_addr = 000000000000000000000001111000--
 
           -- Write logic for block rematch012_in_offsets_reg_low: block
           -- containing bits 31..0 of register `rematch012_in_offsets_reg`
@@ -7595,8 +12337,8 @@ begin
             w_ack := true;
           end if;
 
-        when "1011001" =>
-          -- w_addr = 000000000000000000000001011001--
+        when "01111001" =>
+          -- w_addr = 000000000000000000000001111001--
 
           -- Write logic for block rematch012_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch012_in_offsets_reg`
@@ -7622,8 +12364,8 @@ begin
 
           end if;
 
-        when "1011010" =>
-          -- w_addr = 000000000000000000000001011010--
+        when "01111010" =>
+          -- w_addr = 000000000000000000000001111010--
 
           -- Write logic for block rematch012_in_values_reg_low: block
           -- containing bits 31..0 of register `rematch012_in_values_reg`
@@ -7637,8 +12379,8 @@ begin
             w_ack := true;
           end if;
 
-        when "1011011" =>
-          -- w_addr = 000000000000000000000001011011--
+        when "01111011" =>
+          -- w_addr = 000000000000000000000001111011--
 
           -- Write logic for block rematch012_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch012_in_values_reg`
@@ -7664,8 +12406,8 @@ begin
 
           end if;
 
-        when "1011100" =>
-          -- w_addr = 000000000000000000000001011100--
+        when "01111100" =>
+          -- w_addr = 000000000000000000000001111100--
 
           -- Write logic for block rematch013_in_offsets_reg_low: block
           -- containing bits 31..0 of register `rematch013_in_offsets_reg`
@@ -7679,8 +12421,8 @@ begin
             w_ack := true;
           end if;
 
-        when "1011101" =>
-          -- w_addr = 000000000000000000000001011101--
+        when "01111101" =>
+          -- w_addr = 000000000000000000000001111101--
 
           -- Write logic for block rematch013_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch013_in_offsets_reg`
@@ -7706,8 +12448,8 @@ begin
 
           end if;
 
-        when "1011110" =>
-          -- w_addr = 000000000000000000000001011110--
+        when "01111110" =>
+          -- w_addr = 000000000000000000000001111110--
 
           -- Write logic for block rematch013_in_values_reg_low: block
           -- containing bits 31..0 of register `rematch013_in_values_reg`
@@ -7721,8 +12463,8 @@ begin
             w_ack := true;
           end if;
 
-        when "1011111" =>
-          -- w_addr = 000000000000000000000001011111--
+        when "01111111" =>
+          -- w_addr = 000000000000000000000001111111--
 
           -- Write logic for block rematch013_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch013_in_values_reg`
@@ -7748,8 +12490,8 @@ begin
 
           end if;
 
-        when "1100000" =>
-          -- w_addr = 000000000000000000000001100000--
+        when "10000000" =>
+          -- w_addr = 000000000000000000000010000000--
 
           -- Write logic for block rematch014_in_offsets_reg_low: block
           -- containing bits 31..0 of register `rematch014_in_offsets_reg`
@@ -7763,8 +12505,8 @@ begin
             w_ack := true;
           end if;
 
-        when "1100001" =>
-          -- w_addr = 000000000000000000000001100001--
+        when "10000001" =>
+          -- w_addr = 000000000000000000000010000001--
 
           -- Write logic for block rematch014_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch014_in_offsets_reg`
@@ -7790,8 +12532,8 @@ begin
 
           end if;
 
-        when "1100010" =>
-          -- w_addr = 000000000000000000000001100010--
+        when "10000010" =>
+          -- w_addr = 000000000000000000000010000010--
 
           -- Write logic for block rematch014_in_values_reg_low: block
           -- containing bits 31..0 of register `rematch014_in_values_reg`
@@ -7805,8 +12547,8 @@ begin
             w_ack := true;
           end if;
 
-        when "1100011" =>
-          -- w_addr = 000000000000000000000001100011--
+        when "10000011" =>
+          -- w_addr = 000000000000000000000010000011--
 
           -- Write logic for block rematch014_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch014_in_values_reg`
@@ -7832,8 +12574,8 @@ begin
 
           end if;
 
-        when "1100100" =>
-          -- w_addr = 000000000000000000000001100100--
+        when "10000100" =>
+          -- w_addr = 000000000000000000000010000100--
 
           -- Write logic for block rematch015_in_offsets_reg_low: block
           -- containing bits 31..0 of register `rematch015_in_offsets_reg`
@@ -7847,8 +12589,8 @@ begin
             w_ack := true;
           end if;
 
-        when "1100101" =>
-          -- w_addr = 000000000000000000000001100101--
+        when "10000101" =>
+          -- w_addr = 000000000000000000000010000101--
 
           -- Write logic for block rematch015_in_offsets_reg_high: block
           -- containing bits 63..32 of register `rematch015_in_offsets_reg`
@@ -7874,8 +12616,8 @@ begin
 
           end if;
 
-        when "1100110" =>
-          -- w_addr = 000000000000000000000001100110--
+        when "10000110" =>
+          -- w_addr = 000000000000000000000010000110--
 
           -- Write logic for block rematch015_in_values_reg_low: block
           -- containing bits 31..0 of register `rematch015_in_values_reg`
@@ -7889,8 +12631,8 @@ begin
             w_ack := true;
           end if;
 
-        when "1100111" =>
-          -- w_addr = 000000000000000000000001100111--
+        when "10000111" =>
+          -- w_addr = 000000000000000000000010000111--
 
           -- Write logic for block rematch015_in_values_reg_high: block
           -- containing bits 63..32 of register `rematch015_in_values_reg`
@@ -7916,8 +12658,696 @@ begin
 
           end if;
 
-        when "1111001" =>
-          -- w_addr = 000000000000000000000001111001--
+        when "10001000" =>
+          -- w_addr = 000000000000000000000010001000--
+
+          -- Write logic for block rematch000_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch000_taxi_out_values_reg`
+          -- (`REMATCH000_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '1';
+          end if;
+          if w_req then
+            w_ack := true;
+          end if;
+
+        when "10001001" =>
+          -- w_addr = 000000000000000000000010001001--
+
+          -- Write logic for block rematch000_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch000_taxi_out_values_reg`
+          -- (`REMATCH000_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(63 downto 32) := w_data;
+            w_hstb(63 downto 32) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch000_taxi_out_values:
+          -- rematch000_taxi_out_values.
+
+          tmp_data64 := w_hold(63 downto 0);
+          tmp_strb64 := w_hstb(63 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch000_taxi_out_values_r((0)).d
+                := (f_rematch000_taxi_out_values_r((0)).d and not tmp_strb64)
+                or tmp_data64;
+            w_ack := true;
+
+          end if;
+
+        when "10001010" =>
+          -- w_addr = 000000000000000000000010001010--
+
+          -- Write logic for block rematch001_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch001_taxi_out_values_reg`
+          -- (`REMATCH001_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '1';
+          end if;
+          if w_req then
+            w_ack := true;
+          end if;
+
+        when "10001011" =>
+          -- w_addr = 000000000000000000000010001011--
+
+          -- Write logic for block rematch001_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch001_taxi_out_values_reg`
+          -- (`REMATCH001_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(63 downto 32) := w_data;
+            w_hstb(63 downto 32) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch001_taxi_out_values:
+          -- rematch001_taxi_out_values.
+
+          tmp_data64 := w_hold(63 downto 0);
+          tmp_strb64 := w_hstb(63 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch001_taxi_out_values_r((0)).d
+                := (f_rematch001_taxi_out_values_r((0)).d and not tmp_strb64)
+                or tmp_data64;
+            w_ack := true;
+
+          end if;
+
+        when "10001100" =>
+          -- w_addr = 000000000000000000000010001100--
+
+          -- Write logic for block rematch002_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch002_taxi_out_values_reg`
+          -- (`REMATCH002_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '1';
+          end if;
+          if w_req then
+            w_ack := true;
+          end if;
+
+        when "10001101" =>
+          -- w_addr = 000000000000000000000010001101--
+
+          -- Write logic for block rematch002_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch002_taxi_out_values_reg`
+          -- (`REMATCH002_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(63 downto 32) := w_data;
+            w_hstb(63 downto 32) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch002_taxi_out_values:
+          -- rematch002_taxi_out_values.
+
+          tmp_data64 := w_hold(63 downto 0);
+          tmp_strb64 := w_hstb(63 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch002_taxi_out_values_r((0)).d
+                := (f_rematch002_taxi_out_values_r((0)).d and not tmp_strb64)
+                or tmp_data64;
+            w_ack := true;
+
+          end if;
+
+        when "10001110" =>
+          -- w_addr = 000000000000000000000010001110--
+
+          -- Write logic for block rematch003_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch003_taxi_out_values_reg`
+          -- (`REMATCH003_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '1';
+          end if;
+          if w_req then
+            w_ack := true;
+          end if;
+
+        when "10001111" =>
+          -- w_addr = 000000000000000000000010001111--
+
+          -- Write logic for block rematch003_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch003_taxi_out_values_reg`
+          -- (`REMATCH003_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(63 downto 32) := w_data;
+            w_hstb(63 downto 32) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch003_taxi_out_values:
+          -- rematch003_taxi_out_values.
+
+          tmp_data64 := w_hold(63 downto 0);
+          tmp_strb64 := w_hstb(63 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch003_taxi_out_values_r((0)).d
+                := (f_rematch003_taxi_out_values_r((0)).d and not tmp_strb64)
+                or tmp_data64;
+            w_ack := true;
+
+          end if;
+
+        when "10010000" =>
+          -- w_addr = 000000000000000000000010010000--
+
+          -- Write logic for block rematch004_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch004_taxi_out_values_reg`
+          -- (`REMATCH004_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '1';
+          end if;
+          if w_req then
+            w_ack := true;
+          end if;
+
+        when "10010001" =>
+          -- w_addr = 000000000000000000000010010001--
+
+          -- Write logic for block rematch004_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch004_taxi_out_values_reg`
+          -- (`REMATCH004_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(63 downto 32) := w_data;
+            w_hstb(63 downto 32) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch004_taxi_out_values:
+          -- rematch004_taxi_out_values.
+
+          tmp_data64 := w_hold(63 downto 0);
+          tmp_strb64 := w_hstb(63 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch004_taxi_out_values_r((0)).d
+                := (f_rematch004_taxi_out_values_r((0)).d and not tmp_strb64)
+                or tmp_data64;
+            w_ack := true;
+
+          end if;
+
+        when "10010010" =>
+          -- w_addr = 000000000000000000000010010010--
+
+          -- Write logic for block rematch005_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch005_taxi_out_values_reg`
+          -- (`REMATCH005_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '1';
+          end if;
+          if w_req then
+            w_ack := true;
+          end if;
+
+        when "10010011" =>
+          -- w_addr = 000000000000000000000010010011--
+
+          -- Write logic for block rematch005_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch005_taxi_out_values_reg`
+          -- (`REMATCH005_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(63 downto 32) := w_data;
+            w_hstb(63 downto 32) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch005_taxi_out_values:
+          -- rematch005_taxi_out_values.
+
+          tmp_data64 := w_hold(63 downto 0);
+          tmp_strb64 := w_hstb(63 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch005_taxi_out_values_r((0)).d
+                := (f_rematch005_taxi_out_values_r((0)).d and not tmp_strb64)
+                or tmp_data64;
+            w_ack := true;
+
+          end if;
+
+        when "10010100" =>
+          -- w_addr = 000000000000000000000010010100--
+
+          -- Write logic for block rematch006_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch006_taxi_out_values_reg`
+          -- (`REMATCH006_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '1';
+          end if;
+          if w_req then
+            w_ack := true;
+          end if;
+
+        when "10010101" =>
+          -- w_addr = 000000000000000000000010010101--
+
+          -- Write logic for block rematch006_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch006_taxi_out_values_reg`
+          -- (`REMATCH006_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(63 downto 32) := w_data;
+            w_hstb(63 downto 32) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch006_taxi_out_values:
+          -- rematch006_taxi_out_values.
+
+          tmp_data64 := w_hold(63 downto 0);
+          tmp_strb64 := w_hstb(63 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch006_taxi_out_values_r((0)).d
+                := (f_rematch006_taxi_out_values_r((0)).d and not tmp_strb64)
+                or tmp_data64;
+            w_ack := true;
+
+          end if;
+
+        when "10010110" =>
+          -- w_addr = 000000000000000000000010010110--
+
+          -- Write logic for block rematch007_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch007_taxi_out_values_reg`
+          -- (`REMATCH007_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '1';
+          end if;
+          if w_req then
+            w_ack := true;
+          end if;
+
+        when "10010111" =>
+          -- w_addr = 000000000000000000000010010111--
+
+          -- Write logic for block rematch007_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch007_taxi_out_values_reg`
+          -- (`REMATCH007_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(63 downto 32) := w_data;
+            w_hstb(63 downto 32) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch007_taxi_out_values:
+          -- rematch007_taxi_out_values.
+
+          tmp_data64 := w_hold(63 downto 0);
+          tmp_strb64 := w_hstb(63 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch007_taxi_out_values_r((0)).d
+                := (f_rematch007_taxi_out_values_r((0)).d and not tmp_strb64)
+                or tmp_data64;
+            w_ack := true;
+
+          end if;
+
+        when "10011000" =>
+          -- w_addr = 000000000000000000000010011000--
+
+          -- Write logic for block rematch008_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch008_taxi_out_values_reg`
+          -- (`REMATCH008_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '1';
+          end if;
+          if w_req then
+            w_ack := true;
+          end if;
+
+        when "10011001" =>
+          -- w_addr = 000000000000000000000010011001--
+
+          -- Write logic for block rematch008_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch008_taxi_out_values_reg`
+          -- (`REMATCH008_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(63 downto 32) := w_data;
+            w_hstb(63 downto 32) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch008_taxi_out_values:
+          -- rematch008_taxi_out_values.
+
+          tmp_data64 := w_hold(63 downto 0);
+          tmp_strb64 := w_hstb(63 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch008_taxi_out_values_r((0)).d
+                := (f_rematch008_taxi_out_values_r((0)).d and not tmp_strb64)
+                or tmp_data64;
+            w_ack := true;
+
+          end if;
+
+        when "10011010" =>
+          -- w_addr = 000000000000000000000010011010--
+
+          -- Write logic for block rematch009_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch009_taxi_out_values_reg`
+          -- (`REMATCH009_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '1';
+          end if;
+          if w_req then
+            w_ack := true;
+          end if;
+
+        when "10011011" =>
+          -- w_addr = 000000000000000000000010011011--
+
+          -- Write logic for block rematch009_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch009_taxi_out_values_reg`
+          -- (`REMATCH009_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(63 downto 32) := w_data;
+            w_hstb(63 downto 32) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch009_taxi_out_values:
+          -- rematch009_taxi_out_values.
+
+          tmp_data64 := w_hold(63 downto 0);
+          tmp_strb64 := w_hstb(63 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch009_taxi_out_values_r((0)).d
+                := (f_rematch009_taxi_out_values_r((0)).d and not tmp_strb64)
+                or tmp_data64;
+            w_ack := true;
+
+          end if;
+
+        when "10011100" =>
+          -- w_addr = 000000000000000000000010011100--
+
+          -- Write logic for block rematch010_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch010_taxi_out_values_reg`
+          -- (`REMATCH010_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '1';
+          end if;
+          if w_req then
+            w_ack := true;
+          end if;
+
+        when "10011101" =>
+          -- w_addr = 000000000000000000000010011101--
+
+          -- Write logic for block rematch010_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch010_taxi_out_values_reg`
+          -- (`REMATCH010_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(63 downto 32) := w_data;
+            w_hstb(63 downto 32) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch010_taxi_out_values:
+          -- rematch010_taxi_out_values.
+
+          tmp_data64 := w_hold(63 downto 0);
+          tmp_strb64 := w_hstb(63 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch010_taxi_out_values_r((0)).d
+                := (f_rematch010_taxi_out_values_r((0)).d and not tmp_strb64)
+                or tmp_data64;
+            w_ack := true;
+
+          end if;
+
+        when "10011110" =>
+          -- w_addr = 000000000000000000000010011110--
+
+          -- Write logic for block rematch011_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch011_taxi_out_values_reg`
+          -- (`REMATCH011_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '1';
+          end if;
+          if w_req then
+            w_ack := true;
+          end if;
+
+        when "10011111" =>
+          -- w_addr = 000000000000000000000010011111--
+
+          -- Write logic for block rematch011_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch011_taxi_out_values_reg`
+          -- (`REMATCH011_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(63 downto 32) := w_data;
+            w_hstb(63 downto 32) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch011_taxi_out_values:
+          -- rematch011_taxi_out_values.
+
+          tmp_data64 := w_hold(63 downto 0);
+          tmp_strb64 := w_hstb(63 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch011_taxi_out_values_r((0)).d
+                := (f_rematch011_taxi_out_values_r((0)).d and not tmp_strb64)
+                or tmp_data64;
+            w_ack := true;
+
+          end if;
+
+        when "10100000" =>
+          -- w_addr = 000000000000000000000010100000--
+
+          -- Write logic for block rematch012_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch012_taxi_out_values_reg`
+          -- (`REMATCH012_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '1';
+          end if;
+          if w_req then
+            w_ack := true;
+          end if;
+
+        when "10100001" =>
+          -- w_addr = 000000000000000000000010100001--
+
+          -- Write logic for block rematch012_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch012_taxi_out_values_reg`
+          -- (`REMATCH012_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(63 downto 32) := w_data;
+            w_hstb(63 downto 32) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch012_taxi_out_values:
+          -- rematch012_taxi_out_values.
+
+          tmp_data64 := w_hold(63 downto 0);
+          tmp_strb64 := w_hstb(63 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch012_taxi_out_values_r((0)).d
+                := (f_rematch012_taxi_out_values_r((0)).d and not tmp_strb64)
+                or tmp_data64;
+            w_ack := true;
+
+          end if;
+
+        when "10100010" =>
+          -- w_addr = 000000000000000000000010100010--
+
+          -- Write logic for block rematch013_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch013_taxi_out_values_reg`
+          -- (`REMATCH013_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '1';
+          end if;
+          if w_req then
+            w_ack := true;
+          end if;
+
+        when "10100011" =>
+          -- w_addr = 000000000000000000000010100011--
+
+          -- Write logic for block rematch013_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch013_taxi_out_values_reg`
+          -- (`REMATCH013_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(63 downto 32) := w_data;
+            w_hstb(63 downto 32) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch013_taxi_out_values:
+          -- rematch013_taxi_out_values.
+
+          tmp_data64 := w_hold(63 downto 0);
+          tmp_strb64 := w_hstb(63 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch013_taxi_out_values_r((0)).d
+                := (f_rematch013_taxi_out_values_r((0)).d and not tmp_strb64)
+                or tmp_data64;
+            w_ack := true;
+
+          end if;
+
+        when "10100100" =>
+          -- w_addr = 000000000000000000000010100100--
+
+          -- Write logic for block rematch014_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch014_taxi_out_values_reg`
+          -- (`REMATCH014_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '1';
+          end if;
+          if w_req then
+            w_ack := true;
+          end if;
+
+        when "10100101" =>
+          -- w_addr = 000000000000000000000010100101--
+
+          -- Write logic for block rematch014_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch014_taxi_out_values_reg`
+          -- (`REMATCH014_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(63 downto 32) := w_data;
+            w_hstb(63 downto 32) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch014_taxi_out_values:
+          -- rematch014_taxi_out_values.
+
+          tmp_data64 := w_hold(63 downto 0);
+          tmp_strb64 := w_hstb(63 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch014_taxi_out_values_r((0)).d
+                := (f_rematch014_taxi_out_values_r((0)).d and not tmp_strb64)
+                or tmp_data64;
+            w_ack := true;
+
+          end if;
+
+        when "10100110" =>
+          -- w_addr = 000000000000000000000010100110--
+
+          -- Write logic for block rematch015_taxi_out_values_reg_low: block
+          -- containing bits 31..0 of register `rematch015_taxi_out_values_reg`
+          -- (`REMATCH015_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(31 downto 0) := w_data;
+            w_hstb(31 downto 0) := w_strb;
+            w_multi := '1';
+          end if;
+          if w_req then
+            w_ack := true;
+          end if;
+
+        when "10100111" =>
+          -- w_addr = 000000000000000000000010100111--
+
+          -- Write logic for block rematch015_taxi_out_values_reg_high: block
+          -- containing bits 63..32 of register `rematch015_taxi_out_values_reg`
+          -- (`REMATCH015_TAXI_OUT_VALUES`).
+          if w_req or w_lreq then
+            w_hold(63 downto 32) := w_data;
+            w_hstb(63 downto 32) := w_strb;
+            w_multi := '0';
+          end if;
+
+          -- Write logic for field rematch015_taxi_out_values:
+          -- rematch015_taxi_out_values.
+
+          tmp_data64 := w_hold(63 downto 0);
+          tmp_strb64 := w_hstb(63 downto 0);
+          if w_req then
+
+            -- Regular access logic. Write mode: masked.
+
+            f_rematch015_taxi_out_values_r((0)).d
+                := (f_rematch015_taxi_out_values_r((0)).d and not tmp_strb64)
+                or tmp_data64;
+            w_ack := true;
+
+          end if;
+
+        when "11001000" =>
+          -- w_addr = 000000000000000000000011001000--
 
           -- Write logic for block Profile_enable_reg: block containing bits
           -- 31..0 of register `Profile_enable_reg` (`PROFILE_ENABLE`).
@@ -7941,8 +13371,8 @@ begin
 
           end if;
 
-        when others => -- "1111010"
-          -- w_addr = 000000000000000000000001111010--
+        when others => -- "11001001"
+          -- w_addr = 000000000000000000000011001001--
 
           -- Write logic for block Profile_clear_reg: block containing bits
           -- 31..0 of register `Profile_clear_reg` (`PROFILE_CLEAR`).
@@ -8328,6 +13758,358 @@ begin
       -- Assign the read outputs for field rematch015_lastidx.
       f_rematch015_lastidx_data <= f_rematch015_lastidx_r((0)).d;
 
+      -- Post-bus logic for field rematch000_taxi_firstidx:
+      -- rematch000_taxi_firstidx.
+
+      -- Handle reset for field rematch000_taxi_firstidx.
+      if reset = '1' then
+        f_rematch000_taxi_firstidx_r((0)).d := (others => '0');
+        f_rematch000_taxi_firstidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch000_taxi_firstidx.
+      f_rematch000_taxi_firstidx_data <= f_rematch000_taxi_firstidx_r((0)).d;
+
+      -- Post-bus logic for field rematch000_taxi_lastidx:
+      -- rematch000_taxi_lastidx.
+
+      -- Handle reset for field rematch000_taxi_lastidx.
+      if reset = '1' then
+        f_rematch000_taxi_lastidx_r((0)).d := (others => '0');
+        f_rematch000_taxi_lastidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch000_taxi_lastidx.
+      f_rematch000_taxi_lastidx_data <= f_rematch000_taxi_lastidx_r((0)).d;
+
+      -- Post-bus logic for field rematch001_taxi_firstidx:
+      -- rematch001_taxi_firstidx.
+
+      -- Handle reset for field rematch001_taxi_firstidx.
+      if reset = '1' then
+        f_rematch001_taxi_firstidx_r((0)).d := (others => '0');
+        f_rematch001_taxi_firstidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch001_taxi_firstidx.
+      f_rematch001_taxi_firstidx_data <= f_rematch001_taxi_firstidx_r((0)).d;
+
+      -- Post-bus logic for field rematch001_taxi_lastidx:
+      -- rematch001_taxi_lastidx.
+
+      -- Handle reset for field rematch001_taxi_lastidx.
+      if reset = '1' then
+        f_rematch001_taxi_lastidx_r((0)).d := (others => '0');
+        f_rematch001_taxi_lastidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch001_taxi_lastidx.
+      f_rematch001_taxi_lastidx_data <= f_rematch001_taxi_lastidx_r((0)).d;
+
+      -- Post-bus logic for field rematch002_taxi_firstidx:
+      -- rematch002_taxi_firstidx.
+
+      -- Handle reset for field rematch002_taxi_firstidx.
+      if reset = '1' then
+        f_rematch002_taxi_firstidx_r((0)).d := (others => '0');
+        f_rematch002_taxi_firstidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch002_taxi_firstidx.
+      f_rematch002_taxi_firstidx_data <= f_rematch002_taxi_firstidx_r((0)).d;
+
+      -- Post-bus logic for field rematch002_taxi_lastidx:
+      -- rematch002_taxi_lastidx.
+
+      -- Handle reset for field rematch002_taxi_lastidx.
+      if reset = '1' then
+        f_rematch002_taxi_lastidx_r((0)).d := (others => '0');
+        f_rematch002_taxi_lastidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch002_taxi_lastidx.
+      f_rematch002_taxi_lastidx_data <= f_rematch002_taxi_lastidx_r((0)).d;
+
+      -- Post-bus logic for field rematch003_taxi_firstidx:
+      -- rematch003_taxi_firstidx.
+
+      -- Handle reset for field rematch003_taxi_firstidx.
+      if reset = '1' then
+        f_rematch003_taxi_firstidx_r((0)).d := (others => '0');
+        f_rematch003_taxi_firstidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch003_taxi_firstidx.
+      f_rematch003_taxi_firstidx_data <= f_rematch003_taxi_firstidx_r((0)).d;
+
+      -- Post-bus logic for field rematch003_taxi_lastidx:
+      -- rematch003_taxi_lastidx.
+
+      -- Handle reset for field rematch003_taxi_lastidx.
+      if reset = '1' then
+        f_rematch003_taxi_lastidx_r((0)).d := (others => '0');
+        f_rematch003_taxi_lastidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch003_taxi_lastidx.
+      f_rematch003_taxi_lastidx_data <= f_rematch003_taxi_lastidx_r((0)).d;
+
+      -- Post-bus logic for field rematch004_taxi_firstidx:
+      -- rematch004_taxi_firstidx.
+
+      -- Handle reset for field rematch004_taxi_firstidx.
+      if reset = '1' then
+        f_rematch004_taxi_firstidx_r((0)).d := (others => '0');
+        f_rematch004_taxi_firstidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch004_taxi_firstidx.
+      f_rematch004_taxi_firstidx_data <= f_rematch004_taxi_firstidx_r((0)).d;
+
+      -- Post-bus logic for field rematch004_taxi_lastidx:
+      -- rematch004_taxi_lastidx.
+
+      -- Handle reset for field rematch004_taxi_lastidx.
+      if reset = '1' then
+        f_rematch004_taxi_lastidx_r((0)).d := (others => '0');
+        f_rematch004_taxi_lastidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch004_taxi_lastidx.
+      f_rematch004_taxi_lastidx_data <= f_rematch004_taxi_lastidx_r((0)).d;
+
+      -- Post-bus logic for field rematch005_taxi_firstidx:
+      -- rematch005_taxi_firstidx.
+
+      -- Handle reset for field rematch005_taxi_firstidx.
+      if reset = '1' then
+        f_rematch005_taxi_firstidx_r((0)).d := (others => '0');
+        f_rematch005_taxi_firstidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch005_taxi_firstidx.
+      f_rematch005_taxi_firstidx_data <= f_rematch005_taxi_firstidx_r((0)).d;
+
+      -- Post-bus logic for field rematch005_taxi_lastidx:
+      -- rematch005_taxi_lastidx.
+
+      -- Handle reset for field rematch005_taxi_lastidx.
+      if reset = '1' then
+        f_rematch005_taxi_lastidx_r((0)).d := (others => '0');
+        f_rematch005_taxi_lastidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch005_taxi_lastidx.
+      f_rematch005_taxi_lastidx_data <= f_rematch005_taxi_lastidx_r((0)).d;
+
+      -- Post-bus logic for field rematch006_taxi_firstidx:
+      -- rematch006_taxi_firstidx.
+
+      -- Handle reset for field rematch006_taxi_firstidx.
+      if reset = '1' then
+        f_rematch006_taxi_firstidx_r((0)).d := (others => '0');
+        f_rematch006_taxi_firstidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch006_taxi_firstidx.
+      f_rematch006_taxi_firstidx_data <= f_rematch006_taxi_firstidx_r((0)).d;
+
+      -- Post-bus logic for field rematch006_taxi_lastidx:
+      -- rematch006_taxi_lastidx.
+
+      -- Handle reset for field rematch006_taxi_lastidx.
+      if reset = '1' then
+        f_rematch006_taxi_lastidx_r((0)).d := (others => '0');
+        f_rematch006_taxi_lastidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch006_taxi_lastidx.
+      f_rematch006_taxi_lastidx_data <= f_rematch006_taxi_lastidx_r((0)).d;
+
+      -- Post-bus logic for field rematch007_taxi_firstidx:
+      -- rematch007_taxi_firstidx.
+
+      -- Handle reset for field rematch007_taxi_firstidx.
+      if reset = '1' then
+        f_rematch007_taxi_firstidx_r((0)).d := (others => '0');
+        f_rematch007_taxi_firstidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch007_taxi_firstidx.
+      f_rematch007_taxi_firstidx_data <= f_rematch007_taxi_firstidx_r((0)).d;
+
+      -- Post-bus logic for field rematch007_taxi_lastidx:
+      -- rematch007_taxi_lastidx.
+
+      -- Handle reset for field rematch007_taxi_lastidx.
+      if reset = '1' then
+        f_rematch007_taxi_lastidx_r((0)).d := (others => '0');
+        f_rematch007_taxi_lastidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch007_taxi_lastidx.
+      f_rematch007_taxi_lastidx_data <= f_rematch007_taxi_lastidx_r((0)).d;
+
+      -- Post-bus logic for field rematch008_taxi_firstidx:
+      -- rematch008_taxi_firstidx.
+
+      -- Handle reset for field rematch008_taxi_firstidx.
+      if reset = '1' then
+        f_rematch008_taxi_firstidx_r((0)).d := (others => '0');
+        f_rematch008_taxi_firstidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch008_taxi_firstidx.
+      f_rematch008_taxi_firstidx_data <= f_rematch008_taxi_firstidx_r((0)).d;
+
+      -- Post-bus logic for field rematch008_taxi_lastidx:
+      -- rematch008_taxi_lastidx.
+
+      -- Handle reset for field rematch008_taxi_lastidx.
+      if reset = '1' then
+        f_rematch008_taxi_lastidx_r((0)).d := (others => '0');
+        f_rematch008_taxi_lastidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch008_taxi_lastidx.
+      f_rematch008_taxi_lastidx_data <= f_rematch008_taxi_lastidx_r((0)).d;
+
+      -- Post-bus logic for field rematch009_taxi_firstidx:
+      -- rematch009_taxi_firstidx.
+
+      -- Handle reset for field rematch009_taxi_firstidx.
+      if reset = '1' then
+        f_rematch009_taxi_firstidx_r((0)).d := (others => '0');
+        f_rematch009_taxi_firstidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch009_taxi_firstidx.
+      f_rematch009_taxi_firstidx_data <= f_rematch009_taxi_firstidx_r((0)).d;
+
+      -- Post-bus logic for field rematch009_taxi_lastidx:
+      -- rematch009_taxi_lastidx.
+
+      -- Handle reset for field rematch009_taxi_lastidx.
+      if reset = '1' then
+        f_rematch009_taxi_lastidx_r((0)).d := (others => '0');
+        f_rematch009_taxi_lastidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch009_taxi_lastidx.
+      f_rematch009_taxi_lastidx_data <= f_rematch009_taxi_lastidx_r((0)).d;
+
+      -- Post-bus logic for field rematch010_taxi_firstidx:
+      -- rematch010_taxi_firstidx.
+
+      -- Handle reset for field rematch010_taxi_firstidx.
+      if reset = '1' then
+        f_rematch010_taxi_firstidx_r((0)).d := (others => '0');
+        f_rematch010_taxi_firstidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch010_taxi_firstidx.
+      f_rematch010_taxi_firstidx_data <= f_rematch010_taxi_firstidx_r((0)).d;
+
+      -- Post-bus logic for field rematch010_taxi_lastidx:
+      -- rematch010_taxi_lastidx.
+
+      -- Handle reset for field rematch010_taxi_lastidx.
+      if reset = '1' then
+        f_rematch010_taxi_lastidx_r((0)).d := (others => '0');
+        f_rematch010_taxi_lastidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch010_taxi_lastidx.
+      f_rematch010_taxi_lastidx_data <= f_rematch010_taxi_lastidx_r((0)).d;
+
+      -- Post-bus logic for field rematch011_taxi_firstidx:
+      -- rematch011_taxi_firstidx.
+
+      -- Handle reset for field rematch011_taxi_firstidx.
+      if reset = '1' then
+        f_rematch011_taxi_firstidx_r((0)).d := (others => '0');
+        f_rematch011_taxi_firstidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch011_taxi_firstidx.
+      f_rematch011_taxi_firstidx_data <= f_rematch011_taxi_firstidx_r((0)).d;
+
+      -- Post-bus logic for field rematch011_taxi_lastidx:
+      -- rematch011_taxi_lastidx.
+
+      -- Handle reset for field rematch011_taxi_lastidx.
+      if reset = '1' then
+        f_rematch011_taxi_lastidx_r((0)).d := (others => '0');
+        f_rematch011_taxi_lastidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch011_taxi_lastidx.
+      f_rematch011_taxi_lastidx_data <= f_rematch011_taxi_lastidx_r((0)).d;
+
+      -- Post-bus logic for field rematch012_taxi_firstidx:
+      -- rematch012_taxi_firstidx.
+
+      -- Handle reset for field rematch012_taxi_firstidx.
+      if reset = '1' then
+        f_rematch012_taxi_firstidx_r((0)).d := (others => '0');
+        f_rematch012_taxi_firstidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch012_taxi_firstidx.
+      f_rematch012_taxi_firstidx_data <= f_rematch012_taxi_firstidx_r((0)).d;
+
+      -- Post-bus logic for field rematch012_taxi_lastidx:
+      -- rematch012_taxi_lastidx.
+
+      -- Handle reset for field rematch012_taxi_lastidx.
+      if reset = '1' then
+        f_rematch012_taxi_lastidx_r((0)).d := (others => '0');
+        f_rematch012_taxi_lastidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch012_taxi_lastidx.
+      f_rematch012_taxi_lastidx_data <= f_rematch012_taxi_lastidx_r((0)).d;
+
+      -- Post-bus logic for field rematch013_taxi_firstidx:
+      -- rematch013_taxi_firstidx.
+
+      -- Handle reset for field rematch013_taxi_firstidx.
+      if reset = '1' then
+        f_rematch013_taxi_firstidx_r((0)).d := (others => '0');
+        f_rematch013_taxi_firstidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch013_taxi_firstidx.
+      f_rematch013_taxi_firstidx_data <= f_rematch013_taxi_firstidx_r((0)).d;
+
+      -- Post-bus logic for field rematch013_taxi_lastidx:
+      -- rematch013_taxi_lastidx.
+
+      -- Handle reset for field rematch013_taxi_lastidx.
+      if reset = '1' then
+        f_rematch013_taxi_lastidx_r((0)).d := (others => '0');
+        f_rematch013_taxi_lastidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch013_taxi_lastidx.
+      f_rematch013_taxi_lastidx_data <= f_rematch013_taxi_lastidx_r((0)).d;
+
+      -- Post-bus logic for field rematch014_taxi_firstidx:
+      -- rematch014_taxi_firstidx.
+
+      -- Handle reset for field rematch014_taxi_firstidx.
+      if reset = '1' then
+        f_rematch014_taxi_firstidx_r((0)).d := (others => '0');
+        f_rematch014_taxi_firstidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch014_taxi_firstidx.
+      f_rematch014_taxi_firstidx_data <= f_rematch014_taxi_firstidx_r((0)).d;
+
+      -- Post-bus logic for field rematch014_taxi_lastidx:
+      -- rematch014_taxi_lastidx.
+
+      -- Handle reset for field rematch014_taxi_lastidx.
+      if reset = '1' then
+        f_rematch014_taxi_lastidx_r((0)).d := (others => '0');
+        f_rematch014_taxi_lastidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch014_taxi_lastidx.
+      f_rematch014_taxi_lastidx_data <= f_rematch014_taxi_lastidx_r((0)).d;
+
+      -- Post-bus logic for field rematch015_taxi_firstidx:
+      -- rematch015_taxi_firstidx.
+
+      -- Handle reset for field rematch015_taxi_firstidx.
+      if reset = '1' then
+        f_rematch015_taxi_firstidx_r((0)).d := (others => '0');
+        f_rematch015_taxi_firstidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch015_taxi_firstidx.
+      f_rematch015_taxi_firstidx_data <= f_rematch015_taxi_firstidx_r((0)).d;
+
+      -- Post-bus logic for field rematch015_taxi_lastidx:
+      -- rematch015_taxi_lastidx.
+
+      -- Handle reset for field rematch015_taxi_lastidx.
+      if reset = '1' then
+        f_rematch015_taxi_lastidx_r((0)).d := (others => '0');
+        f_rematch015_taxi_lastidx_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch015_taxi_lastidx.
+      f_rematch015_taxi_lastidx_data <= f_rematch015_taxi_lastidx_r((0)).d;
+
       -- Post-bus logic for field rematch000_in_offsets: rematch000_in_offsets.
 
       -- Handle reset for field rematch000_in_offsets.
@@ -8647,6 +14429,182 @@ begin
       end if;
       -- Assign the read outputs for field rematch015_in_values.
       f_rematch015_in_values_data <= f_rematch015_in_values_r((0)).d;
+
+      -- Post-bus logic for field rematch000_taxi_out_values:
+      -- rematch000_taxi_out_values.
+
+      -- Handle reset for field rematch000_taxi_out_values.
+      if reset = '1' then
+        f_rematch000_taxi_out_values_r((0)).d := (others => '0');
+        f_rematch000_taxi_out_values_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch000_taxi_out_values.
+      f_rematch000_taxi_out_values_data <= f_rematch000_taxi_out_values_r((0)).d;
+
+      -- Post-bus logic for field rematch001_taxi_out_values:
+      -- rematch001_taxi_out_values.
+
+      -- Handle reset for field rematch001_taxi_out_values.
+      if reset = '1' then
+        f_rematch001_taxi_out_values_r((0)).d := (others => '0');
+        f_rematch001_taxi_out_values_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch001_taxi_out_values.
+      f_rematch001_taxi_out_values_data <= f_rematch001_taxi_out_values_r((0)).d;
+
+      -- Post-bus logic for field rematch002_taxi_out_values:
+      -- rematch002_taxi_out_values.
+
+      -- Handle reset for field rematch002_taxi_out_values.
+      if reset = '1' then
+        f_rematch002_taxi_out_values_r((0)).d := (others => '0');
+        f_rematch002_taxi_out_values_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch002_taxi_out_values.
+      f_rematch002_taxi_out_values_data <= f_rematch002_taxi_out_values_r((0)).d;
+
+      -- Post-bus logic for field rematch003_taxi_out_values:
+      -- rematch003_taxi_out_values.
+
+      -- Handle reset for field rematch003_taxi_out_values.
+      if reset = '1' then
+        f_rematch003_taxi_out_values_r((0)).d := (others => '0');
+        f_rematch003_taxi_out_values_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch003_taxi_out_values.
+      f_rematch003_taxi_out_values_data <= f_rematch003_taxi_out_values_r((0)).d;
+
+      -- Post-bus logic for field rematch004_taxi_out_values:
+      -- rematch004_taxi_out_values.
+
+      -- Handle reset for field rematch004_taxi_out_values.
+      if reset = '1' then
+        f_rematch004_taxi_out_values_r((0)).d := (others => '0');
+        f_rematch004_taxi_out_values_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch004_taxi_out_values.
+      f_rematch004_taxi_out_values_data <= f_rematch004_taxi_out_values_r((0)).d;
+
+      -- Post-bus logic for field rematch005_taxi_out_values:
+      -- rematch005_taxi_out_values.
+
+      -- Handle reset for field rematch005_taxi_out_values.
+      if reset = '1' then
+        f_rematch005_taxi_out_values_r((0)).d := (others => '0');
+        f_rematch005_taxi_out_values_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch005_taxi_out_values.
+      f_rematch005_taxi_out_values_data <= f_rematch005_taxi_out_values_r((0)).d;
+
+      -- Post-bus logic for field rematch006_taxi_out_values:
+      -- rematch006_taxi_out_values.
+
+      -- Handle reset for field rematch006_taxi_out_values.
+      if reset = '1' then
+        f_rematch006_taxi_out_values_r((0)).d := (others => '0');
+        f_rematch006_taxi_out_values_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch006_taxi_out_values.
+      f_rematch006_taxi_out_values_data <= f_rematch006_taxi_out_values_r((0)).d;
+
+      -- Post-bus logic for field rematch007_taxi_out_values:
+      -- rematch007_taxi_out_values.
+
+      -- Handle reset for field rematch007_taxi_out_values.
+      if reset = '1' then
+        f_rematch007_taxi_out_values_r((0)).d := (others => '0');
+        f_rematch007_taxi_out_values_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch007_taxi_out_values.
+      f_rematch007_taxi_out_values_data <= f_rematch007_taxi_out_values_r((0)).d;
+
+      -- Post-bus logic for field rematch008_taxi_out_values:
+      -- rematch008_taxi_out_values.
+
+      -- Handle reset for field rematch008_taxi_out_values.
+      if reset = '1' then
+        f_rematch008_taxi_out_values_r((0)).d := (others => '0');
+        f_rematch008_taxi_out_values_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch008_taxi_out_values.
+      f_rematch008_taxi_out_values_data <= f_rematch008_taxi_out_values_r((0)).d;
+
+      -- Post-bus logic for field rematch009_taxi_out_values:
+      -- rematch009_taxi_out_values.
+
+      -- Handle reset for field rematch009_taxi_out_values.
+      if reset = '1' then
+        f_rematch009_taxi_out_values_r((0)).d := (others => '0');
+        f_rematch009_taxi_out_values_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch009_taxi_out_values.
+      f_rematch009_taxi_out_values_data <= f_rematch009_taxi_out_values_r((0)).d;
+
+      -- Post-bus logic for field rematch010_taxi_out_values:
+      -- rematch010_taxi_out_values.
+
+      -- Handle reset for field rematch010_taxi_out_values.
+      if reset = '1' then
+        f_rematch010_taxi_out_values_r((0)).d := (others => '0');
+        f_rematch010_taxi_out_values_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch010_taxi_out_values.
+      f_rematch010_taxi_out_values_data <= f_rematch010_taxi_out_values_r((0)).d;
+
+      -- Post-bus logic for field rematch011_taxi_out_values:
+      -- rematch011_taxi_out_values.
+
+      -- Handle reset for field rematch011_taxi_out_values.
+      if reset = '1' then
+        f_rematch011_taxi_out_values_r((0)).d := (others => '0');
+        f_rematch011_taxi_out_values_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch011_taxi_out_values.
+      f_rematch011_taxi_out_values_data <= f_rematch011_taxi_out_values_r((0)).d;
+
+      -- Post-bus logic for field rematch012_taxi_out_values:
+      -- rematch012_taxi_out_values.
+
+      -- Handle reset for field rematch012_taxi_out_values.
+      if reset = '1' then
+        f_rematch012_taxi_out_values_r((0)).d := (others => '0');
+        f_rematch012_taxi_out_values_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch012_taxi_out_values.
+      f_rematch012_taxi_out_values_data <= f_rematch012_taxi_out_values_r((0)).d;
+
+      -- Post-bus logic for field rematch013_taxi_out_values:
+      -- rematch013_taxi_out_values.
+
+      -- Handle reset for field rematch013_taxi_out_values.
+      if reset = '1' then
+        f_rematch013_taxi_out_values_r((0)).d := (others => '0');
+        f_rematch013_taxi_out_values_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch013_taxi_out_values.
+      f_rematch013_taxi_out_values_data <= f_rematch013_taxi_out_values_r((0)).d;
+
+      -- Post-bus logic for field rematch014_taxi_out_values:
+      -- rematch014_taxi_out_values.
+
+      -- Handle reset for field rematch014_taxi_out_values.
+      if reset = '1' then
+        f_rematch014_taxi_out_values_r((0)).d := (others => '0');
+        f_rematch014_taxi_out_values_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch014_taxi_out_values.
+      f_rematch014_taxi_out_values_data <= f_rematch014_taxi_out_values_r((0)).d;
+
+      -- Post-bus logic for field rematch015_taxi_out_values:
+      -- rematch015_taxi_out_values.
+
+      -- Handle reset for field rematch015_taxi_out_values.
+      if reset = '1' then
+        f_rematch015_taxi_out_values_r((0)).d := (others => '0');
+        f_rematch015_taxi_out_values_r((0)).v := '0';
+      end if;
+      -- Assign the read outputs for field rematch015_taxi_out_values.
+      f_rematch015_taxi_out_values_data <= f_rematch015_taxi_out_values_r((0)).d;
 
       -- Post-bus logic for field Profile_enable: Profile_enable.
 

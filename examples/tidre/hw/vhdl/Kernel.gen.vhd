@@ -33,384 +33,639 @@ entity Kernel is
     TAG_WIDTH   : integer := 1
   );
   port (
-    kcd_clk                    : in  std_logic;
-    kcd_reset                  : in  std_logic;
-    rematch000_in_valid        : in  std_logic;
-    rematch000_in_ready        : out std_logic;
-    rematch000_in_dvalid       : in  std_logic;
-    rematch000_in_last         : in  std_logic;
-    rematch000_in_length       : in  std_logic_vector(31 downto 0);
-    rematch000_in_count        : in  std_logic_vector(0 downto 0);
-    rematch000_in_chars_valid  : in  std_logic;
-    rematch000_in_chars_ready  : out std_logic;
-    rematch000_in_chars_dvalid : in  std_logic;
-    rematch000_in_chars_last   : in  std_logic;
-    rematch000_in_chars        : in  std_logic_vector(31 downto 0);
-    rematch000_in_chars_count  : in  std_logic_vector(2 downto 0);
-    rematch000_in_unl_valid    : in  std_logic;
-    rematch000_in_unl_ready    : out std_logic;
-    rematch000_in_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch000_in_cmd_valid    : out std_logic;
-    rematch000_in_cmd_ready    : in  std_logic;
-    rematch000_in_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch000_in_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch000_in_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch001_in_valid        : in  std_logic;
-    rematch001_in_ready        : out std_logic;
-    rematch001_in_dvalid       : in  std_logic;
-    rematch001_in_last         : in  std_logic;
-    rematch001_in_length       : in  std_logic_vector(31 downto 0);
-    rematch001_in_count        : in  std_logic_vector(0 downto 0);
-    rematch001_in_chars_valid  : in  std_logic;
-    rematch001_in_chars_ready  : out std_logic;
-    rematch001_in_chars_dvalid : in  std_logic;
-    rematch001_in_chars_last   : in  std_logic;
-    rematch001_in_chars        : in  std_logic_vector(31 downto 0);
-    rematch001_in_chars_count  : in  std_logic_vector(2 downto 0);
-    rematch001_in_unl_valid    : in  std_logic;
-    rematch001_in_unl_ready    : out std_logic;
-    rematch001_in_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch001_in_cmd_valid    : out std_logic;
-    rematch001_in_cmd_ready    : in  std_logic;
-    rematch001_in_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch001_in_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch001_in_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch002_in_valid        : in  std_logic;
-    rematch002_in_ready        : out std_logic;
-    rematch002_in_dvalid       : in  std_logic;
-    rematch002_in_last         : in  std_logic;
-    rematch002_in_length       : in  std_logic_vector(31 downto 0);
-    rematch002_in_count        : in  std_logic_vector(0 downto 0);
-    rematch002_in_chars_valid  : in  std_logic;
-    rematch002_in_chars_ready  : out std_logic;
-    rematch002_in_chars_dvalid : in  std_logic;
-    rematch002_in_chars_last   : in  std_logic;
-    rematch002_in_chars        : in  std_logic_vector(31 downto 0);
-    rematch002_in_chars_count  : in  std_logic_vector(2 downto 0);
-    rematch002_in_unl_valid    : in  std_logic;
-    rematch002_in_unl_ready    : out std_logic;
-    rematch002_in_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch002_in_cmd_valid    : out std_logic;
-    rematch002_in_cmd_ready    : in  std_logic;
-    rematch002_in_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch002_in_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch002_in_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch003_in_valid        : in  std_logic;
-    rematch003_in_ready        : out std_logic;
-    rematch003_in_dvalid       : in  std_logic;
-    rematch003_in_last         : in  std_logic;
-    rematch003_in_length       : in  std_logic_vector(31 downto 0);
-    rematch003_in_count        : in  std_logic_vector(0 downto 0);
-    rematch003_in_chars_valid  : in  std_logic;
-    rematch003_in_chars_ready  : out std_logic;
-    rematch003_in_chars_dvalid : in  std_logic;
-    rematch003_in_chars_last   : in  std_logic;
-    rematch003_in_chars        : in  std_logic_vector(31 downto 0);
-    rematch003_in_chars_count  : in  std_logic_vector(2 downto 0);
-    rematch003_in_unl_valid    : in  std_logic;
-    rematch003_in_unl_ready    : out std_logic;
-    rematch003_in_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch003_in_cmd_valid    : out std_logic;
-    rematch003_in_cmd_ready    : in  std_logic;
-    rematch003_in_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch003_in_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch003_in_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch004_in_valid        : in  std_logic;
-    rematch004_in_ready        : out std_logic;
-    rematch004_in_dvalid       : in  std_logic;
-    rematch004_in_last         : in  std_logic;
-    rematch004_in_length       : in  std_logic_vector(31 downto 0);
-    rematch004_in_count        : in  std_logic_vector(0 downto 0);
-    rematch004_in_chars_valid  : in  std_logic;
-    rematch004_in_chars_ready  : out std_logic;
-    rematch004_in_chars_dvalid : in  std_logic;
-    rematch004_in_chars_last   : in  std_logic;
-    rematch004_in_chars        : in  std_logic_vector(31 downto 0);
-    rematch004_in_chars_count  : in  std_logic_vector(2 downto 0);
-    rematch004_in_unl_valid    : in  std_logic;
-    rematch004_in_unl_ready    : out std_logic;
-    rematch004_in_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch004_in_cmd_valid    : out std_logic;
-    rematch004_in_cmd_ready    : in  std_logic;
-    rematch004_in_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch004_in_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch004_in_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch005_in_valid        : in  std_logic;
-    rematch005_in_ready        : out std_logic;
-    rematch005_in_dvalid       : in  std_logic;
-    rematch005_in_last         : in  std_logic;
-    rematch005_in_length       : in  std_logic_vector(31 downto 0);
-    rematch005_in_count        : in  std_logic_vector(0 downto 0);
-    rematch005_in_chars_valid  : in  std_logic;
-    rematch005_in_chars_ready  : out std_logic;
-    rematch005_in_chars_dvalid : in  std_logic;
-    rematch005_in_chars_last   : in  std_logic;
-    rematch005_in_chars        : in  std_logic_vector(31 downto 0);
-    rematch005_in_chars_count  : in  std_logic_vector(2 downto 0);
-    rematch005_in_unl_valid    : in  std_logic;
-    rematch005_in_unl_ready    : out std_logic;
-    rematch005_in_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch005_in_cmd_valid    : out std_logic;
-    rematch005_in_cmd_ready    : in  std_logic;
-    rematch005_in_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch005_in_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch005_in_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch006_in_valid        : in  std_logic;
-    rematch006_in_ready        : out std_logic;
-    rematch006_in_dvalid       : in  std_logic;
-    rematch006_in_last         : in  std_logic;
-    rematch006_in_length       : in  std_logic_vector(31 downto 0);
-    rematch006_in_count        : in  std_logic_vector(0 downto 0);
-    rematch006_in_chars_valid  : in  std_logic;
-    rematch006_in_chars_ready  : out std_logic;
-    rematch006_in_chars_dvalid : in  std_logic;
-    rematch006_in_chars_last   : in  std_logic;
-    rematch006_in_chars        : in  std_logic_vector(31 downto 0);
-    rematch006_in_chars_count  : in  std_logic_vector(2 downto 0);
-    rematch006_in_unl_valid    : in  std_logic;
-    rematch006_in_unl_ready    : out std_logic;
-    rematch006_in_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch006_in_cmd_valid    : out std_logic;
-    rematch006_in_cmd_ready    : in  std_logic;
-    rematch006_in_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch006_in_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch006_in_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch007_in_valid        : in  std_logic;
-    rematch007_in_ready        : out std_logic;
-    rematch007_in_dvalid       : in  std_logic;
-    rematch007_in_last         : in  std_logic;
-    rematch007_in_length       : in  std_logic_vector(31 downto 0);
-    rematch007_in_count        : in  std_logic_vector(0 downto 0);
-    rematch007_in_chars_valid  : in  std_logic;
-    rematch007_in_chars_ready  : out std_logic;
-    rematch007_in_chars_dvalid : in  std_logic;
-    rematch007_in_chars_last   : in  std_logic;
-    rematch007_in_chars        : in  std_logic_vector(31 downto 0);
-    rematch007_in_chars_count  : in  std_logic_vector(2 downto 0);
-    rematch007_in_unl_valid    : in  std_logic;
-    rematch007_in_unl_ready    : out std_logic;
-    rematch007_in_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch007_in_cmd_valid    : out std_logic;
-    rematch007_in_cmd_ready    : in  std_logic;
-    rematch007_in_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch007_in_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch007_in_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch008_in_valid        : in  std_logic;
-    rematch008_in_ready        : out std_logic;
-    rematch008_in_dvalid       : in  std_logic;
-    rematch008_in_last         : in  std_logic;
-    rematch008_in_length       : in  std_logic_vector(31 downto 0);
-    rematch008_in_count        : in  std_logic_vector(0 downto 0);
-    rematch008_in_chars_valid  : in  std_logic;
-    rematch008_in_chars_ready  : out std_logic;
-    rematch008_in_chars_dvalid : in  std_logic;
-    rematch008_in_chars_last   : in  std_logic;
-    rematch008_in_chars        : in  std_logic_vector(31 downto 0);
-    rematch008_in_chars_count  : in  std_logic_vector(2 downto 0);
-    rematch008_in_unl_valid    : in  std_logic;
-    rematch008_in_unl_ready    : out std_logic;
-    rematch008_in_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch008_in_cmd_valid    : out std_logic;
-    rematch008_in_cmd_ready    : in  std_logic;
-    rematch008_in_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch008_in_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch008_in_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch009_in_valid        : in  std_logic;
-    rematch009_in_ready        : out std_logic;
-    rematch009_in_dvalid       : in  std_logic;
-    rematch009_in_last         : in  std_logic;
-    rematch009_in_length       : in  std_logic_vector(31 downto 0);
-    rematch009_in_count        : in  std_logic_vector(0 downto 0);
-    rematch009_in_chars_valid  : in  std_logic;
-    rematch009_in_chars_ready  : out std_logic;
-    rematch009_in_chars_dvalid : in  std_logic;
-    rematch009_in_chars_last   : in  std_logic;
-    rematch009_in_chars        : in  std_logic_vector(31 downto 0);
-    rematch009_in_chars_count  : in  std_logic_vector(2 downto 0);
-    rematch009_in_unl_valid    : in  std_logic;
-    rematch009_in_unl_ready    : out std_logic;
-    rematch009_in_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch009_in_cmd_valid    : out std_logic;
-    rematch009_in_cmd_ready    : in  std_logic;
-    rematch009_in_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch009_in_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch009_in_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch010_in_valid        : in  std_logic;
-    rematch010_in_ready        : out std_logic;
-    rematch010_in_dvalid       : in  std_logic;
-    rematch010_in_last         : in  std_logic;
-    rematch010_in_length       : in  std_logic_vector(31 downto 0);
-    rematch010_in_count        : in  std_logic_vector(0 downto 0);
-    rematch010_in_chars_valid  : in  std_logic;
-    rematch010_in_chars_ready  : out std_logic;
-    rematch010_in_chars_dvalid : in  std_logic;
-    rematch010_in_chars_last   : in  std_logic;
-    rematch010_in_chars        : in  std_logic_vector(31 downto 0);
-    rematch010_in_chars_count  : in  std_logic_vector(2 downto 0);
-    rematch010_in_unl_valid    : in  std_logic;
-    rematch010_in_unl_ready    : out std_logic;
-    rematch010_in_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch010_in_cmd_valid    : out std_logic;
-    rematch010_in_cmd_ready    : in  std_logic;
-    rematch010_in_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch010_in_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch010_in_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch011_in_valid        : in  std_logic;
-    rematch011_in_ready        : out std_logic;
-    rematch011_in_dvalid       : in  std_logic;
-    rematch011_in_last         : in  std_logic;
-    rematch011_in_length       : in  std_logic_vector(31 downto 0);
-    rematch011_in_count        : in  std_logic_vector(0 downto 0);
-    rematch011_in_chars_valid  : in  std_logic;
-    rematch011_in_chars_ready  : out std_logic;
-    rematch011_in_chars_dvalid : in  std_logic;
-    rematch011_in_chars_last   : in  std_logic;
-    rematch011_in_chars        : in  std_logic_vector(31 downto 0);
-    rematch011_in_chars_count  : in  std_logic_vector(2 downto 0);
-    rematch011_in_unl_valid    : in  std_logic;
-    rematch011_in_unl_ready    : out std_logic;
-    rematch011_in_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch011_in_cmd_valid    : out std_logic;
-    rematch011_in_cmd_ready    : in  std_logic;
-    rematch011_in_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch011_in_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch011_in_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch012_in_valid        : in  std_logic;
-    rematch012_in_ready        : out std_logic;
-    rematch012_in_dvalid       : in  std_logic;
-    rematch012_in_last         : in  std_logic;
-    rematch012_in_length       : in  std_logic_vector(31 downto 0);
-    rematch012_in_count        : in  std_logic_vector(0 downto 0);
-    rematch012_in_chars_valid  : in  std_logic;
-    rematch012_in_chars_ready  : out std_logic;
-    rematch012_in_chars_dvalid : in  std_logic;
-    rematch012_in_chars_last   : in  std_logic;
-    rematch012_in_chars        : in  std_logic_vector(31 downto 0);
-    rematch012_in_chars_count  : in  std_logic_vector(2 downto 0);
-    rematch012_in_unl_valid    : in  std_logic;
-    rematch012_in_unl_ready    : out std_logic;
-    rematch012_in_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch012_in_cmd_valid    : out std_logic;
-    rematch012_in_cmd_ready    : in  std_logic;
-    rematch012_in_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch012_in_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch012_in_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch013_in_valid        : in  std_logic;
-    rematch013_in_ready        : out std_logic;
-    rematch013_in_dvalid       : in  std_logic;
-    rematch013_in_last         : in  std_logic;
-    rematch013_in_length       : in  std_logic_vector(31 downto 0);
-    rematch013_in_count        : in  std_logic_vector(0 downto 0);
-    rematch013_in_chars_valid  : in  std_logic;
-    rematch013_in_chars_ready  : out std_logic;
-    rematch013_in_chars_dvalid : in  std_logic;
-    rematch013_in_chars_last   : in  std_logic;
-    rematch013_in_chars        : in  std_logic_vector(31 downto 0);
-    rematch013_in_chars_count  : in  std_logic_vector(2 downto 0);
-    rematch013_in_unl_valid    : in  std_logic;
-    rematch013_in_unl_ready    : out std_logic;
-    rematch013_in_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch013_in_cmd_valid    : out std_logic;
-    rematch013_in_cmd_ready    : in  std_logic;
-    rematch013_in_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch013_in_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch013_in_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch014_in_valid        : in  std_logic;
-    rematch014_in_ready        : out std_logic;
-    rematch014_in_dvalid       : in  std_logic;
-    rematch014_in_last         : in  std_logic;
-    rematch014_in_length       : in  std_logic_vector(31 downto 0);
-    rematch014_in_count        : in  std_logic_vector(0 downto 0);
-    rematch014_in_chars_valid  : in  std_logic;
-    rematch014_in_chars_ready  : out std_logic;
-    rematch014_in_chars_dvalid : in  std_logic;
-    rematch014_in_chars_last   : in  std_logic;
-    rematch014_in_chars        : in  std_logic_vector(31 downto 0);
-    rematch014_in_chars_count  : in  std_logic_vector(2 downto 0);
-    rematch014_in_unl_valid    : in  std_logic;
-    rematch014_in_unl_ready    : out std_logic;
-    rematch014_in_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch014_in_cmd_valid    : out std_logic;
-    rematch014_in_cmd_ready    : in  std_logic;
-    rematch014_in_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch014_in_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch014_in_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch015_in_valid        : in  std_logic;
-    rematch015_in_ready        : out std_logic;
-    rematch015_in_dvalid       : in  std_logic;
-    rematch015_in_last         : in  std_logic;
-    rematch015_in_length       : in  std_logic_vector(31 downto 0);
-    rematch015_in_count        : in  std_logic_vector(0 downto 0);
-    rematch015_in_chars_valid  : in  std_logic;
-    rematch015_in_chars_ready  : out std_logic;
-    rematch015_in_chars_dvalid : in  std_logic;
-    rematch015_in_chars_last   : in  std_logic;
-    rematch015_in_chars        : in  std_logic_vector(31 downto 0);
-    rematch015_in_chars_count  : in  std_logic_vector(2 downto 0);
-    rematch015_in_unl_valid    : in  std_logic;
-    rematch015_in_unl_ready    : out std_logic;
-    rematch015_in_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
-    rematch015_in_cmd_valid    : out std_logic;
-    rematch015_in_cmd_ready    : in  std_logic;
-    rematch015_in_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch015_in_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
-    rematch015_in_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
-    start                      : in  std_logic;
-    stop                       : in  std_logic;
-    reset                      : in  std_logic;
-    idle                       : out std_logic;
-    busy                       : out std_logic;
-    done                       : out std_logic;
-    result                     : out std_logic_vector(63 downto 0);
-    rematch000_firstidx        : in  std_logic_vector(31 downto 0);
-    rematch000_lastidx         : in  std_logic_vector(31 downto 0);
-    rematch001_firstidx        : in  std_logic_vector(31 downto 0);
-    rematch001_lastidx         : in  std_logic_vector(31 downto 0);
-    rematch002_firstidx        : in  std_logic_vector(31 downto 0);
-    rematch002_lastidx         : in  std_logic_vector(31 downto 0);
-    rematch003_firstidx        : in  std_logic_vector(31 downto 0);
-    rematch003_lastidx         : in  std_logic_vector(31 downto 0);
-    rematch004_firstidx        : in  std_logic_vector(31 downto 0);
-    rematch004_lastidx         : in  std_logic_vector(31 downto 0);
-    rematch005_firstidx        : in  std_logic_vector(31 downto 0);
-    rematch005_lastidx         : in  std_logic_vector(31 downto 0);
-    rematch006_firstidx        : in  std_logic_vector(31 downto 0);
-    rematch006_lastidx         : in  std_logic_vector(31 downto 0);
-    rematch007_firstidx        : in  std_logic_vector(31 downto 0);
-    rematch007_lastidx         : in  std_logic_vector(31 downto 0);
-    rematch008_firstidx        : in  std_logic_vector(31 downto 0);
-    rematch008_lastidx         : in  std_logic_vector(31 downto 0);
-    rematch009_firstidx        : in  std_logic_vector(31 downto 0);
-    rematch009_lastidx         : in  std_logic_vector(31 downto 0);
-    rematch010_firstidx        : in  std_logic_vector(31 downto 0);
-    rematch010_lastidx         : in  std_logic_vector(31 downto 0);
-    rematch011_firstidx        : in  std_logic_vector(31 downto 0);
-    rematch011_lastidx         : in  std_logic_vector(31 downto 0);
-    rematch012_firstidx        : in  std_logic_vector(31 downto 0);
-    rematch012_lastidx         : in  std_logic_vector(31 downto 0);
-    rematch013_firstidx        : in  std_logic_vector(31 downto 0);
-    rematch013_lastidx         : in  std_logic_vector(31 downto 0);
-    rematch014_firstidx        : in  std_logic_vector(31 downto 0);
-    rematch014_lastidx         : in  std_logic_vector(31 downto 0);
-    rematch015_firstidx        : in  std_logic_vector(31 downto 0);
-    rematch015_lastidx         : in  std_logic_vector(31 downto 0);
-    count_re_bird              : out std_logic_vector(31 downto 0);
-    count_re_bunny             : out std_logic_vector(31 downto 0);
-    count_re_cat               : out std_logic_vector(31 downto 0);
-    count_re_dog               : out std_logic_vector(31 downto 0);
-    count_re_ferret            : out std_logic_vector(31 downto 0);
-    count_re_fish              : out std_logic_vector(31 downto 0);
-    count_re_gerbil            : out std_logic_vector(31 downto 0);
-    count_re_hamster           : out std_logic_vector(31 downto 0);
-    count_re_horse             : out std_logic_vector(31 downto 0);
-    count_re_kitten            : out std_logic_vector(31 downto 0);
-    count_re_lizard            : out std_logic_vector(31 downto 0);
-    count_re_mouse             : out std_logic_vector(31 downto 0);
-    count_re_puppy             : out std_logic_vector(31 downto 0);
-    count_re_rabbit            : out std_logic_vector(31 downto 0);
-    count_re_rat               : out std_logic_vector(31 downto 0);
-    count_re_turtle            : out std_logic_vector(31 downto 0);
-    count_errors               : out std_logic_vector(31 downto 0)
+    kcd_clk                          : in  std_logic;
+    kcd_reset                        : in  std_logic;
+    rematch000_in_valid              : in  std_logic;
+    rematch000_in_ready              : out std_logic;
+    rematch000_in_dvalid             : in  std_logic;
+    rematch000_in_last               : in  std_logic;
+    rematch000_in_length             : in  std_logic_vector(31 downto 0);
+    rematch000_in_count              : in  std_logic_vector(0 downto 0);
+    rematch000_in_chars_valid        : in  std_logic;
+    rematch000_in_chars_ready        : out std_logic;
+    rematch000_in_chars_dvalid       : in  std_logic;
+    rematch000_in_chars_last         : in  std_logic;
+    rematch000_in_chars              : in  std_logic_vector(31 downto 0);
+    rematch000_in_chars_count        : in  std_logic_vector(2 downto 0);
+    rematch000_in_unl_valid          : in  std_logic;
+    rematch000_in_unl_ready          : out std_logic;
+    rematch000_in_unl_tag            : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch000_in_cmd_valid          : out std_logic;
+    rematch000_in_cmd_ready          : in  std_logic;
+    rematch000_in_cmd_firstIdx       : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch000_in_cmd_lastIdx        : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch000_in_cmd_tag            : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch001_in_valid              : in  std_logic;
+    rematch001_in_ready              : out std_logic;
+    rematch001_in_dvalid             : in  std_logic;
+    rematch001_in_last               : in  std_logic;
+    rematch001_in_length             : in  std_logic_vector(31 downto 0);
+    rematch001_in_count              : in  std_logic_vector(0 downto 0);
+    rematch001_in_chars_valid        : in  std_logic;
+    rematch001_in_chars_ready        : out std_logic;
+    rematch001_in_chars_dvalid       : in  std_logic;
+    rematch001_in_chars_last         : in  std_logic;
+    rematch001_in_chars              : in  std_logic_vector(31 downto 0);
+    rematch001_in_chars_count        : in  std_logic_vector(2 downto 0);
+    rematch001_in_unl_valid          : in  std_logic;
+    rematch001_in_unl_ready          : out std_logic;
+    rematch001_in_unl_tag            : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch001_in_cmd_valid          : out std_logic;
+    rematch001_in_cmd_ready          : in  std_logic;
+    rematch001_in_cmd_firstIdx       : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch001_in_cmd_lastIdx        : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch001_in_cmd_tag            : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch002_in_valid              : in  std_logic;
+    rematch002_in_ready              : out std_logic;
+    rematch002_in_dvalid             : in  std_logic;
+    rematch002_in_last               : in  std_logic;
+    rematch002_in_length             : in  std_logic_vector(31 downto 0);
+    rematch002_in_count              : in  std_logic_vector(0 downto 0);
+    rematch002_in_chars_valid        : in  std_logic;
+    rematch002_in_chars_ready        : out std_logic;
+    rematch002_in_chars_dvalid       : in  std_logic;
+    rematch002_in_chars_last         : in  std_logic;
+    rematch002_in_chars              : in  std_logic_vector(31 downto 0);
+    rematch002_in_chars_count        : in  std_logic_vector(2 downto 0);
+    rematch002_in_unl_valid          : in  std_logic;
+    rematch002_in_unl_ready          : out std_logic;
+    rematch002_in_unl_tag            : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch002_in_cmd_valid          : out std_logic;
+    rematch002_in_cmd_ready          : in  std_logic;
+    rematch002_in_cmd_firstIdx       : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch002_in_cmd_lastIdx        : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch002_in_cmd_tag            : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch003_in_valid              : in  std_logic;
+    rematch003_in_ready              : out std_logic;
+    rematch003_in_dvalid             : in  std_logic;
+    rematch003_in_last               : in  std_logic;
+    rematch003_in_length             : in  std_logic_vector(31 downto 0);
+    rematch003_in_count              : in  std_logic_vector(0 downto 0);
+    rematch003_in_chars_valid        : in  std_logic;
+    rematch003_in_chars_ready        : out std_logic;
+    rematch003_in_chars_dvalid       : in  std_logic;
+    rematch003_in_chars_last         : in  std_logic;
+    rematch003_in_chars              : in  std_logic_vector(31 downto 0);
+    rematch003_in_chars_count        : in  std_logic_vector(2 downto 0);
+    rematch003_in_unl_valid          : in  std_logic;
+    rematch003_in_unl_ready          : out std_logic;
+    rematch003_in_unl_tag            : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch003_in_cmd_valid          : out std_logic;
+    rematch003_in_cmd_ready          : in  std_logic;
+    rematch003_in_cmd_firstIdx       : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch003_in_cmd_lastIdx        : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch003_in_cmd_tag            : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch004_in_valid              : in  std_logic;
+    rematch004_in_ready              : out std_logic;
+    rematch004_in_dvalid             : in  std_logic;
+    rematch004_in_last               : in  std_logic;
+    rematch004_in_length             : in  std_logic_vector(31 downto 0);
+    rematch004_in_count              : in  std_logic_vector(0 downto 0);
+    rematch004_in_chars_valid        : in  std_logic;
+    rematch004_in_chars_ready        : out std_logic;
+    rematch004_in_chars_dvalid       : in  std_logic;
+    rematch004_in_chars_last         : in  std_logic;
+    rematch004_in_chars              : in  std_logic_vector(31 downto 0);
+    rematch004_in_chars_count        : in  std_logic_vector(2 downto 0);
+    rematch004_in_unl_valid          : in  std_logic;
+    rematch004_in_unl_ready          : out std_logic;
+    rematch004_in_unl_tag            : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch004_in_cmd_valid          : out std_logic;
+    rematch004_in_cmd_ready          : in  std_logic;
+    rematch004_in_cmd_firstIdx       : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch004_in_cmd_lastIdx        : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch004_in_cmd_tag            : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch005_in_valid              : in  std_logic;
+    rematch005_in_ready              : out std_logic;
+    rematch005_in_dvalid             : in  std_logic;
+    rematch005_in_last               : in  std_logic;
+    rematch005_in_length             : in  std_logic_vector(31 downto 0);
+    rematch005_in_count              : in  std_logic_vector(0 downto 0);
+    rematch005_in_chars_valid        : in  std_logic;
+    rematch005_in_chars_ready        : out std_logic;
+    rematch005_in_chars_dvalid       : in  std_logic;
+    rematch005_in_chars_last         : in  std_logic;
+    rematch005_in_chars              : in  std_logic_vector(31 downto 0);
+    rematch005_in_chars_count        : in  std_logic_vector(2 downto 0);
+    rematch005_in_unl_valid          : in  std_logic;
+    rematch005_in_unl_ready          : out std_logic;
+    rematch005_in_unl_tag            : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch005_in_cmd_valid          : out std_logic;
+    rematch005_in_cmd_ready          : in  std_logic;
+    rematch005_in_cmd_firstIdx       : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch005_in_cmd_lastIdx        : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch005_in_cmd_tag            : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch006_in_valid              : in  std_logic;
+    rematch006_in_ready              : out std_logic;
+    rematch006_in_dvalid             : in  std_logic;
+    rematch006_in_last               : in  std_logic;
+    rematch006_in_length             : in  std_logic_vector(31 downto 0);
+    rematch006_in_count              : in  std_logic_vector(0 downto 0);
+    rematch006_in_chars_valid        : in  std_logic;
+    rematch006_in_chars_ready        : out std_logic;
+    rematch006_in_chars_dvalid       : in  std_logic;
+    rematch006_in_chars_last         : in  std_logic;
+    rematch006_in_chars              : in  std_logic_vector(31 downto 0);
+    rematch006_in_chars_count        : in  std_logic_vector(2 downto 0);
+    rematch006_in_unl_valid          : in  std_logic;
+    rematch006_in_unl_ready          : out std_logic;
+    rematch006_in_unl_tag            : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch006_in_cmd_valid          : out std_logic;
+    rematch006_in_cmd_ready          : in  std_logic;
+    rematch006_in_cmd_firstIdx       : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch006_in_cmd_lastIdx        : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch006_in_cmd_tag            : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch007_in_valid              : in  std_logic;
+    rematch007_in_ready              : out std_logic;
+    rematch007_in_dvalid             : in  std_logic;
+    rematch007_in_last               : in  std_logic;
+    rematch007_in_length             : in  std_logic_vector(31 downto 0);
+    rematch007_in_count              : in  std_logic_vector(0 downto 0);
+    rematch007_in_chars_valid        : in  std_logic;
+    rematch007_in_chars_ready        : out std_logic;
+    rematch007_in_chars_dvalid       : in  std_logic;
+    rematch007_in_chars_last         : in  std_logic;
+    rematch007_in_chars              : in  std_logic_vector(31 downto 0);
+    rematch007_in_chars_count        : in  std_logic_vector(2 downto 0);
+    rematch007_in_unl_valid          : in  std_logic;
+    rematch007_in_unl_ready          : out std_logic;
+    rematch007_in_unl_tag            : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch007_in_cmd_valid          : out std_logic;
+    rematch007_in_cmd_ready          : in  std_logic;
+    rematch007_in_cmd_firstIdx       : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch007_in_cmd_lastIdx        : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch007_in_cmd_tag            : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch008_in_valid              : in  std_logic;
+    rematch008_in_ready              : out std_logic;
+    rematch008_in_dvalid             : in  std_logic;
+    rematch008_in_last               : in  std_logic;
+    rematch008_in_length             : in  std_logic_vector(31 downto 0);
+    rematch008_in_count              : in  std_logic_vector(0 downto 0);
+    rematch008_in_chars_valid        : in  std_logic;
+    rematch008_in_chars_ready        : out std_logic;
+    rematch008_in_chars_dvalid       : in  std_logic;
+    rematch008_in_chars_last         : in  std_logic;
+    rematch008_in_chars              : in  std_logic_vector(31 downto 0);
+    rematch008_in_chars_count        : in  std_logic_vector(2 downto 0);
+    rematch008_in_unl_valid          : in  std_logic;
+    rematch008_in_unl_ready          : out std_logic;
+    rematch008_in_unl_tag            : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch008_in_cmd_valid          : out std_logic;
+    rematch008_in_cmd_ready          : in  std_logic;
+    rematch008_in_cmd_firstIdx       : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch008_in_cmd_lastIdx        : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch008_in_cmd_tag            : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch009_in_valid              : in  std_logic;
+    rematch009_in_ready              : out std_logic;
+    rematch009_in_dvalid             : in  std_logic;
+    rematch009_in_last               : in  std_logic;
+    rematch009_in_length             : in  std_logic_vector(31 downto 0);
+    rematch009_in_count              : in  std_logic_vector(0 downto 0);
+    rematch009_in_chars_valid        : in  std_logic;
+    rematch009_in_chars_ready        : out std_logic;
+    rematch009_in_chars_dvalid       : in  std_logic;
+    rematch009_in_chars_last         : in  std_logic;
+    rematch009_in_chars              : in  std_logic_vector(31 downto 0);
+    rematch009_in_chars_count        : in  std_logic_vector(2 downto 0);
+    rematch009_in_unl_valid          : in  std_logic;
+    rematch009_in_unl_ready          : out std_logic;
+    rematch009_in_unl_tag            : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch009_in_cmd_valid          : out std_logic;
+    rematch009_in_cmd_ready          : in  std_logic;
+    rematch009_in_cmd_firstIdx       : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch009_in_cmd_lastIdx        : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch009_in_cmd_tag            : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch010_in_valid              : in  std_logic;
+    rematch010_in_ready              : out std_logic;
+    rematch010_in_dvalid             : in  std_logic;
+    rematch010_in_last               : in  std_logic;
+    rematch010_in_length             : in  std_logic_vector(31 downto 0);
+    rematch010_in_count              : in  std_logic_vector(0 downto 0);
+    rematch010_in_chars_valid        : in  std_logic;
+    rematch010_in_chars_ready        : out std_logic;
+    rematch010_in_chars_dvalid       : in  std_logic;
+    rematch010_in_chars_last         : in  std_logic;
+    rematch010_in_chars              : in  std_logic_vector(31 downto 0);
+    rematch010_in_chars_count        : in  std_logic_vector(2 downto 0);
+    rematch010_in_unl_valid          : in  std_logic;
+    rematch010_in_unl_ready          : out std_logic;
+    rematch010_in_unl_tag            : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch010_in_cmd_valid          : out std_logic;
+    rematch010_in_cmd_ready          : in  std_logic;
+    rematch010_in_cmd_firstIdx       : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch010_in_cmd_lastIdx        : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch010_in_cmd_tag            : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch011_in_valid              : in  std_logic;
+    rematch011_in_ready              : out std_logic;
+    rematch011_in_dvalid             : in  std_logic;
+    rematch011_in_last               : in  std_logic;
+    rematch011_in_length             : in  std_logic_vector(31 downto 0);
+    rematch011_in_count              : in  std_logic_vector(0 downto 0);
+    rematch011_in_chars_valid        : in  std_logic;
+    rematch011_in_chars_ready        : out std_logic;
+    rematch011_in_chars_dvalid       : in  std_logic;
+    rematch011_in_chars_last         : in  std_logic;
+    rematch011_in_chars              : in  std_logic_vector(31 downto 0);
+    rematch011_in_chars_count        : in  std_logic_vector(2 downto 0);
+    rematch011_in_unl_valid          : in  std_logic;
+    rematch011_in_unl_ready          : out std_logic;
+    rematch011_in_unl_tag            : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch011_in_cmd_valid          : out std_logic;
+    rematch011_in_cmd_ready          : in  std_logic;
+    rematch011_in_cmd_firstIdx       : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch011_in_cmd_lastIdx        : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch011_in_cmd_tag            : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch012_in_valid              : in  std_logic;
+    rematch012_in_ready              : out std_logic;
+    rematch012_in_dvalid             : in  std_logic;
+    rematch012_in_last               : in  std_logic;
+    rematch012_in_length             : in  std_logic_vector(31 downto 0);
+    rematch012_in_count              : in  std_logic_vector(0 downto 0);
+    rematch012_in_chars_valid        : in  std_logic;
+    rematch012_in_chars_ready        : out std_logic;
+    rematch012_in_chars_dvalid       : in  std_logic;
+    rematch012_in_chars_last         : in  std_logic;
+    rematch012_in_chars              : in  std_logic_vector(31 downto 0);
+    rematch012_in_chars_count        : in  std_logic_vector(2 downto 0);
+    rematch012_in_unl_valid          : in  std_logic;
+    rematch012_in_unl_ready          : out std_logic;
+    rematch012_in_unl_tag            : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch012_in_cmd_valid          : out std_logic;
+    rematch012_in_cmd_ready          : in  std_logic;
+    rematch012_in_cmd_firstIdx       : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch012_in_cmd_lastIdx        : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch012_in_cmd_tag            : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch013_in_valid              : in  std_logic;
+    rematch013_in_ready              : out std_logic;
+    rematch013_in_dvalid             : in  std_logic;
+    rematch013_in_last               : in  std_logic;
+    rematch013_in_length             : in  std_logic_vector(31 downto 0);
+    rematch013_in_count              : in  std_logic_vector(0 downto 0);
+    rematch013_in_chars_valid        : in  std_logic;
+    rematch013_in_chars_ready        : out std_logic;
+    rematch013_in_chars_dvalid       : in  std_logic;
+    rematch013_in_chars_last         : in  std_logic;
+    rematch013_in_chars              : in  std_logic_vector(31 downto 0);
+    rematch013_in_chars_count        : in  std_logic_vector(2 downto 0);
+    rematch013_in_unl_valid          : in  std_logic;
+    rematch013_in_unl_ready          : out std_logic;
+    rematch013_in_unl_tag            : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch013_in_cmd_valid          : out std_logic;
+    rematch013_in_cmd_ready          : in  std_logic;
+    rematch013_in_cmd_firstIdx       : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch013_in_cmd_lastIdx        : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch013_in_cmd_tag            : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch014_in_valid              : in  std_logic;
+    rematch014_in_ready              : out std_logic;
+    rematch014_in_dvalid             : in  std_logic;
+    rematch014_in_last               : in  std_logic;
+    rematch014_in_length             : in  std_logic_vector(31 downto 0);
+    rematch014_in_count              : in  std_logic_vector(0 downto 0);
+    rematch014_in_chars_valid        : in  std_logic;
+    rematch014_in_chars_ready        : out std_logic;
+    rematch014_in_chars_dvalid       : in  std_logic;
+    rematch014_in_chars_last         : in  std_logic;
+    rematch014_in_chars              : in  std_logic_vector(31 downto 0);
+    rematch014_in_chars_count        : in  std_logic_vector(2 downto 0);
+    rematch014_in_unl_valid          : in  std_logic;
+    rematch014_in_unl_ready          : out std_logic;
+    rematch014_in_unl_tag            : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch014_in_cmd_valid          : out std_logic;
+    rematch014_in_cmd_ready          : in  std_logic;
+    rematch014_in_cmd_firstIdx       : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch014_in_cmd_lastIdx        : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch014_in_cmd_tag            : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch015_in_valid              : in  std_logic;
+    rematch015_in_ready              : out std_logic;
+    rematch015_in_dvalid             : in  std_logic;
+    rematch015_in_last               : in  std_logic;
+    rematch015_in_length             : in  std_logic_vector(31 downto 0);
+    rematch015_in_count              : in  std_logic_vector(0 downto 0);
+    rematch015_in_chars_valid        : in  std_logic;
+    rematch015_in_chars_ready        : out std_logic;
+    rematch015_in_chars_dvalid       : in  std_logic;
+    rematch015_in_chars_last         : in  std_logic;
+    rematch015_in_chars              : in  std_logic_vector(31 downto 0);
+    rematch015_in_chars_count        : in  std_logic_vector(2 downto 0);
+    rematch015_in_unl_valid          : in  std_logic;
+    rematch015_in_unl_ready          : out std_logic;
+    rematch015_in_unl_tag            : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch015_in_cmd_valid          : out std_logic;
+    rematch015_in_cmd_ready          : in  std_logic;
+    rematch015_in_cmd_firstIdx       : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch015_in_cmd_lastIdx        : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch015_in_cmd_tag            : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch000_taxi_out_valid        : out std_logic;
+    rematch000_taxi_out_ready        : in  std_logic;
+    rematch000_taxi_out_dvalid       : out std_logic;
+    rematch000_taxi_out_last         : out std_logic;
+    rematch000_taxi_out              : out std_logic_vector(31 downto 0);
+    rematch000_taxi_out_unl_valid    : in  std_logic;
+    rematch000_taxi_out_unl_ready    : out std_logic;
+    rematch000_taxi_out_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch000_taxi_out_cmd_valid    : out std_logic;
+    rematch000_taxi_out_cmd_ready    : in  std_logic;
+    rematch000_taxi_out_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch000_taxi_out_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch000_taxi_out_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch001_taxi_out_valid        : out std_logic;
+    rematch001_taxi_out_ready        : in  std_logic;
+    rematch001_taxi_out_dvalid       : out std_logic;
+    rematch001_taxi_out_last         : out std_logic;
+    rematch001_taxi_out              : out std_logic_vector(31 downto 0);
+    rematch001_taxi_out_unl_valid    : in  std_logic;
+    rematch001_taxi_out_unl_ready    : out std_logic;
+    rematch001_taxi_out_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch001_taxi_out_cmd_valid    : out std_logic;
+    rematch001_taxi_out_cmd_ready    : in  std_logic;
+    rematch001_taxi_out_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch001_taxi_out_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch001_taxi_out_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch002_taxi_out_valid        : out std_logic;
+    rematch002_taxi_out_ready        : in  std_logic;
+    rematch002_taxi_out_dvalid       : out std_logic;
+    rematch002_taxi_out_last         : out std_logic;
+    rematch002_taxi_out              : out std_logic_vector(31 downto 0);
+    rematch002_taxi_out_unl_valid    : in  std_logic;
+    rematch002_taxi_out_unl_ready    : out std_logic;
+    rematch002_taxi_out_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch002_taxi_out_cmd_valid    : out std_logic;
+    rematch002_taxi_out_cmd_ready    : in  std_logic;
+    rematch002_taxi_out_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch002_taxi_out_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch002_taxi_out_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch003_taxi_out_valid        : out std_logic;
+    rematch003_taxi_out_ready        : in  std_logic;
+    rematch003_taxi_out_dvalid       : out std_logic;
+    rematch003_taxi_out_last         : out std_logic;
+    rematch003_taxi_out              : out std_logic_vector(31 downto 0);
+    rematch003_taxi_out_unl_valid    : in  std_logic;
+    rematch003_taxi_out_unl_ready    : out std_logic;
+    rematch003_taxi_out_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch003_taxi_out_cmd_valid    : out std_logic;
+    rematch003_taxi_out_cmd_ready    : in  std_logic;
+    rematch003_taxi_out_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch003_taxi_out_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch003_taxi_out_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch004_taxi_out_valid        : out std_logic;
+    rematch004_taxi_out_ready        : in  std_logic;
+    rematch004_taxi_out_dvalid       : out std_logic;
+    rematch004_taxi_out_last         : out std_logic;
+    rematch004_taxi_out              : out std_logic_vector(31 downto 0);
+    rematch004_taxi_out_unl_valid    : in  std_logic;
+    rematch004_taxi_out_unl_ready    : out std_logic;
+    rematch004_taxi_out_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch004_taxi_out_cmd_valid    : out std_logic;
+    rematch004_taxi_out_cmd_ready    : in  std_logic;
+    rematch004_taxi_out_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch004_taxi_out_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch004_taxi_out_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch005_taxi_out_valid        : out std_logic;
+    rematch005_taxi_out_ready        : in  std_logic;
+    rematch005_taxi_out_dvalid       : out std_logic;
+    rematch005_taxi_out_last         : out std_logic;
+    rematch005_taxi_out              : out std_logic_vector(31 downto 0);
+    rematch005_taxi_out_unl_valid    : in  std_logic;
+    rematch005_taxi_out_unl_ready    : out std_logic;
+    rematch005_taxi_out_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch005_taxi_out_cmd_valid    : out std_logic;
+    rematch005_taxi_out_cmd_ready    : in  std_logic;
+    rematch005_taxi_out_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch005_taxi_out_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch005_taxi_out_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch006_taxi_out_valid        : out std_logic;
+    rematch006_taxi_out_ready        : in  std_logic;
+    rematch006_taxi_out_dvalid       : out std_logic;
+    rematch006_taxi_out_last         : out std_logic;
+    rematch006_taxi_out              : out std_logic_vector(31 downto 0);
+    rematch006_taxi_out_unl_valid    : in  std_logic;
+    rematch006_taxi_out_unl_ready    : out std_logic;
+    rematch006_taxi_out_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch006_taxi_out_cmd_valid    : out std_logic;
+    rematch006_taxi_out_cmd_ready    : in  std_logic;
+    rematch006_taxi_out_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch006_taxi_out_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch006_taxi_out_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch007_taxi_out_valid        : out std_logic;
+    rematch007_taxi_out_ready        : in  std_logic;
+    rematch007_taxi_out_dvalid       : out std_logic;
+    rematch007_taxi_out_last         : out std_logic;
+    rematch007_taxi_out              : out std_logic_vector(31 downto 0);
+    rematch007_taxi_out_unl_valid    : in  std_logic;
+    rematch007_taxi_out_unl_ready    : out std_logic;
+    rematch007_taxi_out_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch007_taxi_out_cmd_valid    : out std_logic;
+    rematch007_taxi_out_cmd_ready    : in  std_logic;
+    rematch007_taxi_out_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch007_taxi_out_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch007_taxi_out_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch008_taxi_out_valid        : out std_logic;
+    rematch008_taxi_out_ready        : in  std_logic;
+    rematch008_taxi_out_dvalid       : out std_logic;
+    rematch008_taxi_out_last         : out std_logic;
+    rematch008_taxi_out              : out std_logic_vector(31 downto 0);
+    rematch008_taxi_out_unl_valid    : in  std_logic;
+    rematch008_taxi_out_unl_ready    : out std_logic;
+    rematch008_taxi_out_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch008_taxi_out_cmd_valid    : out std_logic;
+    rematch008_taxi_out_cmd_ready    : in  std_logic;
+    rematch008_taxi_out_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch008_taxi_out_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch008_taxi_out_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch009_taxi_out_valid        : out std_logic;
+    rematch009_taxi_out_ready        : in  std_logic;
+    rematch009_taxi_out_dvalid       : out std_logic;
+    rematch009_taxi_out_last         : out std_logic;
+    rematch009_taxi_out              : out std_logic_vector(31 downto 0);
+    rematch009_taxi_out_unl_valid    : in  std_logic;
+    rematch009_taxi_out_unl_ready    : out std_logic;
+    rematch009_taxi_out_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch009_taxi_out_cmd_valid    : out std_logic;
+    rematch009_taxi_out_cmd_ready    : in  std_logic;
+    rematch009_taxi_out_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch009_taxi_out_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch009_taxi_out_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch010_taxi_out_valid        : out std_logic;
+    rematch010_taxi_out_ready        : in  std_logic;
+    rematch010_taxi_out_dvalid       : out std_logic;
+    rematch010_taxi_out_last         : out std_logic;
+    rematch010_taxi_out              : out std_logic_vector(31 downto 0);
+    rematch010_taxi_out_unl_valid    : in  std_logic;
+    rematch010_taxi_out_unl_ready    : out std_logic;
+    rematch010_taxi_out_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch010_taxi_out_cmd_valid    : out std_logic;
+    rematch010_taxi_out_cmd_ready    : in  std_logic;
+    rematch010_taxi_out_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch010_taxi_out_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch010_taxi_out_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch011_taxi_out_valid        : out std_logic;
+    rematch011_taxi_out_ready        : in  std_logic;
+    rematch011_taxi_out_dvalid       : out std_logic;
+    rematch011_taxi_out_last         : out std_logic;
+    rematch011_taxi_out              : out std_logic_vector(31 downto 0);
+    rematch011_taxi_out_unl_valid    : in  std_logic;
+    rematch011_taxi_out_unl_ready    : out std_logic;
+    rematch011_taxi_out_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch011_taxi_out_cmd_valid    : out std_logic;
+    rematch011_taxi_out_cmd_ready    : in  std_logic;
+    rematch011_taxi_out_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch011_taxi_out_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch011_taxi_out_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch012_taxi_out_valid        : out std_logic;
+    rematch012_taxi_out_ready        : in  std_logic;
+    rematch012_taxi_out_dvalid       : out std_logic;
+    rematch012_taxi_out_last         : out std_logic;
+    rematch012_taxi_out              : out std_logic_vector(31 downto 0);
+    rematch012_taxi_out_unl_valid    : in  std_logic;
+    rematch012_taxi_out_unl_ready    : out std_logic;
+    rematch012_taxi_out_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch012_taxi_out_cmd_valid    : out std_logic;
+    rematch012_taxi_out_cmd_ready    : in  std_logic;
+    rematch012_taxi_out_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch012_taxi_out_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch012_taxi_out_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch013_taxi_out_valid        : out std_logic;
+    rematch013_taxi_out_ready        : in  std_logic;
+    rematch013_taxi_out_dvalid       : out std_logic;
+    rematch013_taxi_out_last         : out std_logic;
+    rematch013_taxi_out              : out std_logic_vector(31 downto 0);
+    rematch013_taxi_out_unl_valid    : in  std_logic;
+    rematch013_taxi_out_unl_ready    : out std_logic;
+    rematch013_taxi_out_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch013_taxi_out_cmd_valid    : out std_logic;
+    rematch013_taxi_out_cmd_ready    : in  std_logic;
+    rematch013_taxi_out_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch013_taxi_out_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch013_taxi_out_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch014_taxi_out_valid        : out std_logic;
+    rematch014_taxi_out_ready        : in  std_logic;
+    rematch014_taxi_out_dvalid       : out std_logic;
+    rematch014_taxi_out_last         : out std_logic;
+    rematch014_taxi_out              : out std_logic_vector(31 downto 0);
+    rematch014_taxi_out_unl_valid    : in  std_logic;
+    rematch014_taxi_out_unl_ready    : out std_logic;
+    rematch014_taxi_out_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch014_taxi_out_cmd_valid    : out std_logic;
+    rematch014_taxi_out_cmd_ready    : in  std_logic;
+    rematch014_taxi_out_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch014_taxi_out_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch014_taxi_out_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch015_taxi_out_valid        : out std_logic;
+    rematch015_taxi_out_ready        : in  std_logic;
+    rematch015_taxi_out_dvalid       : out std_logic;
+    rematch015_taxi_out_last         : out std_logic;
+    rematch015_taxi_out              : out std_logic_vector(31 downto 0);
+    rematch015_taxi_out_unl_valid    : in  std_logic;
+    rematch015_taxi_out_unl_ready    : out std_logic;
+    rematch015_taxi_out_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    rematch015_taxi_out_cmd_valid    : out std_logic;
+    rematch015_taxi_out_cmd_ready    : in  std_logic;
+    rematch015_taxi_out_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch015_taxi_out_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    rematch015_taxi_out_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
+    start                            : in  std_logic;
+    stop                             : in  std_logic;
+    reset                            : in  std_logic;
+    idle                             : out std_logic;
+    busy                             : out std_logic;
+    done                             : out std_logic;
+    result                           : out std_logic_vector(63 downto 0);
+    rematch000_firstidx              : in  std_logic_vector(31 downto 0);
+    rematch000_lastidx               : in  std_logic_vector(31 downto 0);
+    rematch001_firstidx              : in  std_logic_vector(31 downto 0);
+    rematch001_lastidx               : in  std_logic_vector(31 downto 0);
+    rematch002_firstidx              : in  std_logic_vector(31 downto 0);
+    rematch002_lastidx               : in  std_logic_vector(31 downto 0);
+    rematch003_firstidx              : in  std_logic_vector(31 downto 0);
+    rematch003_lastidx               : in  std_logic_vector(31 downto 0);
+    rematch004_firstidx              : in  std_logic_vector(31 downto 0);
+    rematch004_lastidx               : in  std_logic_vector(31 downto 0);
+    rematch005_firstidx              : in  std_logic_vector(31 downto 0);
+    rematch005_lastidx               : in  std_logic_vector(31 downto 0);
+    rematch006_firstidx              : in  std_logic_vector(31 downto 0);
+    rematch006_lastidx               : in  std_logic_vector(31 downto 0);
+    rematch007_firstidx              : in  std_logic_vector(31 downto 0);
+    rematch007_lastidx               : in  std_logic_vector(31 downto 0);
+    rematch008_firstidx              : in  std_logic_vector(31 downto 0);
+    rematch008_lastidx               : in  std_logic_vector(31 downto 0);
+    rematch009_firstidx              : in  std_logic_vector(31 downto 0);
+    rematch009_lastidx               : in  std_logic_vector(31 downto 0);
+    rematch010_firstidx              : in  std_logic_vector(31 downto 0);
+    rematch010_lastidx               : in  std_logic_vector(31 downto 0);
+    rematch011_firstidx              : in  std_logic_vector(31 downto 0);
+    rematch011_lastidx               : in  std_logic_vector(31 downto 0);
+    rematch012_firstidx              : in  std_logic_vector(31 downto 0);
+    rematch012_lastidx               : in  std_logic_vector(31 downto 0);
+    rematch013_firstidx              : in  std_logic_vector(31 downto 0);
+    rematch013_lastidx               : in  std_logic_vector(31 downto 0);
+    rematch014_firstidx              : in  std_logic_vector(31 downto 0);
+    rematch014_lastidx               : in  std_logic_vector(31 downto 0);
+    rematch015_firstidx              : in  std_logic_vector(31 downto 0);
+    rematch015_lastidx               : in  std_logic_vector(31 downto 0);
+    rematch000_taxi_firstidx         : in  std_logic_vector(31 downto 0);
+    rematch000_taxi_lastidx          : in  std_logic_vector(31 downto 0);
+    rematch001_taxi_firstidx         : in  std_logic_vector(31 downto 0);
+    rematch001_taxi_lastidx          : in  std_logic_vector(31 downto 0);
+    rematch002_taxi_firstidx         : in  std_logic_vector(31 downto 0);
+    rematch002_taxi_lastidx          : in  std_logic_vector(31 downto 0);
+    rematch003_taxi_firstidx         : in  std_logic_vector(31 downto 0);
+    rematch003_taxi_lastidx          : in  std_logic_vector(31 downto 0);
+    rematch004_taxi_firstidx         : in  std_logic_vector(31 downto 0);
+    rematch004_taxi_lastidx          : in  std_logic_vector(31 downto 0);
+    rematch005_taxi_firstidx         : in  std_logic_vector(31 downto 0);
+    rematch005_taxi_lastidx          : in  std_logic_vector(31 downto 0);
+    rematch006_taxi_firstidx         : in  std_logic_vector(31 downto 0);
+    rematch006_taxi_lastidx          : in  std_logic_vector(31 downto 0);
+    rematch007_taxi_firstidx         : in  std_logic_vector(31 downto 0);
+    rematch007_taxi_lastidx          : in  std_logic_vector(31 downto 0);
+    rematch008_taxi_firstidx         : in  std_logic_vector(31 downto 0);
+    rematch008_taxi_lastidx          : in  std_logic_vector(31 downto 0);
+    rematch009_taxi_firstidx         : in  std_logic_vector(31 downto 0);
+    rematch009_taxi_lastidx          : in  std_logic_vector(31 downto 0);
+    rematch010_taxi_firstidx         : in  std_logic_vector(31 downto 0);
+    rematch010_taxi_lastidx          : in  std_logic_vector(31 downto 0);
+    rematch011_taxi_firstidx         : in  std_logic_vector(31 downto 0);
+    rematch011_taxi_lastidx          : in  std_logic_vector(31 downto 0);
+    rematch012_taxi_firstidx         : in  std_logic_vector(31 downto 0);
+    rematch012_taxi_lastidx          : in  std_logic_vector(31 downto 0);
+    rematch013_taxi_firstidx         : in  std_logic_vector(31 downto 0);
+    rematch013_taxi_lastidx          : in  std_logic_vector(31 downto 0);
+    rematch014_taxi_firstidx         : in  std_logic_vector(31 downto 0);
+    rematch014_taxi_lastidx          : in  std_logic_vector(31 downto 0);
+    rematch015_taxi_firstidx         : in  std_logic_vector(31 downto 0);
+    rematch015_taxi_lastidx          : in  std_logic_vector(31 downto 0);
+    rematch000_taxi_count            : out std_logic_vector(31 downto 0);
+    rematch000_errors                : out std_logic_vector(31 downto 0);
+    rematch001_taxi_count            : out std_logic_vector(31 downto 0);
+    rematch001_errors                : out std_logic_vector(31 downto 0);
+    rematch002_taxi_count            : out std_logic_vector(31 downto 0);
+    rematch002_errors                : out std_logic_vector(31 downto 0);
+    rematch003_taxi_count            : out std_logic_vector(31 downto 0);
+    rematch003_errors                : out std_logic_vector(31 downto 0);
+    rematch004_taxi_count            : out std_logic_vector(31 downto 0);
+    rematch004_errors                : out std_logic_vector(31 downto 0);
+    rematch005_taxi_count            : out std_logic_vector(31 downto 0);
+    rematch005_errors                : out std_logic_vector(31 downto 0);
+    rematch006_taxi_count            : out std_logic_vector(31 downto 0);
+    rematch006_errors                : out std_logic_vector(31 downto 0);
+    rematch007_taxi_count            : out std_logic_vector(31 downto 0);
+    rematch007_errors                : out std_logic_vector(31 downto 0);
+    rematch008_taxi_count            : out std_logic_vector(31 downto 0);
+    rematch008_errors                : out std_logic_vector(31 downto 0);
+    rematch009_taxi_count            : out std_logic_vector(31 downto 0);
+    rematch009_errors                : out std_logic_vector(31 downto 0);
+    rematch010_taxi_count            : out std_logic_vector(31 downto 0);
+    rematch010_errors                : out std_logic_vector(31 downto 0);
+    rematch011_taxi_count            : out std_logic_vector(31 downto 0);
+    rematch011_errors                : out std_logic_vector(31 downto 0);
+    rematch012_taxi_count            : out std_logic_vector(31 downto 0);
+    rematch012_errors                : out std_logic_vector(31 downto 0);
+    rematch013_taxi_count            : out std_logic_vector(31 downto 0);
+    rematch013_errors                : out std_logic_vector(31 downto 0);
+    rematch014_taxi_count            : out std_logic_vector(31 downto 0);
+    rematch014_errors                : out std_logic_vector(31 downto 0);
+    rematch015_taxi_count            : out std_logic_vector(31 downto 0);
+    rematch015_errors                : out std_logic_vector(31 downto 0)
   );
 end entity;
 
@@ -420,28 +675,20 @@ architecture Implementation of Kernel is
   signal sub_busy   : std_logic_vector(16-1 downto 0);
   signal sub_done   : std_logic_vector(16-1 downto 0);
 
-  type match_array is array (natural range <>) of std_logic_vector(16-1 downto 0);
-  signal sub_match  : match_array(16-1 downto 0);
-  signal sub_error  : std_logic_vector(16-1 downto 0);
-
-  type increment_array is array (natural range <>) of std_logic_vector(log2ceil(16+1)-1 downto 0);
-  signal increments : increment_array(16 downto 0);
-
-  type counter_array is array (natural range <>) of std_logic_vector(31 downto 0);
-  signal counters   : counter_array(16 downto 0);
-
 begin
 
   rematch000: entity work.SubKernel
     generic map (
       NUM_EPC                  => 4,
-      NUM_REGEX                => 16,
+      NUM_REGEX                => 1,
       INDEX_WIDTH              => INDEX_WIDTH,
       TAG_WIDTH                => TAG_WIDTH
     )
     port map (
       kcd_clk                  => kcd_clk,
       kcd_reset                => kcd_reset,
+
+      -- Fletcher string reader interface.
       in_valid                 => rematch000_in_valid,
       in_ready                 => rematch000_in_ready,
       in_dvalid                => rematch000_in_dvalid,
@@ -463,6 +710,21 @@ begin
       in_cmd_lastIdx           => rematch000_in_cmd_lastIdx,
       in_cmd_tag               => rematch000_in_cmd_tag,
 
+      -- Fletcher index writer interface for taxi.
+      re_taxi_out_valid        => rematch000_taxi_out_valid,
+      re_taxi_out_ready        => rematch000_taxi_out_ready,
+      re_taxi_out_dvalid       => rematch000_taxi_out_dvalid,
+      re_taxi_out_last         => rematch000_taxi_out_last,
+      re_taxi_out              => rematch000_taxi_out,
+      re_taxi_out_unl_valid    => rematch000_taxi_out_unl_valid,
+      re_taxi_out_unl_ready    => rematch000_taxi_out_unl_ready,
+      re_taxi_out_unl_tag      => rematch000_taxi_out_unl_tag,
+      re_taxi_out_cmd_valid    => rematch000_taxi_out_cmd_valid,
+      re_taxi_out_cmd_ready    => rematch000_taxi_out_cmd_ready,
+      re_taxi_out_cmd_firstIdx => rematch000_taxi_out_cmd_firstIdx,
+      re_taxi_out_cmd_lastIdx  => rematch000_taxi_out_cmd_lastIdx,
+      re_taxi_out_cmd_tag      => rematch000_taxi_out_cmd_tag,
+
       -- MMIO control interface.
       mmio_start               => start,
       mmio_stop                => stop,
@@ -473,22 +735,28 @@ begin
       mmio_firstidx            => rematch000_firstidx,
       mmio_lastidx             => rematch000_lastidx,
 
-      -- Counter increment outputs.
-      out_match                => sub_match(0),
-      out_error                => sub_error(0)
+      -- MMIO for taxi output buffer.
+      mmio_re_taxi_firstidx => rematch000_taxi_firstidx,
+      mmio_re_taxi_lastidx  => rematch000_taxi_lastidx,
+      mmio_re_taxi_count    => rematch000_taxi_count,
+
+      -- UTF-8 error counter output.
+      mmio_errors              => rematch000_errors
 
     );
 
   rematch001: entity work.SubKernel
     generic map (
       NUM_EPC                  => 4,
-      NUM_REGEX                => 16,
+      NUM_REGEX                => 1,
       INDEX_WIDTH              => INDEX_WIDTH,
       TAG_WIDTH                => TAG_WIDTH
     )
     port map (
       kcd_clk                  => kcd_clk,
       kcd_reset                => kcd_reset,
+
+      -- Fletcher string reader interface.
       in_valid                 => rematch001_in_valid,
       in_ready                 => rematch001_in_ready,
       in_dvalid                => rematch001_in_dvalid,
@@ -510,6 +778,21 @@ begin
       in_cmd_lastIdx           => rematch001_in_cmd_lastIdx,
       in_cmd_tag               => rematch001_in_cmd_tag,
 
+      -- Fletcher index writer interface for taxi.
+      re_taxi_out_valid        => rematch001_taxi_out_valid,
+      re_taxi_out_ready        => rematch001_taxi_out_ready,
+      re_taxi_out_dvalid       => rematch001_taxi_out_dvalid,
+      re_taxi_out_last         => rematch001_taxi_out_last,
+      re_taxi_out              => rematch001_taxi_out,
+      re_taxi_out_unl_valid    => rematch001_taxi_out_unl_valid,
+      re_taxi_out_unl_ready    => rematch001_taxi_out_unl_ready,
+      re_taxi_out_unl_tag      => rematch001_taxi_out_unl_tag,
+      re_taxi_out_cmd_valid    => rematch001_taxi_out_cmd_valid,
+      re_taxi_out_cmd_ready    => rematch001_taxi_out_cmd_ready,
+      re_taxi_out_cmd_firstIdx => rematch001_taxi_out_cmd_firstIdx,
+      re_taxi_out_cmd_lastIdx  => rematch001_taxi_out_cmd_lastIdx,
+      re_taxi_out_cmd_tag      => rematch001_taxi_out_cmd_tag,
+
       -- MMIO control interface.
       mmio_start               => start,
       mmio_stop                => stop,
@@ -520,22 +803,28 @@ begin
       mmio_firstidx            => rematch001_firstidx,
       mmio_lastidx             => rematch001_lastidx,
 
-      -- Counter increment outputs.
-      out_match                => sub_match(1),
-      out_error                => sub_error(1)
+      -- MMIO for taxi output buffer.
+      mmio_re_taxi_firstidx => rematch001_taxi_firstidx,
+      mmio_re_taxi_lastidx  => rematch001_taxi_lastidx,
+      mmio_re_taxi_count    => rematch001_taxi_count,
+
+      -- UTF-8 error counter output.
+      mmio_errors              => rematch001_errors
 
     );
 
   rematch002: entity work.SubKernel
     generic map (
       NUM_EPC                  => 4,
-      NUM_REGEX                => 16,
+      NUM_REGEX                => 1,
       INDEX_WIDTH              => INDEX_WIDTH,
       TAG_WIDTH                => TAG_WIDTH
     )
     port map (
       kcd_clk                  => kcd_clk,
       kcd_reset                => kcd_reset,
+
+      -- Fletcher string reader interface.
       in_valid                 => rematch002_in_valid,
       in_ready                 => rematch002_in_ready,
       in_dvalid                => rematch002_in_dvalid,
@@ -557,6 +846,21 @@ begin
       in_cmd_lastIdx           => rematch002_in_cmd_lastIdx,
       in_cmd_tag               => rematch002_in_cmd_tag,
 
+      -- Fletcher index writer interface for taxi.
+      re_taxi_out_valid        => rematch002_taxi_out_valid,
+      re_taxi_out_ready        => rematch002_taxi_out_ready,
+      re_taxi_out_dvalid       => rematch002_taxi_out_dvalid,
+      re_taxi_out_last         => rematch002_taxi_out_last,
+      re_taxi_out              => rematch002_taxi_out,
+      re_taxi_out_unl_valid    => rematch002_taxi_out_unl_valid,
+      re_taxi_out_unl_ready    => rematch002_taxi_out_unl_ready,
+      re_taxi_out_unl_tag      => rematch002_taxi_out_unl_tag,
+      re_taxi_out_cmd_valid    => rematch002_taxi_out_cmd_valid,
+      re_taxi_out_cmd_ready    => rematch002_taxi_out_cmd_ready,
+      re_taxi_out_cmd_firstIdx => rematch002_taxi_out_cmd_firstIdx,
+      re_taxi_out_cmd_lastIdx  => rematch002_taxi_out_cmd_lastIdx,
+      re_taxi_out_cmd_tag      => rematch002_taxi_out_cmd_tag,
+
       -- MMIO control interface.
       mmio_start               => start,
       mmio_stop                => stop,
@@ -567,22 +871,28 @@ begin
       mmio_firstidx            => rematch002_firstidx,
       mmio_lastidx             => rematch002_lastidx,
 
-      -- Counter increment outputs.
-      out_match                => sub_match(2),
-      out_error                => sub_error(2)
+      -- MMIO for taxi output buffer.
+      mmio_re_taxi_firstidx => rematch002_taxi_firstidx,
+      mmio_re_taxi_lastidx  => rematch002_taxi_lastidx,
+      mmio_re_taxi_count    => rematch002_taxi_count,
+
+      -- UTF-8 error counter output.
+      mmio_errors              => rematch002_errors
 
     );
 
   rematch003: entity work.SubKernel
     generic map (
       NUM_EPC                  => 4,
-      NUM_REGEX                => 16,
+      NUM_REGEX                => 1,
       INDEX_WIDTH              => INDEX_WIDTH,
       TAG_WIDTH                => TAG_WIDTH
     )
     port map (
       kcd_clk                  => kcd_clk,
       kcd_reset                => kcd_reset,
+
+      -- Fletcher string reader interface.
       in_valid                 => rematch003_in_valid,
       in_ready                 => rematch003_in_ready,
       in_dvalid                => rematch003_in_dvalid,
@@ -604,6 +914,21 @@ begin
       in_cmd_lastIdx           => rematch003_in_cmd_lastIdx,
       in_cmd_tag               => rematch003_in_cmd_tag,
 
+      -- Fletcher index writer interface for taxi.
+      re_taxi_out_valid        => rematch003_taxi_out_valid,
+      re_taxi_out_ready        => rematch003_taxi_out_ready,
+      re_taxi_out_dvalid       => rematch003_taxi_out_dvalid,
+      re_taxi_out_last         => rematch003_taxi_out_last,
+      re_taxi_out              => rematch003_taxi_out,
+      re_taxi_out_unl_valid    => rematch003_taxi_out_unl_valid,
+      re_taxi_out_unl_ready    => rematch003_taxi_out_unl_ready,
+      re_taxi_out_unl_tag      => rematch003_taxi_out_unl_tag,
+      re_taxi_out_cmd_valid    => rematch003_taxi_out_cmd_valid,
+      re_taxi_out_cmd_ready    => rematch003_taxi_out_cmd_ready,
+      re_taxi_out_cmd_firstIdx => rematch003_taxi_out_cmd_firstIdx,
+      re_taxi_out_cmd_lastIdx  => rematch003_taxi_out_cmd_lastIdx,
+      re_taxi_out_cmd_tag      => rematch003_taxi_out_cmd_tag,
+
       -- MMIO control interface.
       mmio_start               => start,
       mmio_stop                => stop,
@@ -614,22 +939,28 @@ begin
       mmio_firstidx            => rematch003_firstidx,
       mmio_lastidx             => rematch003_lastidx,
 
-      -- Counter increment outputs.
-      out_match                => sub_match(3),
-      out_error                => sub_error(3)
+      -- MMIO for taxi output buffer.
+      mmio_re_taxi_firstidx => rematch003_taxi_firstidx,
+      mmio_re_taxi_lastidx  => rematch003_taxi_lastidx,
+      mmio_re_taxi_count    => rematch003_taxi_count,
+
+      -- UTF-8 error counter output.
+      mmio_errors              => rematch003_errors
 
     );
 
   rematch004: entity work.SubKernel
     generic map (
       NUM_EPC                  => 4,
-      NUM_REGEX                => 16,
+      NUM_REGEX                => 1,
       INDEX_WIDTH              => INDEX_WIDTH,
       TAG_WIDTH                => TAG_WIDTH
     )
     port map (
       kcd_clk                  => kcd_clk,
       kcd_reset                => kcd_reset,
+
+      -- Fletcher string reader interface.
       in_valid                 => rematch004_in_valid,
       in_ready                 => rematch004_in_ready,
       in_dvalid                => rematch004_in_dvalid,
@@ -651,6 +982,21 @@ begin
       in_cmd_lastIdx           => rematch004_in_cmd_lastIdx,
       in_cmd_tag               => rematch004_in_cmd_tag,
 
+      -- Fletcher index writer interface for taxi.
+      re_taxi_out_valid        => rematch004_taxi_out_valid,
+      re_taxi_out_ready        => rematch004_taxi_out_ready,
+      re_taxi_out_dvalid       => rematch004_taxi_out_dvalid,
+      re_taxi_out_last         => rematch004_taxi_out_last,
+      re_taxi_out              => rematch004_taxi_out,
+      re_taxi_out_unl_valid    => rematch004_taxi_out_unl_valid,
+      re_taxi_out_unl_ready    => rematch004_taxi_out_unl_ready,
+      re_taxi_out_unl_tag      => rematch004_taxi_out_unl_tag,
+      re_taxi_out_cmd_valid    => rematch004_taxi_out_cmd_valid,
+      re_taxi_out_cmd_ready    => rematch004_taxi_out_cmd_ready,
+      re_taxi_out_cmd_firstIdx => rematch004_taxi_out_cmd_firstIdx,
+      re_taxi_out_cmd_lastIdx  => rematch004_taxi_out_cmd_lastIdx,
+      re_taxi_out_cmd_tag      => rematch004_taxi_out_cmd_tag,
+
       -- MMIO control interface.
       mmio_start               => start,
       mmio_stop                => stop,
@@ -661,22 +1007,28 @@ begin
       mmio_firstidx            => rematch004_firstidx,
       mmio_lastidx             => rematch004_lastidx,
 
-      -- Counter increment outputs.
-      out_match                => sub_match(4),
-      out_error                => sub_error(4)
+      -- MMIO for taxi output buffer.
+      mmio_re_taxi_firstidx => rematch004_taxi_firstidx,
+      mmio_re_taxi_lastidx  => rematch004_taxi_lastidx,
+      mmio_re_taxi_count    => rematch004_taxi_count,
+
+      -- UTF-8 error counter output.
+      mmio_errors              => rematch004_errors
 
     );
 
   rematch005: entity work.SubKernel
     generic map (
       NUM_EPC                  => 4,
-      NUM_REGEX                => 16,
+      NUM_REGEX                => 1,
       INDEX_WIDTH              => INDEX_WIDTH,
       TAG_WIDTH                => TAG_WIDTH
     )
     port map (
       kcd_clk                  => kcd_clk,
       kcd_reset                => kcd_reset,
+
+      -- Fletcher string reader interface.
       in_valid                 => rematch005_in_valid,
       in_ready                 => rematch005_in_ready,
       in_dvalid                => rematch005_in_dvalid,
@@ -698,6 +1050,21 @@ begin
       in_cmd_lastIdx           => rematch005_in_cmd_lastIdx,
       in_cmd_tag               => rematch005_in_cmd_tag,
 
+      -- Fletcher index writer interface for taxi.
+      re_taxi_out_valid        => rematch005_taxi_out_valid,
+      re_taxi_out_ready        => rematch005_taxi_out_ready,
+      re_taxi_out_dvalid       => rematch005_taxi_out_dvalid,
+      re_taxi_out_last         => rematch005_taxi_out_last,
+      re_taxi_out              => rematch005_taxi_out,
+      re_taxi_out_unl_valid    => rematch005_taxi_out_unl_valid,
+      re_taxi_out_unl_ready    => rematch005_taxi_out_unl_ready,
+      re_taxi_out_unl_tag      => rematch005_taxi_out_unl_tag,
+      re_taxi_out_cmd_valid    => rematch005_taxi_out_cmd_valid,
+      re_taxi_out_cmd_ready    => rematch005_taxi_out_cmd_ready,
+      re_taxi_out_cmd_firstIdx => rematch005_taxi_out_cmd_firstIdx,
+      re_taxi_out_cmd_lastIdx  => rematch005_taxi_out_cmd_lastIdx,
+      re_taxi_out_cmd_tag      => rematch005_taxi_out_cmd_tag,
+
       -- MMIO control interface.
       mmio_start               => start,
       mmio_stop                => stop,
@@ -708,22 +1075,28 @@ begin
       mmio_firstidx            => rematch005_firstidx,
       mmio_lastidx             => rematch005_lastidx,
 
-      -- Counter increment outputs.
-      out_match                => sub_match(5),
-      out_error                => sub_error(5)
+      -- MMIO for taxi output buffer.
+      mmio_re_taxi_firstidx => rematch005_taxi_firstidx,
+      mmio_re_taxi_lastidx  => rematch005_taxi_lastidx,
+      mmio_re_taxi_count    => rematch005_taxi_count,
+
+      -- UTF-8 error counter output.
+      mmio_errors              => rematch005_errors
 
     );
 
   rematch006: entity work.SubKernel
     generic map (
       NUM_EPC                  => 4,
-      NUM_REGEX                => 16,
+      NUM_REGEX                => 1,
       INDEX_WIDTH              => INDEX_WIDTH,
       TAG_WIDTH                => TAG_WIDTH
     )
     port map (
       kcd_clk                  => kcd_clk,
       kcd_reset                => kcd_reset,
+
+      -- Fletcher string reader interface.
       in_valid                 => rematch006_in_valid,
       in_ready                 => rematch006_in_ready,
       in_dvalid                => rematch006_in_dvalid,
@@ -745,6 +1118,21 @@ begin
       in_cmd_lastIdx           => rematch006_in_cmd_lastIdx,
       in_cmd_tag               => rematch006_in_cmd_tag,
 
+      -- Fletcher index writer interface for taxi.
+      re_taxi_out_valid        => rematch006_taxi_out_valid,
+      re_taxi_out_ready        => rematch006_taxi_out_ready,
+      re_taxi_out_dvalid       => rematch006_taxi_out_dvalid,
+      re_taxi_out_last         => rematch006_taxi_out_last,
+      re_taxi_out              => rematch006_taxi_out,
+      re_taxi_out_unl_valid    => rematch006_taxi_out_unl_valid,
+      re_taxi_out_unl_ready    => rematch006_taxi_out_unl_ready,
+      re_taxi_out_unl_tag      => rematch006_taxi_out_unl_tag,
+      re_taxi_out_cmd_valid    => rematch006_taxi_out_cmd_valid,
+      re_taxi_out_cmd_ready    => rematch006_taxi_out_cmd_ready,
+      re_taxi_out_cmd_firstIdx => rematch006_taxi_out_cmd_firstIdx,
+      re_taxi_out_cmd_lastIdx  => rematch006_taxi_out_cmd_lastIdx,
+      re_taxi_out_cmd_tag      => rematch006_taxi_out_cmd_tag,
+
       -- MMIO control interface.
       mmio_start               => start,
       mmio_stop                => stop,
@@ -755,22 +1143,28 @@ begin
       mmio_firstidx            => rematch006_firstidx,
       mmio_lastidx             => rematch006_lastidx,
 
-      -- Counter increment outputs.
-      out_match                => sub_match(6),
-      out_error                => sub_error(6)
+      -- MMIO for taxi output buffer.
+      mmio_re_taxi_firstidx => rematch006_taxi_firstidx,
+      mmio_re_taxi_lastidx  => rematch006_taxi_lastidx,
+      mmio_re_taxi_count    => rematch006_taxi_count,
+
+      -- UTF-8 error counter output.
+      mmio_errors              => rematch006_errors
 
     );
 
   rematch007: entity work.SubKernel
     generic map (
       NUM_EPC                  => 4,
-      NUM_REGEX                => 16,
+      NUM_REGEX                => 1,
       INDEX_WIDTH              => INDEX_WIDTH,
       TAG_WIDTH                => TAG_WIDTH
     )
     port map (
       kcd_clk                  => kcd_clk,
       kcd_reset                => kcd_reset,
+
+      -- Fletcher string reader interface.
       in_valid                 => rematch007_in_valid,
       in_ready                 => rematch007_in_ready,
       in_dvalid                => rematch007_in_dvalid,
@@ -792,6 +1186,21 @@ begin
       in_cmd_lastIdx           => rematch007_in_cmd_lastIdx,
       in_cmd_tag               => rematch007_in_cmd_tag,
 
+      -- Fletcher index writer interface for taxi.
+      re_taxi_out_valid        => rematch007_taxi_out_valid,
+      re_taxi_out_ready        => rematch007_taxi_out_ready,
+      re_taxi_out_dvalid       => rematch007_taxi_out_dvalid,
+      re_taxi_out_last         => rematch007_taxi_out_last,
+      re_taxi_out              => rematch007_taxi_out,
+      re_taxi_out_unl_valid    => rematch007_taxi_out_unl_valid,
+      re_taxi_out_unl_ready    => rematch007_taxi_out_unl_ready,
+      re_taxi_out_unl_tag      => rematch007_taxi_out_unl_tag,
+      re_taxi_out_cmd_valid    => rematch007_taxi_out_cmd_valid,
+      re_taxi_out_cmd_ready    => rematch007_taxi_out_cmd_ready,
+      re_taxi_out_cmd_firstIdx => rematch007_taxi_out_cmd_firstIdx,
+      re_taxi_out_cmd_lastIdx  => rematch007_taxi_out_cmd_lastIdx,
+      re_taxi_out_cmd_tag      => rematch007_taxi_out_cmd_tag,
+
       -- MMIO control interface.
       mmio_start               => start,
       mmio_stop                => stop,
@@ -802,22 +1211,28 @@ begin
       mmio_firstidx            => rematch007_firstidx,
       mmio_lastidx             => rematch007_lastidx,
 
-      -- Counter increment outputs.
-      out_match                => sub_match(7),
-      out_error                => sub_error(7)
+      -- MMIO for taxi output buffer.
+      mmio_re_taxi_firstidx => rematch007_taxi_firstidx,
+      mmio_re_taxi_lastidx  => rematch007_taxi_lastidx,
+      mmio_re_taxi_count    => rematch007_taxi_count,
+
+      -- UTF-8 error counter output.
+      mmio_errors              => rematch007_errors
 
     );
 
   rematch008: entity work.SubKernel
     generic map (
       NUM_EPC                  => 4,
-      NUM_REGEX                => 16,
+      NUM_REGEX                => 1,
       INDEX_WIDTH              => INDEX_WIDTH,
       TAG_WIDTH                => TAG_WIDTH
     )
     port map (
       kcd_clk                  => kcd_clk,
       kcd_reset                => kcd_reset,
+
+      -- Fletcher string reader interface.
       in_valid                 => rematch008_in_valid,
       in_ready                 => rematch008_in_ready,
       in_dvalid                => rematch008_in_dvalid,
@@ -839,6 +1254,21 @@ begin
       in_cmd_lastIdx           => rematch008_in_cmd_lastIdx,
       in_cmd_tag               => rematch008_in_cmd_tag,
 
+      -- Fletcher index writer interface for taxi.
+      re_taxi_out_valid        => rematch008_taxi_out_valid,
+      re_taxi_out_ready        => rematch008_taxi_out_ready,
+      re_taxi_out_dvalid       => rematch008_taxi_out_dvalid,
+      re_taxi_out_last         => rematch008_taxi_out_last,
+      re_taxi_out              => rematch008_taxi_out,
+      re_taxi_out_unl_valid    => rematch008_taxi_out_unl_valid,
+      re_taxi_out_unl_ready    => rematch008_taxi_out_unl_ready,
+      re_taxi_out_unl_tag      => rematch008_taxi_out_unl_tag,
+      re_taxi_out_cmd_valid    => rematch008_taxi_out_cmd_valid,
+      re_taxi_out_cmd_ready    => rematch008_taxi_out_cmd_ready,
+      re_taxi_out_cmd_firstIdx => rematch008_taxi_out_cmd_firstIdx,
+      re_taxi_out_cmd_lastIdx  => rematch008_taxi_out_cmd_lastIdx,
+      re_taxi_out_cmd_tag      => rematch008_taxi_out_cmd_tag,
+
       -- MMIO control interface.
       mmio_start               => start,
       mmio_stop                => stop,
@@ -849,22 +1279,28 @@ begin
       mmio_firstidx            => rematch008_firstidx,
       mmio_lastidx             => rematch008_lastidx,
 
-      -- Counter increment outputs.
-      out_match                => sub_match(8),
-      out_error                => sub_error(8)
+      -- MMIO for taxi output buffer.
+      mmio_re_taxi_firstidx => rematch008_taxi_firstidx,
+      mmio_re_taxi_lastidx  => rematch008_taxi_lastidx,
+      mmio_re_taxi_count    => rematch008_taxi_count,
+
+      -- UTF-8 error counter output.
+      mmio_errors              => rematch008_errors
 
     );
 
   rematch009: entity work.SubKernel
     generic map (
       NUM_EPC                  => 4,
-      NUM_REGEX                => 16,
+      NUM_REGEX                => 1,
       INDEX_WIDTH              => INDEX_WIDTH,
       TAG_WIDTH                => TAG_WIDTH
     )
     port map (
       kcd_clk                  => kcd_clk,
       kcd_reset                => kcd_reset,
+
+      -- Fletcher string reader interface.
       in_valid                 => rematch009_in_valid,
       in_ready                 => rematch009_in_ready,
       in_dvalid                => rematch009_in_dvalid,
@@ -886,6 +1322,21 @@ begin
       in_cmd_lastIdx           => rematch009_in_cmd_lastIdx,
       in_cmd_tag               => rematch009_in_cmd_tag,
 
+      -- Fletcher index writer interface for taxi.
+      re_taxi_out_valid        => rematch009_taxi_out_valid,
+      re_taxi_out_ready        => rematch009_taxi_out_ready,
+      re_taxi_out_dvalid       => rematch009_taxi_out_dvalid,
+      re_taxi_out_last         => rematch009_taxi_out_last,
+      re_taxi_out              => rematch009_taxi_out,
+      re_taxi_out_unl_valid    => rematch009_taxi_out_unl_valid,
+      re_taxi_out_unl_ready    => rematch009_taxi_out_unl_ready,
+      re_taxi_out_unl_tag      => rematch009_taxi_out_unl_tag,
+      re_taxi_out_cmd_valid    => rematch009_taxi_out_cmd_valid,
+      re_taxi_out_cmd_ready    => rematch009_taxi_out_cmd_ready,
+      re_taxi_out_cmd_firstIdx => rematch009_taxi_out_cmd_firstIdx,
+      re_taxi_out_cmd_lastIdx  => rematch009_taxi_out_cmd_lastIdx,
+      re_taxi_out_cmd_tag      => rematch009_taxi_out_cmd_tag,
+
       -- MMIO control interface.
       mmio_start               => start,
       mmio_stop                => stop,
@@ -896,22 +1347,28 @@ begin
       mmio_firstidx            => rematch009_firstidx,
       mmio_lastidx             => rematch009_lastidx,
 
-      -- Counter increment outputs.
-      out_match                => sub_match(9),
-      out_error                => sub_error(9)
+      -- MMIO for taxi output buffer.
+      mmio_re_taxi_firstidx => rematch009_taxi_firstidx,
+      mmio_re_taxi_lastidx  => rematch009_taxi_lastidx,
+      mmio_re_taxi_count    => rematch009_taxi_count,
+
+      -- UTF-8 error counter output.
+      mmio_errors              => rematch009_errors
 
     );
 
   rematch010: entity work.SubKernel
     generic map (
       NUM_EPC                  => 4,
-      NUM_REGEX                => 16,
+      NUM_REGEX                => 1,
       INDEX_WIDTH              => INDEX_WIDTH,
       TAG_WIDTH                => TAG_WIDTH
     )
     port map (
       kcd_clk                  => kcd_clk,
       kcd_reset                => kcd_reset,
+
+      -- Fletcher string reader interface.
       in_valid                 => rematch010_in_valid,
       in_ready                 => rematch010_in_ready,
       in_dvalid                => rematch010_in_dvalid,
@@ -933,6 +1390,21 @@ begin
       in_cmd_lastIdx           => rematch010_in_cmd_lastIdx,
       in_cmd_tag               => rematch010_in_cmd_tag,
 
+      -- Fletcher index writer interface for taxi.
+      re_taxi_out_valid        => rematch010_taxi_out_valid,
+      re_taxi_out_ready        => rematch010_taxi_out_ready,
+      re_taxi_out_dvalid       => rematch010_taxi_out_dvalid,
+      re_taxi_out_last         => rematch010_taxi_out_last,
+      re_taxi_out              => rematch010_taxi_out,
+      re_taxi_out_unl_valid    => rematch010_taxi_out_unl_valid,
+      re_taxi_out_unl_ready    => rematch010_taxi_out_unl_ready,
+      re_taxi_out_unl_tag      => rematch010_taxi_out_unl_tag,
+      re_taxi_out_cmd_valid    => rematch010_taxi_out_cmd_valid,
+      re_taxi_out_cmd_ready    => rematch010_taxi_out_cmd_ready,
+      re_taxi_out_cmd_firstIdx => rematch010_taxi_out_cmd_firstIdx,
+      re_taxi_out_cmd_lastIdx  => rematch010_taxi_out_cmd_lastIdx,
+      re_taxi_out_cmd_tag      => rematch010_taxi_out_cmd_tag,
+
       -- MMIO control interface.
       mmio_start               => start,
       mmio_stop                => stop,
@@ -943,22 +1415,28 @@ begin
       mmio_firstidx            => rematch010_firstidx,
       mmio_lastidx             => rematch010_lastidx,
 
-      -- Counter increment outputs.
-      out_match                => sub_match(10),
-      out_error                => sub_error(10)
+      -- MMIO for taxi output buffer.
+      mmio_re_taxi_firstidx => rematch010_taxi_firstidx,
+      mmio_re_taxi_lastidx  => rematch010_taxi_lastidx,
+      mmio_re_taxi_count    => rematch010_taxi_count,
+
+      -- UTF-8 error counter output.
+      mmio_errors              => rematch010_errors
 
     );
 
   rematch011: entity work.SubKernel
     generic map (
       NUM_EPC                  => 4,
-      NUM_REGEX                => 16,
+      NUM_REGEX                => 1,
       INDEX_WIDTH              => INDEX_WIDTH,
       TAG_WIDTH                => TAG_WIDTH
     )
     port map (
       kcd_clk                  => kcd_clk,
       kcd_reset                => kcd_reset,
+
+      -- Fletcher string reader interface.
       in_valid                 => rematch011_in_valid,
       in_ready                 => rematch011_in_ready,
       in_dvalid                => rematch011_in_dvalid,
@@ -980,6 +1458,21 @@ begin
       in_cmd_lastIdx           => rematch011_in_cmd_lastIdx,
       in_cmd_tag               => rematch011_in_cmd_tag,
 
+      -- Fletcher index writer interface for taxi.
+      re_taxi_out_valid        => rematch011_taxi_out_valid,
+      re_taxi_out_ready        => rematch011_taxi_out_ready,
+      re_taxi_out_dvalid       => rematch011_taxi_out_dvalid,
+      re_taxi_out_last         => rematch011_taxi_out_last,
+      re_taxi_out              => rematch011_taxi_out,
+      re_taxi_out_unl_valid    => rematch011_taxi_out_unl_valid,
+      re_taxi_out_unl_ready    => rematch011_taxi_out_unl_ready,
+      re_taxi_out_unl_tag      => rematch011_taxi_out_unl_tag,
+      re_taxi_out_cmd_valid    => rematch011_taxi_out_cmd_valid,
+      re_taxi_out_cmd_ready    => rematch011_taxi_out_cmd_ready,
+      re_taxi_out_cmd_firstIdx => rematch011_taxi_out_cmd_firstIdx,
+      re_taxi_out_cmd_lastIdx  => rematch011_taxi_out_cmd_lastIdx,
+      re_taxi_out_cmd_tag      => rematch011_taxi_out_cmd_tag,
+
       -- MMIO control interface.
       mmio_start               => start,
       mmio_stop                => stop,
@@ -990,22 +1483,28 @@ begin
       mmio_firstidx            => rematch011_firstidx,
       mmio_lastidx             => rematch011_lastidx,
 
-      -- Counter increment outputs.
-      out_match                => sub_match(11),
-      out_error                => sub_error(11)
+      -- MMIO for taxi output buffer.
+      mmio_re_taxi_firstidx => rematch011_taxi_firstidx,
+      mmio_re_taxi_lastidx  => rematch011_taxi_lastidx,
+      mmio_re_taxi_count    => rematch011_taxi_count,
+
+      -- UTF-8 error counter output.
+      mmio_errors              => rematch011_errors
 
     );
 
   rematch012: entity work.SubKernel
     generic map (
       NUM_EPC                  => 4,
-      NUM_REGEX                => 16,
+      NUM_REGEX                => 1,
       INDEX_WIDTH              => INDEX_WIDTH,
       TAG_WIDTH                => TAG_WIDTH
     )
     port map (
       kcd_clk                  => kcd_clk,
       kcd_reset                => kcd_reset,
+
+      -- Fletcher string reader interface.
       in_valid                 => rematch012_in_valid,
       in_ready                 => rematch012_in_ready,
       in_dvalid                => rematch012_in_dvalid,
@@ -1027,6 +1526,21 @@ begin
       in_cmd_lastIdx           => rematch012_in_cmd_lastIdx,
       in_cmd_tag               => rematch012_in_cmd_tag,
 
+      -- Fletcher index writer interface for taxi.
+      re_taxi_out_valid        => rematch012_taxi_out_valid,
+      re_taxi_out_ready        => rematch012_taxi_out_ready,
+      re_taxi_out_dvalid       => rematch012_taxi_out_dvalid,
+      re_taxi_out_last         => rematch012_taxi_out_last,
+      re_taxi_out              => rematch012_taxi_out,
+      re_taxi_out_unl_valid    => rematch012_taxi_out_unl_valid,
+      re_taxi_out_unl_ready    => rematch012_taxi_out_unl_ready,
+      re_taxi_out_unl_tag      => rematch012_taxi_out_unl_tag,
+      re_taxi_out_cmd_valid    => rematch012_taxi_out_cmd_valid,
+      re_taxi_out_cmd_ready    => rematch012_taxi_out_cmd_ready,
+      re_taxi_out_cmd_firstIdx => rematch012_taxi_out_cmd_firstIdx,
+      re_taxi_out_cmd_lastIdx  => rematch012_taxi_out_cmd_lastIdx,
+      re_taxi_out_cmd_tag      => rematch012_taxi_out_cmd_tag,
+
       -- MMIO control interface.
       mmio_start               => start,
       mmio_stop                => stop,
@@ -1037,22 +1551,28 @@ begin
       mmio_firstidx            => rematch012_firstidx,
       mmio_lastidx             => rematch012_lastidx,
 
-      -- Counter increment outputs.
-      out_match                => sub_match(12),
-      out_error                => sub_error(12)
+      -- MMIO for taxi output buffer.
+      mmio_re_taxi_firstidx => rematch012_taxi_firstidx,
+      mmio_re_taxi_lastidx  => rematch012_taxi_lastidx,
+      mmio_re_taxi_count    => rematch012_taxi_count,
+
+      -- UTF-8 error counter output.
+      mmio_errors              => rematch012_errors
 
     );
 
   rematch013: entity work.SubKernel
     generic map (
       NUM_EPC                  => 4,
-      NUM_REGEX                => 16,
+      NUM_REGEX                => 1,
       INDEX_WIDTH              => INDEX_WIDTH,
       TAG_WIDTH                => TAG_WIDTH
     )
     port map (
       kcd_clk                  => kcd_clk,
       kcd_reset                => kcd_reset,
+
+      -- Fletcher string reader interface.
       in_valid                 => rematch013_in_valid,
       in_ready                 => rematch013_in_ready,
       in_dvalid                => rematch013_in_dvalid,
@@ -1074,6 +1594,21 @@ begin
       in_cmd_lastIdx           => rematch013_in_cmd_lastIdx,
       in_cmd_tag               => rematch013_in_cmd_tag,
 
+      -- Fletcher index writer interface for taxi.
+      re_taxi_out_valid        => rematch013_taxi_out_valid,
+      re_taxi_out_ready        => rematch013_taxi_out_ready,
+      re_taxi_out_dvalid       => rematch013_taxi_out_dvalid,
+      re_taxi_out_last         => rematch013_taxi_out_last,
+      re_taxi_out              => rematch013_taxi_out,
+      re_taxi_out_unl_valid    => rematch013_taxi_out_unl_valid,
+      re_taxi_out_unl_ready    => rematch013_taxi_out_unl_ready,
+      re_taxi_out_unl_tag      => rematch013_taxi_out_unl_tag,
+      re_taxi_out_cmd_valid    => rematch013_taxi_out_cmd_valid,
+      re_taxi_out_cmd_ready    => rematch013_taxi_out_cmd_ready,
+      re_taxi_out_cmd_firstIdx => rematch013_taxi_out_cmd_firstIdx,
+      re_taxi_out_cmd_lastIdx  => rematch013_taxi_out_cmd_lastIdx,
+      re_taxi_out_cmd_tag      => rematch013_taxi_out_cmd_tag,
+
       -- MMIO control interface.
       mmio_start               => start,
       mmio_stop                => stop,
@@ -1084,22 +1619,28 @@ begin
       mmio_firstidx            => rematch013_firstidx,
       mmio_lastidx             => rematch013_lastidx,
 
-      -- Counter increment outputs.
-      out_match                => sub_match(13),
-      out_error                => sub_error(13)
+      -- MMIO for taxi output buffer.
+      mmio_re_taxi_firstidx => rematch013_taxi_firstidx,
+      mmio_re_taxi_lastidx  => rematch013_taxi_lastidx,
+      mmio_re_taxi_count    => rematch013_taxi_count,
+
+      -- UTF-8 error counter output.
+      mmio_errors              => rematch013_errors
 
     );
 
   rematch014: entity work.SubKernel
     generic map (
       NUM_EPC                  => 4,
-      NUM_REGEX                => 16,
+      NUM_REGEX                => 1,
       INDEX_WIDTH              => INDEX_WIDTH,
       TAG_WIDTH                => TAG_WIDTH
     )
     port map (
       kcd_clk                  => kcd_clk,
       kcd_reset                => kcd_reset,
+
+      -- Fletcher string reader interface.
       in_valid                 => rematch014_in_valid,
       in_ready                 => rematch014_in_ready,
       in_dvalid                => rematch014_in_dvalid,
@@ -1121,6 +1662,21 @@ begin
       in_cmd_lastIdx           => rematch014_in_cmd_lastIdx,
       in_cmd_tag               => rematch014_in_cmd_tag,
 
+      -- Fletcher index writer interface for taxi.
+      re_taxi_out_valid        => rematch014_taxi_out_valid,
+      re_taxi_out_ready        => rematch014_taxi_out_ready,
+      re_taxi_out_dvalid       => rematch014_taxi_out_dvalid,
+      re_taxi_out_last         => rematch014_taxi_out_last,
+      re_taxi_out              => rematch014_taxi_out,
+      re_taxi_out_unl_valid    => rematch014_taxi_out_unl_valid,
+      re_taxi_out_unl_ready    => rematch014_taxi_out_unl_ready,
+      re_taxi_out_unl_tag      => rematch014_taxi_out_unl_tag,
+      re_taxi_out_cmd_valid    => rematch014_taxi_out_cmd_valid,
+      re_taxi_out_cmd_ready    => rematch014_taxi_out_cmd_ready,
+      re_taxi_out_cmd_firstIdx => rematch014_taxi_out_cmd_firstIdx,
+      re_taxi_out_cmd_lastIdx  => rematch014_taxi_out_cmd_lastIdx,
+      re_taxi_out_cmd_tag      => rematch014_taxi_out_cmd_tag,
+
       -- MMIO control interface.
       mmio_start               => start,
       mmio_stop                => stop,
@@ -1131,22 +1687,28 @@ begin
       mmio_firstidx            => rematch014_firstidx,
       mmio_lastidx             => rematch014_lastidx,
 
-      -- Counter increment outputs.
-      out_match                => sub_match(14),
-      out_error                => sub_error(14)
+      -- MMIO for taxi output buffer.
+      mmio_re_taxi_firstidx => rematch014_taxi_firstidx,
+      mmio_re_taxi_lastidx  => rematch014_taxi_lastidx,
+      mmio_re_taxi_count    => rematch014_taxi_count,
+
+      -- UTF-8 error counter output.
+      mmio_errors              => rematch014_errors
 
     );
 
   rematch015: entity work.SubKernel
     generic map (
       NUM_EPC                  => 4,
-      NUM_REGEX                => 16,
+      NUM_REGEX                => 1,
       INDEX_WIDTH              => INDEX_WIDTH,
       TAG_WIDTH                => TAG_WIDTH
     )
     port map (
       kcd_clk                  => kcd_clk,
       kcd_reset                => kcd_reset,
+
+      -- Fletcher string reader interface.
       in_valid                 => rematch015_in_valid,
       in_ready                 => rematch015_in_ready,
       in_dvalid                => rematch015_in_dvalid,
@@ -1168,6 +1730,21 @@ begin
       in_cmd_lastIdx           => rematch015_in_cmd_lastIdx,
       in_cmd_tag               => rematch015_in_cmd_tag,
 
+      -- Fletcher index writer interface for taxi.
+      re_taxi_out_valid        => rematch015_taxi_out_valid,
+      re_taxi_out_ready        => rematch015_taxi_out_ready,
+      re_taxi_out_dvalid       => rematch015_taxi_out_dvalid,
+      re_taxi_out_last         => rematch015_taxi_out_last,
+      re_taxi_out              => rematch015_taxi_out,
+      re_taxi_out_unl_valid    => rematch015_taxi_out_unl_valid,
+      re_taxi_out_unl_ready    => rematch015_taxi_out_unl_ready,
+      re_taxi_out_unl_tag      => rematch015_taxi_out_unl_tag,
+      re_taxi_out_cmd_valid    => rematch015_taxi_out_cmd_valid,
+      re_taxi_out_cmd_ready    => rematch015_taxi_out_cmd_ready,
+      re_taxi_out_cmd_firstIdx => rematch015_taxi_out_cmd_firstIdx,
+      re_taxi_out_cmd_lastIdx  => rematch015_taxi_out_cmd_lastIdx,
+      re_taxi_out_cmd_tag      => rematch015_taxi_out_cmd_tag,
+
       -- MMIO control interface.
       mmio_start               => start,
       mmio_stop                => stop,
@@ -1178,52 +1755,19 @@ begin
       mmio_firstidx            => rematch015_firstidx,
       mmio_lastidx             => rematch015_lastidx,
 
-      -- Counter increment outputs.
-      out_match                => sub_match(15),
-      out_error                => sub_error(15)
+      -- MMIO for taxi output buffer.
+      mmio_re_taxi_firstidx => rematch015_taxi_firstidx,
+      mmio_re_taxi_lastidx  => rematch015_taxi_lastidx,
+      mmio_re_taxi_count    => rematch015_taxi_count,
+
+      -- UTF-8 error counter output.
+      mmio_errors              => rematch015_errors
 
     );
 
   proc: process (kcd_clk) is
-    variable accum : unsigned(log2ceil(16+1)-1 downto 0);
   begin
     if rising_edge(kcd_clk) then
-
-      -- Determine how much we need to add to each counter for the strobes
-      -- from all the subkernels.
-      for counter_idx in 0 to 16-1 loop
-        accum := (others => '0');
-        for subkernel_idx in 0 to 16-1 loop
-          if sub_match(subkernel_idx)(counter_idx) = '1' then
-            accum := accum + 1;
-          end if;
-        end loop;
-        increments(counter_idx) <= std_logic_vector(accum);
-      end loop;
-
-      accum := (others => '0');
-      for subkernel_idx in 0 to 16-1 loop
-        if sub_error(subkernel_idx) = '1' then
-          accum := accum + 1;
-        end if;
-      end loop;
-      increments(16) <= std_logic_vector(accum);
-
-      -- Add the increment values we determined in the previous cycle to the
-      -- counters.
-      for counter_idx in 0 to 16 loop
-        counters(counter_idx) <= std_logic_vector(
-          unsigned(counters(counter_idx))
-          + resize(unsigned(increments(counter_idx)), 32)
-        );
-      end loop;
-
-      -- Reset the counters when the kernel is reset.
-      if kcd_reset = '1' or reset = '1' then
-        counters <= (others => (others => '0'));
-      end if;
-
-      -- Combine the status flags from the subkernels.
       idle <= '1';
       busy <= '0';
       done <= '1';
@@ -1243,26 +1787,7 @@ begin
         busy <= '1';
         done <= '0';
       end if;
-
     end if;
   end process;
-
-  count_re_bird                 <= counters(0);
-  count_re_bunny                <= counters(1);
-  count_re_cat                  <= counters(2);
-  count_re_dog                  <= counters(3);
-  count_re_ferret               <= counters(4);
-  count_re_fish                 <= counters(5);
-  count_re_gerbil               <= counters(6);
-  count_re_hamster              <= counters(7);
-  count_re_horse                <= counters(8);
-  count_re_kitten               <= counters(9);
-  count_re_lizard               <= counters(10);
-  count_re_mouse                <= counters(11);
-  count_re_puppy                <= counters(12);
-  count_re_rabbit               <= counters(13);
-  count_re_rat                  <= counters(14);
-  count_re_turtle               <= counters(15);
-  count_errors                  <= counters(16);
 
 end architecture;

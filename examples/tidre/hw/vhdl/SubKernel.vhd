@@ -60,6 +60,21 @@ entity SubKernel is
     in_cmd_lastIdx             : out std_logic_vector(INDEX_WIDTH-1 downto 0);
     in_cmd_tag                 : out std_logic_vector(TAG_WIDTH-1 downto 0);
 
+    -- Fletcher index writer interface for taxi.
+    re_taxi_out_valid        : out std_logic;
+    re_taxi_out_ready        : in  std_logic;
+    re_taxi_out_dvalid       : out std_logic;
+    re_taxi_out_last         : out std_logic;
+    re_taxi_out              : out std_logic_vector(31 downto 0);
+    re_taxi_out_unl_valid    : in  std_logic;
+    re_taxi_out_unl_ready    : out std_logic;
+    re_taxi_out_unl_tag      : in  std_logic_vector(TAG_WIDTH-1 downto 0);
+    re_taxi_out_cmd_valid    : out std_logic;
+    re_taxi_out_cmd_ready    : in  std_logic;
+    re_taxi_out_cmd_firstIdx : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    re_taxi_out_cmd_lastIdx  : out std_logic_vector(INDEX_WIDTH-1 downto 0);
+    re_taxi_out_cmd_tag      : out std_logic_vector(TAG_WIDTH-1 downto 0);
+
     -- MMIO control interface.
     mmio_start                 : in  std_logic;
     mmio_stop                  : in  std_logic;
@@ -70,9 +85,13 @@ entity SubKernel is
     mmio_firstidx              : in  std_logic_vector(31 downto 0);
     mmio_lastidx               : in  std_logic_vector(31 downto 0);
 
-    -- Counter increment outputs.
-    out_match                  : out std_logic_vector(NUM_REGEX-1 downto 0);
-    out_error                  : out std_logic
+    -- MMIO for taxi output buffer.
+    mmio_re_taxi_firstidx : in  std_logic_vector(31 downto 0);
+    mmio_re_taxi_lastidx  : in  std_logic_vector(31 downto 0);
+    mmio_re_taxi_count    : out std_logic_vector(31 downto 0);
+
+    -- UTF-8 error counter output.
+    mmio_errors                : out std_logic_vector(31 downto 0)
 
   );
 end entity;
@@ -112,7 +131,7 @@ begin
 
   proc: process (kcd_clk) is
 
-    -- Command stream output holding register.
+    -- Command stream output holding registers.
     type cmd_type is record
       valid     : std_logic;
       tag       : std_logic_vector(TAG_WIDTH-1 downto 0);
@@ -120,13 +139,15 @@ begin
       lastIdx   : std_logic_vector(INDEX_WIDTH-1 downto 0);
     end record;
     variable cmd: cmd_type;
+    variable cre_taxi : cmd_type;
 
-    -- Unlock stream input holding register.
+    -- Unlock stream input holding registers.
     type unl_type is record
       valid     : std_logic;
       tag       : std_logic_vector(TAG_WIDTH-1 downto 0);
     end record;
     variable unl: unl_type;
+    variable ure_taxi : unl_type;
 
     -- Length stream input holding register.
     type il_type is record
@@ -164,6 +185,15 @@ begin
     end record;
     variable mo : mo_type;
 
+    -- Matching index stream output holding registers.
+    type dre_type is record
+      valid     : std_logic;
+      index     : std_logic_vector(31 downto 0);
+      last      : std_logic;
+    end record;
+    variable dre_taxi : dre_type;
+
+    -- FSM state.
     type state_type is (
       S_RESET,
       S_IDLE,
@@ -178,6 +208,11 @@ begin
     -- counter is considered full when MSBs are 01.
     variable outst  : unsigned(7 downto 0);
 
+    -- Match counters for each regex.
+    variable cnt_re_taxi : unsigned(31 downto 0);
+    variable cnt_errors : unsigned(31 downto 0);
+    variable cnt_index  : unsigned(31 downto 0);
+
   begin
     if rising_edge(kcd_clk) then
 
@@ -185,9 +220,16 @@ begin
       if in_cmd_ready = '1' then
         cmd.valid := '0';
       end if;
+      if re_taxi_out_cmd_ready = '1' then
+        cre_taxi.valid := '0';
+      end if;
       if unl.valid = '0' then
         unl.valid := in_unl_valid;
         unl.tag   := in_unl_tag;
+      end if;
+      if ure_taxi.valid = '0' then
+        ure_taxi.valid := re_taxi_out_unl_valid;
+        ure_taxi.tag   := re_taxi_out_unl_tag;
       end if;
       if il.valid = '0' then
         il.valid  := in_valid;
@@ -210,10 +252,11 @@ begin
         mo.match  := m_out_match;
         mo.err    := m_out_error;
       end if;
+      if re_taxi_out_ready = '1' then
+        dre_taxi.valid := '0';
+      end if;
 
       -- Assign default values for non-register, non-stream output signals.
-      out_match <= (others => '0');
-      out_error <= '0';
       mmio_idle <= '0';
       mmio_busy <= '0';
 
@@ -241,6 +284,19 @@ begin
               cmd.firstIdx := mmio_firstidx;
               cmd.lastIdx := mmio_lastidx;
               cmd.valid := '1';
+
+              -- Send command to the taxi index writer.
+              cre_taxi.tag := (others => '0');
+              cre_taxi.firstIdx := mmio_re_taxi_firstidx;
+              cre_taxi.lastIdx := mmio_re_taxi_lastidx;
+              cre_taxi.valid := '1';
+
+              -- Reset counters.
+              cnt_re_taxi := (others => '0');
+              cnt_errors := (others => '0');
+              cnt_index := unsigned(mmio_firstidx);
+
+              -- Start streaming.
               state := S_WAIT_LAST;
 
             end if;
@@ -270,7 +326,10 @@ begin
 
           -- Wait for the outstanding string counter to reach zero (minus one)
           -- again.
-          if outst(7) = '1' then
+          if outst(7) = '1' and dre_taxi.valid = '0' then
+            dre_taxi.index := (others => '0');
+            dre_taxi.last  := '1';
+            dre_taxi.valid := '1';
             state := S_WAIT_UNLOCK;
           end if;
 
@@ -278,10 +337,10 @@ begin
           mmio_busy <= '1';
 
           -- Wait for the unlock stream to signal that the Fletcher interface
-          -- is done. This isn't really necessary for this particular kernel,
-          -- but it's good practice to check anyway.
-          if unl.valid = '1' then
+          -- is done.
+          if unl.valid = '1' and ure_taxi.valid = '1' then
             unl.valid := '0';
+            ure_taxi.valid := '0';
             mmio_done <= '1';
             state := S_IDLE;
           end if;
@@ -320,10 +379,18 @@ begin
 
       -- Handle matcher output. Every match result means one less outstanding
       -- string.
-      if mo.valid = '1' and outst(7) = '0' then
+      if mo.valid = '1' and outst(7) = '0' and dre_taxi.valid = '0' then
         outst := outst - 1;
-        out_match <= mo.match;
-        out_error <= mo.err;
+        if mo.match(0) = '1' then
+          dre_taxi.index := std_logic_vector(cnt_index);
+          dre_taxi.last  := '0';
+          dre_taxi.valid := '1';
+          cnt_re_taxi := cnt_re_taxi + 1;
+        end if;
+        if mo.err = '1' then
+          cnt_errors := cnt_errors + 1;
+        end if;
+        cnt_index := cnt_index + 1;
         mo.valid := '0';
       end if;
 
@@ -338,10 +405,14 @@ begin
         mi.data   := (others => '0');
         -- pragma translate_on
         mo.valid  := '0';
+        cre_taxi.valid := '0';
+        ure_taxi.valid := '0';
+        dre_taxi.valid := '0';
+        cnt_re_taxi    := (others => '0');
+        cnt_errors := (others => '0');
+        cnt_index := (others => '0');
         state     := S_RESET;
         outst     := (others => '1');
-        out_match <= (others => '0');
-        out_error <= '0';
         mmio_idle <= '0';
         mmio_busy <= '1';
         mmio_done <= '0';
@@ -360,6 +431,18 @@ begin
       m_in_mask         <= mi.mask;
       m_in_data         <= mi.data;
       m_out_ready       <= not mo.valid;
+      mmio_errors       <= std_logic_vector(cnt_errors);
+
+      re_taxi_out_cmd_valid    <= cre_taxi.valid;
+      re_taxi_out_cmd_tag      <= cre_taxi.tag;
+      re_taxi_out_cmd_firstIdx <= cre_taxi.firstIdx;
+      re_taxi_out_cmd_lastIdx  <= cre_taxi.lastIdx;
+      re_taxi_out_unl_ready    <= not ure_taxi.valid;
+      re_taxi_out_valid        <= dre_taxi.valid;
+      re_taxi_out_dvalid       <= '1';
+      re_taxi_out_last         <= dre_taxi.last;
+      re_taxi_out              <= dre_taxi.index;
+      mmio_re_taxi_count       <= std_logic_vector(cnt_re_taxi);
 
     end if;
   end process;

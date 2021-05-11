@@ -113,7 +113,7 @@ fstatus_t platformWriteMMIO(uint64_t offset, uint32_t value) {
 
 fstatus_t platformReadMMIO(uint64_t offset, uint32_t *value) {
     int rc;
-    rc = xrtKernelReadRegister(platform.kernel, ALVEO_MMIO_OFFSET + offset *sizeof(uint32_t), value);
+    rc = xrtKernelReadRegister(platform.kernel, ALVEO_MMIO_OFFSET + offset * sizeof(uint32_t), value);
     if (rc != 0) {
         fprintf(stderr, "[FLETCHER_ALVEO] Error while reading MMIO register %04lu.\n", offset);
         return FLETCHER_STATUS_ERROR;
@@ -156,7 +156,7 @@ fstatus_t platformCopyDeviceToHost(const da_t device_source,
 
     debug_print("[FLETCHER_ALVEO] Copy: [device] 0x%016lX --> [host] 0x%016lX (%10lu bytes).\n",
         (unsigned long) device_source,
-        (unsigned long) *host_destination,
+        (unsigned long) host_destination,
         size);
 
     fstatus_t rc;
@@ -165,14 +165,15 @@ fstatus_t platformCopyDeviceToHost(const da_t device_source,
     if (rc != FLETCHER_STATUS_OK) {
         return FLETCHER_STATUS_ERROR;
     }
-    rc = xrtBORead(buffer->handle, host_destination, size, device_source-buffer->device_address);
+    
+    rc = xrtBOSync(buffer->handle, XCL_BO_SYNC_BO_FROM_DEVICE, size, 0);
     if (rc != 0) {
-        fprintf(stderr, "[FLETCHER_ALVEO] Error: platformCopyHostToDevice: xrtBORead.\n");
+        fprintf(stderr, "[FLETCHER_ALVEO] Error: platformCopyDeviceToHost: xrtBOSync.\n");
         return FLETCHER_STATUS_ERROR;
     }
-    rc = xrtBOSync(buffer->handle, XCL_BO_SYNC_BO_FROM_DEVICE, size, device_source-buffer->device_address);
+    rc = xrtBORead(buffer->handle, host_destination, size, device_source-buffer->device_address);
     if (rc != 0) {
-        fprintf(stderr, "[FLETCHER_ALVEO] Error: platformCopyHostToDevice: xrtBOSync.\n");
+        fprintf(stderr, "[FLETCHER_ALVEO] Error: platformCopyDeviceToHost: xrtBORead.\n");
         return FLETCHER_STATUS_ERROR;
     }
 

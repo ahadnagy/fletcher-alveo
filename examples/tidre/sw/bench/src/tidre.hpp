@@ -21,6 +21,12 @@ namespace tidre {
  */
 #define TIDRE_CHECK_STATUS(x) do { auto _stat = x; if (!_stat.ok()) return _stat; } while (0)
 
+
+/**
+ * The size of the buffer allocated on the device for indices.
+ */
+#define OUTPUT_DEVICE_BUFFER_SIZE 65535
+
 /**
  * Shorthand for timestamps returned by time_get().
  */
@@ -162,9 +168,9 @@ class Tidre {
       TIDRE_CHECK_STATUS(fletcher::Platform::Make(platformName, &platform));
     }
      platform_init config{
-      1,                                                    // Device ID
+      0,                                                    // Device ID
       FL_TR_DEVICE_DMA,                                     // Data transfer mechanism
-      "./fletcher.hw.xilinx_u280_xdma_201920_3.xclbin", // Kernel xclbin
+      "./fletcher.hw_emu.xilinx_u280_xdma_201920_3.xclbin", // Kernel xclbin
       "krnl_fletcher_rtl:{krnl_fletcher_rtl_1}",            // Kernel name
       32                                                     // Kernel memory bank ID
   };
@@ -194,8 +200,8 @@ class Tidre {
    * @return Whether the MMIO write was successful.
    */
   fletcher::Status WriteMMIO(const Mmio &mmio) {
-    for (size_t i = 4; i < sizeof(Mmio)/4; i++) {
-      TIDRE_CHECK_STATUS(platform->WriteMMIO(i, *((const uint32_t*)&mmio) + i));
+    for (size_t i = 4; i < (sizeof(Mmio) - sizeof(MmioResult)*NKERNEL)/4; i++) {
+      TIDRE_CHECK_STATUS(platform->WriteMMIO(i, *(((const uint32_t*)&mmio) + i)));
     }
     return fletcher::Status::OK();
   }
@@ -226,10 +232,10 @@ class Tidre {
         std::cout << "  input @ " << std::hex << m.buf_in[i].value << " (val)";
         std::cout << "and " << m.buf_in[i].offset << std::dec << " (offs), ";
         std::cout << "from " << m.rb_in[i].firstidx << " to " << m.rb_in[i].lastidx << std::endl;
-        std::cout << "  output @ " << std::hex << m.buf_out[i].value << std::dec << ", ";
-        std::cout << "from " << m.rb_out[i].firstidx << " to " << m.rb_out[i].lastidx << ", ";
+        //std::cout << "  output @ " << std::hex << m.buf_out[i].value << std::dec << ", ";
+        //std::cout << "from " << m.rb_out[i].firstidx << " to " << m.rb_out[i].lastidx << ", ";
         std::cout << "last wrote " << m.result[i].nmatch << std::endl;
-        std::cout << "  " << m.result[i].nerror << " decode errors" << std::endl;
+        //std::cout << "  " << m.result[i].nerror << " decode errors" << std::endl;
       }
     }
     return fletcher::Status::OK();
@@ -362,6 +368,7 @@ class Tidre {
     auto *offs_buf = (const uint32_t*)in_offs;
     auto *data_buf = (const uint8_t*)in_data;
     auto *out_buf = (uint8_t*)out_ptr;
+    
 
     // Ensure that we can read MMIO.
     uint32_t status = 0xDEADBEEF;
@@ -376,12 +383,16 @@ class Tidre {
     double kernel_wait_time = 0.0;
 
     // MMIO shadow buffers.
-    Mmio mmio_init;
-    memset(&mmio_init, 0, sizeof(Mmio));
+    
+    Mmio m_cur;
+    Mmio m_next;
+      
+    memset(&m_cur, 0, sizeof(Mmio));
+    memset(&m_next, 0, sizeof(Mmio));
+    
 
     for (size_t beat = 0; beat <= numPipelineBeats; beat++) {
-      Mmio *m_cur = &mmio_init;
-      Mmio *m_next = &mmio_init;
+      
 
       // Preparation for next beat.
       if (beat < numPipelineBeats) {
@@ -392,9 +403,6 @@ class Tidre {
         size_t start = (in_nrows * beat) / numPipelineBeats;
         size_t end = (in_nrows * (beat + 1)) / numPipelineBeats;
         if (verbose) std::cout << "  start " << start << ", end " << end << std::endl;
-
-
-        
         
 
         // Upload offset buffer for next beat.
@@ -418,15 +426,22 @@ class Tidre {
         
         TIDRE_CHECK_STATUS(platform->PrepareHostBuffer((uint8_t*)data_part_src, &data_device_addr, data_part_size, &alloced));
         
+        da_t output_buff_device_addr;
+        
+        TIDRE_CHECK_STATUS(platform->DeviceMalloc(&output_buff_device_addr, OUTPUT_DEVICE_BUFFER_SIZE));
+        
 
         // Compute MMIO config for next beat.
         for (size_t k = 0; k < numKernelsToUse; k++) {
           end = (in_nrows * (beat * numKernelsToUse + k + 1)) / (numPipelineBeats * numKernelsToUse);    
-          m_next->buf_in[k].offset = offs_device_addr;
-          m_next->buf_in[k].value = data_device_addr;
-          m_next->rb_in[k].firstidx = start;
-          m_next->rb_in[k].lastidx = end;
-                    
+          m_next.buf_in[k].offset = offs_device_addr;
+          m_next.buf_in[k].value = data_device_addr;
+          m_next.rb_in[k].firstidx = start;
+          m_next.rb_in[k].lastidx = end;
+          m_next.buf_out[k].value = output_buff_device_addr;
+          
+          printf("Write: %d\n", output_buff_device_addr);
+          
           start = end;
         }
         
@@ -444,7 +459,7 @@ class Tidre {
 
         // Read back MMIO from current beat.
         if (verbose > 1) TIDRE_CHECK_STATUS(DumpMMIO(true));
-        TIDRE_CHECK_STATUS(ReadMMIO(m_cur));
+        TIDRE_CHECK_STATUS(ReadMMIO(&m_cur));
 
       }
 
@@ -453,7 +468,7 @@ class Tidre {
         if (verbose) std::cout << "strt beat " << beat+1 << std::endl;
 
         // Configure kernel.
-        TIDRE_CHECK_STATUS(WriteMMIO(*m_next));
+        TIDRE_CHECK_STATUS(WriteMMIO(m_next));
         if (verbose > 1) TIDRE_CHECK_STATUS(DumpMMIO(true));
 
         // Start execution.
@@ -467,8 +482,16 @@ class Tidre {
         for (size_t k = 0; k < numKernelsToUse; k++) {
 
           // Accumulate counters.
-          nmatch_accum += m_cur->result[k].nmatch;
-          nerror_accum += m_cur->result[k].nerror;
+          nmatch_accum += m_cur.result[k].nmatch;
+          nerror_accum += m_cur.result[k].nerror;
+          
+          // Pull index output data if there is still room in the buffer.
+          if (out_size) {
+            size_t size = m_cur.result[k].nmatch * 4;
+            TIDRE_CHECK_STATUS(platform->CopyDeviceToHost(m_cur.buf_out[k].value, out_buf, size));
+                        out_size -= size;
+            out_buf += size;
+          }
 
         }
       }
@@ -529,6 +552,8 @@ class Tidre {
     // Construct result buffer.
     size_t result_size = num_records * 4;
     auto result_buf = (uint32_t*)malloc(result_size);
+    
+    
 
     // Run the kernel.
     std::cout << "Running kernel..." << std::endl;
@@ -552,6 +577,8 @@ class Tidre {
       }
     }
     std::cout << std::endl;
+    
+    
 
     free(offs_buf);
     free(data_buf);

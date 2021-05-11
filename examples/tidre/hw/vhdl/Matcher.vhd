@@ -105,22 +105,7 @@ entity Matcher is
 
     -- Outgoing match stream for one-string-per-cycle systems. match indicates
     -- which of the following regexs matched:
-    --  - 0: /.*[bB][iI][rR][dD].*/
-    --  - 1: /.*[bB][uU][nN][nN][yY].*/
-    --  - 2: /.*[cC][aA][tT].*/
-    --  - 3: /.*[dD][oO][gG].*/
-    --  - 4: /.*[fF][eE][rR][rR][eE][tT].*/
-    --  - 5: /.*[fF][iI][sS][hH].*/
-    --  - 6: /.*[gG][eE][rR][bB][iI][lL].*/
-    --  - 7: /.*[hH][aA][mM][sS][tT][eE][rR].*/
-    --  - 8: /.*[hH][oO][rR][sS][eE].*/
-    --  - 9: /.*[kK][iI][tT][tT][eE][nN].*/
-    --  - 10: /.*[lL][iI][zZ][aA][rR][dD].*/
-    --  - 11: /.*[mM][oO][uU][sS][eE].*/
-    --  - 12: /.*[pP][uU][pP][pP][yY].*/
-    --  - 13: /.*[rR][aA][bB][bB][iI][tT].*/
-    --  - 14: /.*[rR][aA][tT].*/
-    --  - 15: /.*[tT][uU][rR][tT][lL][eE].*/
+    --  - 0: /.*[tT][aA][xX][iI].*/
     -- error indicates that a UTF-8 decoding error occured. Only the following
     -- decode errors are detected:
     --  - multi-byte sequence interrupted by last flag or a new sequence
@@ -134,12 +119,12 @@ entity Matcher is
     --  - code points 0x10FFFF to 0x13FFFF (these are out of range, at least
     --    at the time of writing)
     --  - overlong sequences which are not apparent from the first byte
-    out_match                   : out std_logic_vector(15 downto 0);
+    out_match                   : out std_logic_vector(0 downto 0);
     out_error                   : out std_logic;
 
     -- Outgoing match stream for multiple-string-per-cycle systems.
     out_xmask                   : out std_logic_vector(BPC-1 downto 0);
-    out_xmatch                  : out std_logic_vector(BPC*16-1 downto 0);
+    out_xmatch                  : out std_logic_vector(BPC*1-1 downto 0);
     out_xerror                  : out std_logic_vector(BPC-1 downto 0)
 
   );
@@ -156,7 +141,7 @@ architecture Behavioral of Matcher is
   ;
 
   -- Number of regular expressions matched by this unit.
-  constant NUM_RE               : natural := 16;
+  constant NUM_RE               : natural := 1;
 
   -- NOTE: in the records below, the unusual indentation implies a "validity"
   -- hierarchy; indented signals are valid iff the signal before the indented
@@ -583,47 +568,13 @@ architecture Behavioral of Matcher is
     -- range of code points that does not cross a 64-CP boundary.
     valid                       : std_logic;
       b00001f01t01              : std_logic; -- A
-      b00001f02t02              : std_logic; -- B
-      b00001f03t03              : std_logic; -- C
-      b00001f04t04              : std_logic; -- D
-      b00001f05t05              : std_logic; -- E
-      b00001f06t06              : std_logic; -- F
-      b00001f07t07              : std_logic; -- G
-      b00001f10t10              : std_logic; -- H
       b00001f11t11              : std_logic; -- I
-      b00001f13t13              : std_logic; -- K
-      b00001f14t14              : std_logic; -- L
-      b00001f15t15              : std_logic; -- M
-      b00001f16t16              : std_logic; -- N
-      b00001f17t17              : std_logic; -- O
-      b00001f20t20              : std_logic; -- P
-      b00001f22t22              : std_logic; -- R
-      b00001f23t23              : std_logic; -- S
       b00001f24t24              : std_logic; -- T
-      b00001f25t25              : std_logic; -- U
-      b00001f31t31              : std_logic; -- Y
-      b00001f32t32              : std_logic; -- Z
+      b00001f30t30              : std_logic; -- X
       b00001f41t41              : std_logic; -- a
-      b00001f42t42              : std_logic; -- b
-      b00001f43t43              : std_logic; -- c
-      b00001f44t44              : std_logic; -- d
-      b00001f45t45              : std_logic; -- e
-      b00001f46t46              : std_logic; -- f
-      b00001f47t47              : std_logic; -- g
-      b00001f50t50              : std_logic; -- h
       b00001f51t51              : std_logic; -- i
-      b00001f53t53              : std_logic; -- k
-      b00001f54t54              : std_logic; -- l
-      b00001f55t55              : std_logic; -- m
-      b00001f56t56              : std_logic; -- n
-      b00001f57t57              : std_logic; -- o
-      b00001f60t60              : std_logic; -- p
-      b00001f62t62              : std_logic; -- r
-      b00001f63t63              : std_logic; -- s
       b00001f64t64              : std_logic; -- t
-      b00001f65t65              : std_logic; -- u
-      b00001f71t71              : std_logic; -- y
-      b00001f72t72              : std_logic; -- z
+      b00001f70t70              : std_logic; -- x
 
     -- Copy of s23.last/error.
     last                        : std_logic;
@@ -652,47 +603,13 @@ architecture Behavioral of Matcher is
     -- Pass through control signals and decode range signals.
     o.valid         := i.valid;
     o.b00001f01t01  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0( 0) and not i.th0( 1); -- A
-    o.b00001f02t02  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0( 1) and not i.th0( 2); -- B
-    o.b00001f03t03  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0( 2) and not i.th0( 3); -- C
-    o.b00001f04t04  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0( 3) and not i.th0( 4); -- D
-    o.b00001f05t05  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0( 4) and not i.th0( 5); -- E
-    o.b00001f06t06  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0( 5) and not i.th0( 6); -- F
-    o.b00001f07t07  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0( 6) and not i.th0( 7); -- G
-    o.b00001f10t10  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0( 7) and not i.th0( 8); -- H
     o.b00001f11t11  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0( 8) and not i.th0( 9); -- I
-    o.b00001f13t13  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(10) and not i.th0(11); -- K
-    o.b00001f14t14  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(11) and not i.th0(12); -- L
-    o.b00001f15t15  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(12) and not i.th0(13); -- M
-    o.b00001f16t16  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(13) and not i.th0(14); -- N
-    o.b00001f17t17  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(14) and not i.th0(15); -- O
-    o.b00001f20t20  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(15) and not i.th0(16); -- P
-    o.b00001f22t22  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(17) and not i.th0(18); -- R
-    o.b00001f23t23  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(18) and not i.th0(19); -- S
     o.b00001f24t24  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(19) and not i.th0(20); -- T
-    o.b00001f25t25  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(20) and not i.th0(21); -- U
-    o.b00001f31t31  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(24) and not i.th0(25); -- Y
-    o.b00001f32t32  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(25) and not i.th0(26); -- Z
+    o.b00001f30t30  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(23) and not i.th0(24); -- X
     o.b00001f41t41  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(32) and not i.th0(33); -- a
-    o.b00001f42t42  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(33) and not i.th0(34); -- b
-    o.b00001f43t43  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(34) and not i.th0(35); -- c
-    o.b00001f44t44  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(35) and not i.th0(36); -- d
-    o.b00001f45t45  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(36) and not i.th0(37); -- e
-    o.b00001f46t46  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(37) and not i.th0(38); -- f
-    o.b00001f47t47  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(38) and not i.th0(39); -- g
-    o.b00001f50t50  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(39) and not i.th0(40); -- h
     o.b00001f51t51  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(40) and not i.th0(41); -- i
-    o.b00001f53t53  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(42) and not i.th0(43); -- k
-    o.b00001f54t54  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(43) and not i.th0(44); -- l
-    o.b00001f55t55  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(44) and not i.th0(45); -- m
-    o.b00001f56t56  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(45) and not i.th0(46); -- n
-    o.b00001f57t57  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(46) and not i.th0(47); -- o
-    o.b00001f60t60  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(47) and not i.th0(48); -- p
-    o.b00001f62t62  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(49) and not i.th0(50); -- r
-    o.b00001f63t63  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(50) and not i.th0(51); -- s
     o.b00001f64t64  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(51) and not i.th0(52); -- t
-    o.b00001f65t65  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(52) and not i.th0(53); -- u
-    o.b00001f71t71  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(56) and not i.th0(57); -- y
-    o.b00001f72t72  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(57) and not i.th0(58); -- z
+    o.b00001f70t70  := i.oh3( 0) and i.oh2( 0) and i.oh1( 1) and i.th0(55) and not i.th0(56); -- x
     o.last          := i.last;
     o.error         := i.error;
 
@@ -700,47 +617,13 @@ architecture Behavioral of Matcher is
     -- pragma translate_off
     if to_X01(o.valid) /= '1' then
       o.b00001f01t01 := 'U';
-      o.b00001f02t02 := 'U';
-      o.b00001f03t03 := 'U';
-      o.b00001f04t04 := 'U';
-      o.b00001f05t05 := 'U';
-      o.b00001f06t06 := 'U';
-      o.b00001f07t07 := 'U';
-      o.b00001f10t10 := 'U';
       o.b00001f11t11 := 'U';
-      o.b00001f13t13 := 'U';
-      o.b00001f14t14 := 'U';
-      o.b00001f15t15 := 'U';
-      o.b00001f16t16 := 'U';
-      o.b00001f17t17 := 'U';
-      o.b00001f20t20 := 'U';
-      o.b00001f22t22 := 'U';
-      o.b00001f23t23 := 'U';
       o.b00001f24t24 := 'U';
-      o.b00001f25t25 := 'U';
-      o.b00001f31t31 := 'U';
-      o.b00001f32t32 := 'U';
+      o.b00001f30t30 := 'U';
       o.b00001f41t41 := 'U';
-      o.b00001f42t42 := 'U';
-      o.b00001f43t43 := 'U';
-      o.b00001f44t44 := 'U';
-      o.b00001f45t45 := 'U';
-      o.b00001f46t46 := 'U';
-      o.b00001f47t47 := 'U';
-      o.b00001f50t50 := 'U';
       o.b00001f51t51 := 'U';
-      o.b00001f53t53 := 'U';
-      o.b00001f54t54 := 'U';
-      o.b00001f55t55 := 'U';
-      o.b00001f56t56 := 'U';
-      o.b00001f57t57 := 'U';
-      o.b00001f60t60 := 'U';
-      o.b00001f62t62 := 'U';
-      o.b00001f63t63 := 'U';
       o.b00001f64t64 := 'U';
-      o.b00001f65t65 := 'U';
-      o.b00001f71t71 := 'U';
-      o.b00001f72t72 := 'U';
+      o.b00001f70t70 := 'U';
     end if;
     if to_X01(o.last) /= '1' then
       o.error := INVALID;
@@ -757,7 +640,7 @@ architecture Behavioral of Matcher is
     -- Code point range stream. Each flag signal represents a set of code
     -- points as used by a transition in the NFAEs.
     valid                       : std_logic;
-      match                     : std_logic_vector(20 downto 0);
+      match                     : std_logic_vector(3 downto 0);
 
     -- Copy of s23.last/error.
     last                        : std_logic;
@@ -784,27 +667,10 @@ architecture Behavioral of Matcher is
 
     -- Pass through control signals and decode range signals by default.
     o.valid       := i.valid;
-    o.match(  0)  := i.b00001f11t11 or i.b00001f51t51; -- [Ii]
-    o.match(  1)  := i.b00001f22t22 or i.b00001f62t62; -- [Rr]
-    o.match(  2)  := i.b00001f02t02 or i.b00001f42t42; -- [Bb]
-    o.match(  3)  := i.b00001f04t04 or i.b00001f44t44; -- [Dd]
-    o.match(  4)  := i.b00001f16t16 or i.b00001f56t56; -- [Nn]
-    o.match(  5)  := i.b00001f31t31 or i.b00001f71t71; -- [Yy]
-    o.match(  6)  := i.b00001f25t25 or i.b00001f65t65; -- [Uu]
-    o.match(  7)  := i.b00001f03t03 or i.b00001f43t43; -- [Cc]
-    o.match(  8)  := i.b00001f24t24 or i.b00001f64t64; -- [Tt]
-    o.match(  9)  := i.b00001f01t01 or i.b00001f41t41; -- [Aa]
-    o.match( 10)  := i.b00001f07t07 or i.b00001f47t47; -- [Gg]
-    o.match( 11)  := i.b00001f17t17 or i.b00001f57t57; -- [Oo]
-    o.match( 12)  := i.b00001f05t05 or i.b00001f45t45; -- [Ee]
-    o.match( 13)  := i.b00001f06t06 or i.b00001f46t46; -- [Ff]
-    o.match( 14)  := i.b00001f10t10 or i.b00001f50t50; -- [Hh]
-    o.match( 15)  := i.b00001f23t23 or i.b00001f63t63; -- [Ss]
-    o.match( 16)  := i.b00001f14t14 or i.b00001f54t54; -- [Ll]
-    o.match( 17)  := i.b00001f15t15 or i.b00001f55t55; -- [Mm]
-    o.match( 18)  := i.b00001f13t13 or i.b00001f53t53; -- [Kk]
-    o.match( 19)  := i.b00001f32t32 or i.b00001f72t72; -- [Zz]
-    o.match( 20)  := i.b00001f20t20 or i.b00001f60t60; -- [Pp]
+    o.match(  0)  := i.b00001f24t24 or i.b00001f64t64; -- [Tt]
+    o.match(  1)  := i.b00001f11t11 or i.b00001f51t51; -- [Ii]
+    o.match(  2)  := i.b00001f01t01 or i.b00001f41t41; -- [Aa]
+    o.match(  3)  := i.b00001f30t30 or i.b00001f70t70; -- [Xx]
     o.last        := i.last;
     o.error       := i.error;
 
@@ -825,11 +691,11 @@ architecture Behavioral of Matcher is
   ------------------------------------------------------------------------------
   -- There is one bit for every NFAE state, which indicates whether the NFAE
   -- can be in that state.
-  subtype s5s_type is std_logic_vector(95 downto 0);
+  subtype s5s_type is std_logic_vector(4 downto 0);
 
   type s5s_array is array (natural range <>) of s5s_type;
 
-  constant S5S_RESET            : s5s_type := "100000001000010000000010001000100000000100000000010000010000000010100000100000001100000001000010";
+  constant S5S_RESET            : s5s_type := "00100";
 
   ------------------------------------------------------------------------------
   -- Stage 5 output record
@@ -872,139 +738,18 @@ architecture Behavioral of Matcher is
     -- Transition to the next state if there is an incoming character.
     if i.valid = '1' then
       si := s;
-      s(  0) := (si(  3) and i.match(  0));
-      s(  1) := (si(  1) and '1');
-      s(  2) := (si(  0) and i.match(  1));
-      s(  3) := (si(  1) and i.match(  2));
-      s(  4) := (si(  2) and i.match(  3))
-             or (si(  4) and '1');
-      s(  5) := (si( 10) and i.match(  4));
-      s(  6) := (si(  6) and '1');
-      s(  7) := (si(  6) and i.match(  2));
-      s(  8) := (si(  8) and '1')
-             or (si(  9) and i.match(  5));
-      s(  9) := (si(  5) and i.match(  4));
-      s( 10) := (si(  7) and i.match(  6));
-      s( 11) := (si( 14) and i.match(  7));
-      s( 12) := (si( 12) and '1')
-             or (si( 13) and i.match(  8));
-      s( 13) := (si( 11) and i.match(  9));
-      s( 14) := (si( 14) and '1');
-      s( 15) := (si( 15) and '1');
-      s( 16) := (si( 18) and i.match( 10))
-             or (si( 16) and '1');
-      s( 17) := (si( 15) and i.match(  3));
-      s( 18) := (si( 17) and i.match( 11));
-      s( 19) := (si( 20) and i.match( 12));
-      s( 20) := (si( 23) and i.match( 13));
-      s( 21) := (si( 19) and i.match(  1));
-      s( 22) := (si( 22) and '1')
-             or (si( 24) and i.match(  8));
-      s( 23) := (si( 23) and '1');
-      s( 24) := (si( 25) and i.match( 12));
-      s( 25) := (si( 21) and i.match(  1));
-      s( 26) := (si( 30) and i.match(  0));
-      s( 27) := (si( 28) and i.match( 14))
-             or (si( 27) and '1');
-      s( 28) := (si( 26) and i.match( 15));
-      s( 29) := (si( 29) and '1');
-      s( 30) := (si( 29) and i.match( 13));
-      s( 31) := (si( 31) and '1');
-      s( 32) := (si( 34) and i.match(  0));
-      s( 33) := (si( 36) and i.match(  1));
-      s( 34) := (si( 33) and i.match(  2));
-      s( 35) := (si( 31) and i.match( 10));
-      s( 36) := (si( 35) and i.match( 12));
-      s( 37) := (si( 32) and i.match( 16))
-             or (si( 37) and '1');
-      s( 38) := (si( 41) and i.match( 12));
-      s( 39) := (si( 44) and i.match(  9));
-      s( 40) := (si( 40) and '1');
-      s( 41) := (si( 42) and i.match(  8));
-      s( 42) := (si( 45) and i.match( 15));
-      s( 43) := (si( 43) and '1')
-             or (si( 38) and i.match(  1));
-      s( 44) := (si( 40) and i.match( 14));
-      s( 45) := (si( 39) and i.match( 17));
-      s( 46) := (si( 46) and '1');
-      s( 47) := (si( 47) and '1')
-             or (si( 49) and i.match( 12));
-      s( 48) := (si( 51) and i.match(  1));
-      s( 49) := (si( 48) and i.match( 15));
-      s( 50) := (si( 46) and i.match( 14));
-      s( 51) := (si( 50) and i.match( 11));
-      s( 52) := (si( 54) and i.match( 12));
-      s( 53) := (si( 57) and i.match(  8));
-      s( 54) := (si( 53) and i.match(  8));
-      s( 55) := (si( 55) and '1')
-             or (si( 52) and i.match(  4));
-      s( 56) := (si( 56) and '1');
-      s( 57) := (si( 58) and i.match(  0));
-      s( 58) := (si( 56) and i.match( 18));
-      s( 59) := (si( 61) and i.match(  0));
-      s( 60) := (si( 59) and i.match( 19));
-      s( 61) := (si( 65) and i.match( 16));
-      s( 62) := (si( 62) and '1')
-             or (si( 63) and i.match(  3));
-      s( 63) := (si( 64) and i.match(  1));
-      s( 64) := (si( 60) and i.match(  9));
-      s( 65) := (si( 65) and '1');
-      s( 66) := (si( 68) and i.match( 11));
-      s( 67) := (si( 71) and i.match( 15));
-      s( 68) := (si( 69) and i.match( 17));
-      s( 69) := (si( 69) and '1');
-      s( 70) := (si( 67) and i.match( 12))
-             or (si( 70) and '1');
-      s( 71) := (si( 66) and i.match(  6));
-      s( 72) := (si( 72) and '1')
-             or (si( 75) and i.match(  5));
-      s( 73) := (si( 73) and '1');
-      s( 74) := (si( 77) and i.match(  6));
-      s( 75) := (si( 76) and i.match( 20));
-      s( 76) := (si( 74) and i.match( 20));
-      s( 77) := (si( 73) and i.match( 20));
-      s( 78) := (si( 79) and i.match(  2));
-      s( 79) := (si( 83) and i.match(  9));
-      s( 80) := (si( 84) and i.match(  0));
-      s( 81) := (si( 81) and '1')
-             or (si( 80) and i.match(  8));
-      s( 82) := (si( 82) and '1');
-      s( 83) := (si( 82) and i.match(  1));
-      s( 84) := (si( 78) and i.match(  2));
-      s( 85) := (si( 86) and i.match(  9));
-      s( 86) := (si( 87) and i.match(  1));
-      s( 87) := (si( 87) and '1');
-      s( 88) := (si( 85) and i.match(  8))
-             or (si( 88) and '1');
-      s( 89) := (si( 93) and i.match( 16));
-      s( 90) := (si( 95) and i.match(  8));
-      s( 91) := (si( 89) and i.match( 12))
-             or (si( 91) and '1');
-      s( 92) := (si( 94) and i.match(  1));
-      s( 93) := (si( 92) and i.match(  8));
-      s( 94) := (si( 90) and i.match(  6));
-      s( 95) := (si( 95) and '1');
+      s(  0) := (si(  2) and i.match(  0));
+      s(  1) := (si(  1) and '1')
+             or (si(  4) and i.match(  1));
+      s(  2) := (si(  2) and '1');
+      s(  3) := (si(  0) and i.match(  2));
+      s(  4) := (si(  3) and i.match(  3));
     end if;
 
     -- Save whether the next state will be a final state to determine whether
     -- a regex is matching or not. The timing of this corresponds to the last
     -- signal.
-    o.match(0) := s(  4);
-    o.match(1) := s(  8);
-    o.match(2) := s( 12);
-    o.match(3) := s( 16);
-    o.match(4) := s( 22);
-    o.match(5) := s( 27);
-    o.match(6) := s( 37);
-    o.match(7) := s( 43);
-    o.match(8) := s( 47);
-    o.match(9) := s( 55);
-    o.match(10) := s( 62);
-    o.match(11) := s( 70);
-    o.match(12) := s( 72);
-    o.match(13) := s( 81);
-    o.match(14) := s( 88);
-    o.match(15) := s( 91);
+    o.match(0) := s(  1);
 
     -- Reset the state when we're resetting or receiving the last character.
     if reset = '1' or i.last = '1' then
@@ -1210,9 +955,9 @@ begin
 
     -- Assign the record signal.
     for i in 0 to BPC-1 loop
-        inp(i).valid <= in_valid and in_mask(i);
-        inp(i).data <= in_data(8*i+7 downto 8*i);
-        inp(i).last <= in_valid and in_xlast_v(i);
+      inp(i).valid <= in_valid and in_mask(i);
+      inp(i).data <= in_data(8*i+7 downto 8*i);
+      inp(i).last <= in_valid and in_xlast_v(i);
     end loop;
 
   end process;

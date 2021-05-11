@@ -140,35 +140,48 @@ architecture Behavorial of AxiTop is
       BUS_BURST_MAX_LEN  : integer := 16
     );
     port (
-      bcd_clk           : in  std_logic;
-      bcd_reset         : in  std_logic;
-      kcd_clk           : in  std_logic;
-      kcd_reset         : in  std_logic;
-      mmio_awvalid      : in  std_logic;
-      mmio_awready      : out std_logic;
-      mmio_awaddr       : in  std_logic_vector(31 downto 0);
-      mmio_wvalid       : in  std_logic;
-      mmio_wready       : out std_logic;
-      mmio_wdata        : in  std_logic_vector(31 downto 0);
-      mmio_wstrb        : in  std_logic_vector(3 downto 0);
-      mmio_bvalid       : out std_logic;
-      mmio_bready       : in  std_logic;
-      mmio_bresp        : out std_logic_vector(1 downto 0);
-      mmio_arvalid      : in  std_logic;
-      mmio_arready      : out std_logic;
-      mmio_araddr       : in  std_logic_vector(31 downto 0);
-      mmio_rvalid       : out std_logic;
-      mmio_rready       : in  std_logic;
-      mmio_rdata        : out std_logic_vector(31 downto 0);
-      mmio_rresp        : out std_logic_vector(1 downto 0);
-      rd_mst_rreq_valid : out std_logic;
-      rd_mst_rreq_ready : in  std_logic;
-      rd_mst_rreq_addr  : out std_logic_vector(BUS_ADDR_WIDTH-1 downto 0);
-      rd_mst_rreq_len   : out std_logic_vector(BUS_LEN_WIDTH-1 downto 0);
-      rd_mst_rdat_valid : in  std_logic;
-      rd_mst_rdat_ready : out std_logic;
-      rd_mst_rdat_data  : in  std_logic_vector(BUS_DATA_WIDTH-1 downto 0);
-      rd_mst_rdat_last  : in  std_logic
+      bcd_clk            : in  std_logic;
+      bcd_reset          : in  std_logic;
+      kcd_clk            : in  std_logic;
+      kcd_reset          : in  std_logic;
+      mmio_awvalid       : in  std_logic;
+      mmio_awready       : out std_logic;
+      mmio_awaddr        : in  std_logic_vector(31 downto 0);
+      mmio_wvalid        : in  std_logic;
+      mmio_wready        : out std_logic;
+      mmio_wdata         : in  std_logic_vector(31 downto 0);
+      mmio_wstrb         : in  std_logic_vector(3 downto 0);
+      mmio_bvalid        : out std_logic;
+      mmio_bready        : in  std_logic;
+      mmio_bresp         : out std_logic_vector(1 downto 0);
+      mmio_arvalid       : in  std_logic;
+      mmio_arready       : out std_logic;
+      mmio_araddr        : in  std_logic_vector(31 downto 0);
+      mmio_rvalid        : out std_logic;
+      mmio_rready        : in  std_logic;
+      mmio_rdata         : out std_logic_vector(31 downto 0);
+      mmio_rresp         : out std_logic_vector(1 downto 0);
+      rd_mst_rreq_valid  : out std_logic;
+      rd_mst_rreq_ready  : in  std_logic;
+      rd_mst_rreq_addr   : out std_logic_vector(BUS_ADDR_WIDTH-1 downto 0);
+      rd_mst_rreq_len    : out std_logic_vector(BUS_LEN_WIDTH-1 downto 0);
+      rd_mst_rdat_valid  : in  std_logic;
+      rd_mst_rdat_ready  : out std_logic;
+      rd_mst_rdat_data   : in  std_logic_vector(BUS_DATA_WIDTH-1 downto 0);
+      rd_mst_rdat_last   : in  std_logic;
+      wr_mst_wreq_valid  : out std_logic;
+      wr_mst_wreq_ready  : in  std_logic;
+      wr_mst_wreq_addr   : out std_logic_vector(BUS_ADDR_WIDTH-1 downto 0);
+      wr_mst_wreq_len    : out std_logic_vector(BUS_LEN_WIDTH-1 downto 0);
+      wr_mst_wreq_last   : out std_logic;
+      wr_mst_wdat_valid  : out std_logic;
+      wr_mst_wdat_ready  : in  std_logic;
+      wr_mst_wdat_data   : out std_logic_vector(BUS_DATA_WIDTH-1 downto 0);
+      wr_mst_wdat_strobe : out std_logic_vector(BUS_DATA_WIDTH/8-1 downto 0);
+      wr_mst_wdat_last   : out std_logic;
+      wr_mst_wrep_valid  : in  std_logic;
+      wr_mst_wrep_ready  : out std_logic;
+      wr_mst_wrep_ok     : in  std_logic
     );
   end component;
   -----------------------------------------------------------------------------
@@ -232,7 +245,19 @@ begin
       rd_mst_rdat_ready         => rd_mst_rdat_ready,
       rd_mst_rdat_data          => rd_mst_rdat_data,
       rd_mst_rdat_last          => rd_mst_rdat_last,
-
+      wr_mst_wreq_valid         => wr_mst_wreq_valid,
+      wr_mst_wreq_ready         => wr_mst_wreq_ready,
+      wr_mst_wreq_addr          => wr_mst_wreq_addr,
+      wr_mst_wreq_len           => wr_mst_wreq_len,
+      wr_mst_wreq_last          => wr_mst_wreq_last,
+      wr_mst_wdat_valid         => wr_mst_wdat_valid,
+      wr_mst_wdat_ready         => wr_mst_wdat_ready,
+      wr_mst_wdat_data          => wr_mst_wdat_data,
+      wr_mst_wdat_strobe        => wr_mst_wdat_strobe,
+      wr_mst_wdat_last          => wr_mst_wdat_last,
+      wr_mst_wrep_valid         => wr_mst_wrep_valid,
+      wr_mst_wrep_ready         => wr_mst_wrep_ready,
+      wr_mst_wrep_ok            => wr_mst_wrep_ok,
       mmio_awvalid              => s_axi_awvalid,
       mmio_awready              => s_axi_awready,
       mmio_awaddr               => s_axi_awaddr,
@@ -292,6 +317,55 @@ begin
       m_axi_rvalid              => m_axi_rvalid,
       m_axi_rready              => m_axi_rready
     );
-
+  -----------------------------------------------------------------------------
+  -- AXI write converter
+  -----------------------------------------------------------------------------
+  -- Buffering bursts is disabled (ENABLE_FIFO=false) because BufferWriters
+  -- are already able to absorb full bursts.
+  axi_write_conv_inst: AxiWriteConverter
+    generic map (
+      ADDR_WIDTH                => BUS_ADDR_WIDTH,
+      MASTER_DATA_WIDTH         => BUS_DATA_WIDTH,
+      MASTER_LEN_WIDTH          => BUS_LEN_WIDTH,
+      SLAVE_DATA_WIDTH          => BUS_DATA_WIDTH,
+      SLAVE_LEN_WIDTH           => BUS_LEN_WIDTH,
+      SLAVE_MAX_BURST           => BUS_BURST_MAX_LEN,
+      ENABLE_FIFO               => false,
+      SLV_REQ_SLICE_DEPTH       => 0,
+      SLV_DAT_SLICE_DEPTH       => 0,
+      MST_REQ_SLICE_DEPTH       => 0,
+      MST_DAT_SLICE_DEPTH       => 0
+    )
+    port map (
+      clk                       => bcd_clk,
+      reset_n                   => bcd_reset_n,
+      slv_bus_wreq_addr         => wr_mst_wreq_addr,
+      slv_bus_wreq_len          => wr_mst_wreq_len,
+      slv_bus_wreq_valid        => wr_mst_wreq_valid,
+      slv_bus_wreq_ready        => wr_mst_wreq_ready,
+      slv_bus_wreq_last         => wr_mst_wreq_last,
+      slv_bus_wdat_data         => wr_mst_wdat_data,
+      slv_bus_wdat_strobe       => wr_mst_wdat_strobe,
+      slv_bus_wdat_last         => wr_mst_wdat_last,
+      slv_bus_wdat_valid        => wr_mst_wdat_valid,
+      slv_bus_wdat_ready        => wr_mst_wdat_ready,
+      slv_bus_wrep_valid        => wr_mst_wrep_valid,
+      slv_bus_wrep_ready        => wr_mst_wrep_ready,
+      slv_bus_wrep_ok           => wr_mst_wrep_ok,
+      m_axi_awaddr              => m_axi_awaddr,
+      m_axi_awlen               => m_axi_awlen,
+      m_axi_awvalid             => m_axi_awvalid,
+      m_axi_awready             => m_axi_awready,
+      m_axi_awsize              => m_axi_awsize,
+      m_axi_awuser              => m_axi_awuser,
+      m_axi_wdata               => m_axi_wdata,
+      m_axi_wstrb               => m_axi_wstrb,
+      m_axi_wlast               => m_axi_wlast,
+      m_axi_wvalid              => m_axi_wvalid,
+      m_axi_wready              => m_axi_wready,
+      m_axi_bvalid              => m_axi_bvalid,
+      m_axi_bready              => m_axi_bready,
+      m_axi_bresp               => m_axi_bresp
+    );
 
 end architecture;

@@ -167,6 +167,134 @@ package mmio_pkg is
       f_rematch015_lastidx_data : out std_logic_vector(31 downto 0)
           := (others => '0');
 
+      -- Interface for field rematch000_taxi_firstidx: rematch000_taxi_firstidx.
+      f_rematch000_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch000_taxi_lastidx: rematch000_taxi_lastidx.
+      f_rematch000_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch001_taxi_firstidx: rematch001_taxi_firstidx.
+      f_rematch001_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch001_taxi_lastidx: rematch001_taxi_lastidx.
+      f_rematch001_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch002_taxi_firstidx: rematch002_taxi_firstidx.
+      f_rematch002_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch002_taxi_lastidx: rematch002_taxi_lastidx.
+      f_rematch002_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch003_taxi_firstidx: rematch003_taxi_firstidx.
+      f_rematch003_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch003_taxi_lastidx: rematch003_taxi_lastidx.
+      f_rematch003_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch004_taxi_firstidx: rematch004_taxi_firstidx.
+      f_rematch004_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch004_taxi_lastidx: rematch004_taxi_lastidx.
+      f_rematch004_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch005_taxi_firstidx: rematch005_taxi_firstidx.
+      f_rematch005_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch005_taxi_lastidx: rematch005_taxi_lastidx.
+      f_rematch005_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch006_taxi_firstidx: rematch006_taxi_firstidx.
+      f_rematch006_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch006_taxi_lastidx: rematch006_taxi_lastidx.
+      f_rematch006_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch007_taxi_firstidx: rematch007_taxi_firstidx.
+      f_rematch007_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch007_taxi_lastidx: rematch007_taxi_lastidx.
+      f_rematch007_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch008_taxi_firstidx: rematch008_taxi_firstidx.
+      f_rematch008_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch008_taxi_lastidx: rematch008_taxi_lastidx.
+      f_rematch008_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch009_taxi_firstidx: rematch009_taxi_firstidx.
+      f_rematch009_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch009_taxi_lastidx: rematch009_taxi_lastidx.
+      f_rematch009_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch010_taxi_firstidx: rematch010_taxi_firstidx.
+      f_rematch010_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch010_taxi_lastidx: rematch010_taxi_lastidx.
+      f_rematch010_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch011_taxi_firstidx: rematch011_taxi_firstidx.
+      f_rematch011_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch011_taxi_lastidx: rematch011_taxi_lastidx.
+      f_rematch011_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch012_taxi_firstidx: rematch012_taxi_firstidx.
+      f_rematch012_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch012_taxi_lastidx: rematch012_taxi_lastidx.
+      f_rematch012_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch013_taxi_firstidx: rematch013_taxi_firstidx.
+      f_rematch013_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch013_taxi_lastidx: rematch013_taxi_lastidx.
+      f_rematch013_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch014_taxi_firstidx: rematch014_taxi_firstidx.
+      f_rematch014_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch014_taxi_lastidx: rematch014_taxi_lastidx.
+      f_rematch014_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch015_taxi_firstidx: rematch015_taxi_firstidx.
+      f_rematch015_taxi_firstidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch015_taxi_lastidx: rematch015_taxi_lastidx.
+      f_rematch015_taxi_lastidx_data : out std_logic_vector(31 downto 0)
+          := (others => '0');
+
       -- Interface for field rematch000_in_offsets: rematch000_in_offsets.
       f_rematch000_in_offsets_data : out std_logic_vector(63 downto 0)
           := (others => '0');
@@ -295,72 +423,212 @@ package mmio_pkg is
       f_rematch015_in_values_data : out std_logic_vector(63 downto 0)
           := (others => '0');
 
-      -- Interface for field count_re_bird: count_re_bird.
-      f_count_re_bird_write_data : in std_logic_vector(31 downto 0)
+      -- Interface for field rematch000_taxi_out_values:
+      -- rematch000_taxi_out_values.
+      f_rematch000_taxi_out_values_data : out std_logic_vector(63 downto 0)
           := (others => '0');
 
-      -- Interface for field count_re_bunny: count_re_bunny.
-      f_count_re_bunny_write_data : in std_logic_vector(31 downto 0)
+      -- Interface for field rematch001_taxi_out_values:
+      -- rematch001_taxi_out_values.
+      f_rematch001_taxi_out_values_data : out std_logic_vector(63 downto 0)
           := (others => '0');
 
-      -- Interface for field count_re_cat: count_re_cat.
-      f_count_re_cat_write_data : in std_logic_vector(31 downto 0)
+      -- Interface for field rematch002_taxi_out_values:
+      -- rematch002_taxi_out_values.
+      f_rematch002_taxi_out_values_data : out std_logic_vector(63 downto 0)
           := (others => '0');
 
-      -- Interface for field count_re_dog: count_re_dog.
-      f_count_re_dog_write_data : in std_logic_vector(31 downto 0)
+      -- Interface for field rematch003_taxi_out_values:
+      -- rematch003_taxi_out_values.
+      f_rematch003_taxi_out_values_data : out std_logic_vector(63 downto 0)
           := (others => '0');
 
-      -- Interface for field count_re_ferret: count_re_ferret.
-      f_count_re_ferret_write_data : in std_logic_vector(31 downto 0)
+      -- Interface for field rematch004_taxi_out_values:
+      -- rematch004_taxi_out_values.
+      f_rematch004_taxi_out_values_data : out std_logic_vector(63 downto 0)
           := (others => '0');
 
-      -- Interface for field count_re_fish: count_re_fish.
-      f_count_re_fish_write_data : in std_logic_vector(31 downto 0)
+      -- Interface for field rematch005_taxi_out_values:
+      -- rematch005_taxi_out_values.
+      f_rematch005_taxi_out_values_data : out std_logic_vector(63 downto 0)
           := (others => '0');
 
-      -- Interface for field count_re_gerbil: count_re_gerbil.
-      f_count_re_gerbil_write_data : in std_logic_vector(31 downto 0)
+      -- Interface for field rematch006_taxi_out_values:
+      -- rematch006_taxi_out_values.
+      f_rematch006_taxi_out_values_data : out std_logic_vector(63 downto 0)
           := (others => '0');
 
-      -- Interface for field count_re_hamster: count_re_hamster.
-      f_count_re_hamster_write_data : in std_logic_vector(31 downto 0)
+      -- Interface for field rematch007_taxi_out_values:
+      -- rematch007_taxi_out_values.
+      f_rematch007_taxi_out_values_data : out std_logic_vector(63 downto 0)
           := (others => '0');
 
-      -- Interface for field count_re_horse: count_re_horse.
-      f_count_re_horse_write_data : in std_logic_vector(31 downto 0)
+      -- Interface for field rematch008_taxi_out_values:
+      -- rematch008_taxi_out_values.
+      f_rematch008_taxi_out_values_data : out std_logic_vector(63 downto 0)
           := (others => '0');
 
-      -- Interface for field count_re_kitten: count_re_kitten.
-      f_count_re_kitten_write_data : in std_logic_vector(31 downto 0)
+      -- Interface for field rematch009_taxi_out_values:
+      -- rematch009_taxi_out_values.
+      f_rematch009_taxi_out_values_data : out std_logic_vector(63 downto 0)
           := (others => '0');
 
-      -- Interface for field count_re_lizard: count_re_lizard.
-      f_count_re_lizard_write_data : in std_logic_vector(31 downto 0)
+      -- Interface for field rematch010_taxi_out_values:
+      -- rematch010_taxi_out_values.
+      f_rematch010_taxi_out_values_data : out std_logic_vector(63 downto 0)
           := (others => '0');
 
-      -- Interface for field count_re_mouse: count_re_mouse.
-      f_count_re_mouse_write_data : in std_logic_vector(31 downto 0)
+      -- Interface for field rematch011_taxi_out_values:
+      -- rematch011_taxi_out_values.
+      f_rematch011_taxi_out_values_data : out std_logic_vector(63 downto 0)
           := (others => '0');
 
-      -- Interface for field count_re_puppy: count_re_puppy.
-      f_count_re_puppy_write_data : in std_logic_vector(31 downto 0)
+      -- Interface for field rematch012_taxi_out_values:
+      -- rematch012_taxi_out_values.
+      f_rematch012_taxi_out_values_data : out std_logic_vector(63 downto 0)
           := (others => '0');
 
-      -- Interface for field count_re_rabbit: count_re_rabbit.
-      f_count_re_rabbit_write_data : in std_logic_vector(31 downto 0)
+      -- Interface for field rematch013_taxi_out_values:
+      -- rematch013_taxi_out_values.
+      f_rematch013_taxi_out_values_data : out std_logic_vector(63 downto 0)
           := (others => '0');
 
-      -- Interface for field count_re_rat: count_re_rat.
-      f_count_re_rat_write_data : in std_logic_vector(31 downto 0)
+      -- Interface for field rematch014_taxi_out_values:
+      -- rematch014_taxi_out_values.
+      f_rematch014_taxi_out_values_data : out std_logic_vector(63 downto 0)
           := (others => '0');
 
-      -- Interface for field count_re_turtle: count_re_turtle.
-      f_count_re_turtle_write_data : in std_logic_vector(31 downto 0)
+      -- Interface for field rematch015_taxi_out_values:
+      -- rematch015_taxi_out_values.
+      f_rematch015_taxi_out_values_data : out std_logic_vector(63 downto 0)
           := (others => '0');
 
-      -- Interface for field count_errors: count_errors.
-      f_count_errors_write_data : in std_logic_vector(31 downto 0)
+      -- Interface for field rematch000_taxi_count: rematch000_taxi_count.
+      f_rematch000_taxi_count_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch000_errors: rematch000_errors.
+      f_rematch000_errors_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch001_taxi_count: rematch001_taxi_count.
+      f_rematch001_taxi_count_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch001_errors: rematch001_errors.
+      f_rematch001_errors_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch002_taxi_count: rematch002_taxi_count.
+      f_rematch002_taxi_count_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch002_errors: rematch002_errors.
+      f_rematch002_errors_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch003_taxi_count: rematch003_taxi_count.
+      f_rematch003_taxi_count_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch003_errors: rematch003_errors.
+      f_rematch003_errors_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch004_taxi_count: rematch004_taxi_count.
+      f_rematch004_taxi_count_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch004_errors: rematch004_errors.
+      f_rematch004_errors_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch005_taxi_count: rematch005_taxi_count.
+      f_rematch005_taxi_count_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch005_errors: rematch005_errors.
+      f_rematch005_errors_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch006_taxi_count: rematch006_taxi_count.
+      f_rematch006_taxi_count_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch006_errors: rematch006_errors.
+      f_rematch006_errors_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch007_taxi_count: rematch007_taxi_count.
+      f_rematch007_taxi_count_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch007_errors: rematch007_errors.
+      f_rematch007_errors_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch008_taxi_count: rematch008_taxi_count.
+      f_rematch008_taxi_count_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch008_errors: rematch008_errors.
+      f_rematch008_errors_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch009_taxi_count: rematch009_taxi_count.
+      f_rematch009_taxi_count_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch009_errors: rematch009_errors.
+      f_rematch009_errors_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch010_taxi_count: rematch010_taxi_count.
+      f_rematch010_taxi_count_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch010_errors: rematch010_errors.
+      f_rematch010_errors_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch011_taxi_count: rematch011_taxi_count.
+      f_rematch011_taxi_count_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch011_errors: rematch011_errors.
+      f_rematch011_errors_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch012_taxi_count: rematch012_taxi_count.
+      f_rematch012_taxi_count_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch012_errors: rematch012_errors.
+      f_rematch012_errors_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch013_taxi_count: rematch013_taxi_count.
+      f_rematch013_taxi_count_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch013_errors: rematch013_errors.
+      f_rematch013_errors_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch014_taxi_count: rematch014_taxi_count.
+      f_rematch014_taxi_count_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch014_errors: rematch014_errors.
+      f_rematch014_errors_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch015_taxi_count: rematch015_taxi_count.
+      f_rematch015_taxi_count_write_data : in std_logic_vector(31 downto 0)
+          := (others => '0');
+
+      -- Interface for field rematch015_errors: rematch015_errors.
+      f_rematch015_errors_write_data : in std_logic_vector(31 downto 0)
           := (others => '0');
 
       -- Interface for field Profile_enable: Profile_enable.

@@ -83,19 +83,40 @@ int main(int argc, char **argv) {
   const auto *values = reinterpret_cast<const uint8_t *>(array->value_data()->data());
   std::cout << "Loaded dataset with " << num_rows << " row(s) and " << num_bytes << " data byte(s)." << std::endl;
   
+    // Unfortunately, when you're loading record batch files, the buffer pointers
+  // are not aligned to 64 bytes. That slows down the DMA transfers by about a
+  // factor 4. The code below reallocates the buffers with proper alignment.
+  // You can easily get rid of this by changing the true to false. Note that
+  // when buffers are allocated by Arrow (versus being pointers to a mmap'd
+  // record batch file), the buffers will already be aligned from the start.
+  if (true) {
+    int32_t *aligned_offsets = nullptr;
+    const size_t offsets_size = (num_rows + 1) * sizeof(uint32_t);
+    posix_memalign(reinterpret_cast<void**>(&aligned_offsets), 64, offsets_size);
+    memcpy(aligned_offsets, offsets, offsets_size);
+    offsets = aligned_offsets;
+
+    uint8_t *aligned_values = nullptr;
+    const size_t values_size = num_bytes;
+    posix_memalign(reinterpret_cast<void**>(&aligned_values), 64, values_size);
+    memcpy(aligned_values, values, values_size);
+    values = aligned_values;
+  }
+  
   // Make an output buffer that's large enough to handle the case where all
   // records match.
   uint32_t *matches = nullptr;
   const size_t matches_size = num_rows * sizeof(uint32_t);
   posix_memalign(reinterpret_cast<void**>(&matches), 64, matches_size);
   size_t num_matches = 0;
+  
 
   // Connect to the FPGA.
   std::shared_ptr<Tidre> t;
   auto tidre_status = Tidre::Make(
     &t, "alveo",
-    10, // Number of pipeline beats; tweakable, at least 1.
-    16  // Number of kernels to use; tweakable from 1 to 16.
+    1, // Number of pipeline beats; tweakable, at least 1.
+    1  // Number of kernels to use; tweakable from 1 to 16.
   );
   if (!tidre_status.ok()) {
     std::cerr << "Could not connect to FPGA: " << tidre_status.message << std::endl;
