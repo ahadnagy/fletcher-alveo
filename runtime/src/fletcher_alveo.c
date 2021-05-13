@@ -20,10 +20,10 @@ fstatus_t getBufferByDA(da_t device_address, device_buffer **device_buffer) {
     return FLETCHER_STATUS_ERROR;
 }
 
-fstatus_t getBufferByHA(uint8_t host_address, device_buffer **device_buffer) {
+fstatus_t getBufferByHA(uint8_t *host_ptr, device_buffer **device_buffer) {
     for (int i = 0; i < buffer_map_size; i++) {
-        if (buffer_map[i].host_address <= host_address &&
-            buffer_map[i].host_address + buffer_map[i].size > host_address) {
+        if (buffer_map[i].host_address <= (uint64_t)host_ptr &&
+            buffer_map[i].host_address + buffer_map[i].size > (uint64_t)host_ptr) {
             *device_buffer = & buffer_map[i];
             return FLETCHER_STATUS_OK;
         }
@@ -184,6 +184,24 @@ uint64_t platformDeviceMalloc(da_t *device_address, int64_t size) {
     device_buffer buf;
 
     buf.handle = xrtBOAlloc(platform.device, size, XRT_BO_FLAGS_NONE, platform.memory_bank);
+    
+    switch (platform.transfer_mech) {
+        case FL_TR_DEVICE_DMA:
+            buf.handle = xrtBOAlloc(platform.device, size, XRT_BO_FLAGS_NONE, platform.memory_bank);
+            break;
+        case FL_TR_HOST_SHADOW_BUFF:
+           buf.handle = xrtBOAlloc(platform.device, size, XRT_BO_FLAGS_HOST_ONLY, platform.memory_bank);
+            break;
+        case FL_TR_HOST_ONLY_BUFF:
+            buf.handle = xrtBOAlloc(platform.device, size, XRT_BO_FLAGS_HOST_ONLY, platform.memory_bank);
+        case FL_TR_NONE:
+            buf.handle = xrtBOAlloc(platform.device, size, XRT_BO_FLAGS_NONE, platform.memory_bank);
+            break;
+        default:
+            fprintf(stderr, "[FLETCHER_ALVEO] Error: unsupported data transfer mechanism.\n");
+    }
+    
+    
     if (buf.handle == 0) {
         fprintf(stderr, "[FLETCHER_ALVEO] Error: allocating device memory.\n");
         return FLETCHER_STATUS_ERROR;
@@ -212,7 +230,7 @@ uint64_t platformHostMalloc(uint8_t **host_ptr, int64_t size) {
     *host_ptr = (uint8_t*)xrtBOMap(buf.handle);
     device_address = xrtBOAddress(buf.handle);
     buf.device_address = device_address;
-    buf.host_address = **host_ptr;
+    buf.host_address = (uint64_t)*host_ptr;
     buf.active = true;
     buf.size = size;
     buffer_map[buffer_map_size] = buf;
@@ -269,7 +287,7 @@ fstatus_t platformPrepareHostBuffer(const uint8_t *host_source,
                 return FLETCHER_STATUS_ERROR;
             }
               device_buffer *buffer;
-             rc = getBufferByHA(*host_address, &buffer);
+             rc = getBufferByHA(host_address, &buffer);
              if (rc != FLETCHER_STATUS_OK) {
                 return FLETCHER_STATUS_ERROR;
              }
@@ -279,7 +297,7 @@ fstatus_t platformPrepareHostBuffer(const uint8_t *host_source,
             break;
 
         case FL_TR_HOST_ONLY_BUFF:
-            rc = getBufferByHA(*host_source, &buffer);
+            rc = getBufferByHA((uint8_t*)host_source, &buffer);
              if (rc != FLETCHER_STATUS_OK) {
                 return FLETCHER_STATUS_ERROR;
              }

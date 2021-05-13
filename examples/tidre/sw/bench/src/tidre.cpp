@@ -116,7 +116,7 @@ int main(int argc, char **argv) {
   auto tidre_status = Tidre::Make(
     &t, "alveo",
     1, // Number of pipeline beats; tweakable, at least 1.
-    1  // Number of kernels to use; tweakable from 1 to 16.
+    16  // Number of kernels to use; tweakable from 1 to 16.
   );
   if (!tidre_status.ok()) {
     std::cerr << "Could not connect to FPGA: " << tidre_status.message << std::endl;

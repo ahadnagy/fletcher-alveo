@@ -25,7 +25,7 @@ namespace tidre {
 /**
  * The size of the buffer allocated on the device for indices.
  */
-#define OUTPUT_DEVICE_BUFFER_SIZE 65535
+#define OUTPUT_DEVICE_BUFFER_SIZE 524288
 
 /**
  * Shorthand for timestamps returned by time_get().
@@ -169,10 +169,10 @@ class Tidre {
     }
      platform_init config{
       0,                                                    // Device ID
-      FL_TR_DEVICE_DMA,                                     // Data transfer mechanism
-      "./fletcher.hw_emu.xilinx_u280_xdma_201920_3.xclbin", // Kernel xclbin
+      FL_TR_HOST_SHADOW_BUFF,                                     // Data transfer mechanism
+      "./fletcher.hw.xilinx_u250_gen3x16_xdma_3_1_202020_1.xclbin", // Kernel xclbin
       "krnl_fletcher_rtl:{krnl_fletcher_rtl_1}",            // Kernel name
-      32                                                     // Kernel memory bank ID
+      0                                                     // Kernel memory bank ID
   };
   platform->init_data = &config;
     TIDRE_CHECK_STATUS(platform->Init());
@@ -425,23 +425,22 @@ class Tidre {
         da_t data_device_addr;
         
         TIDRE_CHECK_STATUS(platform->PrepareHostBuffer((uint8_t*)data_part_src, &data_device_addr, data_part_size, &alloced));
+             
         
-        da_t output_buff_device_addr;
-        
-        TIDRE_CHECK_STATUS(platform->DeviceMalloc(&output_buff_device_addr, OUTPUT_DEVICE_BUFFER_SIZE));
         
 
         // Compute MMIO config for next beat.
         for (size_t k = 0; k < numKernelsToUse; k++) {
-          end = (in_nrows * (beat * numKernelsToUse + k + 1)) / (numPipelineBeats * numKernelsToUse);    
+          end = (in_nrows * (beat * numKernelsToUse + k + 1)) / (numPipelineBeats * numKernelsToUse);   
+          
+          da_t output_buff_device_addr;
+          TIDRE_CHECK_STATUS(platform->DeviceMalloc(&output_buff_device_addr, OUTPUT_DEVICE_BUFFER_SIZE));
+          
           m_next.buf_in[k].offset = offs_device_addr;
           m_next.buf_in[k].value = data_device_addr;
           m_next.rb_in[k].firstidx = start;
           m_next.rb_in[k].lastidx = end;
           m_next.buf_out[k].value = output_buff_device_addr;
-          
-          printf("Write: %d\n", output_buff_device_addr);
-          
           start = end;
         }
         
@@ -489,11 +488,16 @@ class Tidre {
           if (out_size) {
             size_t size = m_cur.result[k].nmatch * 4;
             TIDRE_CHECK_STATUS(platform->CopyDeviceToHost(m_cur.buf_out[k].value, out_buf, size));
-                        out_size -= size;
+            out_size -= size;
             out_buf += size;
           }
+          
+          //Free buffers
+          platform->DeviceFree(m_cur.buf_out[k].value);
 
         }
+        platform->DeviceFree(m_cur.buf_in[0].value);
+        platform->DeviceFree(m_cur.buf_in[0].offset);
       }
 
     }
@@ -503,6 +507,9 @@ class Tidre {
     // Write output.
     if (nmatch) *nmatch = nmatch_accum;
     if (nerror) *nerror = nerror_accum;
+    
+    size_t num_bytes = offs_buf[in_nrows] - offs_buf[0];
+    std::cout << "Raw kernel throughput: " << (num_bytes / kernel_wait_time) * 1e-9 << " GB/s" << std::endl;
 
     return fletcher::Status::OK();
   }
