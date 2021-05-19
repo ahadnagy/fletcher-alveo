@@ -194,6 +194,7 @@ uint64_t platformDeviceMalloc(da_t *device_address, int64_t size) {
             break;
         case FL_TR_HOST_ONLY_BUFF:
             buf.handle = xrtBOAlloc(platform.device, size, XRT_BO_FLAGS_HOST_ONLY, platform.memory_bank);
+            break;
         case FL_TR_NONE:
             buf.handle = xrtBOAlloc(platform.device, size, XRT_BO_FLAGS_NONE, platform.memory_bank);
             break;
@@ -254,7 +255,7 @@ fstatus_t platformDeviceFree(da_t device_address) {
             return FLETCHER_STATUS_ERROR;
         }
     } else {
-        fprintf(stderr, "[FLETCHER_ALVEO] Error: dourble free of device buffer at 0x%016lX.\n", buffer->device_address);
+        fprintf(stderr, "[FLETCHER_ALVEO] Error: double free of device buffer at 0x%016lX.\n", buffer->device_address);
         return FLETCHER_STATUS_ERROR;
     }
     return FLETCHER_STATUS_OK;
